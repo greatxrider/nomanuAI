@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/lib/theme-context";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme, mounted } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,36 @@ const Header = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  // Theme Toggle Component
+  const ThemeToggle = () => (
+    <button
+      onClick={toggleTheme}
+      className={`p-2 rounded-lg transition-all duration-300 focus-ring group ${
+        isScrolled
+          ? theme === "dark"
+            ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
+            : "hover:bg-gray-100 text-gray-700 hover:text-brand-orange"
+          : theme === "dark"
+          ? "hover:bg-gray-800 text-white hover:text-brand-orange"
+          : "hover:bg-gray-800/10 text-gray-800 hover:text-brand-orange"
+      }`}
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+    >
+      {theme === "dark" ? (
+        <Sun className="w-5 h-5 group-hover:rotate-180 transition-transform duration-300" />
+      ) : (
+        <Moon className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+      )}
+    </button>
+  );
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
+          ? theme === "dark"
+            ? "bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-700"
+            : "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
           : "bg-transparent"
       }`}
     >
@@ -40,7 +67,11 @@ const Header = () => {
             className="flex items-center hover:scale-105 transition-transform duration-300"
           >
             <Image
-              src="/assets/nomanuai-logo.png"
+              src={
+                !mounted || theme === "dark"
+                  ? "/assets/nomanuai-logo-white.png"
+                  : "/assets/nomanuai-logo.png"
+              }
               alt="NomanuAI"
               width={140}
               height={44}
@@ -50,42 +81,60 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 ${
                   isScrolled
-                    ? "text-gray-700 hover:text-brand-orange"
-                    : "text-white hover:text-brand-orange"
+                    ? theme === "dark"
+                      ? "text-gray-300 hover:text-brand-orange"
+                      : "text-gray-700 hover:text-brand-orange"
+                    : theme === "dark"
+                    ? "text-white hover:text-brand-orange"
+                    : "text-gray-800 hover:text-brand-orange"
                 }`}
               >
                 {item.name}
                 <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
               </Link>
             ))}
-            <Link href="#contact" className="btn-primary ml-6">
+
+            {/* Theme Toggle - Desktop */}
+            <ThemeToggle />
+
+            <Link href="#contact" className="btn-primary ml-4">
               Get Started
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors focus-ring ${
-              isScrolled
-                ? "hover:bg-gray-100 text-gray-700"
-                : "hover:bg-gray-800 text-white"
-            }`}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          {/* Mobile Controls */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Theme Toggle - Mobile */}
+            <ThemeToggle />
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`p-2 rounded-lg transition-colors focus-ring ${
+                isScrolled
+                  ? theme === "dark"
+                    ? "hover:bg-gray-700 text-gray-300"
+                    : "hover:bg-gray-100 text-gray-700"
+                  : theme === "dark"
+                  ? "hover:bg-gray-800 text-white"
+                  : "hover:bg-gray-800/10 text-gray-800"
+              }`}
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -93,8 +142,12 @@ const Header = () => {
           <div
             className={`md:hidden border-t backdrop-blur-md ${
               isScrolled
-                ? "border-gray-200 bg-white/95"
-                : "border-gray-600 bg-gray-800/95"
+                ? theme === "dark"
+                  ? "border-gray-700 bg-gray-900/95"
+                  : "border-gray-200 bg-white/95"
+                : theme === "dark"
+                ? "border-gray-600 bg-gray-800/95"
+                : "border-gray-300 bg-white/95"
             }`}
           >
             <div className="py-4 space-y-2">
@@ -105,8 +158,12 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-3 font-medium transition-colors duration-300 rounded-lg mx-2 ${
                     isScrolled
-                      ? "text-gray-700 hover:text-brand-orange hover:bg-gray-50"
-                      : "text-white hover:text-brand-orange hover:bg-gray-700/50"
+                      ? theme === "dark"
+                        ? "text-gray-300 hover:text-brand-orange hover:bg-gray-700/50"
+                        : "text-gray-700 hover:text-brand-orange hover:bg-gray-50"
+                      : theme === "dark"
+                      ? "text-white hover:text-brand-orange hover:bg-gray-700/50"
+                      : "text-gray-700 hover:text-brand-orange hover:bg-gray-50"
                   }`}
                 >
                   {item.name}

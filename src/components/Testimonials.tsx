@@ -71,21 +71,26 @@ const Testimonials = () => {
       <Star
         key={index}
         className={`w-5 h-5 ${
-          index < rating ? "text-yellow-400 fill-current" : "text-gray-300"
+          index < rating
+            ? "text-yellow-400 fill-current"
+            : "text-gray-300 dark:text-gray-600"
         }`}
       />
     ));
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-gray-50">
+    <section
+      id="testimonials"
+      className="section-padding bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+    >
       <div className="container-width">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it. See how we've helped businesses
             transform their operations with AI automation.
           </p>
@@ -96,12 +101,12 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="card p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600 hover:border-gray-200 dark:hover:border-gray-500 p-8 transform hover:-translate-y-1"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Quote Icon */}
               <div className="mb-6">
-                <Quote className="w-8 h-8 text-primary-500 opacity-60" />
+                <Quote className="w-8 h-8 text-brand-orange opacity-60" />
               </div>
 
               {/* Rating */}
@@ -110,23 +115,23 @@ const Testimonials = () => {
               </div>
 
               {/* Content */}
-              <p className="text-gray-600 mb-6 leading-relaxed italic">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
 
               {/* Author */}
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4 text-xl">
+                <div className="w-12 h-12 bg-brand-orange/10 dark:bg-brand-orange/20 rounded-full flex items-center justify-center mr-4 text-xl">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">
+                  <div className="font-semibold text-gray-900 dark:text-white">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
                     {testimonial.position}
                   </div>
-                  <div className="text-sm text-primary-500 font-medium">
+                  <div className="text-sm text-brand-orange font-medium">
                     {testimonial.company}
                   </div>
                 </div>
@@ -137,41 +142,50 @@ const Testimonials = () => {
 
         {/* Trust Indicators */}
         <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
             Trusted by Leading Businesses
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700">
+              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
                 Real Estate
               </div>
-              <div className="text-gray-500">Agencies</div>
+              <div className="text-gray-500 dark:text-gray-400">Agencies</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700">Marketing</div>
-              <div className="text-gray-500">Firms</div>
+              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
+                Marketing
+              </div>
+              <div className="text-gray-500 dark:text-gray-400">Firms</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700">Sales</div>
-              <div className="text-gray-500">Teams</div>
+              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
+                Sales
+              </div>
+              <div className="text-gray-500 dark:text-gray-400">Teams</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700">Tech</div>
-              <div className="text-gray-500">Startups</div>
+              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
+                Tech
+              </div>
+              <div className="text-gray-500 dark:text-gray-400">Startups</div>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 text-center bg-white dark:bg-gray-700 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 dark:border-gray-600">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to Join Our Success Stories?
           </h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how AI automation can transform your business
             operations and drive measurable results.
           </p>
-          <a href="#contact" className="btn-primary text-lg px-8 py-4">
+          <a
+            href="#contact"
+            className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 text-lg inline-block"
+          >
             Start Your Transformation
           </a>
         </div>

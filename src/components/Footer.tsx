@@ -11,8 +11,11 @@ import {
   Network,
   Sparkles,
 } from "lucide-react";
+import { useTheme } from "@/lib/theme-context";
 
 const Footer = () => {
+  const { theme, mounted } = useTheme();
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -41,7 +44,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-950 text-white border-t border-gray-800">
+    <footer className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
       {/* AI Pattern Background */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-10 left-10 w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
@@ -56,7 +59,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6 group">
               <Image
-                src="/assets/nomanuai-logo.png"
+                src={
+                  !mounted || theme === "dark"
+                    ? "/assets/nomanuai-logo-white.png"
+                    : "/assets/nomanuai-logo.png"
+                }
                 alt="NomanuAI"
                 width={120}
                 height={38}
@@ -67,12 +74,12 @@ const Footer = () => {
 
             <div className="flex items-center space-x-2 mb-6">
               <Brain className="w-5 h-5 text-brand-orange animate-pulse" />
-              <span className="text-sm font-medium text-gray-300">
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 AI-Powered Automation
               </span>
             </div>
 
-            <p className="text-gray-400 mb-8 body-md leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 mb-8 text-base md:text-lg leading-relaxed">
               Empowering businesses with{" "}
               <span className="text-brand-orange font-semibold">
                 intelligent automation
@@ -83,20 +90,20 @@ const Footer = () => {
 
             {/* Enhanced Contact Info */}
             <div className="space-y-4">
-              <div className="flex items-center text-gray-400 hover:text-brand-orange transition-colors group">
-                <div className="p-2 bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
+              <div className="flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors group">
+                <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
                 <span className="text-sm">hello@nomanuai.com</span>
               </div>
-              <div className="flex items-center text-gray-400 hover:text-brand-orange transition-colors group">
-                <div className="p-2 bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
+              <div className="flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors group">
+                <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
                 <span className="text-sm">+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center text-gray-400">
-                <div className="p-2 bg-gray-900 rounded-lg mr-3">
+              <div className="flex items-center text-gray-600 dark:text-gray-400">
+                <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span className="text-sm">Serving clients worldwide</span>
@@ -108,14 +115,14 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Network className="w-5 h-5 text-brand-orange" />
-              <h3 className="text-lg font-bold text-white">AI Services</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">AI Services</h3>
             </div>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
                   >
                     <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
                     {link.name}
@@ -129,14 +136,14 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Sparkles className="w-5 h-5 text-brand-orange animate-pulse" />
-              <h3 className="text-lg font-bold text-white">Company</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Company</h3>
             </div>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
                   >
                     <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
                     {link.name}
@@ -150,14 +157,14 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Brain className="w-5 h-5 text-brand-orange animate-pulse animation-delay-200" />
-              <h3 className="text-lg font-bold text-white">Resources</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Resources</h3>
             </div>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
                   >
                     <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
                     {link.name}
@@ -170,31 +177,31 @@ const Footer = () => {
       </div>
 
       {/* Enhanced Bottom Bar */}
-      <div className="border-t border-gray-800 bg-gray-900/50">
+      <div className="border-t border-gray-200 dark:border-gray-800 bg-gray-200/50 dark:bg-gray-900/50">
         <div className="container-width py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0 flex items-center">
+            <div className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0 flex items-center">
               <span>© {currentYear} NomanuAI. All rights reserved.</span>
               <div className="ml-3 flex items-center space-x-1">
-                <span className="text-xs text-gray-500">Powered by</span>
+                <span className="text-xs text-gray-500 dark:text-gray-500">Powered by</span>
                 <Brain className="w-3 h-3 text-brand-orange animate-pulse" />
                 <span className="text-xs text-brand-orange font-medium">
                   AI
                 </span>
               </div>
-            </p>
+            </div>
 
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
               <Link
                 href="#"
-                className="text-gray-400 hover:text-brand-orange transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="#"
-                className="text-gray-400 hover:text-brand-orange transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors"
               >
                 Terms of Service
               </Link>
@@ -203,7 +210,7 @@ const Footer = () => {
             {/* Enhanced Scroll to Top */}
             <button
               onClick={scrollToTop}
-              className="group p-3 bg-brand-orange hover:bg-brand-orange-dark rounded-full transition-all duration-300 transform hover:-translate-y-1 focus-ring mt-4 md:mt-0 relative overflow-hidden"
+              className="group p-3 bg-brand-orange hover:bg-brand-orange-dark rounded-full transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 focus:ring-offset-2 dark:focus:ring-offset-gray-900 mt-4 md:mt-0 relative overflow-hidden"
               aria-label="Scroll to top"
             >
               <ArrowUp className="w-4 h-4 text-white relative z-10" />
