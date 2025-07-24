@@ -114,26 +114,26 @@ const Header = () => {
             {/* Theme Toggle - Mobile */}
             <ThemeToggle />
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 rounded-lg transition-colors focus-ring ${
-                isScrolled
+              isScrolled
                   ? theme === "dark"
                     ? "hover:bg-gray-700 text-gray-300"
                     : "hover:bg-gray-100 text-gray-700"
                   : theme === "dark"
                   ? "hover:bg-gray-800 text-white"
                   : "hover:bg-gray-800/10 text-gray-800"
-              }`}
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            }`}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
           </div>
         </div>
 

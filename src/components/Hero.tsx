@@ -3,22 +3,16 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  ChevronRight,
   Zap,
-  Brain,
-  Cpu,
-  Network,
   Bot,
-  Sparkles,
   ArrowRight,
-  Play,
   CheckCircle,
   TrendingUp,
-  TrendingDown,
-  Shield,
   Clock,
   Users,
+  TrendingDown,
 } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   const [currentHeadline, setCurrentHeadline] = useState(0);
@@ -175,7 +169,7 @@ const Hero = () => {
                 className="group relative bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-base flex items-center justify-center overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
-                  Book Your Free Automation Audit
+                  Book Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-orange-light to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -185,12 +179,7 @@ const Hero = () => {
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="group border-2 border-brand-orange/30 bg-brand-orange/5 hover:bg-brand-orange/10 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-sm flex items-center justify-center"
               >
-                <Play
-                  className={`w-5 h-5 mr-2 transition-transform ${
-                    isPlaying ? "scale-110" : ""
-                  }`}
-                />
-                Watch Demo
+                Sample Projects
               </button>
             </div>
 
@@ -288,101 +277,66 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Interactive AI Visual */}
+          {/* Right Column - Floating Automation Tool Logos (Zapier larger, all with animated gray container) */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Central AI Core */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96">
-                {/* Core Circle */}
-                <div className="absolute inset-8 bg-gradient-to-br from-brand-orange/20 to-brand-orange/5 rounded-full border-2 border-brand-orange/30 backdrop-blur-sm flex items-center justify-center">
-                  <div className="relative">
-                    <Brain className="w-16 h-16 md:w-20 md:h-20 text-brand-orange animate-pulse" />
-                    <div className="absolute inset-0 bg-brand-orange/20 rounded-full filter blur-xl animate-ping" />
-                  </div>
-                </div>
-
-                {/* Orbiting Elements */}
-                {[
-                  { icon: Cpu, angle: 0, delay: 0 },
-                  { icon: Network, angle: 72, delay: 200 },
-                  { icon: Bot, angle: 144, delay: 400 },
-                  { icon: Zap, angle: 216, delay: 600 },
-                  { icon: Sparkles, angle: 288, delay: 800 },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="absolute w-12 h-12 md:w-16 md:h-16"
-                    style={{
-                      transform: `rotate(${item.angle}deg) translateX(140px) rotate(-${item.angle}deg)`,
-                      top: "50%",
-                      left: "50%",
-                      marginTop: "-24px",
-                      marginLeft: "-24px",
-                      animationDelay: `${item.delay}ms`,
-                    }}
-                  >
-                    <div className="w-full h-full bg-gray-800/40 border border-brand-orange/40 rounded-full backdrop-blur-sm flex items-center justify-center hover:scale-110 transition-all duration-300 animate-float">
-                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-brand-orange" />
-                    </div>
-                  </div>
-                ))}
-
-                {/* Connection Lines */}
-                <svg className="absolute inset-0 w-full h-full opacity-30">
-                  <defs>
-                    <linearGradient
-                      id="connectionGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stopColor="#E56518" stopOpacity="0.6" />
-                      <stop
-                        offset="100%"
-                        stopColor="#E56518"
-                        stopOpacity="0.1"
-                      />
-                    </linearGradient>
-                  </defs>
-                  {[
-                    { x2: "85%", y2: "50%", delay: "0ms" }, // 0 degrees
-                    { x2: "61.16%", y2: "79.42%", delay: "200ms" }, // 72 degrees
-                    { x2: "21.68%", y2: "29.43%", delay: "400ms" }, // 144 degrees
-                    { x2: "21.68%", y2: "70.57%", delay: "600ms" }, // 216 degrees
-                    { x2: "61.16%", y2: "20.58%", delay: "800ms" }, // 288 degrees
-                  ].map((line, index) => (
-                    <line
-                      key={index}
-                      x1="50%"
-                      y1="50%"
-                      x2={line.x2}
-                      y2={line.y2}
-                      stroke="url(#connectionGradient)"
-                      strokeWidth="2"
-                      className="animate-pulse"
-                      style={{ animationDelay: line.delay }}
-                    />
-                  ))}
-                </svg>
-
-                {/* Pulse Rings */}
-                <div className="absolute inset-0 rounded-full border border-brand-orange/20 animate-ping animation-duration-3000" />
-                <div className="absolute inset-4 rounded-full border border-brand-orange/15 animate-ping animation-duration-4000 animation-delay-500" />
-              </div>
-
-              {/* Floating Info Cards */}
-              <div className="absolute -top-8 -left-8 bg-gray-800/80 backdrop-blur-sm border border-brand-orange/30 rounded-lg p-3 animate-float">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  <span className="text-xs text-gray-300">AI Active</span>
+            {/* Organized Triangular Floating Automation Tool Logos (Zapier container bigger) */}
+            <div className="relative w-full h-[520px] flex items-center justify-center">
+              {/* Triangle vertices for 3 logos, n8n and Zapier larger, with gray background container and animation */}
+              <div
+                className="absolute animate-float"
+                style={{
+                  left: "50%",
+                  top: "5%",
+                  transform: "translate(-50%, 0)",
+                }}
+              >
+                <div className="bg-gray-200 dark:bg-gray-800 rounded-xl p-4 flex items-center justify-center shadow-lg">
+                  <Image
+                    src="/logo/N8n-logo-new.svg.png"
+                    alt="n8n logo"
+                    width={220}
+                    height={220}
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
-
-              <div className="absolute -bottom-8 -right-8 bg-gray-800/80 backdrop-blur-sm border border-brand-orange/30 rounded-lg p-3 animate-float animation-delay-1000">
-                <div className="flex items-center space-x-2">
-                  <TrendingUp className="w-3 h-3 text-brand-orange" />
-                  <span className="text-xs text-gray-300">Optimizing</span>
+              <div
+                className="absolute animate-float"
+                style={{
+                  left: "20%",
+                  top: "65%",
+                  transform: "translate(0, 0)",
+                }}
+              >
+                <div className="bg-gray-200 dark:bg-gray-800 rounded-xl p-4 flex items-center justify-center shadow-lg">
+                  <Image
+                    src="/logo/make-logo.png"
+                    alt="Make logo"
+                    width={180}
+                    height={180}
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
+              <div
+                className="absolute animate-float"
+                style={{
+                  left: "80%",
+                  top: "65%",
+                  transform: "translate(-100%, 0)",
+                }}
+              >
+                <div className="bg-gray-200 dark:bg-gray-800 rounded-xl p-8 flex items-center justify-center shadow-lg">
+                  <Image
+                    src="/logo/Zapier_logo.svg.png"
+                    alt="Zapier logo"
+                    width={260}
+                    height={260}
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
             </div>

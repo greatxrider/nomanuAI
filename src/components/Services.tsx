@@ -191,17 +191,17 @@ const Services = () => {
 
           {/* Services Grid with Alternating Layout */}
           <div className="space-y-12">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
               const isEven = index % 2 === 0;
 
-              return (
-                <div
-                  key={service.id}
+            return (
+              <div
+                key={service.id}
                   className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
                     isEven ? "lg:flex-row" : "lg:flex-row-reverse"
                   }`}
-                >
+              >
                   {/* Service Content */}
                   <div className="flex-1 max-w-2xl">
                     <div className="group relative bg-white/50 dark:bg-gray-800/30 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-brand-orange/50 rounded-3xl p-8 lg:p-12 transition-all duration-500 hover:scale-105">
@@ -210,16 +210,16 @@ const Services = () => {
                         <span className="text-xs font-medium text-brand-orange uppercase tracking-wide">
                           {service.category}
                         </span>
-                      </div>
+                </div>
 
                       {/* Title and Description */}
                       <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-brand-orange transition-colors">
-                        {service.title}
-                      </h3>
+                    {service.title}
+                  </h3>
 
                       <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
-                        {service.description}
-                      </p>
+                    {service.description}
+                  </p>
 
                       {/* Process Flow */}
                       <div className="bg-gray-100 dark:bg-gray-900/50 rounded-xl p-4 mb-6 border border-gray-200 dark:border-gray-600/30">
@@ -235,9 +235,9 @@ const Services = () => {
 
                       {/* Features */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-                        {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature, featureIndex) => (
                           <div
-                            key={featureIndex}
+                        key={featureIndex}
                             className="flex items-center text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors"
                           >
                             <CheckCircle className="w-4 h-4 text-brand-orange mr-3 flex-shrink-0" />
@@ -269,7 +269,7 @@ const Services = () => {
                         <div className="absolute -top-3 -right-3 w-6 h-6 bg-brand-orange/30 rounded-full animate-pulse" />
                         <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-brand-orange/20 rounded-full animate-pulse animation-delay-300" />
                         <div className="absolute top-1/2 -left-6 w-3 h-3 bg-brand-orange/40 rounded-full animate-pulse animation-delay-600" />
-                      </div>
+                        </div>
 
                       {/* Connection Lines to Center (Desktop only) */}
                       <div className="hidden lg:block absolute inset-0">
@@ -293,11 +293,11 @@ const Services = () => {
                   {index < services.length - 1 && (
                     <div className="lg:hidden flex justify-center">
                       <ArrowDown className="w-8 h-8 text-brand-orange/50 animate-bounce" />
-                    </div>
-                  )}
                 </div>
-              );
-            })}
+                  )}
+              </div>
+            );
+          })}
           </div>
         </div>
 
@@ -306,13 +306,13 @@ const Services = () => {
           {/* Divider */}
           <div className="flex justify-center items-center space-x-4 mb-12">
             <div className="w-16 h-px bg-gradient-to-r from-transparent to-brand-orange/50" />
-            <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 text-brand-orange animate-pulse" />
               <Network className="w-6 h-6 text-brand-orange animate-pulse animation-delay-200" />
               <Sparkles className="w-5 h-5 text-brand-orange animate-pulse animation-delay-400" />
-            </div>
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-brand-orange/50" />
           </div>
+            <div className="w-16 h-px bg-gradient-to-l from-transparent to-brand-orange/50" />
+        </div>
 
           {/* Custom Solution CTA */}
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-200/50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-700/50 rounded-3xl p-12 border border-gray-300/30 dark:border-gray-600/30 backdrop-blur-sm">
@@ -333,14 +333,14 @@ const Services = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
+            <a
+              href="#contact"
                 className="inline-flex items-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg group"
-              >
+            >
                 <Workflow className="w-5 h-5 mr-3 group-hover:animate-pulse" />
                 Start AI Transformation
-                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
 
               <button className="inline-flex items-center border-2 border-brand-orange/30 bg-brand-orange/5 hover:bg-brand-orange/10 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-sm">
                 <MessageSquare className="w-5 h-5 mr-3" />
