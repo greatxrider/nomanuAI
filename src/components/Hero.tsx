@@ -25,8 +25,8 @@ const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const headlines = [
-    "Automate Your Manual Processes",
-    "Capture Every Lead Effortlessly",
+    "Automate Manual Work",
+    "Capture Every Lead",
     "Integrate AI Into Your Workflow",
     "Eliminate Repetitive Tasks",
   ];
@@ -163,11 +163,9 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-              We solve business bottlenecks by building custom{" "}
-              <span className="text-brand-orange font-semibold">
-                workflow automations
-              </span>{" "}
-              and integrating AI to eliminate repetitive tasks.
+              At Nomanu AI, we take busywork off your plate. Our team transforms
+              manual processes into seamless, automated workflows powered by
+              AI—so you can focus on what matters most.
             </p>
 
             {/* CTA Buttons */}
