@@ -149,14 +149,14 @@ const Hero = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
               <span className="block bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent min-h-[1.2em]">
                 {headlines[currentHeadline]}
               </span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto lg:mx-0">
               At Nomanu AI, we take busywork off your plate. Our team transforms
               manual processes into seamless, automated workflows powered by
               AI—so you can focus on what matters most.
@@ -277,67 +277,31 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Floating Automation Tool Logos (Zapier larger, all with animated gray container) */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            {/* Organized Triangular Floating Automation Tool Logos (Zapier container bigger) */}
-            <div className="relative w-full h-[520px] flex items-center justify-center">
-              {/* Triangle vertices for 3 logos, n8n and Zapier larger, with gray background container and animation */}
+          {/* Right Column - Floating Automation Platforms Image */}
+          <div className="order-1 lg:order-2 flex justify-center items-center">
+            <div className="relative w-full h-full flex items-center justify-center">
               <div
-                className="absolute animate-float"
+                className="animate-float"
                 style={{
-                  left: "50%",
-                  top: "5%",
-                  transform: "translate(-50%, 0)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <div className="bg-gray-200 dark:bg-gray-800 rounded-xl p-4 flex items-center justify-center shadow-lg">
-                  <Image
-                    src="/logo/N8n-logo-new.svg.png"
-                    alt="n8n logo"
-                    width={220}
-                    height={220}
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-              <div
-                className="absolute animate-float"
-                style={{
-                  left: "20%",
-                  top: "65%",
-                  transform: "translate(0, 0)",
-                }}
-              >
-                <div className="bg-gray-200 dark:bg-gray-800 rounded-xl p-4 flex items-center justify-center shadow-lg">
-                  <Image
-                    src="/logo/make-logo.png"
-                    alt="Make logo"
-                    width={180}
-                    height={180}
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-              <div
-                className="absolute animate-float"
-                style={{
-                  left: "80%",
-                  top: "65%",
-                  transform: "translate(-100%, 0)",
-                }}
-              >
-                <div className="bg-gray-200 dark:bg-gray-800 rounded-xl p-8 flex items-center justify-center shadow-lg">
-                  <Image
-                    src="/logo/Zapier_logo.svg.png"
-                    alt="Zapier logo"
-                    width={260}
-                    height={260}
-                    className="object-contain"
-                    priority
-                  />
-                </div>
+                <Image
+                  src="/logo/automation-platforms.png"
+                  alt="Automation platforms logos"
+                  width={600}
+                  height={600}
+                  className="object-contain"
+                  style={{
+                    width: "600px",
+                    height: "600px",
+                    minWidth: "600px",
+                    minHeight: "600px",
+                  }}
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -345,16 +309,24 @@ const Hero = () => {
       </div>
 
       {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <button
+        onClick={() => {
+          const nextSection = document.getElementById("services");
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20 cursor-pointer hover:scale-110 transition-transform duration-300"
+      >
         <div className="flex flex-col items-center space-y-2">
-          <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:border-brand-orange transition-colors duration-300">
             <div className="w-1 h-3 bg-brand-orange rounded-full mt-2 animate-pulse" />
           </div>
-          <span className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-wide">
+          <span className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-wide bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-2 py-1 rounded hover:text-brand-orange transition-colors duration-300">
             Discover More
           </span>
         </div>
-      </div>
+      </button>
     </section>
   );
 };

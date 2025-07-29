@@ -39,17 +39,20 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <section
+      id="about"
+      className="section-padding bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+    >
       <div className="container-width">
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-1 bg-brand-orange rounded-full"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
             About <span className="text-gradient">NomanuAI</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
             We're passionate about helping businesses harness the power of AI to
             automate processes, increase efficiency, and drive growth.
           </p>
@@ -114,7 +117,9 @@ const About = () => {
 
         {/* Values Section */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-6">Our Core Values</h3>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+            Our Core Values
+          </h3>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
             These principles guide everything we do and ensure we deliver
             exceptional value to our clients.
@@ -133,8 +138,12 @@ const About = () => {
                 <div className="w-16 h-16 bg-brand-orange/10 dark:bg-brand-orange/20 rounded-xl flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:shadow-lg hover:shadow-brand-orange/20 hover:scale-110">
                   <IconComponent className="w-8 h-8 text-brand-orange" />
                 </div>
-                <h4 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-4">{value.title}</h4>
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">{value.description}</p>
+                <h4 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
+                  {value.title}
+                </h4>
+                <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             );
           })}

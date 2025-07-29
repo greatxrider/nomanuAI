@@ -87,10 +87,10 @@ const Testimonials = () => {
       <div className="container-width">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it. See how we've helped businesses
             transform their operations with AI automation.
           </p>

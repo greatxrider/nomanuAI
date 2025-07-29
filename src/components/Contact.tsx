@@ -96,14 +96,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section
+      id="contact"
+      className="section-padding bg-white dark:bg-gray-900 transition-colors duration-300"
+    >
       <div className="container-width">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Let's <span className="text-gradient">Transform</span> Your Business
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Ready to automate your processes and accelerate growth? Get in touch
             with our AI automation experts today.
           </p>
@@ -122,8 +125,12 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-brand-orange" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Email</div>
-                  <div className="text-gray-600 dark:text-gray-300">hello@nomanuai.com</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">
+                    Email
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-300">
+                    hello@nomanuai.com
+                  </div>
                 </div>
               </div>
 
@@ -132,8 +139,12 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-brand-orange" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Phone</div>
-                  <div className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">
+                    Phone
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-300">
+                    +1 (555) 123-4567
+                  </div>
                 </div>
               </div>
 
@@ -142,8 +153,12 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-brand-orange" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Location</div>
-                  <div className="text-gray-600 dark:text-gray-300">Serving clients worldwide</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">
+                    Location
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-300">
+                    Serving clients worldwide
+                  </div>
                 </div>
               </div>
             </div>
