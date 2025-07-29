@@ -1,193 +1,240 @@
 "use client";
+import { useState, useEffect, useRef } from "react";
+import { Quote, Sparkles, ChevronLeft, ChevronRight, Users, Star } from "lucide-react";
 
-import { Star, Quote } from "lucide-react";
+const testimonials = [
+  {
+    id: 1,
+    avatar: "/path/to/avatar1.jpg",
+    content: "NomanuAI made automation easy and effective for our business. The team delivered exactly what we needed.",
+    name: "Michael",
+    company: "MDS Manufacturing",
+    rating: 5,
+  },
+  {
+    id: 2,
+    avatar: "/path/to/avatar2.jpg",
+    content: "Their AI solutions are top-notch and the team is very responsive. Highly recommended!",
+    name: "Diane",
+    company: "ABC Rentals",
+    rating: 5,
+  },
+  {
+    id: 3,
+    avatar: "/path/to/avatar3.jpg",
+    content: "We saw real results in just weeks. The automation has transformed our workflow completely.",
+    name: "Allison",
+    company: "Grand Party Rental",
+    rating: 5,
+  },
+  {
+    id: 4,
+    avatar: "/path/to/avatar4.jpg",
+    content: "Exceptional service and results. Our productivity increased by 300% after implementation.",
+    name: "Robert",
+    company: "Tech Solutions Inc",
+    rating: 5,
+  },
+];
+
+const AUTO_SCROLL_INTERVAL = 10000;
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      company: "Elite Realty Group",
-      position: "CEO",
-      content:
-        "NomanuAI transformed our lead generation process completely. We've seen a 300% increase in qualified leads and our sales team is more productive than ever. The AI automation handles the initial qualification perfectly.",
-      rating: 5,
-      avatar: "👩‍💼",
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      company: "Digital Marketing Pro",
-      position: "Operations Director",
-      content:
-        "The CRM integration was seamless and the automation workflows have saved us 20+ hours per week. Our client onboarding is now completely automated and our clients love the experience.",
-      rating: 5,
-      avatar: "👨‍💻",
-    },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      company: "Sales Force Solutions",
-      position: "VP of Sales",
-      content:
-        "Working with NomanuAI was a game-changer. Their team understood our unique needs and delivered a custom solution that exceeded our expectations. ROI was evident within the first month.",
-      rating: 5,
-      avatar: "👩‍🏭",
-    },
-    {
-      id: 4,
-      name: "David Thompson",
-      company: "Property Ventures Inc",
-      position: "Founder",
-      content:
-        "The automated communication system they built for us handles 80% of our customer inquiries. Our response time improved dramatically and customer satisfaction scores are at an all-time high.",
-      rating: 5,
-      avatar: "👨‍💼",
-    },
-    {
-      id: 5,
-      name: "Lisa Park",
-      company: "Growth Marketing Agency",
-      position: "Managing Partner",
-      content:
-        "NomanuAI's process optimization analysis revealed bottlenecks we didn't even know existed. The implemented solutions improved our efficiency by 45% and our team morale has never been better.",
-      rating: 5,
-      avatar: "👩‍🎨",
-    },
-    {
-      id: 6,
-      name: "Robert Wilson",
-      company: "Tech Innovators LLC",
-      position: "CTO",
-      content:
-        "Their compliance automation system keeps us audit-ready 24/7. What used to take days of manual work is now handled automatically with detailed reporting. Absolutely phenomenal work.",
-      rating: 5,
-      avatar: "👨‍🔧",
-    },
-  ];
+  const [active, setActive] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setActive((prev) => (prev + 1) % testimonials.length);
+    }, AUTO_SCROLL_INTERVAL);
+    return () => intervalRef.current && clearInterval(intervalRef.current);
+  }, []);
+
+  const goTo = (idx: number) => {
+    setActive(idx);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = setInterval(() => {
+        setActive((prev) => (prev + 1) % testimonials.length);
+      }, AUTO_SCROLL_INTERVAL);
+    }
+  };
 
   const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        className={`w-5 h-5 ${
-          index < rating
-            ? "text-yellow-400 fill-current"
-            : "text-gray-300 dark:text-gray-600"
-        }`}
-      />
+    return Array.from({ length: rating }).map((_, i) => (
+      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
     ));
   };
 
   return (
     <section
       id="testimonials"
-      className="section-padding bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+      className="relative py-24 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
     >
-      <div className="container-width">
+      {/* Enhanced AI Background - Same as Home section */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated Circuit Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern
+                id="circuit-testimonials"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M20,20 L80,20 L80,80 L20,80 Z"
+                  fill="none"
+                  stroke="#E56518"
+                  strokeWidth="1"
+                />
+                <circle cx="20" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="80" r="3" fill="#E56518" />
+                <circle cx="20" cy="80" r="3" fill="#E56518" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit-testimonials)" />
+          </svg>
+        </div>
+
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
+          <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+          <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+      </div>
+
+      <div className="container-width relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            What Our <span className="text-gradient">Clients Say</span>
+          <div className="inline-flex items-center px-6 py-2 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
+            <Sparkles className="w-5 h-5 text-brand-orange mr-2 animate-pulse" />
+            <span className="text-brand-orange font-semibold">Client Success Stories</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Real Stories. <span className="text-brand-orange">Real Impact.</span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Don't just take our word for it. See how we've helped businesses
-            transform their operations with AI automation.
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Discover how AI-powered automation is transforming businesses like yours.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              className="bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600 hover:border-gray-200 dark:hover:border-gray-500 p-8 transform hover:-translate-y-1"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Quote Icon */}
-              <div className="mb-6">
-                <Quote className="w-8 h-8 text-brand-orange opacity-60" />
+        {/* Two-Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column - Info & Stats */}
+          <div className="space-y-8">
+            {/* Main Info */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
-
-              {/* Rating */}
-              <div className="flex items-center mb-4">
-                {renderStars(testimonial.rating)}
-              </div>
-
-              {/* Content */}
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic">
-                "{testimonial.content}"
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Trusted by Industry Leaders
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                Our AI automation solutions have helped businesses across various industries 
+                achieve remarkable results. From startups to enterprises, we deliver 
+                consistent value and measurable impact.
               </p>
-
-              {/* Author */}
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-brand-orange/10 dark:bg-brand-orange/20 rounded-full flex items-center justify-center mr-4 text-xl">
-                  {testimonial.avatar}
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {testimonial.position}
-                  </div>
-                  <div className="text-sm text-brand-orange font-medium">
-                    {testimonial.company}
-                  </div>
+              <div className="flex items-center space-x-4">
+                <div className="text-3xl font-bold text-brand-orange">20+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  Happy Clients<br />
+                  <span className="text-xs">Satisfied with our services</span>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Trusted by Leading Businesses
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
-                Real Estate
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
+                <div className="text-2xl font-bold text-brand-orange mb-2">50+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Automation Projects</div>
               </div>
-              <div className="text-gray-500 dark:text-gray-400">Agencies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
-                Marketing
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
+                <div className="text-2xl font-bold text-brand-orange mb-2">95%</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Success Rate</div>
               </div>
-              <div className="text-gray-500 dark:text-gray-400">Firms</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
-                Sales
-              </div>
-              <div className="text-gray-500 dark:text-gray-400">Teams</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
-                Tech
-              </div>
-              <div className="text-gray-500 dark:text-gray-400">Startups</div>
             </div>
           </div>
-        </div>
 
-        {/* Call to Action */}
-        <div className="mt-16 text-center bg-white dark:bg-gray-700 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 dark:border-gray-600">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Ready to Join Our Success Stories?
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how AI automation can transform your business
-            operations and drive measurable results.
-          </p>
-          <a
-            href="#contact"
-            className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 text-lg inline-block"
-          >
-            Start Your Transformation
-          </a>
+          {/* Right Column - Testimonial Carousel */}
+          <div className="relative">
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 hover:shadow-brand-orange/20 transition-all duration-500 group">
+              {/* AI Glow Effect */}
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-orange/10 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              
+              {/* Floating Quote Icon */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center shadow-lg shadow-brand-orange/20">
+                <Quote className="w-6 h-6 text-white" />
+              </div>
+
+              {/* Testimonial Content */}
+              <div className="relative z-10 text-center">
+                <img
+                  src={testimonials[active].avatar}
+                  alt={testimonials[active].name}
+                  className="w-16 h-16 rounded-full object-cover border-4 border-brand-orange shadow-lg mx-auto mb-6"
+                />
+                
+                <div className="flex justify-center mb-4">
+                  {renderStars(testimonials[active].rating)}
+                </div>
+                
+                <p className="text-lg text-gray-800 dark:text-gray-100 mb-6 leading-relaxed">
+                  "{testimonials[active].content}"
+                </p>
+                
+                <div className="text-center">
+                  <div className="font-bold text-brand-orange text-lg">{testimonials[active].name}</div>
+                  <div className="text-brand-orange/80 text-sm italic">{testimonials[active].company}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex justify-center gap-4 mt-8">
+              <button
+                className="p-3 bg-white/80 dark:bg-gray-800/80 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
+                onClick={() => goTo((active - 1 + testimonials.length) % testimonials.length)}
+                aria-label="Previous"
+              >
+                <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              </button>
+              <button
+                className="p-3 bg-white/80 dark:bg-gray-800/80 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
+                onClick={() => goTo((active + 1) % testimonials.length)}
+                aria-label="Next"
+              >
+                <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              </button>
+            </div>
+
+            {/* Dots */}
+            <div className="flex justify-center gap-2 mt-4">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    i === active
+                      ? "bg-brand-orange"
+                      : "bg-gray-300 dark:bg-gray-700"
+                  }`}
+                  onClick={() => goTo(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

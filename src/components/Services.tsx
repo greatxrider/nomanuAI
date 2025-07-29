@@ -1,101 +1,73 @@
 "use client";
 
 import {
-  Bot,
-  Users,
   Zap,
-  BarChart3,
-  MessageSquare,
-  Shield,
-  ArrowRight,
+  Users,
   CheckCircle,
-  Brain,
-  Workflow,
+  MessageCircle,
+  TrendingUp,
+  Shield,
   Sparkles,
   Cpu,
+  Brain,
+  Network,
 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      id: "lead-generation",
+      id: 1,
       title: "AI Lead Generation",
-      description:
-        "Transform prospects into qualified leads with intelligent automation.",
-      icon: Users,
-      gradient: "from-blue-500 to-cyan-400",
-      glow: "shadow-blue-500/25",
-      features: [
-        "Automated scoring",
-        "Smart qualification",
-        "Multi-channel nurturing",
-      ],
-    },
-    {
-      id: "crm-integration",
-      title: "CRM Integration",
-      description:
-        "Seamlessly sync and automate customer data across all platforms.",
-      icon: BarChart3,
-      gradient: "from-purple-500 to-pink-400",
-      glow: "shadow-purple-500/25",
-      features: [
-        "Data sync automation",
-        "Pipeline management",
-        "Follow-up automation",
-      ],
-    },
-    {
-      id: "client-onboarding",
-      title: "Client Onboarding",
-      description:
-        "Create seamless onboarding experiences that guide clients automatically.",
-      icon: Bot,
-      gradient: "from-green-500 to-emerald-400",
-      glow: "shadow-green-500/25",
-      features: [
-        "Welcome sequences",
-        "Document collection",
-        "Progress tracking",
-      ],
-    },
-    {
-      id: "communication",
-      title: "AI Communication",
-      description:
-        "Deploy intelligent chatbots that provide instant customer support.",
-      icon: MessageSquare,
-      gradient: "from-orange-500 to-red-400",
-      glow: "shadow-orange-500/25",
-      features: ["24/7 chatbots", "Multi-language support", "Human handoff"],
-    },
-    {
-      id: "process-optimization",
-      title: "Process Optimization",
-      description:
-        "Analyze and automate business processes with AI-driven insights.",
+      description: "Automated lead capture and qualification systems that work 24/7",
       icon: Zap,
-      gradient: "from-yellow-500 to-orange-400",
-      glow: "shadow-yellow-500/25",
-      features: [
-        "Process analysis",
-        "Bottleneck identification",
-        "Performance monitoring",
-      ],
+      features: ["Smart lead scoring", "Multi-channel capture", "Real-time notifications"],
+      gradient: "from-brand-orange to-brand-orange-light",
+      glow: "shadow-brand-orange/25",
     },
     {
-      id: "compliance",
-      title: "Compliance & Security",
-      description:
-        "Ensure regulatory compliance with automated monitoring systems.",
+      id: 2,
+      title: "CRM Integration & Automation",
+      description: "Seamless integration with your existing CRM and workflow automation",
+      icon: Users,
+      features: ["Custom integrations", "Workflow automation", "Data synchronization"],
+      gradient: "from-brand-orange to-brand-orange-light",
+      glow: "shadow-brand-orange/25",
+    },
+    {
+      id: 3,
+      title: "Client Onboarding Automation",
+      description: "Streamlined client onboarding processes that reduce manual work",
+      icon: CheckCircle,
+      features: ["Automated welcome sequences", "Document processing", "Progress tracking"],
+      gradient: "from-brand-orange to-brand-orange-light",
+      glow: "shadow-brand-orange/25",
+    },
+    {
+      id: 4,
+      title: "AI Communication Systems",
+      description: "Intelligent communication platforms that engage customers automatically",
+      icon: MessageCircle,
+      features: ["Chatbot integration", "Email automation", "Smart responses"],
+      gradient: "from-brand-orange to-brand-orange-light",
+      glow: "shadow-brand-orange/25",
+    },
+    {
+      id: 5,
+      title: "Business Process Optimization",
+      description: "Identify and automate repetitive tasks to boost efficiency",
+      icon: TrendingUp,
+      features: ["Process analysis", "Automation mapping", "Performance tracking"],
+      gradient: "from-brand-orange to-brand-orange-light",
+      glow: "shadow-brand-orange/25",
+    },
+    {
+      id: 6,
+      title: "Compliance & Security Automation",
+      description: "Automated compliance checks and security protocols",
       icon: Shield,
-      gradient: "from-indigo-500 to-purple-400",
-      glow: "shadow-indigo-500/25",
-      features: [
-        "Compliance monitoring",
-        "Automated reporting",
-        "Security protocols",
-      ],
+      features: ["Compliance monitoring", "Security alerts", "Audit trails"],
+      gradient: "from-brand-orange to-brand-orange-light",
+      glow: "shadow-brand-orange/25",
     },
   ];
 
@@ -195,14 +167,14 @@ const Services = () => {
                 Input
               </span>
             </div>
-            <ArrowRight className="w-5 h-5 text-brand-orange animate-pulse" />
+            <Network className="w-5 h-5 text-brand-orange animate-pulse" />
             <div className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-brand-orange/20 to-brand-orange/10 rounded-full border border-brand-orange/50 backdrop-blur-sm shadow-lg shadow-brand-orange/20">
               <Sparkles className="w-4 h-4 text-brand-orange animate-pulse" />
               <span className="text-sm text-gray-900 dark:text-white font-medium">
                 AI Processing
               </span>
             </div>
-            <ArrowRight className="w-5 h-5 text-brand-orange animate-pulse animation-delay-200" />
+            <Network className="w-5 h-5 text-brand-orange animate-pulse animation-delay-200" />
             <div className="flex items-center space-x-2 px-4 py-2 bg-gray-200/50 dark:bg-gray-800/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 backdrop-blur-sm">
               <Zap className="w-4 h-4 text-brand-orange" />
               <span className="text-sm text-gray-700 dark:text-gray-300">
@@ -228,8 +200,8 @@ const Services = () => {
                 {/* Floating Particles */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/30 rounded-full animate-pulse animation-delay-300" />
-                  <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse animation-delay-600" />
+                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+                  <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
                 </div>
 
                 {/* Icon with Gradient Background */}
@@ -280,8 +252,8 @@ const Services = () => {
             <div className="absolute bottom-4 left-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse animation-delay-300" />
 
             <div className="relative z-10">
-              <div className="w-20 h-20 bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/20">
-                <Brain className="w-10 h-10 text-brand-orange animate-pulse" />
+              <div className="w-24 h-24 bg-brand-orange rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
+                <Network className="w-12 h-12 text-white" />
               </div>
 
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
@@ -302,7 +274,7 @@ const Services = () => {
               >
                 <Sparkles className="w-4 h-4 mr-2 group-hover:animate-pulse" />
                 Get Started
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Network className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
