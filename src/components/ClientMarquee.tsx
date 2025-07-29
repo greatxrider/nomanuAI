@@ -3,18 +3,13 @@
 const ClientMarquee = () => {
   // Major company names for the marquee
   const companies = [
-    "Samsung",
-    "Google",
-    "Microsoft",
-    "Amazon",
-    "Apple",
-    "Meta",
-    "Netflix",
-    "Spotify",
-    "Adobe",
-    "Salesforce",
-    "Oracle",
-    "IBM",
+    "Nyxpro",
+    "MetaWatt",
+    "BuiltFromLove",
+    "Anonova",
+    "Haivyne",
+    "Bamboo Works",
+    "Easy Outsource",
   ];
 
   return (
@@ -23,7 +18,7 @@ const ClientMarquee = () => {
         {/* Section Header */}
         <div className="text-center mb-8">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-            Trusted by Industry Leaders
+            Success Stories: Clients We've Served
           </p>
         </div>
 
@@ -41,7 +36,7 @@ const ClientMarquee = () => {
                 key={`first-${index}`}
                 className="flex-shrink-0 flex items-center justify-center min-w-[120px] h-12"
               >
-                <span className="text-2xl font-bold text-gray-700 dark:text-gray-300 hover:text-brand-orange transition-colors duration-300 whitespace-nowrap">
+                <span className="text-xl font-bold text-gray-700 dark:text-gray-300 hover:text-brand-orange transition-colors duration-300 whitespace-nowrap">
                   {company}
                 </span>
               </div>
@@ -53,7 +48,7 @@ const ClientMarquee = () => {
                 key={`second-${index}`}
                 className="flex-shrink-0 flex items-center justify-center min-w-[120px] h-12"
               >
-                <span className="text-2xl font-bold text-gray-700 dark:text-gray-300 hover:text-brand-orange transition-colors duration-300 whitespace-nowrap">
+                <span className="text-xl font-bold text-gray-700 dark:text-gray-300 hover:text-brand-orange transition-colors duration-300 whitespace-nowrap">
                   {company}
                 </span>
               </div>
@@ -64,8 +59,15 @@ const ClientMarquee = () => {
         {/* Trust indicator */}
         <div className="text-center mt-8">
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            Join <span className="text-brand-orange font-semibold">50+</span>{" "}
-            companies automating their success
+            From{" "}
+            <span className="text-brand-orange font-semibold">
+              startups to enterprises
+            </span>{" "}
+            - we've built{" "}
+            <span className="text-brand-orange font-semibold">
+              500+ automations
+            </span>{" "}
+            that drive real results
           </p>
         </div>
       </div>

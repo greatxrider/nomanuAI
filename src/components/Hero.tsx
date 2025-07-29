@@ -156,7 +156,7 @@ const Hero = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto lg:mx-0">
+            <p className="text-base md:text-lg mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto lg:mx-0">
               At Nomanu AI, we take busywork off your plate. Our team transforms
               manual processes into seamless, automated workflows powered by
               AI—so you can focus on what matters most.

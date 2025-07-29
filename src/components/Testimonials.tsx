@@ -87,10 +87,10 @@ const Testimonials = () => {
       <div className="container-width">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it. See how we've helped businesses
             transform their operations with AI automation.
           </p>
@@ -178,7 +178,7 @@ const Testimonials = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to Join Our Success Stories?
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how AI automation can transform your business
             operations and drive measurable results.
           </p>
