@@ -74,7 +74,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="section-padding relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
       {/* Enhanced AI Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -140,7 +140,7 @@ const Services = () => {
         {/* AI-Inspired Header */}
         <div className="text-center mb-16">
           {/* AI Processing Badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange/10 to-brand-orange/5 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8 shadow-lg shadow-brand-orange/10">
+          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8 shadow-lg shadow-brand-orange/10">
             <Cpu className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
             <span className="text-brand-orange font-medium">
               AI-Powered Solutions
@@ -150,12 +150,12 @@ const Services = () => {
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Our{" "}
-            <span className="bg-gradient-to-r from-brand-orange to-brand-orange-light bg-clip-text text-transparent">
+            <span className="text-brand-orange">
               AI Services
             </span>
           </h2>
 
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Streamline your business with cutting-edge AI automation solutions
           </p>
 
@@ -167,14 +167,18 @@ const Services = () => {
                 Input
               </span>
             </div>
-            <Network className="w-5 h-5 text-brand-orange animate-pulse" />
-            <div className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-brand-orange/20 to-brand-orange/10 rounded-full border border-brand-orange/50 backdrop-blur-sm shadow-lg shadow-brand-orange/20">
+            <div className="w-5 h-5 text-brand-orange animate-pulse">
+              →
+            </div>
+            <div className="flex items-center space-x-2 px-4 py-2 bg-brand-orange/20 rounded-full border border-brand-orange/50 backdrop-blur-sm shadow-lg shadow-brand-orange/20">
               <Sparkles className="w-4 h-4 text-brand-orange animate-pulse" />
               <span className="text-sm text-gray-900 dark:text-white font-medium">
                 AI Processing
               </span>
             </div>
-            <Network className="w-5 h-5 text-brand-orange animate-pulse animation-delay-200" />
+            <div className="w-5 h-5 text-brand-orange animate-pulse">
+              →
+            </div>
             <div className="flex items-center space-x-2 px-4 py-2 bg-gray-200/50 dark:bg-gray-800/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 backdrop-blur-sm">
               <Zap className="w-4 h-4 text-brand-orange" />
               <span className="text-sm text-gray-700 dark:text-gray-300">
@@ -191,7 +195,7 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-400 dark:border-gray-600 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
+                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* AI Glow Effect */}
@@ -200,18 +204,18 @@ const Services = () => {
                 {/* Floating Particles */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-                  <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
+                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/30 rounded-full animate-pulse animation-delay-300" />
+                  <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse animation-delay-600" />
                 </div>
 
-                {/* Icon with Gradient Background */}
+                {/* Icon with Brand Orange Background */}
                 <div
-                  className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-4 shadow-lg ${service.glow} group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-14 h-14 bg-brand-orange rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <IconComponent className="w-7 h-7 text-white" />
                 </div>
 
-                {/* Title with Gradient Text */}
+                {/* Title with Brand Orange Text */}
                 <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
                   {service.title}
                 </h3>
@@ -221,14 +225,14 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                {/* Features with AI Styling */}
+                {/* Features with Brand Orange Styling */}
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <div
                       key={featureIndex}
                       className="flex items-center text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300"
                     >
-                      <div className="w-3 h-3 bg-gradient-to-br from-brand-orange to-brand-orange-light rounded-full mr-2 flex-shrink-0 shadow-sm shadow-brand-orange/25" />
+                      <div className="w-3 h-3 bg-brand-orange rounded-full mr-2 flex-shrink-0 shadow-sm shadow-brand-orange/25" />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -243,7 +247,7 @@ const Services = () => {
 
         {/* AI-Inspired CTA */}
         <div className="text-center">
-          <div className="relative bg-gradient-to-r from-white/90 to-gray-50/90 dark:from-gray-800/90 dark:to-gray-900/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-400 dark:border-gray-600 shadow-2xl shadow-brand-orange/10 overflow-hidden">
+          <div className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 overflow-hidden">
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
 
@@ -252,30 +256,25 @@ const Services = () => {
             <div className="absolute bottom-4 left-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse animation-delay-300" />
 
             <div className="relative z-10">
-              <div className="w-24 h-24 bg-brand-orange rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
-                <Network className="w-12 h-12 text-white" />
+              <div className="w-20 h-20 bg-brand-orange/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/20">
+                <Brain className="w-10 h-10 text-brand-orange animate-pulse" />
               </div>
 
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Ready to{" "}
-                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-light bg-clip-text text-transparent">
+                <span className="text-brand-orange">
                   Automate
                 </span>
                 ?
               </h3>
 
-              <p className="text-xs text-gray-600 dark:text-gray-300 mb-6 max-w-md mx-auto">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-md mx-auto">
                 Let's design a custom AI automation strategy for your business.
               </p>
 
-              <a
-                href="#contact"
-                className="group inline-flex items-center bg-gradient-to-r from-brand-orange to-brand-orange-light hover:from-brand-orange-dark hover:to-brand-orange text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 text-sm shadow-lg shadow-brand-orange/25 hover:shadow-xl hover:shadow-brand-orange/40 hover:scale-105"
-              >
-                <Sparkles className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                Get Started
-                <Network className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 text-sm inline-block">
+                Get Started Today
+              </button>
             </div>
           </div>
         </div>

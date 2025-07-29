@@ -34,10 +34,10 @@ const Header = () => {
         isScrolled
           ? theme === "dark"
             ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
-            : "hover:bg-gray-100 text-gray-700 hover:text-brand-orange"
+            : "hover:bg-gray-200 text-gray-700 hover:text-brand-orange"
           : theme === "dark"
           ? "hover:bg-gray-800 text-white hover:text-brand-orange"
-          : "hover:bg-gray-800/10 text-gray-800 hover:text-brand-orange"
+          : "hover:bg-gray-200 text-gray-800 hover:text-brand-orange"
       }`}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
@@ -55,7 +55,7 @@ const Header = () => {
         isScrolled
           ? theme === "dark"
             ? "bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800"
-            : "bg-black/70 backdrop-blur-md shadow-lg border-b border-gray-800"
+            : "bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200"
           : "bg-transparent"
       }`}
     >
@@ -88,10 +88,12 @@ const Header = () => {
                 href={item.href}
                 className={`font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 ${
                   isScrolled
-                    ? "text-white hover:text-brand-orange"
+                    ? theme === "dark"
+                      ? "text-white hover:text-brand-orange"
+                      : "text-gray-800 hover:text-brand-orange"
                     : theme === "dark"
                     ? "text-white hover:text-brand-orange"
-                    : "text-white hover:text-brand-orange"
+                    : "text-gray-800 hover:text-brand-orange"
                 }`}
               >
                 {item.name}
@@ -120,8 +122,12 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 rounded-lg transition-colors focus-ring ${
                 isScrolled
-                  ? "hover:bg-gray-700 text-white"
-                  : "hover:bg-gray-800/10 text-white"
+                  ? theme === "dark"
+                    ? "hover:bg-gray-700 text-white"
+                    : "hover:bg-gray-200 text-gray-800"
+                  : theme === "dark"
+                  ? "hover:bg-gray-800 text-white"
+                  : "hover:bg-gray-200 text-gray-800"
               }`}
               aria-label="Toggle mobile menu"
             >
@@ -139,8 +145,12 @@ const Header = () => {
           <div
             className={`md:hidden border-t backdrop-blur-md ${
               isScrolled
-                ? "border-gray-800 bg-black/80"
-                : "border-gray-700 bg-black/70"
+                ? theme === "dark"
+                  ? "border-gray-800 bg-black/80"
+                  : "border-gray-200 bg-white/90"
+                : theme === "dark"
+                ? "border-gray-700 bg-black/70"
+                : "border-gray-200 bg-white/70"
             }`}
           >
             <div className="py-4 space-y-2">
@@ -149,7 +159,11 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-2 text-white hover:text-brand-orange transition-colors duration-300"
+                  className={`block px-4 py-2 transition-colors duration-300 ${
+                    theme === "dark"
+                      ? "text-white hover:text-brand-orange"
+                      : "text-gray-800 hover:text-brand-orange"
+                  }`}
                 >
                   {item.name}
                 </Link>
