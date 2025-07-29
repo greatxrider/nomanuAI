@@ -1,12 +1,20 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { Quote, Sparkles, ChevronLeft, ChevronRight, Users, Star } from "lucide-react";
+import {
+  Quote,
+  Sparkles,
+  ChevronLeft,
+  ChevronRight,
+  Users,
+  Star,
+} from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
     avatar: "/path/to/avatar1.jpg",
-    content: "NomanuAI made automation easy and effective for our business. The team delivered exactly what we needed.",
+    content:
+      "NomanuAI made automation easy and effective for our business. The team delivered exactly what we needed.",
     name: "Michael",
     company: "MDS Manufacturing",
     rating: 5,
@@ -14,7 +22,8 @@ const testimonials = [
   {
     id: 2,
     avatar: "/path/to/avatar2.jpg",
-    content: "Their AI solutions are top-notch and the team is very responsive. Highly recommended!",
+    content:
+      "Their AI solutions are top-notch and the team is very responsive. Highly recommended!",
     name: "Diane",
     company: "ABC Rentals",
     rating: 5,
@@ -22,7 +31,8 @@ const testimonials = [
   {
     id: 3,
     avatar: "/path/to/avatar3.jpg",
-    content: "We saw real results in just weeks. The automation has transformed our workflow completely.",
+    content:
+      "We saw real results in just weeks. The automation has transformed our workflow completely.",
     name: "Allison",
     company: "Grand Party Rental",
     rating: 5,
@@ -30,7 +40,8 @@ const testimonials = [
   {
     id: 4,
     avatar: "/path/to/avatar4.jpg",
-    content: "Exceptional service and results. Our productivity increased by 300% after implementation.",
+    content:
+      "Exceptional service and results. Our productivity increased by 300% after implementation.",
     name: "Robert",
     company: "Tech Solutions Inc",
     rating: 5,
@@ -69,48 +80,15 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="relative py-24 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
+      className="relative section-padding bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 overflow-hidden"
     >
-      {/* Enhanced AI Background - Same as Home section */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Animated Circuit Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern
-                id="circuit-testimonials"
-                x="0"
-                y="0"
-                width="100"
-                height="100"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M20,20 L80,20 L80,80 L20,80 Z"
-                  fill="none"
-                  stroke="#E56518"
-                  strokeWidth="1"
-                />
-                <circle cx="20" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="80" r="3" fill="#E56518" />
-                <circle cx="20" cy="80" r="3" fill="#E56518" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#circuit-testimonials)" />
-          </svg>
-        </div>
-
-        {/* Floating AI Particles */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-          <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-          <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
-        </div>
-
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+      {/* AI Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
+        <div
+          className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
       </div>
 
       <div className="container-width relative z-10">
@@ -118,13 +96,17 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-2 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
             <Sparkles className="w-5 h-5 text-brand-orange mr-2 animate-pulse" />
-            <span className="text-brand-orange font-semibold">Client Success Stories</span>
+            <span className="text-brand-orange font-semibold">
+              Client Success Stories
+            </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Real Stories. <span className="text-brand-orange">Real Impact.</span>
+            Real Stories.{" "}
+            <span className="text-brand-orange">Real Impact.</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Discover how AI-powered automation is transforming businesses like yours.
+            Discover how AI-powered automation is transforming businesses like
+            yours.
           </p>
         </div>
 
@@ -141,14 +123,15 @@ const Testimonials = () => {
                 Trusted by Industry Leaders
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                Our AI automation solutions have helped businesses across various industries 
-                achieve remarkable results. From startups to enterprises, we deliver 
-                consistent value and measurable impact.
+                Our AI automation solutions have helped businesses across
+                various industries achieve remarkable results. From startups to
+                enterprises, we deliver consistent value and measurable impact.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="text-3xl font-bold text-brand-orange">20+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Happy Clients<br />
+                  Happy Clients
+                  <br />
                   <span className="text-xs">Satisfied with our services</span>
                 </div>
               </div>
@@ -157,12 +140,20 @@ const Testimonials = () => {
             {/* Trust Indicators */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
-                <div className="text-2xl font-bold text-brand-orange mb-2">50+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Automation Projects</div>
+                <div className="text-2xl font-bold text-brand-orange mb-2">
+                  50+
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  Automation Projects
+                </div>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
-                <div className="text-2xl font-bold text-brand-orange mb-2">95%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Success Rate</div>
+                <div className="text-2xl font-bold text-brand-orange mb-2">
+                  95%
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  Success Rate
+                </div>
               </div>
             </div>
           </div>
@@ -172,7 +163,7 @@ const Testimonials = () => {
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 hover:shadow-brand-orange/20 transition-all duration-500 group">
               {/* AI Glow Effect */}
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-orange/10 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              
+
               {/* Floating Quote Icon */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center shadow-lg shadow-brand-orange/20">
                 <Quote className="w-6 h-6 text-white" />
@@ -185,18 +176,22 @@ const Testimonials = () => {
                   alt={testimonials[active].name}
                   className="w-16 h-16 rounded-full object-cover border-4 border-brand-orange shadow-lg mx-auto mb-6"
                 />
-                
+
                 <div className="flex justify-center mb-4">
                   {renderStars(testimonials[active].rating)}
                 </div>
-                
+
                 <p className="text-lg text-gray-800 dark:text-gray-100 mb-6 leading-relaxed">
                   "{testimonials[active].content}"
                 </p>
-                
+
                 <div className="text-center">
-                  <div className="font-bold text-brand-orange text-lg">{testimonials[active].name}</div>
-                  <div className="text-brand-orange/80 text-sm italic">{testimonials[active].company}</div>
+                  <div className="font-bold text-brand-orange text-lg">
+                    {testimonials[active].name}
+                  </div>
+                  <div className="text-brand-orange/80 text-sm italic">
+                    {testimonials[active].company}
+                  </div>
                 </div>
               </div>
             </div>
@@ -205,7 +200,9 @@ const Testimonials = () => {
             <div className="flex justify-center gap-4 mt-8">
               <button
                 className="p-3 bg-white/80 dark:bg-gray-800/80 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
-                onClick={() => goTo((active - 1 + testimonials.length) % testimonials.length)}
+                onClick={() =>
+                  goTo((active - 1 + testimonials.length) % testimonials.length)
+                }
                 aria-label="Previous"
               >
                 <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />

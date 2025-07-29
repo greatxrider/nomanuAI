@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ClientMarquee from "@/components/ClientMarquee";
 import Services from "@/components/Services";
+import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <ClientMarquee />
       <Services />
+      <Projects />
       <About />
       <Testimonials />
       <Contact />

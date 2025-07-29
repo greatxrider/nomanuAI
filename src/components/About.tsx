@@ -27,12 +27,66 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative section-padding bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 overflow-hidden"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* AI Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+      {/* Enhanced AI Background - Same as Home section */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated Circuit Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern
+                id="circuit-about"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M20,20 L80,20 L80,80 L20,80 Z"
+                  fill="none"
+                  stroke="#E56518"
+                  strokeWidth="1"
+                />
+                <circle cx="20" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="80" r="3" fill="#E56518" />
+                <circle cx="20" cy="80" r="3" fill="#E56518" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit-about)" />
+          </svg>
+        </div>
+
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0">
+          {[
+            { left: "15%", top: "20%", delay: "0s", duration: "4s" },
+            { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
+            { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
+            { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
+            { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
+            { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
+            { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
+            { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
+          ].map((particle, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
+              style={{
+                left: particle.left,
+                top: particle.top,
+                animationDelay: particle.delay,
+                animationDuration: particle.duration,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
       </div>
 
       <div className="container-width relative z-10">
@@ -44,73 +98,77 @@ const About = () => {
             <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             About <span className="text-brand-orange">NomanuAI</span>
           </h2>
-          
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We're a passionate team of Filipino AI specialists, software engineers, and automation professionals. 
-            Together, we transform complex business challenges into elegant AI-powered solutions that drive real results.
+
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            We are a team of Filipino developers, AI specialists, and software engineers 
+            working together to deliver intelligent automation solutions that transform businesses.
           </p>
         </div>
 
-        {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">
-            {/* Team Introduction */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Filipino Excellence in AI
-              </h3>
-              <p className="text-base text-gray-300 leading-relaxed mb-6">
-                Our diverse team combines deep technical expertise with innovative problem-solving approaches. 
-                We specialize in creating custom automation solutions that adapt to your unique business needs.
-              </p>
-              <p className="text-base text-gray-300 leading-relaxed">
-                From intelligent process automation to predictive analytics, we help businesses thrive in the digital age 
-                with solutions that are both powerful and practical.
-              </p>
-            </div>
-
-            {/* Team Roles */}
-            <div className="space-y-4">
-              {team.map((member, idx) => (
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6">
+              {stats.map((stat, index) => (
                 <div
-                  key={member.title}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10"
-                  style={{ animationDelay: `${idx * 100}ms` }}
+                  key={stat.label}
+                  className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-brand-orange rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <member.icon className="w-6 h-6 text-white" />
+                  {/* AI Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="relative z-10 text-center">
+                    <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
+                      <stat.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white group-hover:text-brand-orange transition-colors duration-300">
-                        {member.title}
-                      </h4>
-                      <p className="text-sm text-gray-300">
-                        {member.description}
-                      </p>
+
+                    <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                      {stat.value}
                     </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+
+                  {/* Floating AI Particles */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
+                    <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+                    <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              {stats.map((stat, idx) => (
+            {/* Team Roles */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                Our Expertise
+              </h3>
+              {team.map((member, index) => (
                 <div
-                  key={stat.label}
-                  className="group text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
-                  style={{ animationDelay: `${idx * 100}ms` }}
+                  key={member.title}
+                  className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
+                  style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="text-2xl font-bold text-brand-orange mb-1 group-hover:scale-110 transition-transform duration-300">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-gray-300 font-medium">
-                    {stat.label}
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
+                      <member.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
+                        {member.title}
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        {member.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -120,30 +178,20 @@ const About = () => {
           {/* Right Column - Visual Design */}
           <div className="relative">
             {/* AI Processing Visualization */}
-            <div className="group relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl shadow-brand-orange/10 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-800/90 dark:to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 overflow-hidden">
               {/* Neural Network Pattern */}
               <div className="absolute inset-0 opacity-20">
-                <svg className="w-full h-full" viewBox="0 0 300 300">
+                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#E56518" stopOpacity="0.3" />
-                      <stop offset="100%" stopColor="#E56518" stopOpacity="0.3" />
+                      <stop offset="0%" stopColor="#E56518" />
+                      <stop offset="100%" stopColor="#E56518" />
                     </linearGradient>
                   </defs>
-                  <circle cx="50" cy="50" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="150" cy="50" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="250" cy="50" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="50" cy="150" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="150" cy="150" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="250" cy="150" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="50" cy="250" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="150" cy="250" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="250" cy="250" r="3" fill="url(#neuralGradient)" />
-                  <path d="M50,50 L150,50 L250,50" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
-                  <path d="M50,150 L150,150 L250,150" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
-                  <path d="M50,250 L150,250 L250,250" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
-                  <path d="M50,50 L50,150 L50,250" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
-                  <path d="M150,50 L150,150 L150,250" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
+                  <circle cx="100" cy="100" r="3" fill="url(#neuralGradient)" />
+                  <circle cx="200" cy="150" r="3" fill="url(#neuralGradient)" />
+                  <circle cx="300" cy="100" r="3" fill="url(#neuralGradient)" />
+                  <path d="M100,100 L200,150 L300,100" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
                   <path d="M250,50 L250,150 L250,250" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
                 </svg>
               </div>
@@ -153,24 +201,32 @@ const About = () => {
                   <Network className="w-12 h-12 text-white" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   AI-Powered Solutions
                 </h3>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  We transform complex business processes into intelligent, automated workflows. 
-                  Our solutions adapt and learn, becoming more efficient over time.
+
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  We transform complex business processes into intelligent,
+                  automated workflows. Our solutions adapt and learn, becoming
+                  more efficient over time.
                 </p>
 
                 <div className="space-y-3">
-                  {["Intelligent Automation", "Custom AI Solutions", "Process Optimization", "Data Intelligence"].map((solution, idx) => (
+                  {[
+                    "Intelligent Automation",
+                    "Custom AI Solutions",
+                    "Process Optimization",
+                    "Data Intelligence",
+                  ].map((solution, idx) => (
                     <div
                       key={solution}
                       className="flex items-center space-x-3 p-3 bg-white/10 rounded-lg border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
                       style={{ animationDelay: `${idx * 100}ms` }}
                     >
                       <Sparkles className="w-4 h-4 text-brand-orange flex-shrink-0" />
-                      <span className="text-sm text-white font-medium">{solution}</span>
+                      <span className="text-sm text-gray-900 dark:text-white font-medium">
+                        {solution}
+                      </span>
                     </div>
                   ))}
                 </div>
