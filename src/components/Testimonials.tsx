@@ -100,7 +100,7 @@ const Testimonials = () => {
               Client Success Stories
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Real Stories.{" "}
             <span className="text-brand-orange">Real Impact.</span>
           </h2>
@@ -141,18 +141,22 @@ const Testimonials = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl font-bold text-brand-orange mb-2">
-                  50+
+                  2-4 Weeks
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Automation Projects
+                  Average Implementation
+                  <br />
+                  <span className="text-xs">From concept to results</span>
                 </div>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl font-bold text-brand-orange mb-2">
-                  95%
+                  24/7
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Success Rate
+                  Support Available
+                  <br />
+                  <span className="text-xs">When you need us most</span>
                 </div>
               </div>
             </div>

@@ -180,29 +180,29 @@ const Contact = () => {
             </span>
             <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Let's <span className="text-brand-orange">Transform</span> Your
             Business
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to automate your processes and accelerate growth? Get in touch
             with our AI automation experts today.
           </p>
         </div>
 
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           {/* Left Column - Contact Info & AI Features */}
           <div className="space-y-8">
             {/* AI-Powered Contact Card */}
-            <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10">
+            <div className="group bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10">
               <div className="w-12 h-12 bg-brand-orange rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-4">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white group-hover:text-brand-orange transition-colors duration-300 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-brand-orange transition-colors duration-300 mb-4">
                 AI-Powered Consultation
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed mb-6">
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 Our AI specialists analyze your business needs and design custom
                 automation solutions that deliver measurable results.
               </p>
@@ -214,9 +214,11 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">Email</div>
-                    <div className="text-sm text-gray-300">
-                      hello@nomanuai.com
+                    <div className="font-semibold text-gray-900 dark:text-white">
+                      Email
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">
+                      consulting@nomanuai.com
                     </div>
                   </div>
                 </div>
@@ -226,9 +228,11 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">Phone</div>
-                    <div className="text-sm text-gray-300">
-                      +1 (555) 123-4567
+                    <div className="font-semibold text-gray-900 dark:text-white">
+                      Phone
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">
+                      +63 975 948 3289
                     </div>
                   </div>
                 </div>
@@ -238,8 +242,10 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-brand-orange" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">Location</div>
-                    <div className="text-sm text-gray-300">
+                    <div className="font-semibold text-gray-900 dark:text-white">
+                      Location
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">
                       Serving clients worldwide
                     </div>
                   </div>
@@ -249,26 +255,26 @@ const Contact = () => {
 
             {/* AI Features */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="group text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105">
+              <div className="group text-center bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-sm font-semibold text-white mb-1">
+                <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
                   Fast Response
                 </div>
-                <div className="text-xs text-gray-300">
+                <div className="text-xs text-gray-600 dark:text-gray-300">
                   2-4 hours during business days
                 </div>
               </div>
 
-              <div className="group text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105">
+              <div className="group text-center bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-sm font-semibold text-white mb-1">
+                <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
                   Expert Team
                 </div>
-                <div className="text-xs text-gray-300">
+                <div className="text-xs text-gray-600 dark:text-gray-300">
                   AI specialists & engineers
                 </div>
               </div>
@@ -276,177 +282,183 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10">
+          <div className="group bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10 h-full flex flex-col">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-brand-orange rounded-lg flex items-center justify-center mr-4">
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white group-hover:text-brand-orange transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-brand-orange transition-colors duration-300">
                   Start Your Project
                 </h3>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   Tell us about your automation needs
                 </p>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Name & Email Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+              {/* Form Fields Container */}
+              <div className="flex-1 space-y-4">
+                {/* Name & Email Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                {/* Phone & Company Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      placeholder="Your company"
+                    />
+                  </div>
+                </div>
+
+                {/* Service Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Name *
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Service Type *
                   </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
+                  <select
+                    name="serviceType"
+                    value={formData.serviceType}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
-                    placeholder="Your name"
-                  />
+                    aria-label="Select service type"
+                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
+                  >
+                    <option value="" className="text-gray-400">
+                      Select a service
+                    </option>
+                    {services.map((service) => (
+                      <option
+                        key={service}
+                        value={service}
+                        className="text-gray-900"
+                      >
+                        {service}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
 
-              {/* Phone & Company Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
-                    placeholder="Your company"
-                  />
-                </div>
-              </div>
-
-              {/* Service Type */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Service Type *
-                </label>
-                <select
-                  name="serviceType"
-                  value={formData.serviceType}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
-                >
-                  <option value="" className="text-gray-400">
-                    Select a service
-                  </option>
-                  {services.map((service) => (
-                    <option
-                      key={service}
-                      value={service}
-                      className="text-gray-900"
+                {/* Budget & Timeline Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      aria-label="Select budget range"
+                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
                     >
-                      {service}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Budget & Timeline Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Budget Range
-                  </label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
-                  >
-                    <option value="" className="text-gray-400">
-                      Select budget
-                    </option>
-                    {budgetRanges.map((budget) => (
-                      <option
-                        key={budget}
-                        value={budget}
-                        className="text-gray-900"
-                      >
-                        {budget}
+                      <option value="" className="text-gray-400">
+                        Select budget
                       </option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Timeline
-                  </label>
-                  <select
-                    name="timeline"
-                    value={formData.timeline}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
-                  >
-                    <option value="" className="text-gray-400">
-                      Select timeline
-                    </option>
-                    {timelines.map((timeline) => (
-                      <option
-                        key={timeline}
-                        value={timeline}
-                        className="text-gray-900"
-                      >
-                        {timeline}
+                      {budgetRanges.map((budget) => (
+                        <option
+                          key={budget}
+                          value={budget}
+                          className="text-gray-900"
+                        >
+                          {budget}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Timeline
+                    </label>
+                    <select
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      aria-label="Select timeline"
+                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
+                    >
+                      <option value="" className="text-gray-400">
+                        Select timeline
                       </option>
-                    ))}
-                  </select>
+                      {timelines.map((timeline) => (
+                        <option
+                          key={timeline}
+                          value={timeline}
+                          className="text-gray-900"
+                        >
+                          {timeline}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
-              </div>
 
-              {/* Message */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Project Details *
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={3}
-                  className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 resize-none text-sm text-white placeholder-gray-400"
-                  placeholder="Tell us about your automation needs..."
-                />
+                {/* Message */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Project Details *
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={3}
+                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 resize-none text-sm text-white placeholder-gray-400"
+                    placeholder="Tell us about your automation needs..."
+                  />
+                </div>
               </div>
 
               {/* Submit Button */}

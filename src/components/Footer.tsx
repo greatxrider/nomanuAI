@@ -10,12 +10,17 @@ import {
   Brain,
   Network,
   Sparkles,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 import { useTheme } from "@/lib/theme-context";
 
 const Footer = () => {
   const { theme, mounted } = useTheme();
-  
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -94,19 +99,74 @@ const Footer = () => {
                 <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span className="text-sm">hello@nomanuai.com</span>
+                <span className="text-sm">consulting@nomanuai.com</span>
               </div>
               <div className="flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors group">
                 <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+63 975 948 3289</span>
               </div>
               <div className="flex items-center text-gray-600 dark:text-gray-400">
                 <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span className="text-sm">Serving clients worldwide</span>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="pt-4">
+                <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Network className="w-4 h-4 text-brand-orange mr-2" />
+                  Follow Us
+                </h4>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/company/yourcompany"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://twitter.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
+                    aria-label="Twitter"
+                  >
+                    <Twitter className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://instagram.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://facebook.com/yourpage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -115,7 +175,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Network className="w-5 h-5 text-brand-orange" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">AI Services</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                AI Services
+              </h3>
             </div>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
@@ -136,7 +198,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Sparkles className="w-5 h-5 text-brand-orange animate-pulse" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Company</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                Company
+              </h3>
             </div>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -157,7 +221,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Brain className="w-5 h-5 text-brand-orange animate-pulse animation-delay-200" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Resources</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                Resources
+              </h3>
             </div>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
@@ -183,7 +249,9 @@ const Footer = () => {
             <div className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0 flex items-center">
               <span>© {currentYear} NomanuAI. All rights reserved.</span>
               <div className="ml-3 flex items-center space-x-1">
-                <span className="text-xs text-gray-500 dark:text-gray-500">Powered by</span>
+                <span className="text-xs text-gray-500 dark:text-gray-500">
+                  Powered by
+                </span>
                 <Brain className="w-3 h-3 text-brand-orange animate-pulse" />
                 <span className="text-xs text-brand-orange font-medium">
                   AI

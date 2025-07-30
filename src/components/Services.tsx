@@ -18,34 +18,50 @@ const Services = () => {
     {
       id: 1,
       title: "AI Lead Generation",
-      description: "Automated lead capture and qualification systems that work 24/7",
+      description:
+        "Automated lead capture and qualification systems that work 24/7",
       icon: Zap,
-      features: ["Smart lead scoring", "Multi-channel capture", "Real-time notifications"],
+      features: [
+        "Smart lead scoring",
+        "Multi-channel capture",
+        "Real-time notifications",
+      ],
       gradient: "from-brand-orange to-brand-orange-light",
       glow: "shadow-brand-orange/25",
     },
     {
       id: 2,
       title: "CRM Integration & Automation",
-      description: "Seamless integration with your existing CRM and workflow automation",
+      description:
+        "Seamless integration with your existing CRM and workflow automation",
       icon: Users,
-      features: ["Custom integrations", "Workflow automation", "Data synchronization"],
+      features: [
+        "Custom integrations",
+        "Workflow automation",
+        "Data synchronization",
+      ],
       gradient: "from-brand-orange to-brand-orange-light",
       glow: "shadow-brand-orange/25",
     },
     {
       id: 3,
       title: "Client Onboarding Automation",
-      description: "Streamlined client onboarding processes that reduce manual work",
+      description:
+        "Streamlined client onboarding processes that reduce manual work",
       icon: CheckCircle,
-      features: ["Automated welcome sequences", "Document processing", "Progress tracking"],
+      features: [
+        "Automated welcome sequences",
+        "Document processing",
+        "Progress tracking",
+      ],
       gradient: "from-brand-orange to-brand-orange-light",
       glow: "shadow-brand-orange/25",
     },
     {
       id: 4,
       title: "AI Communication Systems",
-      description: "Intelligent communication platforms that engage customers automatically",
+      description:
+        "Intelligent communication platforms that engage customers automatically",
       icon: MessageCircle,
       features: ["Chatbot integration", "Email automation", "Smart responses"],
       gradient: "from-brand-orange to-brand-orange-light",
@@ -56,7 +72,11 @@ const Services = () => {
       title: "Business Process Optimization",
       description: "Identify and automate repetitive tasks to boost efficiency",
       icon: TrendingUp,
-      features: ["Process analysis", "Automation mapping", "Performance tracking"],
+      features: [
+        "Process analysis",
+        "Automation mapping",
+        "Performance tracking",
+      ],
       gradient: "from-brand-orange to-brand-orange-light",
       glow: "shadow-brand-orange/25",
     },
@@ -149,10 +169,7 @@ const Services = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Our{" "}
-            <span className="text-brand-orange">
-              AI Services
-            </span>
+            Our <span className="text-brand-orange">AI Services</span>
           </h2>
 
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -167,18 +184,14 @@ const Services = () => {
                 Input
               </span>
             </div>
-            <div className="w-5 h-5 text-brand-orange animate-pulse">
-              →
-            </div>
+            <div className="w-5 h-5 text-brand-orange animate-pulse">→</div>
             <div className="flex items-center space-x-2 px-4 py-2 bg-brand-orange/20 rounded-full border border-brand-orange/50 backdrop-blur-sm shadow-lg shadow-brand-orange/20">
               <Sparkles className="w-4 h-4 text-brand-orange animate-pulse" />
               <span className="text-sm text-gray-900 dark:text-white font-medium">
                 AI Processing
               </span>
             </div>
-            <div className="w-5 h-5 text-brand-orange animate-pulse">
-              →
-            </div>
+            <div className="w-5 h-5 text-brand-orange animate-pulse">→</div>
             <div className="flex items-center space-x-2 px-4 py-2 bg-gray-200/50 dark:bg-gray-800/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 backdrop-blur-sm">
               <Zap className="w-4 h-4 text-brand-orange" />
               <span className="text-sm text-gray-700 dark:text-gray-300">
@@ -245,6 +258,326 @@ const Services = () => {
           })}
         </div>
 
+        {/* Tools & Apps Marquee */}
+        <div className="mb-16">
+          {/* Marquee Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
+              <Network className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
+              <span className="text-brand-orange font-semibold">
+                Integration Ecosystem
+              </span>
+              <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Plug AI into your{" "}
+              <span className="text-brand-orange">existing data</span>
+            </h3>
+            <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              We integrate AI automation with your current platforms and
+              workflows
+            </p>
+          </div>
+
+          {/* Marquee Container with Shadow Fade */}
+          <div className="relative overflow-hidden bg-gray-900/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl border border-gray-200/20 dark:border-gray-700/20">
+            {/* Left Shadow Fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900/20 via-gray-900/10 to-transparent dark:from-gray-800/20 dark:via-gray-800/10 z-10 pointer-events-none" />
+
+            {/* Right Shadow Fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900/20 via-gray-900/10 to-transparent dark:from-gray-800/20 dark:via-gray-800/10 z-10 pointer-events-none" />
+
+            {/* Marquee Track */}
+            <div className="flex animate-marquee">
+              {/* First Row */}
+              <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
+                {/* Data Integration & Automation Tools */}
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-brand-orange/20 rounded-lg flex items-center justify-center">
+                    <Brain className="w-4 h-4 text-brand-orange" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-brand-orange transition-colors">
+                    Client Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-blue-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition-colors">
+                    Data APIs
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-4 h-4 text-green-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-green-500 transition-colors">
+                    CRM Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
+                    <Users className="w-4 h-4 text-red-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-red-500 transition-colors">
+                    Sales Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-purple-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-500 transition-colors">
+                    Marketing Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-yellow-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-yellow-500 transition-colors">
+                    Analytics Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center">
+                    <Shield className="w-4 h-4 text-indigo-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-indigo-500 transition-colors">
+                    Cloud Storage
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center">
+                    <Cpu className="w-4 h-4 text-teal-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-teal-500 transition-colors">
+                    Database
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-pink-500/20 rounded-lg flex items-center justify-center">
+                    <Network className="w-4 h-4 text-pink-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-500 transition-colors">
+                    Webhooks
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Sparkles className="w-4 h-4 text-orange-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-500 transition-colors">
+                    AI Models
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <Brain className="w-4 h-4 text-cyan-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-cyan-500 transition-colors">
+                    Automation
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-emerald-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-emerald-500 transition-colors">
+                    Workflows
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-violet-500/20 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-4 h-4 text-violet-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-violet-500 transition-colors">
+                    Real-time
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-rose-500/20 rounded-lg flex items-center justify-center">
+                    <Users className="w-4 h-4 text-rose-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-rose-500 transition-colors">
+                    Integration
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-sky-500/20 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-sky-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-sky-500 transition-colors">
+                    Results
+                  </span>
+                </div>
+              </div>
+
+              {/* Duplicate for seamless loop */}
+              <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
+                {/* Data Integration & Automation Tools */}
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-brand-orange/20 rounded-lg flex items-center justify-center">
+                    <Brain className="w-4 h-4 text-brand-orange" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-brand-orange transition-colors">
+                    Client Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-blue-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition-colors">
+                    Data APIs
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-4 h-4 text-green-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-green-500 transition-colors">
+                    CRM Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
+                    <Users className="w-4 h-4 text-red-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-red-500 transition-colors">
+                    Sales Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-purple-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-500 transition-colors">
+                    Marketing Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-yellow-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-yellow-500 transition-colors">
+                    Analytics Data
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center">
+                    <Shield className="w-4 h-4 text-indigo-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-indigo-500 transition-colors">
+                    Cloud Storage
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center">
+                    <Cpu className="w-4 h-4 text-teal-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-teal-500 transition-colors">
+                    Database
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-pink-500/20 rounded-lg flex items-center justify-center">
+                    <Network className="w-4 h-4 text-pink-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-500 transition-colors">
+                    Webhooks
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Sparkles className="w-4 h-4 text-orange-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-500 transition-colors">
+                    AI Models
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <Brain className="w-4 h-4 text-cyan-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-cyan-500 transition-colors">
+                    Automation
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-emerald-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-emerald-500 transition-colors">
+                    Workflows
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-violet-500/20 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-4 h-4 text-violet-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-violet-500 transition-colors">
+                    Real-time
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-rose-500/20 rounded-lg flex items-center justify-center">
+                    <Users className="w-4 h-4 text-rose-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-rose-500 transition-colors">
+                    Integration
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <div className="w-8 h-8 bg-sky-500/20 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-sky-500" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-sky-500 transition-colors">
+                    Results
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Browse All Integrations Button */}
+          <div className="text-center mt-8">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+              <Network className="w-4 h-4" />
+              <span>Start Data Integration</span>
+            </button>
+          </div>
+        </div>
+
         {/* AI-Inspired CTA */}
         <div className="text-center">
           <div className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 overflow-hidden">
@@ -261,11 +594,7 @@ const Services = () => {
               </div>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Ready to{" "}
-                <span className="text-brand-orange">
-                  Automate
-                </span>
-                ?
+                Ready to <span className="text-brand-orange">Automate</span>?
               </h3>
 
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-md mx-auto">

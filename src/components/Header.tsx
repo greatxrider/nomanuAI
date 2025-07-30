@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Github } from "lucide-react";
 import { useTheme } from "@/lib/theme-context";
 
 const Header = () => {
@@ -105,8 +105,28 @@ const Header = () => {
             {/* Theme Toggle - Desktop */}
             <ThemeToggle />
 
-            <Link 
-              href="#contact" 
+            {/* GitHub Projects Link */}
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-2 rounded-lg transition-all duration-300 focus-ring group ${
+                isScrolled
+                  ? theme === "dark"
+                    ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
+                    : "hover:bg-gray-200 text-gray-700 hover:text-brand-orange"
+                  : theme === "dark"
+                  ? "hover:bg-gray-800 text-white hover:text-brand-orange"
+                  : "hover:bg-gray-200 text-gray-800 hover:text-brand-orange"
+              }`}
+              aria-label="View our automation projects on GitHub"
+              title="View our automation projects on GitHub"
+            >
+              <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+            </a>
+
+            <Link
+              href="#contact"
               className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm"
             >
               Get Started
@@ -169,7 +189,17 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-4 pt-4">
+              <div className="px-4 pt-4 space-y-3">
+                <a
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-center w-full py-3 px-6 rounded-lg transition-all duration-300 text-center border border-gray-300 dark:border-gray-600 hover:border-brand-orange hover:text-brand-orange"
+                >
+                  <Github className="w-5 h-5 mr-2" />
+                  <span className="font-medium">View Projects</span>
+                </a>
                 <Link
                   href="#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
