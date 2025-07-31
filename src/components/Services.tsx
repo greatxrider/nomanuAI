@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Zap,
   Users,
@@ -279,7 +280,7 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Marquee Container with Shadow Fade */}
+          {/* First Marquee - Left Direction */}
           <div className="relative overflow-hidden bg-gray-900/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl border border-gray-200/20 dark:border-gray-700/20">
             {/* Left Shadow Fade */}
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900/20 via-gray-900/10 to-transparent dark:from-gray-800/20 dark:via-gray-800/10 z-10 pointer-events-none" />
@@ -287,322 +288,736 @@ const Services = () => {
             {/* Right Shadow Fade */}
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900/20 via-gray-900/10 to-transparent dark:from-gray-800/20 dark:via-gray-800/10 z-10 pointer-events-none" />
 
-            {/* Marquee Track */}
+            {/* Marquee Track - Left Direction */}
             <div className="flex animate-marquee">
               {/* First Row */}
               <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
-                {/* Data Integration & Automation Tools */}
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-brand-orange/20 rounded-lg flex items-center justify-center">
-                    <Brain className="w-4 h-4 text-brand-orange" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-brand-orange transition-colors">
-                    Client Data
-                  </span>
+                {/* App Logos */}
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0f6a_asana_svg_55712e4bc0.svg"
+                    alt="Asana"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-blue-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition-colors">
-                    Data APIs
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0fc4_airtable_svg_3260e9a572.svg"
+                    alt="Airtable"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-4 h-4 text-green-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-green-500 transition-colors">
-                    CRM Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68fbe0cbedc9ca2ddb3_mailchimp_svg_574c2a4641.svg"
+                    alt="Mailchimp"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
-                    <Users className="w-4 h-4 text-red-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-red-500 transition-colors">
-                    Sales Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729fbb7d09521916b34_microsoft_Outlook_svg_baf4ee4ddf.svg"
+                    alt="Microsoft Outlook"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-purple-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-500 transition-colors">
-                    Marketing Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ccbfc12ceb1fe6ae68_active_Campaign_svg_35c109a2eb.svg"
+                    alt="ActiveCampaign"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-4 h-4 text-yellow-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-yellow-500 transition-colors">
-                    Analytics Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd19ed90bc689462b3_autopilot_svg_b9a6db3526.svg"
+                    alt="Autopilot"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-indigo-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-indigo-500 transition-colors">
-                    Cloud Storage
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ce9b227a3194696e89_automizy_png_6c4c2ae7c0.svg"
+                    alt="Automizy"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center">
-                    <Cpu className="w-4 h-4 text-teal-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-teal-500 transition-colors">
-                    Database
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc8fbc5fb41664b4ba_aggregate_svg_920d36c8b1.svg"
+                    alt="Aggregate"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-pink-500/20 rounded-lg flex items-center justify-center">
-                    <Network className="w-4 h-4 text-pink-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-500 transition-colors">
-                    Webhooks
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc51d72b9903df9fde_amqp_svg_ebc4c3b32a.svg"
+                    alt="AMQP"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                    <Sparkles className="w-4 h-4 text-orange-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-500 transition-colors">
-                    AI Models
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7710ca11e9ff79c3_affinity_svg_bfb77106bf.svg"
+                    alt="Affinity"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                    <Brain className="w-4 h-4 text-cyan-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-cyan-500 transition-colors">
-                    Automation
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdc905e0766217414a_ai_Transform_svg_295de265a2.svg"
+                    alt="AI Transform"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-emerald-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-emerald-500 transition-colors">
-                    Workflows
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68f9befbce885cd4c83_marketstack_svg_a3eb7798e5.svg"
+                    alt="Marketstack"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-violet-500/20 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-4 h-4 text-violet-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-violet-500 transition-colors">
-                    Real-time
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd45de65d9d01bbec5_agile_Crm_png_ab0a6823a4.svg"
+                    alt="Agile CRM"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-rose-500/20 rounded-lg flex items-center justify-center">
-                    <Users className="w-4 h-4 text-rose-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-rose-500 transition-colors">
-                    Integration
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729644e57ad4c4882db_d3bf3a_svg_679a3f62f0.svg"
+                    alt="Database"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-sky-500/20 rounded-lg flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-sky-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-sky-500 transition-colors">
-                    Results
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729c77b48f5c03da73d_Group_2_58ad425d58.svg"
+                    alt="Integration"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7d05b082d9860095_Img_1_0efa51a03c.svg"
+                    alt="API"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
               </div>
 
               {/* Duplicate for seamless loop */}
               <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
-                {/* Data Integration & Automation Tools */}
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-brand-orange/20 rounded-lg flex items-center justify-center">
-                    <Brain className="w-4 h-4 text-brand-orange" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-brand-orange transition-colors">
-                    Client Data
-                  </span>
+                {/* App Logos - Duplicate Set */}
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0f6a_asana_svg_55712e4bc0.svg"
+                    alt="Asana"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-blue-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition-colors">
-                    Data APIs
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0fc4_airtable_svg_3260e9a572.svg"
+                    alt="Airtable"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-4 h-4 text-green-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-green-500 transition-colors">
-                    CRM Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68fbe0cbedc9ca2ddb3_mailchimp_svg_574c2a4641.svg"
+                    alt="Mailchimp"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
-                    <Users className="w-4 h-4 text-red-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-red-500 transition-colors">
-                    Sales Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729fbb7d09521916b34_microsoft_Outlook_svg_baf4ee4ddf.svg"
+                    alt="Microsoft Outlook"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-purple-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-500 transition-colors">
-                    Marketing Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ccbfc12ceb1fe6ae68_active_Campaign_svg_35c109a2eb.svg"
+                    alt="ActiveCampaign"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-4 h-4 text-yellow-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-yellow-500 transition-colors">
-                    Analytics Data
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd19ed90bc689462b3_autopilot_svg_b9a6db3526.svg"
+                    alt="Autopilot"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-indigo-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-indigo-500 transition-colors">
-                    Cloud Storage
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ce9b227a3194696e89_automizy_png_6c4c2ae7c0.svg"
+                    alt="Automizy"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center">
-                    <Cpu className="w-4 h-4 text-teal-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-teal-500 transition-colors">
-                    Database
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc8fbc5fb41664b4ba_aggregate_svg_920d36c8b1.svg"
+                    alt="Aggregate"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-pink-500/20 rounded-lg flex items-center justify-center">
-                    <Network className="w-4 h-4 text-pink-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-500 transition-colors">
-                    Webhooks
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc51d72b9903df9fde_amqp_svg_ebc4c3b32a.svg"
+                    alt="AMQP"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                    <Sparkles className="w-4 h-4 text-orange-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-500 transition-colors">
-                    AI Models
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7710ca11e9ff79c3_affinity_svg_bfb77106bf.svg"
+                    alt="Affinity"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                    <Brain className="w-4 h-4 text-cyan-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-cyan-500 transition-colors">
-                    Automation
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdc905e0766217414a_ai_Transform_svg_295de265a2.svg"
+                    alt="AI Transform"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-emerald-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-emerald-500 transition-colors">
-                    Workflows
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68f9befbce885cd4c83_marketstack_svg_a3eb7798e5.svg"
+                    alt="Marketstack"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Third duplicate for seamless infinite loop */}
+              <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
+                {/* App Logos - Third Duplicate Set */}
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0f6a_asana_svg_55712e4bc0.svg"
+                    alt="Asana"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-violet-500/20 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-4 h-4 text-violet-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-violet-500 transition-colors">
-                    Real-time
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0fc4_airtable_svg_3260e9a572.svg"
+                    alt="Airtable"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-rose-500/20 rounded-lg flex items-center justify-center">
-                    <Users className="w-4 h-4 text-rose-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-rose-500 transition-colors">
-                    Integration
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68fbe0cbedc9ca2ddb3_mailchimp_svg_574c2a4641.svg"
+                    alt="Mailchimp"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="flex items-center space-x-3 px-4 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
-                  <div className="w-8 h-8 bg-sky-500/20 rounded-lg flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-sky-500" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-sky-500 transition-colors">
-                    Results
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729fbb7d09521916b34_microsoft_Outlook_svg_baf4ee4ddf.svg"
+                    alt="Microsoft Outlook"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ccbfc12ceb1fe6ae68_active_Campaign_svg_35c109a2eb.svg"
+                    alt="ActiveCampaign"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd19ed90bc689462b3_autopilot_svg_b9a6db3526.svg"
+                    alt="Autopilot"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ce9b227a3194696e89_automizy_png_6c4c2ae7c0.svg"
+                    alt="Automizy"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc8fbc5fb41664b4ba_aggregate_svg_920d36c8b1.svg"
+                    alt="Aggregate"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc51d72b9903df9fde_amqp_svg_ebc4c3b32a.svg"
+                    alt="AMQP"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7710ca11e9ff79c3_affinity_svg_bfb77106bf.svg"
+                    alt="Affinity"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdc905e0766217414a_ai_Transform_svg_295de265a2.svg"
+                    alt="AI Transform"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68f9befbce885cd4c83_marketstack_svg_a3eb7798e5.svg"
+                    alt="Marketstack"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd45de65d9d01bbec5_agile_Crm_png_ab0a6823a4.svg"
+                    alt="Agile CRM"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729644e57ad4c4882db_d3bf3a_svg_679a3f62f0.svg"
+                    alt="Database"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729c77b48f5c03da73d_Group_2_58ad425d58.svg"
+                    alt="Integration"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7d05b082d9860095_Img_1_0efa51a03c.svg"
+                    alt="API"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Browse All Integrations Button */}
-          <div className="text-center mt-8">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
-              <Network className="w-4 h-4" />
-              <span>Start Data Integration</span>
-            </button>
-          </div>
-        </div>
+          {/* Second Marquee - Right Direction */}
+          <div className="relative overflow-hidden bg-gray-900/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl border border-gray-200/20 dark:border-gray-700/20 mt-8">
+            {/* Left Shadow Fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900/20 via-gray-900/10 to-transparent dark:from-gray-800/20 dark:via-gray-800/10 z-10 pointer-events-none" />
 
-        {/* AI-Inspired CTA */}
-        <div className="text-center">
-          <div className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 overflow-hidden">
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
+            {/* Right Shadow Fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900/20 via-gray-900/10 to-transparent dark:from-gray-800/20 dark:via-gray-800/10 z-10 pointer-events-none" />
 
-            {/* Floating AI Elements */}
-            <div className="absolute top-4 right-4 w-3 h-3 bg-brand-orange/30 rounded-full animate-pulse" />
-            <div className="absolute bottom-4 left-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse animation-delay-300" />
+            {/* Marquee Track - Right Direction */}
+            <div className="flex animate-marquee-reverse">
+              {/* First Row */}
+              <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
+                {/* App Logos */}
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0f6a_asana_svg_55712e4bc0.svg"
+                    alt="Asana"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
 
-            <div className="relative z-10">
-              <div className="w-20 h-20 bg-brand-orange/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/20">
-                <Brain className="w-10 h-10 text-brand-orange animate-pulse" />
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0fc4_airtable_svg_3260e9a572.svg"
+                    alt="Airtable"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68fbe0cbedc9ca2ddb3_mailchimp_svg_574c2a4641.svg"
+                    alt="Mailchimp"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729fbb7d09521916b34_microsoft_Outlook_svg_baf4ee4ddf.svg"
+                    alt="Microsoft Outlook"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ccbfc12ceb1fe6ae68_active_Campaign_svg_35c109a2eb.svg"
+                    alt="ActiveCampaign"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd19ed90bc689462b3_autopilot_svg_b9a6db3526.svg"
+                    alt="Autopilot"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ce9b227a3194696e89_automizy_png_6c4c2ae7c0.svg"
+                    alt="Automizy"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc8fbc5fb41664b4ba_aggregate_svg_920d36c8b1.svg"
+                    alt="Aggregate"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc51d72b9903df9fde_amqp_svg_ebc4c3b32a.svg"
+                    alt="AMQP"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7710ca11e9ff79c3_affinity_svg_bfb77106bf.svg"
+                    alt="Affinity"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdc905e0766217414a_ai_Transform_svg_295de265a2.svg"
+                    alt="AI Transform"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68f9befbce885cd4c83_marketstack_svg_a3eb7798e5.svg"
+                    alt="Marketstack"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Ready to <span className="text-brand-orange">Automate</span>?
-              </h3>
+              {/* Duplicate for seamless loop */}
+              <div className="flex items-center space-x-6 py-8 px-8 min-w-max">
+                {/* App Logos - Duplicate Set */}
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0f6a_asana_svg_55712e4bc0.svg"
+                    alt="Asana"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
 
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-md mx-auto">
-                Let's design a custom AI automation strategy for your business.
-              </p>
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdeb6560b7c1ec0fc4_airtable_svg_3260e9a572.svg"
+                    alt="Airtable"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
 
-              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 text-sm inline-block">
-                Get Started Today
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68fbe0cbedc9ca2ddb3_mailchimp_svg_574c2a4641.svg"
+                    alt="Mailchimp"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66e3d729fbb7d09521916b34_microsoft_Outlook_svg_baf4ee4ddf.svg"
+                    alt="Microsoft Outlook"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ccbfc12ceb1fe6ae68_active_Campaign_svg_35c109a2eb.svg"
+                    alt="ActiveCampaign"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cd19ed90bc689462b3_autopilot_svg_b9a6db3526.svg"
+                    alt="Autopilot"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7ce9b227a3194696e89_automizy_png_6c4c2ae7c0.svg"
+                    alt="Automizy"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc8fbc5fb41664b4ba_aggregate_svg_920d36c8b1.svg"
+                    alt="Aggregate"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc51d72b9903df9fde_amqp_svg_ebc4c3b32a.svg"
+                    alt="AMQP"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cc7710ca11e9ff79c3_affinity_svg_bfb77106bf.svg"
+                    alt="Affinity"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f4d7cdc905e0766217414a_ai_Transform_svg_295de265a2.svg"
+                    alt="AI Transform"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 group shadow-sm">
+                  <Image
+                    src="/appLogos/66f6a68f9befbce885cd4c83_marketstack_svg_a3eb7798e5.svg"
+                    alt="Marketstack"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Integration Buttons */}
+          <div className="text-center mt-8">
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-[#00AB8E] hover:bg-[#00997A] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#00AB8E] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+                <Network className="w-4 h-4" />
+                <span>n8n Integrations</span>
+              </button>
+              <button className="bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+                <Network className="w-4 h-4" />
+                <span>Make Integrations</span>
+              </button>
+              <button className="bg-[#FF4A00] hover:bg-[#E64200] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#FF4A00] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+                <Network className="w-4 h-4" />
+                <span>Zapier Integrations</span>
               </button>
             </div>
           </div>

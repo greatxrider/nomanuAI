@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import TeamCarousel from "./TeamCarousel";
 import {
   Cpu,
   Users2,
@@ -19,9 +21,21 @@ const About = () => {
   ];
 
   const team = [
-    { title: "AI Specialists", icon: Brain, description: "Expert in machine learning and AI algorithms" },
-    { title: "Software Engineers", icon: Cpu, description: "Building robust automation systems" },
-    { title: "AI Professionals", icon: CircuitBoard, description: "Creating intelligent business solutions" },
+    {
+      title: "AI Specialists",
+      icon: Brain,
+      description: "Expert in machine learning and AI algorithms",
+    },
+    {
+      title: "Software Engineers",
+      icon: Cpu,
+      description: "Building robust automation systems",
+    },
+    {
+      title: "AI Professionals",
+      icon: CircuitBoard,
+      description: "Creating intelligent business solutions",
+    },
   ];
 
   return (
@@ -94,7 +108,9 @@ const About = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
             <Brain className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
-            <span className="text-brand-orange font-semibold">Meet Our Team</span>
+            <span className="text-brand-orange font-semibold">
+              Meet Our Team
+            </span>
             <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
           </div>
 
@@ -103,8 +119,9 @@ const About = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We are a team of Filipino developers, AI specialists, and software engineers 
-            working together to deliver intelligent automation solutions that transform businesses.
+            We are a team of Filipino developers, AI specialists, and software
+            engineers working together to deliver intelligent automation
+            solutions that transform businesses.
           </p>
         </div>
 
@@ -122,7 +139,7 @@ const About = () => {
                 >
                   {/* AI Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
+
                   <div className="relative z-10 text-center">
                     <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
                       <stat.icon className="w-6 h-6 text-white" />
@@ -139,8 +156,14 @@ const About = () => {
                   {/* Floating AI Particles */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-                    <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-                    <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
+                    <div
+                      className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse"
+                      style={{ animationDelay: "1s" }}
+                    />
+                    <div
+                      className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse"
+                      style={{ animationDelay: "2s" }}
+                    />
                   </div>
                 </div>
               ))}
@@ -181,9 +204,18 @@ const About = () => {
             <div className="group relative bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-800/90 dark:to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 overflow-hidden">
               {/* Neural Network Pattern */}
               <div className="absolute inset-0 opacity-20">
-                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  className="w-full h-full"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <defs>
-                    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="neuralGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#E56518" />
                       <stop offset="100%" stopColor="#E56518" />
                     </linearGradient>
@@ -191,8 +223,18 @@ const About = () => {
                   <circle cx="100" cy="100" r="3" fill="url(#neuralGradient)" />
                   <circle cx="200" cy="150" r="3" fill="url(#neuralGradient)" />
                   <circle cx="300" cy="100" r="3" fill="url(#neuralGradient)" />
-                  <path d="M100,100 L200,150 L300,100" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
-                  <path d="M250,50 L250,150 L250,250" stroke="url(#neuralGradient)" strokeWidth="1" fill="none" />
+                  <path
+                    d="M100,100 L200,150 L300,100"
+                    stroke="url(#neuralGradient)"
+                    strokeWidth="1"
+                    fill="none"
+                  />
+                  <path
+                    d="M250,50 L250,150 L250,250"
+                    stroke="url(#neuralGradient)"
+                    strokeWidth="1"
+                    fill="none"
+                  />
                 </svg>
               </div>
 
@@ -235,11 +277,33 @@ const About = () => {
               {/* Floating AI Particles */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-                <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-                <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
+                <div
+                  className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                />
+                <div
+                  className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse"
+                  style={{ animationDelay: "2s" }}
+                />
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Team Members Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Meet the <span className="text-brand-orange">NomanuAI</span> Team
+            </h3>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our talented team of Filipino developers, AI specialists, and
+              automation experts working together to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <TeamCarousel />
         </div>
 
         {/* Bottom CTA */}

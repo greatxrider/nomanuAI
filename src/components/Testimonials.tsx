@@ -80,7 +80,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="relative section-padding bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 overflow-hidden"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden"
     >
       {/* AI Background Effects */}
       <div className="absolute inset-0 opacity-20">
@@ -100,7 +100,7 @@ const Testimonials = () => {
               Client Success Stories
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Real Stories.{" "}
             <span className="text-brand-orange">Real Impact.</span>
           </h2>

@@ -16,7 +16,6 @@ import Image from "next/image";
 
 const Hero = () => {
   const [currentHeadline, setCurrentHeadline] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const headlines = [
     "Automate Manual Work",
@@ -176,7 +175,12 @@ const Hero = () => {
               </Link>
 
               <button
-                onClick={() => setIsPlaying(!isPlaying)}
+                onClick={() => {
+                  const projectsSection = document.getElementById("projects");
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="group border-2 border-brand-orange/30 bg-brand-orange/5 hover:bg-brand-orange/10 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-sm flex items-center justify-center"
               >
                 Sample Projects
