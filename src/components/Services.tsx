@@ -1007,11 +1007,11 @@ const Services = () => {
           {/* Integration Buttons */}
           <div className="text-center mt-8">
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-[#00AB8E] hover:bg-[#00997A] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#00AB8E] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+              <button className="bg-[#FF6B6B] hover:bg-[#FF5252] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
                 <Network className="w-4 h-4" />
                 <span>n8n Integrations</span>
               </button>
-              <button className="bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+              <button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
                 <Network className="w-4 h-4" />
                 <span>Make Integrations</span>
               </button>
