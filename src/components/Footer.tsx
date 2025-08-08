@@ -122,7 +122,7 @@ const Footer = () => {
                 </h4>
                 <div className="flex space-x-3">
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/nomanuai"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
@@ -131,7 +131,7 @@ const Footer = () => {
                     <Github className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://linkedin.com/company/yourcompany"
+                    href="https://www.linkedin.com/company/107854474/admin/dashboard/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
@@ -140,16 +140,16 @@ const Footer = () => {
                     <Linkedin className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://twitter.com/yourusername"
+                    href="https://x.com/nomanuai98"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
-                    aria-label="Twitter"
+                    aria-label="X"
                   >
                     <Twitter className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://instagram.com/yourusername"
+                    href="https://www.instagram.com/nomanuai/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
@@ -158,7 +158,7 @@ const Footer = () => {
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://facebook.com/yourpage"
+                    href="https://www.facebook.com/people/NomanuAi/61578373473028/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"

@@ -107,7 +107,7 @@ const Header = () => {
 
             {/* GitHub Projects Link */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/nomanuai"
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2 rounded-lg transition-all duration-300 focus-ring group ${
