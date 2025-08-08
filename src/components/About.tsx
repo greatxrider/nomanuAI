@@ -16,8 +16,8 @@ import {
 const About = () => {
   const stats = [
     { label: "Automation Projects", value: "50+", icon: Zap },
-    { label: "Happy Clients", value: "20+", icon: Users2 },
-    { label: "AI Solutions Deployed", value: "50+", icon: Lightbulb },
+    { label: "Happy Clients", value: "5+", icon: Users2 },
+    { label: "AI Solutions Solved", value: "50+", icon: Lightbulb },
   ];
 
   const team = [
@@ -29,10 +29,10 @@ const About = () => {
     {
       title: "Software Engineers",
       icon: Cpu,
-      description: "Building robust automation systems",
+      description: "Building robust Web and Software",
     },
     {
-      title: "AI Professionals",
+      title: "Automation Specialists",
       icon: CircuitBoard,
       description: "Creating intelligent business solutions",
     },

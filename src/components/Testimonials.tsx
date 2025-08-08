@@ -12,7 +12,7 @@ import {
 const testimonials = [
   {
     id: 1,
-    avatar: "/path/to/avatar1.jpg",
+    avatar: "https://i.pravatar.cc/150?img=12",
     content:
       "NomanuAI made automation easy and effective for our business. The team delivered exactly what we needed.",
     name: "Michael",
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     id: 2,
-    avatar: "/path/to/avatar2.jpg",
+    avatar: "https://i.pravatar.cc/150?img=47",
     content:
       "Their AI solutions are top-notch and the team is very responsive. Highly recommended!",
     name: "Diane",
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     id: 3,
-    avatar: "/path/to/avatar3.jpg",
+    avatar: "https://i.pravatar.cc/150?img=32",
     content:
       "We saw real results in just weeks. The automation has transformed our workflow completely.",
     name: "Allison",
@@ -39,11 +39,47 @@ const testimonials = [
   },
   {
     id: 4,
-    avatar: "/path/to/avatar4.jpg",
+    avatar: "https://i.pravatar.cc/150?img=67",
     content:
       "Exceptional service and results. Our productivity increased by 300% after implementation.",
     name: "Robert",
     company: "Tech Solutions Inc",
+    rating: 5,
+  },
+  {
+    id: 5,
+    avatar: "/testimonialsPicture/derick-photo.jpg",
+    content:
+      "NomanuAI transformed our manual processes into efficient automated workflows. The results exceeded our expectations.",
+    name: "Derick",
+    company: "MetaWatt",
+    rating: 5,
+  },
+  {
+    id: 6,
+    avatar: "/testimonialsPicture/raymond-photo.jpg",
+    content:
+      "Outstanding automation solutions that streamlined our operations. The team's expertise is unmatched.",
+    name: "Raymond",
+    company: "BuiltFromLove",
+    rating: 5,
+  },
+  {
+    id: 7,
+    avatar: "/testimonialsPicture/yvonne-photo.jpg",
+    content:
+      "Professional, reliable, and results-driven. NomanuAI delivered automation that truly made a difference.",
+    name: "Yvonne",
+    company: "Haivyne",
+    rating: 5,
+  },
+  {
+    id: 8,
+    avatar: "/testimonialsPicture/paul-photo.jpg",
+    content:
+      "Exceptional quality and service. The automation solutions have significantly improved our efficiency.",
+    name: "Paul",
+    company: "Nyxpro",
     rating: 5,
   },
 ];
@@ -128,7 +164,7 @@ const Testimonials = () => {
                 enterprises, we deliver consistent value and measurable impact.
               </p>
               <div className="flex items-center space-x-4">
-                <div className="text-3xl font-bold text-brand-orange">20+</div>
+                <div className="text-3xl font-bold text-brand-orange">5+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
                   Happy Clients
                   <br />
@@ -141,7 +177,7 @@ const Testimonials = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl font-bold text-brand-orange mb-2">
-                  2-4 Weeks
+                  3-5 Weeks
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
                   Average Implementation

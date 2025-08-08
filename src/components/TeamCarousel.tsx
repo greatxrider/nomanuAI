@@ -42,9 +42,12 @@ const TeamCarousel = () => {
       school: "Mindanao State University - Iligan Institute of Technology",
       experience: "4+ years in software, web, and AI automation",
       roles: ["Co-Founder & former CTO of Nyxpro (IT Services BPO)"],
+      location: "Philippines",
       certifications: [
         "Nucamp Full-Stack Coding Bootcamp",
         "IBM DevOps & Software Engineering – Certified Professional",
+        "Treehouse Full Stack JavaScript",
+        "Treehouse Python Developer Bootcamp",
       ],
     },
     {
@@ -55,6 +58,7 @@ const TeamCarousel = () => {
       languages: ["JavaScript", "TypeScript", "Python"],
       degree: "Kodego Bootcamp Graduate",
       experience: "1 year of experience in Automation",
+      location: "Philippines",
     },
     {
       id: 3,
@@ -64,7 +68,8 @@ const TeamCarousel = () => {
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
       school: "Mindanao State University - Iligan Institute of Technology",
-      experience: "1 year as Developer",
+      experience: "1 year of experience in Automation",
+      location: "Philippines",
     },
     {
       id: 4,
@@ -74,7 +79,8 @@ const TeamCarousel = () => {
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
       school: "Mindanao State University - Iligan Institute of Technology",
-      experience: "1 year as Developer",
+      experience: "1 year of experience in Automation",
+      location: "Philippines",
     },
     {
       id: 5,
@@ -84,7 +90,8 @@ const TeamCarousel = () => {
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
       school: "Mindanao State University - Iligan Institute of Technology",
-      experience: "1 year as Developer",
+      experience: "1 year of experience in Automation",
+      location: "Philippines",
     },
     {
       id: 6,
@@ -94,7 +101,8 @@ const TeamCarousel = () => {
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
       school: "Mindanao State University - Iligan Institute of Technology",
-      experience: "2+ years as Developer",
+      experience: "2 years of experience in Automation",
+      location: "Philippines",
     },
     {
       id: 7,
@@ -104,7 +112,7 @@ const TeamCarousel = () => {
       languages: ["JavaScript", "Python", "TypeScript"],
       degree: "Electronics and Communications Engineering",
       location: "Kilakarai",
-      experience: "1 year of experience in Automation specialist",
+      experience: "1 year of experience in Automation",
     },
   ];
 
@@ -224,7 +232,7 @@ const TeamCarousel = () => {
                   </p>
                   {currentMember.school && (
                     <p className="text-gray-700 dark:text-gray-300">
-                      <span className="font-semibold">School:</span>{" "}
+                      <span className="font-semibold">University:</span>{" "}
                       {currentMember.school}
                     </p>
                   )}

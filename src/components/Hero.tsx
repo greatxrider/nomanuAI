@@ -143,7 +143,7 @@ const Hero = () => {
             <div className="inline-flex items-center px-4 py-2 mb-8 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm">
               <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
               <span className="text-sm font-medium text-brand-orange">
-                Trusted by 50+ Businesses
+                From manual to automated.
               </span>
             </div>
 

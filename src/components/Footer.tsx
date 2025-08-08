@@ -37,7 +37,7 @@ const Footer = () => {
     company: [
       { name: "About Us", href: "#about" },
       { name: "Our Team", href: "#about" },
-      { name: "Careers", href: "#contact" },
+      { name: "Careers", href: "/careers" },
       { name: "Contact", href: "#contact" },
     ],
     resources: [
@@ -46,7 +46,7 @@ const Footer = () => {
       { name: "Documentation", href: "#" },
       { name: "Support", href: "#contact" },
     ],
-  };
+  } as const;
 
   return (
     <footer className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">

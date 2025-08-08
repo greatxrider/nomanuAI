@@ -7,88 +7,182 @@ import {
   CheckCircle,
   MessageCircle,
   TrendingUp,
-  Shield,
   Sparkles,
   Cpu,
   Brain,
   Network,
+  Star,
+  FileText,
 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: "AI Lead Generation",
+      title: "Lead Generation & Qualification Automation",
       description:
-        "Automated lead capture and qualification systems that work 24/7",
+        "Automatically capture, enrich, and qualify leads — then alert sales instantly.",
       icon: Zap,
       features: [
-        "Smart lead scoring",
-        "Multi-channel capture",
-        "Real-time notifications",
+        "Scrape, collect, and enrich leads via Apify, Clay, or Apollo",
+        "Connect lead forms (Facebook Ads, website) to CRMs like GHL or HubSpot",
+        "Auto-qualify using AI/scoring and notify sales in real time",
       ],
-      gradient: "from-brand-orange to-brand-orange-light",
-      glow: "shadow-brand-orange/25",
+      idealFor: [
+        "Real Estate Agents",
+        "SaaS Sales Teams",
+        "Digital Agencies",
+        "Mortgage Brokers",
+        "Coaches",
+      ],
     },
     {
       id: 2,
-      title: "CRM Integration & Automation",
+      title: "CRM & Pipeline Automation",
       description:
-        "Seamless integration with your existing CRM and workflow automation",
+        "Create and update contacts, deals, and tasks automatically across your CRM stack.",
       icon: Users,
       features: [
-        "Custom integrations",
-        "Workflow automation",
-        "Data synchronization",
+        "Auto-create contacts, deals, tasks in HubSpot, GoHighLevel, ClickUp",
+        "Trigger reminders, follow-ups, and status updates by stage/behavior",
+        "Sync Calendly, Zoom, email, and CRM in one flow",
       ],
-      gradient: "from-brand-orange to-brand-orange-light",
-      glow: "shadow-brand-orange/25",
+      idealFor: [
+        "Real Estate",
+        "Sales Teams",
+        "Insurance Agencies",
+        "Coaches",
+        "Franchise Operations",
+      ],
     },
     {
       id: 3,
-      title: "Client Onboarding Automation",
+      title: "Client Onboarding Workflows",
       description:
-        "Streamlined client onboarding processes that reduce manual work",
+        "From intake to welcome — automate emails, calendar setup, and document signing.",
       icon: CheckCircle,
       features: [
-        "Automated welcome sequences",
-        "Document processing",
-        "Progress tracking",
+        "Automate onboarding: intake → welcome email → scheduling → e-sign",
+        "Auto-populate Airtable/ClickUp with client info",
+        "Assign internal tasks automatically",
       ],
-      gradient: "from-brand-orange to-brand-orange-light",
-      glow: "shadow-brand-orange/25",
+      idealFor: [
+        "Agencies",
+        "Service Businesses",
+        "Real Estate Firms",
+        "E-commerce Brands",
+      ],
     },
     {
       id: 4,
-      title: "AI Communication Systems",
+      title: "Proposal, Quote, or Report Generation",
       description:
-        "Intelligent communication platforms that engage customers automatically",
-      icon: MessageCircle,
-      features: ["Chatbot integration", "Email automation", "Smart responses"],
-      gradient: "from-brand-orange to-brand-orange-light",
-      glow: "shadow-brand-orange/25",
+        "Generate personalized proposals/reports from your CRM or Airtable data.",
+      icon: FileText,
+      features: [
+        "Auto-generate docs via Documint or Google Docs",
+        "Use CRM/Airtable data to build tailored outputs",
+        "Email or send PDFs to clients automatically",
+      ],
+      idealFor: [
+        "Real Estate",
+        "Marketing Agencies",
+        "Mortgage Brokers",
+        "B2B Sales",
+        "SEO Agencies",
+      ],
     },
     {
       id: 5,
-      title: "Business Process Optimization",
-      description: "Identify and automate repetitive tasks to boost efficiency",
-      icon: TrendingUp,
+      title: "Content Repurposing & Social Posting Automation",
+      description:
+        "Turn inputs into on-brand content and schedule across social platforms.",
+      icon: Sparkles,
       features: [
-        "Process analysis",
-        "Automation mapping",
-        "Performance tracking",
+        "Pull from forms, Notion, or Slack and format social posts",
+        "Auto-post or schedule to LinkedIn, Facebook, Instagram, and more",
+        "Use AI to summarize, rewrite, and repurpose long-form content",
       ],
-      gradient: "from-brand-orange to-brand-orange-light",
-      glow: "shadow-brand-orange/25",
+      idealFor: [
+        "Social Media Agencies",
+        "Content Creators",
+        "Coaches",
+        "Real Estate Agents",
+      ],
     },
     {
       id: 6,
-      title: "Compliance & Security Automation",
-      description: "Automated compliance checks and security protocols",
-      icon: Shield,
-      features: ["Compliance monitoring", "Security alerts", "Audit trails"],
-      gradient: "from-brand-orange to-brand-orange-light",
-      glow: "shadow-brand-orange/25",
+      title: "Task & Team Workflow Automation",
+      description:
+        "Keep projects moving with automated tasks, updates, reminders, and checks.",
+      icon: Cpu,
+      features: [
+        "Recurring task creation and project updates in ClickUp, Notion, or Trello",
+        "Automated reminders and status checks",
+        "Slack, email, or SMS updates on changes",
+      ],
+      idealFor: ["Agencies", "Franchise Ops", "Recruitment Teams", "SEO Firms"],
+    },
+    {
+      id: 7,
+      title: "Email & Outreach Sequences",
+      description:
+        "Enroll leads into targeted sequences and personalize with AI-powered copy.",
+      icon: MessageCircle,
+      features: [
+        "Cold, nurture, and reactivation sequences",
+        "Personalize with data enrichment and AI copywriting",
+        "Automated timing and escalation logic",
+      ],
+      idealFor: [
+        "B2B Sales Teams",
+        "Marketing Agencies",
+        "Coaches",
+        "Recruiters",
+      ],
+    },
+    {
+      id: 8,
+      title: "Form-to-Workflow Automation",
+      description:
+        "Any form can power a backend process — from saving data to triggering onboarding.",
+      icon: Network,
+      features: [
+        "Typeform/GHL/Jotform → Airtable/CRM",
+        "Slack/Email team notifications",
+        "Trigger onboarding, scheduling, or enrichment",
+      ],
+      idealFor: ["Real Estate", "Coaches", "Course Creators", "Local Services"],
+    },
+    {
+      id: 9,
+      title: "Review & Testimonial Automation",
+      description:
+        "Collect more 5-star reviews and route feedback to the right team automatically.",
+      icon: Star,
+      features: [
+        "Request Google/Facebook/Trustpilot reviews after milestones",
+        "Send positive reviews to marketing",
+        "Escalate negative feedback to support",
+      ],
+      idealFor: ["Local Services", "Real Estate", "E-commerce", "Coaches"],
+    },
+    {
+      id: 10,
+      title: "Custom Automation Blueprint",
+      description:
+        "Don't know what to automate yet? We'll architect what you need — then automate it.",
+      icon: Brain,
+      features: [
+        "Discovery session to surface manual pain points",
+        "Blueprint & architecture tailored to your systems",
+        "Implementation roadmap to ship fast",
+      ],
+      idealFor: [
+        "Teams seeking clarity",
+        "Complex workflows",
+        "Custom requirements",
+      ],
     },
   ];
 
@@ -177,6 +271,10 @@ const Services = () => {
             Streamline your business with cutting-edge AI automation solutions
           </p>
 
+          <p className="text-base md:text-lg text-brand-orange font-semibold max-w-2xl mx-auto mt-4">
+            We will automate your manual processes or you don't pay.
+          </p>
+
           {/* AI Flow Indicator */}
           <div className="flex justify-center items-center space-x-4 mt-8">
             <div className="flex items-center space-x-2 px-4 py-2 bg-gray-200/50 dark:bg-gray-800/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 backdrop-blur-sm">
@@ -252,6 +350,25 @@ const Services = () => {
                   ))}
                 </div>
 
+                {/* Ideal for */}
+                {service.idealFor && service.idealFor.length > 0 && (
+                  <div className="mt-4">
+                    <div className="text-[11px] uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                      Ideal for
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {service.idealFor.map((aud) => (
+                        <span
+                          key={aud}
+                          className="px-2 py-1 bg-white/40 dark:bg-white/10 border border-gray-200/50 dark:border-gray-700/50 text-[11px] rounded-full text-gray-700 dark:text-gray-200"
+                        >
+                          {aud}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Hover Glow Border */}
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-brand-orange/20 transition-all duration-500" />
               </div>
@@ -275,8 +392,9 @@ const Services = () => {
               <span className="text-brand-orange">existing data</span>
             </h3>
             <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We integrate AI automation with your current platforms and
-              workflows
+              We connect AI to your existing systems — from CRMs to project
+              management tools — to automate repetitive work, streamline
+              communication, and turn your data into actionable insights.
             </p>
           </div>
 
@@ -1006,19 +1124,37 @@ const Services = () => {
 
           {/* Integration Buttons */}
           <div className="text-center mt-8">
+            <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+              Explore Integrations
+            </h4>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-[#FF6B6B] hover:bg-[#FF5252] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+              <a
+                href="https://n8n.io/integrations/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FF6B6B] hover:bg-[#FF5252] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2"
+              >
                 <Network className="w-4 h-4" />
                 <span>n8n Integrations</span>
-              </button>
-              <button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+              </a>
+              <a
+                href="https://www.make.com/en/integrations?community=1&verified=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2"
+              >
                 <Network className="w-4 h-4" />
                 <span>Make Integrations</span>
-              </button>
-              <button className="bg-[#FF4A00] hover:bg-[#E64200] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#FF4A00] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2">
+              </a>
+              <a
+                href="https://zapier.com/apps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FF4A00] hover:bg-[#E64200] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#FF4A00] focus:ring-opacity-50 text-sm inline-flex items-center space-x-2"
+              >
                 <Network className="w-4 h-4" />
                 <span>Zapier Integrations</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

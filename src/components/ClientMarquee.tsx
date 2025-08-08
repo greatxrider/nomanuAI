@@ -44,13 +44,13 @@ const ClientMarquee = () => {
 
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 py-12 overflow-hidden border-y border-gray-200 dark:border-gray-700 transition-colors duration-300">
-              <div className="container-width">
-          {/* Section Header */}
-          <div className="text-center mb-8">
-            <p className="text-sm font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-              Success Stories: Clients We've Served
-            </p>
-          </div>
+      <div className="container-width">
+        {/* Section Header */}
+        <div className="text-center mb-8">
+          <p className="text-sm font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+            Success Stories: Clients We've Served
+          </p>
+        </div>
 
         {/* Marquee Container */}
         <div className="relative">
@@ -116,10 +116,8 @@ const ClientMarquee = () => {
               startups to enterprises
             </span>{" "}
             - we've built{" "}
-            <span className="text-brand-orange font-semibold">
-              500+ automations
-            </span>{" "}
-            that drive real results
+            <span className="text-brand-orange font-semibold">automation</span>{" "}
+            that drives real results
           </p>
         </div>
       </div>
