@@ -18,7 +18,7 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [visibleCount, setVisibleCount] = useState<number>(technologies.length);
   const [overflowCount, setOverflowCount] = useState<number>(0);
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [isHoveringTrigger, setIsHoveringTrigger] = useState<boolean>(false);
 
   const measure = () => {
     const container = containerRef.current;
@@ -104,22 +104,18 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
         </span>
       ))}
       {overflowCount > 0 && (
-        <div className="relative inline-block">
-          <span
-            className="px-2 py-1 bg-brand-orange/10 text-brand-orange text-xs rounded-full font-medium cursor-default"
-            onMouseEnter={() => setShowModal(true)}
-          >
+        <div
+          className="relative inline-block"
+          onMouseEnter={() => setIsHoveringTrigger(true)}
+          onMouseLeave={() => setIsHoveringTrigger(false)}
+        >
+          <span className="px-2 py-1 bg-brand-orange/10 text-brand-orange text-xs rounded-full font-medium cursor-default">
             +{overflowCount}
           </span>
 
-          {showModal && (
-            <div
-              className="fixed inset-0 z-50"
-              role="dialog"
-              aria-modal="true"
-              onMouseLeave={() => setShowModal(false)}
-              onClick={() => setShowModal(false)}
-            >
+          {isHoveringTrigger && (
+            <div className="fixed inset-0 z-50 pointer-events-none">
+              {/* Non-interactive backdrop so hover is not trapped */}
               <div className="absolute inset-0 bg-black/40" />
               <div className="relative z-10 flex items-center justify-center w-full h-full p-4">
                 <div className="max-w-md w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-xl shadow-2xl p-4">
