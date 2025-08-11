@@ -129,7 +129,7 @@ const Header = () => {
               href="/#contact"
               className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm"
             >
-              Get Started
+              Contact Us
             </Link>
           </nav>
 
@@ -205,7 +205,7 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
                 >
-                  Get Started
+                  Contact Us
                 </Link>
               </div>
             </div>

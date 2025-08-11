@@ -292,20 +292,22 @@ const Hero = () => {
                   justifyContent: "center",
                 }}
               >
-                <Image
-                  src="/logo/automation-platforms.png"
-                  alt="Automation platforms logos"
-                  width={600}
-                  height={600}
-                  className="object-contain"
-                  style={{
-                    width: "600px",
-                    height: "600px",
-                    minWidth: "600px",
-                    minHeight: "600px",
-                  }}
-                  priority
-                />
+                <div className="bg-gray-800/20 dark:bg-gray-800/15 backdrop-blur-sm rounded-2xl p-2 border border-transparent">
+                  <Image
+                    src="/logo/automation-platforms.png"
+                    alt="Automation platforms logos"
+                    width={600}
+                    height={600}
+                    className="object-contain rounded-xl"
+                    style={{
+                      width: "600px",
+                      height: "600px",
+                      minWidth: "600px",
+                      minHeight: "600px",
+                    }}
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

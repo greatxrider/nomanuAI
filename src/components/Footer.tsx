@@ -84,7 +84,7 @@ const Footer = () => {
               </span>
             </div>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-8 text-base md:text-lg leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 mb-6 text-base md:text-lg leading-relaxed">
               Empowering businesses with{" "}
               <span className="text-brand-orange font-semibold">
                 intelligent automation
@@ -92,6 +92,15 @@ const Footer = () => {
               . Transform your operations and accelerate growth with our
               cutting-edge AI technology.
             </p>
+
+            {/* Get Started Button */}
+            <Link
+              href="/#projects"
+              className="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8 group"
+            >
+              Get Started
+              <div className="ml-2 w-4 h-4 bg-white/20 rounded-full group-hover:bg-white/30 transition-colors duration-300"></div>
+            </Link>
 
             {/* Enhanced Contact Info */}
             <div className="space-y-4">
