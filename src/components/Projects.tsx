@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { createPortal } from "react-dom";
 import {
   ExternalLink,
   Github,
@@ -11,6 +12,10 @@ import {
   MessageCircle,
   Search,
   Filter,
+  X,
+  Clock,
+  Target,
+  CheckCircle,
 } from "lucide-react";
 
 // Renders technology chips in a single line; if they overflow, show "+N" with a modal on hover
@@ -142,9 +147,349 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
   );
 };
 
+// Project Detail Modal Component
+const ProjectModal = ({
+  project,
+  isOpen,
+  onClose,
+}: {
+  project: any;
+  isOpen: boolean;
+  onClose: () => void;
+}) => {
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+
+  // Body scroll lock and modal takeover
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    };
+  }, [isOpen]);
+
+  if (!isOpen || !project) return null;
+
+  // Enhanced project details for Lead Flow Automation
+  const getProjectDetails = (proj: any) => {
+    if (proj.id === 7) {
+      // Lead Flow Messenger Automation
+      return {
+        fullDescription: `This sophisticated automation revolutionizes property investment lead generation through Facebook Messenger. Built with n8n, it creates an intelligent conversation flow that captures high-quality leads, extracts structured data using AI, and seamlessly integrates with your CRM ecosystem. The system handles everything from initial contact to lead qualification, making your sales process completely hands-free.`,
+        detailedFeatures: [
+          "AI-Powered Data Extraction: Uses OpenAI GPT-4 to intelligently parse lead information from natural conversations",
+          "Facebook Messenger Integration: Seamless webhook integration for real-time message processing",
+          "Smart Lead Qualification: Automatically identifies and qualifies leads based on predefined criteria",
+          "CRM Synchronization: Instant data sync with HighLevel CRM and Airtable for unified lead management",
+          "Contextual AI Responses: Memory-enabled conversations that maintain context across interactions",
+          "Automated Follow-ups: Intelligent scheduling and calendar integration for discovery calls",
+        ],
+        workflowSteps: [
+          "Facebook Messenger receives incoming lead inquiries via webhook",
+          "AI agent analyzes message content and extracts structured data",
+          "System validates and processes lead information (name, email, phone, property details)",
+          "Data is automatically stored in Airtable with calculated projections",
+          "Lead information syncs to HighLevel CRM with appropriate tags",
+          "AI generates personalized response based on lead completeness",
+          "Follow-up sequences trigger based on lead quality and engagement",
+        ],
+        businessImpact: [
+          "24/7 Lead Capture: Never miss a potential client, even outside business hours",
+          "Zero Manual Data Entry: Completely eliminates the need for manual lead processing",
+          "Instant Lead Qualification: Automatically identifies high-value prospects",
+          "Improved Response Time: Immediate acknowledgment and professional responses",
+          "Scalable Growth: Handle unlimited leads without additional staff",
+          "Data Accuracy: AI-powered extraction ensures consistent, clean data",
+        ],
+        technicalSpecs: [
+          "Platform: n8n workflow automation",
+          "AI Model: OpenAI GPT-4 for natural language processing",
+          "Integrations: Facebook Messenger API, Airtable API, HighLevel CRM",
+          "Memory: Context-aware conversations with session persistence",
+          "Webhook Security: Token-based authentication and verification",
+          "Data Processing: Real-time JSON parsing and field mapping",
+        ],
+      };
+    }
+
+    // Default details for other projects
+    return {
+      fullDescription: proj.description,
+      detailedFeatures: [
+        `Feature 1 for ${proj.title}`,
+        `Feature 2 for ${proj.title}`,
+      ],
+      workflowSteps: [`Step 1 for ${proj.title}`, `Step 2 for ${proj.title}`],
+      businessImpact: proj.results,
+      technicalSpecs: proj.technologies.map(
+        (tech: string) => `Built with ${tech}`
+      ),
+    };
+  };
+
+  const details = getProjectDetails(project);
+
+  const modalContent = (
+    <div
+      className="fixed inset-0 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+      style={{
+        zIndex: 999999999,
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      <div
+        className="relative bg-white dark:bg-gray-900 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
+        style={{
+          zIndex: 999999999,
+          position: "relative",
+        }}
+      >
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          aria-label="Close modal"
+          className="absolute top-4 right-4 p-3 bg-red-500 hover:bg-red-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+          style={{ zIndex: 999999999 }}
+        >
+          <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+        </button>
+
+        <div className="flex flex-col h-full max-h-[90vh]">
+          {/* Project Title Section */}
+          <div className="px-6 py-4 bg-gradient-to-r from-brand-orange to-brand-orange-dark flex-shrink-0">
+            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+              {project.title}
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.slice(0, 4).map((tech: string) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm rounded-full"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="w-full h-80 relative flex-shrink-0 bg-gray-50 dark:bg-gray-800">
+            {project.image && project.image.startsWith("/automations/") ? (
+              <div
+                className="relative h-full group cursor-pointer"
+                onClick={() => setIsImageModalOpen(true)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain hover:opacity-90 transition-opacity duration-300"
+                />
+                {/* Click to expand indicator */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
+                  <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-lg backdrop-blur-sm">
+                    <span className="text-sm font-medium text-gray-900 dark:text-white">
+                      Click to view full image
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="h-full bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center">
+                <div className="w-24 h-24 bg-brand-orange rounded-xl flex items-center justify-center">
+                  <project.icon className="w-12 h-12 text-white" />
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Content Section */}
+          <div className="flex-1 overflow-y-auto p-6 lg:p-8">
+            <div className="space-y-6">
+              {/* Description */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Target className="w-5 h-5 mr-2 text-brand-orange" />
+                  Overview
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {details.fullDescription}
+                </p>
+              </div>
+
+              {/* Key Features */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <CheckCircle className="w-5 h-5 mr-2 text-brand-orange" />
+                  Key Features
+                </h3>
+                <ul className="space-y-2">
+                  {details.detailedFeatures.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start text-gray-600 dark:text-gray-300 text-sm"
+                    >
+                      <div className="w-2 h-2 bg-brand-orange rounded-full mr-3 mt-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Workflow Steps */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Clock className="w-5 h-5 mr-2 text-brand-orange" />
+                  How It Works
+                </h3>
+                <ol className="space-y-3">
+                  {details.workflowSteps.map((step, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start text-gray-600 dark:text-gray-300 text-sm"
+                    >
+                      <span className="flex-shrink-0 w-6 h-6 bg-brand-orange text-white rounded-full text-xs flex items-center justify-center mr-3 mt-0.5">
+                        {idx + 1}
+                      </span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Business Impact */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <TrendingUp className="w-5 h-5 mr-2 text-brand-orange" />
+                  Business Impact
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {details.businessImpact.map((impact, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 bg-brand-orange/5 border border-brand-orange/20 rounded-lg"
+                    >
+                      <p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
+                        {impact}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Technical Specifications */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Zap className="w-5 h-5 mr-2 text-brand-orange" />
+                  Technical Specifications
+                </h3>
+                <div className="space-y-2">
+                  {details.technicalSpecs.map((spec, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center text-gray-600 dark:text-gray-300 text-sm"
+                    >
+                      <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3" />
+                      {spec}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-4 pt-4">
+                <a
+                  href={project.link}
+                  className="flex-1 bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                >
+                  View Live Demo
+                </a>
+                <a
+                  href={project.github}
+                  className="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                >
+                  View Code
+                </a>
+                <button
+                  onClick={onClose}
+                  className="px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+                >
+                  <X className="w-4 h-4" />
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Full Image Modal */}
+      {isImageModalOpen &&
+        project.image &&
+        project.image.startsWith("/automations/") && (
+          <div
+            className="fixed inset-0 flex items-center justify-center p-4 bg-black/95 backdrop-blur-lg"
+            style={{ zIndex: 999999999 }}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setIsImageModalOpen(false);
+              }
+            }}
+          >
+            <div className="relative max-w-full max-h-full">
+              <button
+                onClick={() => setIsImageModalOpen(false)}
+                aria-label="Close full image"
+                className="absolute top-6 right-6 p-3 bg-red-500 hover:bg-red-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                style={{ zIndex: 999999999 }}
+              >
+                <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+              </button>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="max-w-full max-h-full object-contain"
+                style={{ maxHeight: "90vh", maxWidth: "90vw" }}
+              />
+            </div>
+          </div>
+        )}
+    </div>
+  );
+
+  // Render modal in a portal at the document root to escape any stacking context
+  return typeof window !== "undefined"
+    ? createPortal(modalContent, document.body)
+    : null;
+};
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   const projects = [
     {
@@ -246,6 +591,29 @@ const Projects = () => {
         "Scalable automation",
       ],
       icon: TrendingUp,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 7,
+      title: "Lead Flow Messenger Automation",
+      description:
+        "AI-powered Facebook Messenger bot that captures property investment leads, extracts data, and integrates with CRM systems",
+      category: "n8n-automations",
+      image: "/automations/lead-flow-messenger-project.png",
+      technologies: [
+        "n8n",
+        "OpenAI GPT-4",
+        "Facebook Messenger API",
+        "Airtable",
+        "HighLevel CRM",
+      ],
+      results: [
+        "Automated lead qualification",
+        "Real-time CRM integration",
+        "AI data extraction",
+      ],
+      icon: MessageCircle,
       link: "#",
       github: "#",
     },
@@ -352,14 +720,24 @@ const Projects = () => {
             return (
               <div
                 key={project.id}
-                className="group bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
+                className="group bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
+                onClick={() => openModal(project)}
               >
-                {/* Project Image Placeholder */}
+                {/* Project Image */}
                 <div className="h-48 bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center relative overflow-hidden">
-                  <div className="w-16 h-16 bg-brand-orange rounded-xl flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
+                  {project.image &&
+                  project.image.startsWith("/automations/") ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 bg-brand-orange rounded-xl flex items-center justify-center">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                  )}
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-brand-orange/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <a
@@ -437,6 +815,13 @@ const Projects = () => {
             </a>
           </div>
         </div>
+
+        {/* Project Detail Modal */}
+        <ProjectModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        />
       </div>
     </section>
   );
