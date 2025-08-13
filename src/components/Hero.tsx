@@ -19,7 +19,7 @@ const Hero = () => {
 
   const headlines = [
     "Automate Manual Work",
-    "Capture Every Lead",
+    "Empower Your Team",
     "Integrate AI Into Your Workflow",
     "Eliminate Repetitive Tasks",
   ];
@@ -156,9 +156,10 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-base md:text-lg mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-              At Nomanu AI, we take busywork off your plate. Our team transforms
-              manual processes into seamless, automated workflows powered by
-              AI—so you can focus on what matters most.
+              At Nomanu AI, we take busywork off your plate. We design, build,
+              and run automation workflows that replace manual work—while
+              training your team to harness AI across every stage of your
+              business, so you can focus on what matters most.
             </p>
 
             {/* CTA Buttons */}

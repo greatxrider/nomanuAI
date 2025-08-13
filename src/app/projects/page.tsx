@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
+import Link from "next/link";
 import {
   ExternalLink,
   Github,
@@ -16,6 +17,7 @@ import {
   Clock,
   Target,
   CheckCircle,
+  ArrowLeft,
 } from "lucide-react";
 
 // Renders technology chips in a single line; if they overflow, show "+N" with a modal on hover
@@ -551,7 +553,7 @@ const ProjectModal = ({
     : null;
 };
 
-const Projects = () => {
+export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProject, setSelectedProject] = useState(null);
@@ -716,224 +718,225 @@ const Projects = () => {
   });
 
   return (
-    <section
-      id="projects"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden"
-    >
-      {/* AI Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
-
-      <div className="container-width relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-            <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
-            <span className="text-sm font-medium text-brand-orange">
-              Our Portfolio
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Projects We've <span className="text-brand-orange">Built</span>
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Explore our portfolio of AI automation solutions that have
-            transformed businesses across industries.
-          </p>
-        </div>
-
-        {/* Search and Filter Section */}
-        <div className="mb-10">
-          <div className="flex items-center gap-4 justify-center">
-            {/* Filter Icon */}
-            <button
-              type="button"
-              aria-label="Filter"
-              className="hidden sm:flex items-center justify-center w-8 h-8 rounded-md border border-white/10 bg-white/5 text-gray-300 hover:text-white hover:border-brand-orange/40"
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800">
+      {/* Header */}
+      <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-700/50">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="flex items-center justify-between mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors duration-300"
             >
-              <Filter className="w-4 h-4" />
-            </button>
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Back to Home
+            </Link>
+          </div>
 
-            {/* Filter Pills */}
-            <div className="flex items-center gap-3">
-              {filters.map((filter) => (
-                <button
-                  key={filter.id}
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm border ${
-                    activeFilter === filter.id
-                      ? "bg-brand-orange text-white border-brand-orange/60 shadow-brand-orange/20"
-                      : "bg-white/5 text-gray-300 border-white/10 hover:border-brand-orange/40 hover:text-white"
-                  }`}
-                >
-                  {filter.label}
-                </button>
-              ))}
+          <div className="text-center">
+            <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
+              <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
+              <span className="text-sm font-medium text-brand-orange">
+                Our Portfolio
+              </span>
             </div>
 
-            {/* Search Input */}
-            <div className="relative w-72 sm:w-80">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search projects..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
-              />
-            </div>
-          </div>
-        </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Projects We've <span className="text-brand-orange">Built</span>
+            </h1>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.slice(0, 6).map((project, index) => {
-            const IconComponent = project.icon;
-            return (
-              <div
-                key={project.id}
-                className="group bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
-                style={{ animationDelay: `${index * 100}ms` }}
-                onClick={() => openModal(project)}
-              >
-                {/* Project Image */}
-                <div className="h-48 bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center relative overflow-hidden">
-                  {project.image &&
-                  project.image.startsWith("/automations/") ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-16 h-16 bg-brand-orange rounded-xl flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                  )}
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-brand-orange/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <a
-                      href={project.link}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300"
-                    >
-                      <ExternalLink className="w-5 h-5 text-white" />
-                    </a>
-                    <a
-                      href={project.github}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300"
-                    >
-                      <Github className="w-5 h-5 text-white" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* Project Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  {/* Technologies with responsive +N overflow */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                      Technologies / Apps
-                    </h4>
-                    <TechList technologies={project.technologies} />
-                  </div>
-
-                  {/* Results */}
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                      Key Results
-                    </h4>
-                    <ul className="space-y-1">
-                      {project.results.map((result, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-center text-xs text-gray-600 dark:text-gray-300"
-                        >
-                          <div className="w-2 h-2 bg-brand-orange rounded-full mr-2 flex-shrink-0" />
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* See More Button */}
-        {filteredProjects.length > 6 && (
-          <div className="text-center mt-12">
-            <a
-              href="/projects"
-              className="inline-flex items-center bg-white/80 dark:bg-white/10 hover:bg-white/90 dark:hover:bg-white/20 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-gray-200/50 dark:border-white/20 backdrop-blur-sm"
-            >
-              <span>See All Projects</span>
-              <ExternalLink className="w-5 h-5 ml-2" />
-            </a>
-          </div>
-        )}
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-white/20 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Ready to Build Something Amazing?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let's discuss your project requirements and create a custom AI
-              automation solution for your business.
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Explore our complete portfolio of AI automation solutions that
+              have transformed businesses across industries.
             </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Start Your Project
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
           </div>
         </div>
+      </div>
 
-        {/* Disclaimer Button */}
-        <div className="text-center mt-8">
-          <button
-            onClick={() => setIsDisclaimerOpen(true)}
-            className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
-          >
-            <Shield className="w-4 h-4 mr-2" />
-            Project Portfolio Information
-          </button>
+      {/* Main Content */}
+      <div className="relative overflow-hidden">
+        {/* AI Background Effects */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
+          <div
+            className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          />
         </div>
 
-        {/* Project Detail Modal */}
-        <ProjectModal
-          project={selectedProject}
-          isOpen={isModalOpen}
-          onClose={closeModal}
-        />
+        <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+          {/* Search and Filter Section */}
+          <div className="mb-10">
+            <div className="flex items-center gap-4 justify-center">
+              {/* Filter Icon */}
+              <button
+                type="button"
+                aria-label="Filter"
+                className="hidden sm:flex items-center justify-center w-8 h-8 rounded-md border border-white/10 bg-white/5 text-gray-300 hover:text-white hover:border-brand-orange/40"
+              >
+                <Filter className="w-4 h-4" />
+              </button>
 
-        {/* Disclaimer Modal */}
-        {isDisclaimerOpen && (
-          <DisclaimerModal
-            isOpen={isDisclaimerOpen}
-            onClose={() => setIsDisclaimerOpen(false)}
-          />
-        )}
+              {/* Filter Pills */}
+              <div className="flex items-center gap-3">
+                {filters.map((filter) => (
+                  <button
+                    key={filter.id}
+                    onClick={() => setActiveFilter(filter.id)}
+                    className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm border ${
+                      activeFilter === filter.id
+                        ? "bg-brand-orange text-white border-brand-orange/60 shadow-brand-orange/20"
+                        : "bg-white/5 text-gray-300 border-white/10 hover:border-brand-orange/40 hover:text-white"
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Search Input */}
+              <div className="relative w-72 sm:w-80">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search projects..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-9 pr-3 py-2 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => {
+              const IconComponent = project.icon;
+              return (
+                <div
+                  key={project.id}
+                  className="group bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => openModal(project)}
+                >
+                  {/* Project Image */}
+                  <div className="h-48 bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center relative overflow-hidden">
+                    {project.image &&
+                    project.image.startsWith("/automations/") ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-16 h-16 bg-brand-orange rounded-xl flex items-center justify-center">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                    )}
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-brand-orange/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                      <a
+                        href={project.link}
+                        className="p-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300"
+                      >
+                        <ExternalLink className="w-5 h-5 text-white" />
+                      </a>
+                      <a
+                        href={project.github}
+                        className="p-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300"
+                      >
+                        <Github className="w-5 h-5 text-white" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Project Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies with responsive +N overflow */}
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        Technologies / Apps
+                      </h4>
+                      <TechList technologies={project.technologies} />
+                    </div>
+
+                    {/* Results */}
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        Key Results
+                      </h4>
+                      <ul className="space-y-1">
+                        {project.results.map((result, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-center text-xs text-gray-600 dark:text-gray-300"
+                          >
+                            <div className="w-2 h-2 bg-brand-orange rounded-full mr-2 flex-shrink-0" />
+                            {result}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-white/20 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Ready to Build Something Amazing?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                Let's discuss your project requirements and create a custom AI
+                automation solution for your business.
+              </p>
+              <Link
+                href="/#contact"
+                className="inline-flex items-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Start Your Project
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Disclaimer Button */}
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setIsDisclaimerOpen(true)}
+              className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
+            >
+              <Shield className="w-4 h-4 mr-2" />
+              Project Portfolio Information
+            </button>
+          </div>
+        </div>
       </div>
-    </section>
-  );
-};
 
-export default Projects;
+      {/* Project Detail Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
+
+      {/* Disclaimer Modal */}
+      {isDisclaimerOpen && (
+        <DisclaimerModal
+          isOpen={isDisclaimerOpen}
+          onClose={() => setIsDisclaimerOpen(false)}
+        />
+      )}
+    </div>
+  );
+}

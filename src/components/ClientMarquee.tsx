@@ -30,82 +30,53 @@ const ClientMarquee = () => {
       logo: "/companyLogos/haivyne-logo.png",
       hasLogo: true,
     },
-    {
-      name: "Bamboo Works",
-      logo: "/companyLogos/bambooworks-logo.png",
-      hasLogo: true,
-    },
-    {
-      name: "Easy Outsource",
-      logo: "/companyLogos/easyoutsource-logo.png",
-      hasLogo: true,
-    },
   ];
 
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 py-12 overflow-hidden border-y border-gray-200 dark:border-gray-700 transition-colors duration-300">
       <div className="container-width">
         {/* Section Header */}
-        <div className="text-center mb-8">
-          <p className="text-sm font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-            Success Stories: Clients We've Served
+        <div className="text-center mb-12">
+          <p className="text-lg font-medium text-brand-orange">
+            We've helped our clients reclaim 20+ hours weekly through automation
           </p>
         </div>
 
-        {/* Marquee Container */}
-        <div className="relative">
-          {/* Gradient overlays for smooth fade effect */}
-
-          {/* Scrolling company logos and names */}
-          <div className="flex animate-marquee">
-            {/* First set of companies */}
-            {companies.map((company, index) => (
-              <div
-                key={`first-${index}`}
-                className="flex-shrink-0 flex items-center justify-center min-w-[200px] h-20 mx-8"
-              >
-                {company.hasLogo ? (
-                  <Image
-                    src={company.logo!}
-                    alt={company.name}
-                    width={160}
-                    height={80}
-                    className="h-16 w-auto object-contain hover:scale-110 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center w-40 h-16 bg-gray-100 dark:bg-white/10 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300">
-                    <span className="text-xl font-bold text-gray-800 dark:text-white hover:text-brand-orange transition-colors duration-300">
-                      {company.name}
-                    </span>
-                  </div>
-                )}
-              </div>
-            ))}
-
-            {/* Duplicate set for seamless loop */}
-            {companies.map((company, index) => (
-              <div
-                key={`second-${index}`}
-                className="flex-shrink-0 flex items-center justify-center min-w-[200px] h-20 mx-8"
-              >
-                {company.hasLogo ? (
-                  <Image
-                    src={company.logo!}
-                    alt={company.name}
-                    width={160}
-                    height={80}
-                    className="h-16 w-auto object-contain hover:scale-110 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center w-40 h-16 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:border-brand-orange/50 transition-all duration-300">
-                    <span className="text-xl font-bold text-white hover:text-brand-orange transition-colors duration-300">
-                      {company.name}
-                    </span>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+        {/* Static Logo Grid */}
+        <div className="flex items-center justify-center gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
+          {companies.map((company, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center group cursor-pointer flex-1"
+            >
+              {company.hasLogo ? (
+                <Image
+                  src={company.logo!}
+                  alt={company.name}
+                  width={120}
+                  height={60}
+                  className="h-12 md:h-14 lg:h-16 w-auto object-contain grayscale hover:grayscale-0 hover:brightness-100 brightness-75 transition-all duration-500 hover:scale-110 group-hover:drop-shadow-lg"
+                  style={{
+                    filter: "grayscale(100%) contrast(1.2)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.filter =
+                      "grayscale(0%) contrast(1) brightness(1) drop-shadow(0 4px 6px rgba(229, 101, 24, 0.2))";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.filter =
+                      "grayscale(100%) contrast(1.2)";
+                  }}
+                />
+              ) : (
+                <div className="flex items-center justify-center w-32 h-12 md:h-14 lg:h-16 bg-gray-100 dark:bg-white/10 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300">
+                  <span className="text-lg font-bold text-gray-800 dark:text-white hover:text-brand-orange transition-colors duration-300">
+                    {company.name}
+                  </span>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Trust indicator */}
