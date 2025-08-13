@@ -41,15 +41,66 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* AI Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
+      {/* Enhanced AI Background - Same as Home section */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated Circuit Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern
+                id="circuit-about"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M20,20 L80,20 L80,80 L20,80 Z"
+                  fill="none"
+                  stroke="#E56518"
+                  strokeWidth="1"
+                />
+                <circle cx="20" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="80" r="3" fill="#E56518" />
+                <circle cx="20" cy="80" r="3" fill="#E56518" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit-about)" />
+          </svg>
+        </div>
+
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0">
+          {[
+            { left: "15%", top: "20%", delay: "0s", duration: "4s" },
+            { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
+            { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
+            { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
+            { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
+            { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
+            { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
+            { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
+          ].map((particle, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
+              style={{
+                left: particle.left,
+                top: particle.top,
+                animationDelay: particle.delay,
+                animationDuration: particle.duration,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
       </div>
 
       <div className="container-width relative z-10">
