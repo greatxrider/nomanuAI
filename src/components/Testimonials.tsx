@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Users,
   Star,
+  Calendar,
 } from "lucide-react";
 
 const testimonials = [
@@ -116,91 +117,152 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden"
+      className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
     >
-      {/* AI Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
+      {/* Enhanced AI Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated Circuit Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern
+                id="circuit-testimonials"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M20,20 L80,20 L80,80 L20,80 Z"
+                  fill="none"
+                  stroke="#E56518"
+                  strokeWidth="1"
+                />
+                <circle cx="20" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="20" r="3" fill="#E56518" />
+                <circle cx="80" cy="80" r="3" fill="#E56518" />
+                <circle cx="20" cy="80" r="3" fill="#E56518" />
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#circuit-testimonials)"
+            />
+          </svg>
+        </div>
+
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0">
+          {[
+            { left: "15%", top: "20%", delay: "0s", duration: "4s" },
+            { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
+            { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
+            { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
+            { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
+            { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
+            { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
+            { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
+          ].map((particle, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
+              style={{
+                left: particle.left,
+                top: particle.top,
+                animationDelay: particle.delay,
+                animationDuration: particle.duration,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
       </div>
 
       <div className="container-width relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-2 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
-            <Sparkles className="w-5 h-5 text-brand-orange mr-2 animate-pulse" />
-            <span className="text-brand-orange font-semibold">
-              Client Success Stories
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Real Stories.{" "}
-            <span className="text-brand-orange">Real Impact.</span>
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Discover how AI-powered automation is transforming businesses like
-            yours.
-          </p>
-        </div>
-
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           {/* Left Column - Info & Stats */}
-          <div className="space-y-8">
+          <div className="flex">
             {/* Main Info */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-brand-orange rounded-2xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Trusted by Industry Leaders
+            <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 w-full flex flex-col justify-center">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                <span
+                  className="text-brand-orange"
+                  style={{
+                    textShadow:
+                      "0 0 8px rgba(229, 101, 24, 0.4), 0 0 15px rgba(229, 101, 24, 0.2)",
+                  }}
+                >
+                  Half the Workload, Full Speed Ahead
+                </span>
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                Our AI automation solutions have helped businesses across
-                various industries achieve remarkable results. From startups to
-                enterprises, we deliver consistent value and measurable impact.
+                Nomanu AI designs, builds, and runs automation workflows that
+                remove the repetitive clicks, manual updates, and constant
+                follow-ups slowing your team down.
               </p>
-              <div className="flex items-center space-x-4">
-                <div className="text-3xl font-bold text-brand-orange">5+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Happy Clients
-                  <br />
-                  <span className="text-xs">Satisfied with our services</span>
-                </div>
-              </div>
-            </div>
 
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
-                <div className="text-2xl font-bold text-brand-orange mb-2">
-                  3-5 Weeks
+              {/* Key Benefits */}
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">
+                    20+ hours reclaimed every week
+                  </span>
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Average Implementation
-                  <br />
-                  <span className="text-xs">From concept to results</span>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">
+                    Instant process improvements from day one
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">
+                    No extra hires. No extra tools. Just results.
+                  </span>
                 </div>
               </div>
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 text-center hover:shadow-lg transition-all duration-300">
-                <div className="text-2xl font-bold text-brand-orange mb-2">
-                  24/7
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Support Available
-                  <br />
-                  <span className="text-xs">When you need us most</span>
-                </div>
+
+              {/* Book Free Consultation Button */}
+              <div className="mt-6">
+                <button className="group relative bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-base flex items-center justify-center overflow-hidden border-2 border-transparent hover:border-transparent">
+                  {/* AI Colored Border Effect */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm scale-105" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm scale-110" />
+
+                  {/* Multi-colored Glowing Border Effect */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400/60 via-pink-500/70 to-blue-500/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-lg scale-110" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/40 via-purple-500/50 to-cyan-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-xl scale-125" />
+
+                  {/* Inner Glow Effect */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400/20 via-pink-500/30 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
+
+                  {/* Subtle Background Glow */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400/5 via-pink-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Glowing Shadow Effect */}
+                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-400/50 via-purple-500/50 to-pink-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl scale-110 -z-10" />
+                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-blue-400/30 via-green-400/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-2xl scale-125 -z-20" />
+
+                  {/* Button Content */}
+                  <span className="relative z-10 flex items-center">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book Free Consultation
+                  </span>
+                </button>
               </div>
             </div>
           </div>
 
           {/* Right Column - Testimonial Carousel */}
-          <div className="relative">
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 hover:shadow-brand-orange/20 transition-all duration-500 group">
+          <div className="flex flex-col">
+            <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 hover:shadow-brand-orange/20 transition-all duration-500 group w-full flex flex-col justify-center relative flex-1">
               {/* AI Glow Effect */}
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-orange/10 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
