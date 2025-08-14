@@ -31,7 +31,7 @@ const Header = () => {
   const ThemeToggle = () => (
     <button
       onClick={toggleTheme}
-      className={`p-2 rounded-lg transition-all duration-300 focus-ring group ${
+      className={`p-2.5 rounded-lg transition-all duration-300 focus-ring group ${
         isScrolled
           ? theme === "dark"
             ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
@@ -61,7 +61,7 @@ const Header = () => {
       }`}
     >
       <div className="container-width">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-[100px] md:h-[100px]">
           {/* Logo */}
           <Link
             href="/"
@@ -76,7 +76,7 @@ const Header = () => {
               alt="NomanuAI"
               width={140}
               height={44}
-              className="h-8 md:h-11 w-auto"
+              className="h-12 md:h-14 w-auto"
               priority
             />
           </Link>
@@ -87,7 +87,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 ${
+                className={`font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 text-lg ${
                   isScrolled
                     ? theme === "dark"
                       ? "text-white hover:text-brand-orange"
@@ -110,7 +110,7 @@ const Header = () => {
               href="https://github.com/nomanuai"
               target="_blank"
               rel="noopener noreferrer"
-              className={`p-2 rounded-lg transition-all duration-300 focus-ring group ${
+              className={`p-2.5 rounded-lg transition-all duration-300 focus-ring group ${
                 isScrolled
                   ? theme === "dark"
                     ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
@@ -127,7 +127,7 @@ const Header = () => {
 
             <Link
               href="/#contact"
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm"
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
             >
               Contact Us
             </Link>
@@ -141,7 +141,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-lg transition-colors focus-ring ${
+              className={`p-3 rounded-lg transition-colors focus-ring ${
                 isScrolled
                   ? theme === "dark"
                     ? "hover:bg-gray-700 text-white"
@@ -153,9 +153,9 @@ const Header = () => {
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-7 h-7" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-7 h-7" />
               )}
             </button>
           </div>
