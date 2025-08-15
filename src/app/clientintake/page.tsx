@@ -1,7 +1,10 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Link from "next/link";
-import Image from "next/image";
 import {
   CheckCircle2,
   Users,
@@ -17,9 +20,35 @@ import {
   CheckSquare,
   CreditCard,
   Share2,
+  Clock,
+  FileText,
+  Calendar,
+  ShoppingCart,
+  Building,
+  HeartHandshake,
+  UserPlus,
+  ClipboardCheck,
+  Send,
+  Filter,
+  Zap,
+  Target,
+  TrendingUp,
+  BookOpen,
+  Settings,
+  Globe,
+  Shield,
+  ArrowRight,
 } from "lucide-react";
 
-export default function SalesCRMManagementPage() {
+const ClientIntakeOnboardingPage = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header />
@@ -33,7 +62,7 @@ export default function SalesCRMManagementPage() {
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern
-                  id="circuit"
+                  id="circuit-hero"
                   x="0"
                   y="0"
                   width="100"
@@ -52,7 +81,7 @@ export default function SalesCRMManagementPage() {
                   <circle cx="20" cy="80" r="3" fill="#E56518" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#circuit)" />
+              <rect width="100%" height="100%" fill="url(#circuit-hero)" />
             </svg>
           </div>
 
@@ -67,17 +96,22 @@ export default function SalesCRMManagementPage() {
               <div
                 key={i}
                 className="absolute w-2 h-2 bg-brand-orange rounded-full animate-pulse opacity-30"
-                data-left={particle.left}
-                data-top={particle.top}
-                data-delay={particle.delay}
-                data-duration={particle.duration}
+                style={{
+                  left: particle.left,
+                  top: particle.top,
+                  animationDelay: particle.delay,
+                  animationDuration: particle.duration,
+                }}
               />
             ))}
           </div>
 
           {/* Gradient Orbs */}
           <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+          <div
+            className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          />
         </div>
 
         <div className="container-width relative z-10">
@@ -85,21 +119,22 @@ export default function SalesCRMManagementPage() {
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/30 backdrop-blur-sm mb-5">
               <Bot className="w-5 h-5 text-brand-orange" />
               <span className="text-sm font-medium text-brand-orange">
-                CRM Management Services
+                Client Intake & Onboarding Services
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
               <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-                CRM Management
+                Client Intake & Onboarding
               </span>
             </h1>
             <p className="text-lg md:text-xl font-semibold text-brand-orange mb-4">
-              Turn your CRM into a revenue-generating machine
+              Transform your client onboarding into a seamless, professional
+              experience
             </p>
             <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              Most businesses use only 20% of their CRM's capabilities. We help
-              you unlock the other 80% through smart automation, clean data
-              processes, and workflows that actually get used by your team.
+              Automate everything from initial contact to project kickoff.
+              Create consistent, impressive first impressions while reducing
+              manual work and ensuring nothing falls through the cracks.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/#contact" className="btn-primary">
@@ -113,8 +148,8 @@ export default function SalesCRMManagementPage() {
         </div>
       </section>
 
-      {/* Social Proof / Statistic Section */}
-      <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+      {/* Social Proof Section - Pattern B: Glowing Orange Gradient */}
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         {/* Glowing Orange Gradient Background Effects */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
@@ -157,29 +192,29 @@ export default function SalesCRMManagementPage() {
 
         <div className="container-width relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
-            <div className="text-6xl font-bold text-brand-orange mb-3">76%</div>
+            <div className="text-6xl font-bold text-brand-orange mb-3">84%</div>
             <p className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              of businesses say less than half of their CRM data is accurate or
-              complete
+              of businesses lose potential clients during lengthy onboarding
+              processes
             </p>
             <p className="body-md">
-              According to Validity's 2025 State of CRM Data Management report,
-              incomplete and inaccurate CRM records, caused by manual entry,
-              poor adoption, and disconnected tools, cost companies millions in
-              lost opportunities.
+              According to HubSpot research, complex intake processes, manual
+              data collection, and poor communication during onboarding lead to
+              client drop-offs and damaged first impressions.
             </p>
           </div>
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
             <p className="italic body-lg mb-4">
-              "Before working with NomanuAI, our team spent 3 hours a day on
-              data entry. Now that time goes to actual selling. Our pipeline
-              visibility improved 300% and our close rate went up 18%."
+              "Before working with NomanuAI, our client onboarding took 2 weeks
+              and involved countless back-and-forth emails. Now our entire
+              process is automated, clients get started in 2 days, and our team
+              can focus on actual project delivery instead of paperwork."
             </p>
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 rounded-lg overflow-hidden border-2 border-brand-orange flex-shrink-0">
                 <Image
-                  src="/testimonialsPicture/yvonne-photo.jpg"
-                  alt="Yvonne - Business Owner, Haivyne"
+                  src="/testimonialsPicture/paul-photo.jpg"
+                  alt="Paul - Agency Owner, BambooWorks"
                   width={64}
                   height={64}
                   className="w-full h-full object-cover"
@@ -187,7 +222,7 @@ export default function SalesCRMManagementPage() {
               </div>
               <div>
                 <p className="text-gray-900 dark:text-white font-semibold">
-                  — Yvonne, Business Owner, Haivyne
+                  — Paul, Agency Owner, BambooWorks
                 </p>
               </div>
             </div>
@@ -195,7 +230,7 @@ export default function SalesCRMManagementPage() {
         </div>
       </section>
 
-      {/* Benefit-Focused Section */}
+      {/* Benefits Section - Pattern A: Gray gradient with AI background */}
       <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
         {/* Enhanced AI Background - Same as Home/About section */}
         <div className="absolute inset-0 overflow-hidden">
@@ -259,41 +294,41 @@ export default function SalesCRMManagementPage() {
         <div className="container-width relative z-10">
           <h2 className="heading-lg mb-2">
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              What we actually do for your CRM
+              What we actually do for your client onboarding
             </span>
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            We don't just set up your CRM and walk away. We build sustainable
-            systems that your team will actually use, with ongoing support to
-            ensure adoption and ROI.
+            We build automated systems that handle every step from initial
+            inquiry to project kickoff, creating a smooth, professional
+            experience for your clients.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
-                title: "Data cleanup & migration",
-                desc: "Remove duplicates, standardize formats, and migrate your data without losing important history.",
+                title: "Automated Lead Capture",
+                desc: "Smart forms that capture the right information and automatically route leads to the right team members.",
               },
               {
-                title: "Custom automation workflows",
-                desc: "Lead scoring, follow-up sequences, and task creation that matches how your team actually works.",
+                title: "Welcome Sequences",
+                desc: "Personalized email sequences that guide clients through your process and set proper expectations.",
               },
               {
-                title: "Integration with your tools",
-                desc: "Connect your CRM to email, calendar, marketing tools, and accounting software seamlessly.",
+                title: "Document Collection",
+                desc: "Streamlined systems for gathering contracts, questionnaires, and project materials.",
               },
               {
-                title: "Team training & adoption",
-                desc: "We train your team on the new processes and provide documentation so nothing gets forgotten.",
+                title: "Scheduling Automation",
+                desc: "Smart calendar integration that handles discovery calls, kickoff meetings, and project milestones.",
               },
               {
-                title: "Reporting & analytics setup",
-                desc: "Build dashboards that show you what's actually moving the needle for your business.",
+                title: "Project Setup",
+                desc: "Automatic creation of project folders, team assignments, and communication channels.",
               },
               {
-                title: "Ongoing optimization",
-                desc: "Monthly check-ins to refine workflows and add new automations as your business grows.",
+                title: "Progress Tracking",
+                desc: "Real-time dashboards showing onboarding status and potential bottlenecks.",
               },
             ].map((item) => (
               <div
@@ -311,56 +346,46 @@ export default function SalesCRMManagementPage() {
           </div>
 
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              CRM platforms we work with
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We specialize in the leading CRM platforms:
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/hubspot-logo.png"
-                  alt="HubSpot"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/salesforce-logo.png"
-                  alt="Salesforce"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/zoho-logo.png"
-                  alt="Zoho"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/highlevel-logo.png"
-                  alt="GoHighLevel"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Onboarding Platforms we integrate with
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                We work with your existing tools and can recommend the best
+                platforms for your specific onboarding needs:
+              </p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                "TypeForm",
+                "Calendly",
+                "DocuSign",
+                "Airtable",
+                "Notion",
+                "ClickUp",
+                "Monday.com",
+                "Asana",
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Google Workspace",
+              ].map((tool) => (
+                <div
+                  key={tool}
+                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-3 text-center border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {tool}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who We Work With Section */}
-      <section className="relative py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+      {/* Target Audience Section - Pattern B: Glowing Orange Gradient */}
+      <section className="relative py-32 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         {/* Glowing Orange Gradient Background Effects */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
@@ -409,19 +434,13 @@ export default function SalesCRMManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            Our CRM management services work best for growing businesses that
-            have outgrown basic contact management but aren't quite ready for a
-            full sales operations team.
+            Our client onboarding services work best for growing businesses that
+            want to create professional first impressions and reduce
+            time-to-value for new clients.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                label: "Real Estate Agencies & Teams",
-                icon: Landmark,
-                copy: "Coordinate leads, follow-ups, and pipeline stages across agents without manual tracking.",
-                size: "Teams of 3-25 agents",
-              },
               {
                 label: "Digital Marketing Agencies",
                 icon: Users,
@@ -429,22 +448,22 @@ export default function SalesCRMManagementPage() {
                 size: "5-50 team members",
               },
               {
-                label: "B2B SaaS Startups",
-                icon: LineChart,
-                copy: "Connect product usage data to your CRM for clean pipelines, health scores, and renewals.",
-                size: "Seed to Series B",
-              },
-              {
-                label: "Professional Services (Legal, Accounting, Consulting)",
-                icon: Scale,
-                copy: "Automate intake, engagement letters, task handoffs, and billing with audit-ready records.",
+                label: "Consulting Firms",
+                icon: Briefcase,
+                copy: "Professional client intake processes that collect requirements and set project expectations.",
                 size: "Solo to 25+ staff",
               },
               {
-                label: "E-commerce Brands",
-                icon: Briefcase,
-                copy: "Unify customer, order, and support data for targeted campaigns and higher LTV.",
-                size: "$500K-$50M revenue",
+                label: "Software Development Agencies",
+                icon: Settings,
+                copy: "Automated discovery processes, requirement gathering, and project kickoff workflows.",
+                size: "Teams of 5-30 developers",
+              },
+              {
+                label: "Creative Agencies & Design Studios",
+                icon: Users,
+                copy: "Streamlined creative briefs, asset collection, and project setup for design work.",
+                size: "Studios of 3-20 creatives",
               },
             ].map(({ label, icon: Icon, copy, size }) => (
               <div
@@ -469,7 +488,7 @@ export default function SalesCRMManagementPage() {
         </div>
       </section>
 
-      {/* Features / Example Automations */}
+      {/* Features Section - Pattern A: Gray gradient with AI background */}
       <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
         {/* Enhanced AI Background - Same as Home/About section */}
         <div className="absolute inset-0 overflow-hidden">
@@ -602,8 +621,8 @@ export default function SalesCRMManagementPage() {
         </div>
       </section>
 
-      {/* Service Options / Packages */}
-      <section className="relative py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+      {/* Service Options Section - Pattern B: Glowing Orange Gradient */}
+      <section className="relative py-32 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         {/* Glowing Orange Gradient Background Effects */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
@@ -663,15 +682,16 @@ export default function SalesCRMManagementPage() {
                 START HERE
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                CRM Health Check
+                Onboarding Audit
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 $497 (2 hour session)
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                We'll review your current setup, identify the biggest gaps, and
-                give you a prioritized action plan. Great if you're not sure
-                where to start or want a second opinion.
+                We'll review your current onboarding process, identify
+                bottlenecks, and give you a prioritized action plan. Perfect if
+                you want to understand what's possible before committing to
+                changes.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Book Session
@@ -684,15 +704,15 @@ export default function SalesCRMManagementPage() {
                 MOST POPULAR
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                Complete CRM Setup
+                Complete Onboarding Setup
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 Starting at $3,500
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                We clean up your data, build custom automations, set up
-                reporting, and train your team. Includes 30 days of support
-                after launch to ensure everything works smoothly.
+                We build your entire automated onboarding system from lead
+                capture to project kickoff. Includes training, documentation,
+                and 30 days of support to ensure everything works perfectly.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Get Quote
@@ -705,15 +725,15 @@ export default function SalesCRMManagementPage() {
                 ONGOING
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Monthly Optimization
+                Onboarding Optimization
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 $1,200/month
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                Monthly check-ins to optimize workflows, add new automations,
-                and keep your system running as your business evolves. Includes
-                priority support and quarterly strategy sessions.
+                Monthly optimization of your onboarding workflows, performance
+                monitoring, and continuous improvements. Includes priority
+                support and quarterly strategy sessions.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Learn More
@@ -723,7 +743,7 @@ export default function SalesCRMManagementPage() {
         </div>
       </section>
 
-      {/* Other Solutions (Cross-Sell) */}
+      {/* Related Services Section - Pattern A: Gray gradient with AI background */}
       <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
         {/* Enhanced AI Background - Same as Home/About section */}
         <div className="absolute inset-0 overflow-hidden">
@@ -732,7 +752,7 @@ export default function SalesCRMManagementPage() {
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern
-                  id="circuit-other"
+                  id="circuit-related"
                   x="0"
                   y="0"
                   width="100"
@@ -751,7 +771,7 @@ export default function SalesCRMManagementPage() {
                   <circle cx="20" cy="80" r="3" fill="#E56518" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#circuit-other)" />
+              <rect width="100%" height="100%" fill="url(#circuit-related)" />
             </svg>
           </div>
 
@@ -799,16 +819,24 @@ export default function SalesCRMManagementPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
-                id: 2,
-                title: "Client Intake & Onboarding",
+                id: 1,
+                title: "Sales CRM Management",
                 description:
-                  "Welcome new clients with a smooth, consistent process every time. From booking to first delivery, everything flows without delays or missed details.",
-                icon: UserCheck,
+                  "Keep your leads, conversations, and follow-ups organized without lifting a finger. Your sales team always knows the next step to move deals forward.",
+                icon: Users,
                 features: [
-                  "Automated intake forms and scheduling",
-                  "Welcome email sequences and onboarding",
-                  "Document collection and e-signatures",
+                  "Automated lead tracking and qualification",
+                  "Smart follow-up reminders and sequences",
+                  "Pipeline management and deal progression",
                 ],
+                idealFor: [
+                  "Sales Teams",
+                  "Real Estate Agents",
+                  "Insurance Agencies",
+                  "B2B Companies",
+                  "Consultants",
+                ],
+                href: "/salescrmmanagement",
               },
               {
                 id: 3,
@@ -820,6 +848,13 @@ export default function SalesCRMManagementPage() {
                   "Automated task creation and assignment",
                   "Progress tracking and milestone management",
                   "Team communication and updates",
+                ],
+                idealFor: [
+                  "Project Managers",
+                  "Agencies",
+                  "Development Teams",
+                  "Construction Firms",
+                  "Event Planners",
                 ],
                 href: "/projectmanagement",
               },
@@ -834,6 +869,13 @@ export default function SalesCRMManagementPage() {
                   "Payment reminders and follow-ups",
                   "Expense tracking and reporting",
                 ],
+                idealFor: [
+                  "Freelancers",
+                  "Small Businesses",
+                  "Consultants",
+                  "Service Providers",
+                  "Agencies",
+                ],
                 href: "/billingpayment",
               },
               {
@@ -847,14 +889,22 @@ export default function SalesCRMManagementPage() {
                   "Multi-platform publishing automation",
                   "Performance tracking and analytics",
                 ],
+                idealFor: [
+                  "Social Media Managers",
+                  "Content Creators",
+                  "Brands",
+                  "Influencers",
+                  "Marketing Agencies",
+                ],
                 href: "/socialmedia",
               },
             ].map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div
+                <Link
                   key={service.id}
-                  className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden flex flex-col"
+                  href={service.href}
+                  className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden flex flex-col block"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* AI Glow Effect */}
@@ -897,47 +947,22 @@ export default function SalesCRMManagementPage() {
 
                   {/* CTA Button */}
                   <div className="mt-auto pt-4">
-                    <Link
-                      href={
-                        service.id === 2
-                          ? "/clientintake"
-                          : service.id === 3
-                          ? "/projectmanagement"
-                          : service.id === 4
-                          ? "/billingpayment"
-                          : service.id === 5
-                          ? "/socialmedia"
-                          : "/#services"
-                      }
-                      className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
-                    >
+                    <span className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto">
                       <span>Learn More</span>
-                      <svg
-                        className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 7l5 5m0 0l-5 5m5-5H6"
-                        />
-                      </svg>
-                    </Link>
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
                   </div>
 
                   {/* Hover Glow Border */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-brand-orange/20 transition-all duration-500" />
-                </div>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA Section - Pattern B: Glowing Orange Gradient */}
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         {/* Glowing Orange Gradient Background Effects */}
         <div className="absolute inset-0 overflow-hidden">
@@ -978,27 +1003,25 @@ export default function SalesCRMManagementPage() {
             ))}
           </div>
         </div>
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-6 right-10 w-48 h-48 rounded-full bg-brand-orange/10 blur-3xl" />
-        </div>
-        <div className="container-width text-center relative">
-          <h2 className="heading-lg mb-4">
-            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Ready to turn your CRM into a growth engine?
-            </span>
-          </h2>
-          <p className="body-lg mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute call to discuss your current setup and see if
-            we're a good fit. No sales pitch, just an honest conversation about
-            your CRM challenges.
-          </p>
-          <div className="flex items-center justify-center gap-3">
-            <Link href="/#contact" className="btn-primary">
-              Book Free Call
-            </Link>
-            <Link href="/#services" className="btn-secondary">
-              All Services
-            </Link>
+
+        <div className="container-width relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Ready to transform your client onboarding?
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              Stop losing potential clients to complicated onboarding processes.
+              Let's build you an automated system that creates great first
+              impressions and gets clients to value faster.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/#contact" className="btn-primary">
+                Book a Call
+              </Link>
+              <Link href="/#projects" className="btn-outline">
+                See Our Work
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -1006,4 +1029,6 @@ export default function SalesCRMManagementPage() {
       <Footer />
     </main>
   );
-}
+};
+
+export default ClientIntakeOnboardingPage;

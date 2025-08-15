@@ -17,9 +17,15 @@ import {
   CheckSquare,
   CreditCard,
   Share2,
+  Calendar,
+  Clock,
+  FileText,
+  Target,
+  TrendingUp,
+  Settings,
 } from "lucide-react";
 
-export default function SalesCRMManagementPage() {
+export default function ProjectManagementPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header />
@@ -85,21 +91,22 @@ export default function SalesCRMManagementPage() {
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/30 backdrop-blur-sm mb-5">
               <Bot className="w-5 h-5 text-brand-orange" />
               <span className="text-sm font-medium text-brand-orange">
-                CRM Management Services
+                Project Management Services
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
               <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-                CRM Management
+                Project Management
               </span>
             </h1>
             <p className="text-lg md:text-xl font-semibold text-brand-orange mb-4">
-              Turn your CRM into a revenue-generating machine
+              Turn your project chaos into a streamlined delivery machine
             </p>
             <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              Most businesses use only 20% of their CRM's capabilities. We help
-              you unlock the other 80% through smart automation, clean data
-              processes, and workflows that actually get used by your team.
+              Most teams spend more time managing projects than executing them.
+              We help you automate task tracking, team coordination, and
+              progress reporting so your team can focus on delivering
+              exceptional results.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/#contact" className="btn-primary">
@@ -157,29 +164,30 @@ export default function SalesCRMManagementPage() {
 
         <div className="container-width relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
-            <div className="text-6xl font-bold text-brand-orange mb-3">76%</div>
+            <div className="text-6xl font-bold text-brand-orange mb-3">68%</div>
             <p className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              of businesses say less than half of their CRM data is accurate or
-              complete
+              of projects fail due to poor communication and lack of visibility
+              into progress
             </p>
             <p className="body-md">
-              According to Validity's 2025 State of CRM Data Management report,
-              incomplete and inaccurate CRM records, caused by manual entry,
-              poor adoption, and disconnected tools, cost companies millions in
-              lost opportunities.
+              According to PMI's 2025 Pulse of the Profession report,
+              miscommunication, unclear task assignments, and lack of real-time
+              progress tracking are the leading causes of project delays and
+              budget overruns.
             </p>
           </div>
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
             <p className="italic body-lg mb-4">
-              "Before working with NomanuAI, our team spent 3 hours a day on
-              data entry. Now that time goes to actual selling. Our pipeline
-              visibility improved 300% and our close rate went up 18%."
+              "Before working with NomanuAI, our team spent 4 hours a week in
+              status meetings. Now everything is automated and visible in
+              real-time. We delivered our last project 3 weeks early and 15%
+              under budget."
             </p>
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 rounded-lg overflow-hidden border-2 border-brand-orange flex-shrink-0">
                 <Image
-                  src="/testimonialsPicture/yvonne-photo.jpg"
-                  alt="Yvonne - Business Owner, Haivyne"
+                  src="/testimonialsPicture/raymond-photo.jpg"
+                  alt="Raymond - Project Manager, MetaWatt"
                   width={64}
                   height={64}
                   className="w-full h-full object-cover"
@@ -187,7 +195,7 @@ export default function SalesCRMManagementPage() {
               </div>
               <div>
                 <p className="text-gray-900 dark:text-white font-semibold">
-                  — Yvonne, Business Owner, Haivyne
+                  — Raymond, Project Manager, MetaWatt
                 </p>
               </div>
             </div>
@@ -259,41 +267,42 @@ export default function SalesCRMManagementPage() {
         <div className="container-width relative z-10">
           <h2 className="heading-lg mb-2">
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              What we actually do for your CRM
+              What we actually do for your project management
             </span>
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            We don't just set up your CRM and walk away. We build sustainable
-            systems that your team will actually use, with ongoing support to
-            ensure adoption and ROI.
+            We don't just set up project management tools and leave. We build
+            intelligent automation systems that keep your projects moving
+            forward, with real-time visibility and team coordination that
+            actually works.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
-                title: "Data cleanup & migration",
-                desc: "Remove duplicates, standardize formats, and migrate your data without losing important history.",
+                title: "Automated task creation & assignment",
+                desc: "Smart workflows that create tasks, assign team members, and set deadlines based on project templates and dependencies.",
               },
               {
-                title: "Custom automation workflows",
-                desc: "Lead scoring, follow-up sequences, and task creation that matches how your team actually works.",
+                title: "Progress tracking & reporting",
+                desc: "Real-time dashboards showing project health, milestone progress, and team workload without manual updates.",
               },
               {
-                title: "Integration with your tools",
-                desc: "Connect your CRM to email, calendar, marketing tools, and accounting software seamlessly.",
+                title: "Team communication automation",
+                desc: "Automated notifications, status updates, and escalations that keep everyone informed without overwhelming them.",
               },
               {
-                title: "Team training & adoption",
-                desc: "We train your team on the new processes and provide documentation so nothing gets forgotten.",
+                title: "Resource & capacity planning",
+                desc: "AI-powered insights into team availability, workload distribution, and optimal resource allocation.",
               },
               {
-                title: "Reporting & analytics setup",
-                desc: "Build dashboards that show you what's actually moving the needle for your business.",
+                title: "Client & stakeholder updates",
+                desc: "Automated progress reports, milestone notifications, and client-facing dashboards for complete transparency.",
               },
               {
-                title: "Ongoing optimization",
-                desc: "Monthly check-ins to refine workflows and add new automations as your business grows.",
+                title: "Integration & data sync",
+                desc: "Connect your project tools with time tracking, billing, CRM, and communication platforms seamlessly.",
               },
             ].map((item) => (
               <div
@@ -312,47 +321,29 @@ export default function SalesCRMManagementPage() {
 
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              CRM platforms we work with
+              Project management platforms we work with
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We specialize in the leading CRM platforms:
+              We specialize in the leading project management platforms:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/hubspot-logo.png"
-                  alt="HubSpot"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-blue-600 text-lg">Asana</span>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/salesforce-logo.png"
-                  alt="Salesforce"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-purple-600 text-lg">
+                  Monday
+                </span>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/zoho-logo.png"
-                  alt="Zoho"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-orange-600 text-lg">
+                  ClickUp
+                </span>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/highlevel-logo.png"
-                  alt="GoHighLevel"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-black dark:text-white text-lg">
+                  Notion
+                </span>
               </div>
             </div>
           </div>
@@ -409,42 +400,42 @@ export default function SalesCRMManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            Our CRM management services work best for growing businesses that
-            have outgrown basic contact management but aren't quite ready for a
-            full sales operations team.
+            Our project management automation services work best for growing
+            teams that have outgrown basic to-do lists but need more structure
+            than complex enterprise project management.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                label: "Real Estate Agencies & Teams",
-                icon: Landmark,
-                copy: "Coordinate leads, follow-ups, and pipeline stages across agents without manual tracking.",
-                size: "Teams of 3-25 agents",
-              },
-              {
                 label: "Digital Marketing Agencies",
                 icon: Users,
-                copy: "Centralize client onboarding, approvals, and reporting with automated workflows.",
-                size: "5-50 team members",
+                copy: "Coordinate campaigns, deliverables, and client communications across multiple projects simultaneously.",
+                size: "Teams of 5-50 members",
               },
               {
-                label: "B2B SaaS Startups",
-                icon: LineChart,
-                copy: "Connect product usage data to your CRM for clean pipelines, health scores, and renewals.",
-                size: "Seed to Series B",
+                label: "Software Development Teams",
+                icon: Settings,
+                copy: "Automate sprint planning, bug tracking, and deployment workflows with seamless developer tool integration.",
+                size: "Dev teams of 3-30",
               },
               {
-                label: "Professional Services (Legal, Accounting, Consulting)",
-                icon: Scale,
-                copy: "Automate intake, engagement letters, task handoffs, and billing with audit-ready records.",
-                size: "Solo to 25+ staff",
-              },
-              {
-                label: "E-commerce Brands",
+                label: "Creative Agencies & Design Studios",
                 icon: Briefcase,
-                copy: "Unify customer, order, and support data for targeted campaigns and higher LTV.",
-                size: "$500K-$50M revenue",
+                copy: "Streamline creative briefs, revision tracking, and asset delivery with client approval workflows.",
+                size: "Studios of 3-25 creatives",
+              },
+              {
+                label: "Construction & Engineering Firms",
+                icon: Landmark,
+                copy: "Track project phases, resource allocation, and compliance requirements with automated reporting.",
+                size: "Teams of 10-100",
+              },
+              {
+                label: "Consulting Firms",
+                icon: Scale,
+                copy: "Manage client engagements, deliverable tracking, and team utilization across multiple projects.",
+                size: "Solo to 50+ consultants",
               },
             ].map(({ label, icon: Icon, copy, size }) => (
               <div
@@ -539,46 +530,47 @@ export default function SalesCRMManagementPage() {
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
             These are real examples from recent client projects. We customize
-            everything to match your specific sales process and business needs.
+            everything to match your specific project workflows and team
+            structure.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {[
               {
-                title: "Lead qualification chatbot",
+                title: "Smart project kickoff workflows",
                 description:
-                  "Captures visitor info, asks qualifying questions, schedules demos for qualified leads automatically",
-                icon: Bot,
+                  "Automatically creates project templates, assigns team members, sets up communication channels, and schedules kickoff meetings",
+                icon: Target,
               },
               {
-                title: "Follow-up sequence automation",
+                title: "Milestone & deadline tracking",
                 description:
-                  "Sends personalized emails based on lead behavior, creates tasks for sales reps at optimal times",
-                icon: Mail,
+                  "Monitors project progress, sends automated reminders, escalates delayed tasks, and updates stakeholders on schedule changes",
+                icon: Calendar,
               },
               {
-                title: "Deal pipeline reporting",
+                title: "Resource allocation optimizer",
                 description:
-                  "Daily dashboards showing win rates, deal velocity, and bottlenecks by rep and stage",
+                  "Analyzes team capacity, suggests optimal task assignments, prevents overallocation, and balances workloads across projects",
+                icon: TrendingUp,
+              },
+              {
+                title: "Client progress reporting",
+                description:
+                  "Generates automated status reports, client-facing dashboards, and milestone updates without manual data compilation",
+                icon: FileText,
+              },
+              {
+                title: "Team performance analytics",
+                description:
+                  "Tracks productivity metrics, identifies bottlenecks, measures project success rates, and provides improvement insights",
                 icon: LineChart,
               },
               {
-                title: "Customer onboarding workflows",
+                title: "Cross-platform integrations",
                 description:
-                  "Automatically creates project records, assigns team members, sends welcome sequences",
+                  "Syncs data between project tools, time tracking, communication apps, and billing systems for seamless workflows",
                 icon: Workflow,
-              },
-              {
-                title: "Meeting summary automation",
-                description:
-                  "Records key points from sales calls, updates deal records, creates follow-up tasks",
-                icon: MessageSquare,
-              },
-              {
-                title: "Renewal reminder system",
-                description:
-                  "Tracks contract end dates, alerts account managers, triggers renewal conversations",
-                icon: Mail,
               },
             ].map(({ title, description, icon: Icon }) => (
               <div
@@ -663,15 +655,16 @@ export default function SalesCRMManagementPage() {
                 START HERE
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                CRM Health Check
+                Project Workflow Audit
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 $497 (2 hour session)
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                We'll review your current setup, identify the biggest gaps, and
-                give you a prioritized action plan. Great if you're not sure
-                where to start or want a second opinion.
+                We'll analyze your current project workflows, identify
+                bottlenecks, and give you a prioritized automation roadmap.
+                Perfect if you want to understand what's possible before
+                committing to changes.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Book Session
@@ -684,15 +677,15 @@ export default function SalesCRMManagementPage() {
                 MOST POPULAR
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                Complete CRM Setup
+                Complete PM Automation Setup
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 Starting at $3,500
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                We clean up your data, build custom automations, set up
-                reporting, and train your team. Includes 30 days of support
-                after launch to ensure everything works smoothly.
+                We build your entire automated project management system with
+                task automation, progress tracking, and team coordination.
+                Includes training and 30 days of support after launch.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Get Quote
@@ -705,15 +698,15 @@ export default function SalesCRMManagementPage() {
                 ONGOING
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Monthly Optimization
+                Monthly PM Optimization
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 $1,200/month
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                Monthly check-ins to optimize workflows, add new automations,
-                and keep your system running as your business evolves. Includes
-                priority support and quarterly strategy sessions.
+                Monthly optimization of your project workflows, performance
+                monitoring, and continuous improvements. Includes priority
+                support and quarterly strategy sessions.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Learn More
@@ -792,12 +785,24 @@ export default function SalesCRMManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            CRM management works best when it's connected to your other business
-            processes. We also help with these common adjacent needs.
+            Project management works best when it's connected to your other
+            business processes. We also help with these common adjacent needs.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
+              {
+                id: 1,
+                title: "Sales CRM Management",
+                description:
+                  "Keep your leads, conversations, and follow-ups organized without lifting a finger. Your sales team always knows the next step to move deals forward.",
+                icon: Users,
+                features: [
+                  "Automated lead tracking and qualification",
+                  "Smart follow-up reminders and sequences",
+                  "Pipeline management and deal progression",
+                ],
+              },
               {
                 id: 2,
                 title: "Client Intake & Onboarding",
@@ -809,19 +814,6 @@ export default function SalesCRMManagementPage() {
                   "Welcome email sequences and onboarding",
                   "Document collection and e-signatures",
                 ],
-              },
-              {
-                id: 3,
-                title: "Project Management",
-                description:
-                  "Track tasks, deadlines, and progress automatically across your tools. Everyone stays aligned, and projects move from start to finish with less effort.",
-                icon: CheckSquare,
-                features: [
-                  "Automated task creation and assignment",
-                  "Progress tracking and milestone management",
-                  "Team communication and updates",
-                ],
-                href: "/projectmanagement",
               },
               {
                 id: 4,
@@ -899,10 +891,10 @@ export default function SalesCRMManagementPage() {
                   <div className="mt-auto pt-4">
                     <Link
                       href={
-                        service.id === 2
+                        service.id === 1
+                          ? "/salescrmmanagement"
+                          : service.id === 2
                           ? "/clientintake"
-                          : service.id === 3
-                          ? "/projectmanagement"
                           : service.id === 4
                           ? "/billingpayment"
                           : service.id === 5
@@ -984,13 +976,13 @@ export default function SalesCRMManagementPage() {
         <div className="container-width text-center relative">
           <h2 className="heading-lg mb-4">
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Ready to turn your CRM into a growth engine?
+              Ready to transform your project delivery?
             </span>
           </h2>
           <p className="body-lg mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute call to discuss your current setup and see if
-            we're a good fit. No sales pitch, just an honest conversation about
-            your CRM challenges.
+            Book a free 30-minute call to discuss your current project
+            management challenges and see how we can streamline your team's
+            workflow.
           </p>
           <div className="flex items-center justify-center gap-3">
             <Link href="/#contact" className="btn-primary">

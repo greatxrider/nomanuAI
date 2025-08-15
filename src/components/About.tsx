@@ -295,13 +295,13 @@ const About = () => {
         {/* Team Members Section */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Meet the <span className="text-brand-orange">NomanuAI</span> Team
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Your{" "}
+              <span className="text-brand-orange">Automation Partners</span>
             </h3>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Our talented team of Filipino developers, AI specialists, and
-              automation experts working together to deliver exceptional
-              results.
+              Your partners in building efficient, scalable systems that support
+              growth today and adapt for tomorrow.
             </p>
           </div>
 

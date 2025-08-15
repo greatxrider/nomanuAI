@@ -17,9 +17,22 @@ import {
   CheckSquare,
   CreditCard,
   Share2,
+  Calendar,
+  Clock,
+  FileText,
+  Target,
+  TrendingUp,
+  Settings,
+  Hash,
+  Camera,
+  Video,
+  Edit3,
+  Heart,
+  Eye,
+  BarChart3,
 } from "lucide-react";
 
-export default function SalesCRMManagementPage() {
+export default function SocialMediaPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header />
@@ -85,21 +98,22 @@ export default function SalesCRMManagementPage() {
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/30 backdrop-blur-sm mb-5">
               <Bot className="w-5 h-5 text-brand-orange" />
               <span className="text-sm font-medium text-brand-orange">
-                CRM Management Services
+                Social Media Content Services
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
               <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-                CRM Management
+                Social Media Content
               </span>
             </h1>
             <p className="text-lg md:text-xl font-semibold text-brand-orange mb-4">
-              Turn your CRM into a revenue-generating machine
+              Turn your social media into a consistent lead generation machine
             </p>
             <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              Most businesses use only 20% of their CRM's capabilities. We help
-              you unlock the other 80% through smart automation, clean data
-              processes, and workflows that actually get used by your team.
+              Most businesses struggle to maintain consistent social media
+              presence. We help you automate content planning, creation, and
+              publishing so you stay visible online, engage your audience, and
+              generate leads without the daily posting grind.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/#contact" className="btn-primary">
@@ -157,29 +171,28 @@ export default function SalesCRMManagementPage() {
 
         <div className="container-width relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
-            <div className="text-6xl font-bold text-brand-orange mb-3">76%</div>
+            <div className="text-6xl font-bold text-brand-orange mb-3">73%</div>
             <p className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              of businesses say less than half of their CRM data is accurate or
-              complete
+              of businesses struggle to maintain consistent social media posting
             </p>
             <p className="body-md">
-              According to Validity's 2025 State of CRM Data Management report,
-              incomplete and inaccurate CRM records, caused by manual entry,
-              poor adoption, and disconnected tools, cost companies millions in
-              lost opportunities.
+              According to Sprout Social's State of Social Media report, content
+              planning, creation, and consistent posting across multiple
+              platforms overwhelm most marketing teams, leading to inconsistent
+              brand presence and missed engagement opportunities.
             </p>
           </div>
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
             <p className="italic body-lg mb-4">
-              "Before working with NomanuAI, our team spent 3 hours a day on
-              data entry. Now that time goes to actual selling. Our pipeline
-              visibility improved 300% and our close rate went up 18%."
+              "Before working with NomanuAI, our social media was hit-or-miss.
+              Now we post consistently across 5 platforms, our engagement is up
+              200%, and I spend 2 hours a week instead of 15 on social media."
             </p>
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 rounded-lg overflow-hidden border-2 border-brand-orange flex-shrink-0">
                 <Image
                   src="/testimonialsPicture/yvonne-photo.jpg"
-                  alt="Yvonne - Business Owner, Haivyne"
+                  alt="Yvonne - Marketing Director, Haivyne"
                   width={64}
                   height={64}
                   className="w-full h-full object-cover"
@@ -187,7 +200,7 @@ export default function SalesCRMManagementPage() {
               </div>
               <div>
                 <p className="text-gray-900 dark:text-white font-semibold">
-                  — Yvonne, Business Owner, Haivyne
+                  — Yvonne, Marketing Director, Haivyne
                 </p>
               </div>
             </div>
@@ -259,41 +272,42 @@ export default function SalesCRMManagementPage() {
         <div className="container-width relative z-10">
           <h2 className="heading-lg mb-2">
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              What we actually do for your CRM
+              What we actually do for your social media
             </span>
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            We don't just set up your CRM and walk away. We build sustainable
-            systems that your team will actually use, with ongoing support to
-            ensure adoption and ROI.
+            We don't just schedule posts and disappear. We build complete
+            content automation systems that handle planning, creation,
+            publishing, and performance tracking so you maintain consistent
+            brand presence while focusing on your business.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
-                title: "Data cleanup & migration",
-                desc: "Remove duplicates, standardize formats, and migrate your data without losing important history.",
+                title: "Content planning & strategy",
+                desc: "AI-powered content calendars that align with your business goals, audience interests, and optimal posting times.",
               },
               {
-                title: "Custom automation workflows",
-                desc: "Lead scoring, follow-up sequences, and task creation that matches how your team actually works.",
+                title: "Automated content creation",
+                desc: "Smart templates and workflows that generate engaging posts, captions, and hashtags from your business activities.",
               },
               {
-                title: "Integration with your tools",
-                desc: "Connect your CRM to email, calendar, marketing tools, and accounting software seamlessly.",
+                title: "Multi-platform publishing",
+                desc: "Seamless posting across Facebook, Instagram, LinkedIn, Twitter, and other platforms with platform-specific optimization.",
               },
               {
-                title: "Team training & adoption",
-                desc: "We train your team on the new processes and provide documentation so nothing gets forgotten.",
+                title: "Engagement automation",
+                desc: "Automated responses, comment monitoring, and engagement strategies that build relationships with your audience.",
               },
               {
-                title: "Reporting & analytics setup",
-                desc: "Build dashboards that show you what's actually moving the needle for your business.",
+                title: "Performance tracking & insights",
+                desc: "Real-time analytics showing reach, engagement, and conversion metrics with actionable improvement recommendations.",
               },
               {
-                title: "Ongoing optimization",
-                desc: "Monthly check-ins to refine workflows and add new automations as your business grows.",
+                title: "Content repurposing workflows",
+                desc: "Automatic conversion of blog posts, videos, and other content into multiple social media formats and sizes.",
               },
             ].map((item) => (
               <div
@@ -312,47 +326,29 @@ export default function SalesCRMManagementPage() {
 
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              CRM platforms we work with
+              Social media platforms we work with
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We specialize in the leading CRM platforms:
+              We specialize in the leading social media and content platforms:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/hubspot-logo.png"
-                  alt="HubSpot"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-blue-600 text-lg">
+                  Facebook
+                </span>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/salesforce-logo.png"
-                  alt="Salesforce"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-pink-600 text-lg">
+                  Instagram
+                </span>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/zoho-logo.png"
-                  alt="Zoho"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-blue-700 text-lg">
+                  LinkedIn
+                </span>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <Image
-                  src="/crmLogo/highlevel-logo.png"
-                  alt="GoHighLevel"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="font-bold text-blue-400 text-lg">Twitter</span>
               </div>
             </div>
           </div>
@@ -409,42 +405,42 @@ export default function SalesCRMManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            Our CRM management services work best for growing businesses that
-            have outgrown basic contact management but aren't quite ready for a
-            full sales operations team.
+            Our social media automation services work best for businesses that
+            understand the importance of social presence but lack the time or
+            resources to maintain consistent, engaging content.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                label: "Real Estate Agencies & Teams",
-                icon: Landmark,
-                copy: "Coordinate leads, follow-ups, and pipeline stages across agents without manual tracking.",
-                size: "Teams of 3-25 agents",
+                label: "Small Business Owners",
+                icon: Briefcase,
+                copy: "Maintain professional social presence while focusing on core business operations and customer service.",
+                size: "Solo to 10 employees",
               },
               {
-                label: "Digital Marketing Agencies",
+                label: "Marketing Agencies",
                 icon: Users,
-                copy: "Centralize client onboarding, approvals, and reporting with automated workflows.",
-                size: "5-50 team members",
+                copy: "Scale social media services for multiple clients with automated content creation and publishing workflows.",
+                size: "Agencies managing 10+ clients",
               },
               {
-                label: "B2B SaaS Startups",
-                icon: LineChart,
-                copy: "Connect product usage data to your CRM for clean pipelines, health scores, and renewals.",
-                size: "Seed to Series B",
-              },
-              {
-                label: "Professional Services (Legal, Accounting, Consulting)",
-                icon: Scale,
-                copy: "Automate intake, engagement letters, task handoffs, and billing with audit-ready records.",
-                size: "Solo to 25+ staff",
+                label: "Content Creators & Influencers",
+                icon: Camera,
+                copy: "Amplify reach across platforms, repurpose content efficiently, and maintain consistent posting schedules.",
+                size: "Individual creators & teams",
               },
               {
                 label: "E-commerce Brands",
-                icon: Briefcase,
-                copy: "Unify customer, order, and support data for targeted campaigns and higher LTV.",
-                size: "$500K-$50M revenue",
+                icon: Settings,
+                copy: "Showcase products, engage customers, and drive sales through automated social commerce strategies.",
+                size: "$50K-$5M revenue",
+              },
+              {
+                label: "Professional Services",
+                icon: Scale,
+                copy: "Build thought leadership, share expertise, and attract clients through consistent, valuable content.",
+                size: "Consultants to 50+ staff",
               },
             ].map(({ label, icon: Icon, copy, size }) => (
               <div
@@ -539,46 +535,46 @@ export default function SalesCRMManagementPage() {
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
             These are real examples from recent client projects. We customize
-            everything to match your specific sales process and business needs.
+            everything to match your brand voice, audience, and business goals.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {[
               {
-                title: "Lead qualification chatbot",
+                title: "AI-powered content calendar",
                 description:
-                  "Captures visitor info, asks qualifying questions, schedules demos for qualified leads automatically",
-                icon: Bot,
+                  "Automatically generates content ideas, captions, and posting schedules based on your industry, audience engagement, and business goals",
+                icon: Calendar,
               },
               {
-                title: "Follow-up sequence automation",
+                title: "Cross-platform publishing",
                 description:
-                  "Sends personalized emails based on lead behavior, creates tasks for sales reps at optimal times",
-                icon: Mail,
+                  "Formats and publishes content optimally for each platform while maintaining brand consistency across all channels",
+                icon: Share2,
               },
               {
-                title: "Deal pipeline reporting",
+                title: "Engagement monitoring & response",
                 description:
-                  "Daily dashboards showing win rates, deal velocity, and bottlenecks by rep and stage",
-                icon: LineChart,
-              },
-              {
-                title: "Customer onboarding workflows",
-                description:
-                  "Automatically creates project records, assigns team members, sends welcome sequences",
-                icon: Workflow,
-              },
-              {
-                title: "Meeting summary automation",
-                description:
-                  "Records key points from sales calls, updates deal records, creates follow-up tasks",
+                  "Tracks mentions, comments, and messages across platforms with automated responses and escalation for important interactions",
                 icon: MessageSquare,
               },
               {
-                title: "Renewal reminder system",
+                title: "Content repurposing workflows",
                 description:
-                  "Tracks contract end dates, alerts account managers, triggers renewal conversations",
-                icon: Mail,
+                  "Transforms blog posts, videos, and other content into multiple social media formats, saving hours of manual work",
+                icon: Edit3,
+              },
+              {
+                title: "Performance analytics dashboard",
+                description:
+                  "Real-time tracking of reach, engagement, and conversion metrics with insights to optimize content strategy",
+                icon: BarChart3,
+              },
+              {
+                title: "Hashtag research & optimization",
+                description:
+                  "Automatically researches and suggests trending, relevant hashtags to maximize reach and discoverability",
+                icon: Hash,
               },
             ].map(({ title, description, icon: Icon }) => (
               <div
@@ -663,15 +659,15 @@ export default function SalesCRMManagementPage() {
                 START HERE
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                CRM Health Check
+                Social Media Strategy Audit
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 $497 (2 hour session)
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                We'll review your current setup, identify the biggest gaps, and
-                give you a prioritized action plan. Great if you're not sure
-                where to start or want a second opinion.
+                We'll analyze your current social media presence, identify
+                missed opportunities, and give you a prioritized automation
+                roadmap. Perfect if you want to understand what's possible.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Book Session
@@ -684,15 +680,15 @@ export default function SalesCRMManagementPage() {
                 MOST POPULAR
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                Complete CRM Setup
+                Complete Social Media Automation
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 Starting at $3,500
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                We clean up your data, build custom automations, set up
-                reporting, and train your team. Includes 30 days of support
-                after launch to ensure everything works smoothly.
+                We build your entire automated social media system with content
+                planning, creation, publishing, and analytics. Includes training
+                and 30 days of support after launch.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Get Quote
@@ -705,15 +701,15 @@ export default function SalesCRMManagementPage() {
                 ONGOING
               </p>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Monthly Optimization
+                Monthly Content Optimization
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 $1,200/month
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                Monthly check-ins to optimize workflows, add new automations,
-                and keep your system running as your business evolves. Includes
-                priority support and quarterly strategy sessions.
+                Monthly optimization of your content strategy, performance
+                monitoring, and continuous improvements. Includes priority
+                support and quarterly strategy sessions.
               </p>
               <Link href="/#contact" className="btn-primary">
                 Learn More
@@ -792,12 +788,24 @@ export default function SalesCRMManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            CRM management works best when it's connected to your other business
-            processes. We also help with these common adjacent needs.
+            Social media automation works best when it's connected to your other
+            business processes. We also help with these common adjacent needs.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
+              {
+                id: 1,
+                title: "Sales CRM Management",
+                description:
+                  "Keep your leads, conversations, and follow-ups organized without lifting a finger. Your sales team always knows the next step to move deals forward.",
+                icon: Users,
+                features: [
+                  "Automated lead tracking and qualification",
+                  "Smart follow-up reminders and sequences",
+                  "Pipeline management and deal progression",
+                ],
+              },
               {
                 id: 2,
                 title: "Client Intake & Onboarding",
@@ -821,7 +829,6 @@ export default function SalesCRMManagementPage() {
                   "Progress tracking and milestone management",
                   "Team communication and updates",
                 ],
-                href: "/projectmanagement",
               },
               {
                 id: 4,
@@ -834,20 +841,6 @@ export default function SalesCRMManagementPage() {
                   "Payment reminders and follow-ups",
                   "Expense tracking and reporting",
                 ],
-                href: "/billingpayment",
-              },
-              {
-                id: 5,
-                title: "Social Media Content",
-                description:
-                  "Plan your content once and let it publish on schedule across all your channels. Stay visible online without the daily posting grind.",
-                icon: Share2,
-                features: [
-                  "Content planning and scheduling",
-                  "Multi-platform publishing automation",
-                  "Performance tracking and analytics",
-                ],
-                href: "/socialmedia",
               },
             ].map((service, index) => {
               const IconComponent = service.icon;
@@ -899,14 +892,14 @@ export default function SalesCRMManagementPage() {
                   <div className="mt-auto pt-4">
                     <Link
                       href={
-                        service.id === 2
+                        service.id === 1
+                          ? "/salescrmmanagement"
+                          : service.id === 2
                           ? "/clientintake"
                           : service.id === 3
                           ? "/projectmanagement"
                           : service.id === 4
                           ? "/billingpayment"
-                          : service.id === 5
-                          ? "/socialmedia"
                           : "/#services"
                       }
                       className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
@@ -984,13 +977,13 @@ export default function SalesCRMManagementPage() {
         <div className="container-width text-center relative">
           <h2 className="heading-lg mb-4">
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Ready to turn your CRM into a growth engine?
+              Ready to automate your social media success?
             </span>
           </h2>
           <p className="body-lg mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute call to discuss your current setup and see if
-            we're a good fit. No sales pitch, just an honest conversation about
-            your CRM challenges.
+            Book a free 30-minute call to discuss your current social media
+            challenges and see how we can help you build consistent online
+            presence.
           </p>
           <div className="flex items-center justify-center gap-3">
             <Link href="/#contact" className="btn-primary">

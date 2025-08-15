@@ -248,7 +248,19 @@ const Services = () => {
                 {/* CTA Button */}
                 <div className="mt-auto pt-4">
                   <Link
-                    href={service.id === 1 ? "/salescrmmanagement" : "#contact"}
+                    href={
+                      service.id === 1
+                        ? "/salescrmmanagement"
+                        : service.id === 2
+                        ? "/clientintake"
+                        : service.id === 3
+                        ? "/projectmanagement"
+                        : service.id === 4
+                        ? "/billingpayment"
+                        : service.id === 5
+                        ? "/socialmedia"
+                        : "#contact"
+                    }
                     className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
                   >
                     <span>Learn More</span>
