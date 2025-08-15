@@ -26,7 +26,6 @@ const Services = () => {
         "Automated lead tracking and qualification",
         "Smart follow-up reminders and sequences",
         "Pipeline management and deal progression",
-        "Team collaboration and task assignment",
       ],
       idealFor: [
         "Sales Teams",
@@ -46,7 +45,6 @@ const Services = () => {
         "Automated intake forms and scheduling",
         "Welcome email sequences and onboarding",
         "Document collection and e-signatures",
-        "Client portal and progress tracking",
       ],
       idealFor: [
         "Service Businesses",
@@ -66,7 +64,6 @@ const Services = () => {
         "Automated task creation and assignment",
         "Progress tracking and milestone management",
         "Team communication and updates",
-        "Integration with project tools",
       ],
       idealFor: [
         "Project Managers",
@@ -86,7 +83,6 @@ const Services = () => {
         "Automated invoice generation and sending",
         "Payment reminders and follow-ups",
         "Expense tracking and reporting",
-        "Financial record synchronization",
       ],
       idealFor: [
         "Freelancers",
@@ -106,7 +102,6 @@ const Services = () => {
         "Content planning and scheduling",
         "Multi-platform publishing automation",
         "Performance tracking and analytics",
-        "Content repurposing and optimization",
       ],
       idealFor: [
         "Social Media Managers",
@@ -130,7 +125,6 @@ const Services = () => {
       "AI-powered workflow analysis",
       "Custom automation roadmap",
       "ROI projections for each opportunity",
-      "Implementation strategy",
     ],
     cta: {
       text: "Book Discovery Call",
@@ -198,12 +192,12 @@ const Services = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                <p className="text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                   {service.description}
                 </p>
 
@@ -212,7 +206,7 @@ const Services = () => {
                   {service.features.map((feature, featureIndex) => (
                     <div
                       key={featureIndex}
-                      className="flex items-center text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300"
+                      className="flex items-center text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300"
                     >
                       <div className="w-3 h-3 bg-brand-orange rounded-full mr-2 flex-shrink-0 shadow-sm shadow-brand-orange/25" />
                       <span>{feature}</span>
@@ -223,7 +217,7 @@ const Services = () => {
                 {/* CTA Button */}
                 <div className="mt-auto pt-4">
                   <Link
-                    href="#contact"
+                    href={service.id === 1 ? "/salescrmmanagement" : "#contact"}
                     className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
                   >
                     <span>Learn More</span>
@@ -255,12 +249,12 @@ const Services = () => {
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
               {discoveryCard.title}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+            <p className="text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
               {discoveryCard.description}
             </p>
 
@@ -269,7 +263,7 @@ const Services = () => {
               {discoveryCard.benefits.map((benefit, benefitIndex) => (
                 <div
                   key={benefitIndex}
-                  className="flex items-center text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300"
+                  className="flex items-center text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300"
                 >
                   <div className="w-3 h-3 bg-brand-orange rounded-full mr-2 flex-shrink-0 shadow-sm shadow-brand-orange/25" />
                   <span>{benefit}</span>
