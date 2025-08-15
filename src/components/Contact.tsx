@@ -303,7 +303,7 @@ const Contact = () => {
                 {/* Name & Email Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                       Name *
                     </label>
                     <input
@@ -312,12 +312,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                       Email *
                     </label>
                     <input
@@ -326,7 +326,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -335,7 +335,7 @@ const Contact = () => {
                 {/* Phone & Company Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                       Phone
                     </label>
                     <input
@@ -343,12 +343,12 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                       Company
                     </label>
                     <input
@@ -356,7 +356,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white placeholder-gray-400"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                       placeholder="Your company"
                     />
                   </div>
@@ -373,16 +373,19 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     aria-label="Select service type"
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white"
                   >
-                    <option value="" className="text-gray-400">
+                    <option
+                      value=""
+                      className="text-gray-600 dark:text-gray-400"
+                    >
                       Select a service
                     </option>
                     {services.map((service) => (
                       <option
                         key={service}
                         value={service}
-                        className="text-gray-900"
+                        className="text-gray-900 dark:text-white"
                       >
                         {service}
                       </option>
@@ -393,7 +396,7 @@ const Contact = () => {
                 {/* Budget & Timeline Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                       Budget Range
                     </label>
                     <select
@@ -401,16 +404,19 @@ const Contact = () => {
                       value={formData.budget}
                       onChange={handleInputChange}
                       aria-label="Select budget range"
-                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white"
                     >
-                      <option value="" className="text-gray-400">
+                      <option
+                        value=""
+                        className="text-gray-600 dark:text-gray-400"
+                      >
                         Select budget
                       </option>
                       {budgetRanges.map((budget) => (
                         <option
                           key={budget}
                           value={budget}
-                          className="text-gray-900"
+                          className="text-gray-900 dark:text-white"
                         >
                           {budget}
                         </option>
@@ -418,7 +424,7 @@ const Contact = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                       Timeline
                     </label>
                     <select
@@ -426,16 +432,19 @@ const Contact = () => {
                       value={formData.timeline}
                       onChange={handleInputChange}
                       aria-label="Select timeline"
-                      className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-white"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white"
                     >
-                      <option value="" className="text-gray-400">
+                      <option
+                        value=""
+                        className="text-gray-600 dark:text-gray-400"
+                      >
                         Select timeline
                       </option>
                       {timelines.map((timeline) => (
                         <option
                           key={timeline}
                           value={timeline}
-                          className="text-gray-900"
+                          className="text-gray-900 dark:text-white"
                         >
                           {timeline}
                         </option>
@@ -446,7 +455,7 @@ const Contact = () => {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
                     Project Details *
                   </label>
                   <textarea
@@ -455,7 +464,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 resize-none text-sm text-white placeholder-gray-400"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 resize-none text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="Tell us about your automation needs..."
                   />
                 </div>

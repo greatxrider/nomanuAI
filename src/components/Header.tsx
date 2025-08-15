@@ -56,7 +56,7 @@ const Header = () => {
         isScrolled
           ? theme === "dark"
             ? "bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800"
-            : "bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200"
+            : "bg-gray-300/30 backdrop-blur-md shadow-lg border-b border-gray-200"
           : "bg-transparent"
       }`}
     >
@@ -168,7 +168,7 @@ const Header = () => {
               isScrolled
                 ? theme === "dark"
                   ? "border-gray-800 bg-black/80"
-                  : "border-gray-200 bg-white/90"
+                  : "border-gray-200 bg-gray-300/30"
                 : theme === "dark"
                 ? "border-gray-700 bg-black/70"
                 : "border-gray-200 bg-white/70"

@@ -159,10 +159,10 @@ const Hero = () => {
           className="animate-bounce cursor-pointer hover:scale-110 transition-transform duration-300"
         >
           <div className="flex flex-col items-center space-y-2">
-            <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:border-brand-orange transition-colors duration-300">
+            <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm hover:border-brand-orange transition-colors duration-300">
               <div className="w-1 h-3 bg-brand-orange rounded-full mt-2 animate-pulse" />
             </div>
-            <span className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-wide bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-2 py-1 rounded hover:text-brand-orange transition-colors duration-300">
+            <span className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-wide bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm px-2 py-1 rounded hover:text-brand-orange transition-colors duration-300">
               Discover More
             </span>
           </div>

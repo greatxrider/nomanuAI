@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import {
   ExternalLink,
   Github,
@@ -718,20 +720,71 @@ export default function ProjectsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800">
-      {/* Header */}
-      <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-700/50">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center justify-between mb-6">
-            <Link
-              href="/"
-              className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors duration-300"
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Back to Home
-            </Link>
+    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <Header />
+
+      {/* Page Header - Fixed navbar overlap issue */}
+      <div className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+        {/* Enhanced AI Background - Same as Home/About section */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Animated Circuit Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern
+                  id="circuit-header"
+                  x="0"
+                  y="0"
+                  width="100"
+                  height="100"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M20,20 L80,20 L80,80 L20,80 Z"
+                    fill="none"
+                    stroke="#E56518"
+                    strokeWidth="1"
+                  />
+                  <circle cx="20" cy="20" r="3" fill="#E56518" />
+                  <circle cx="80" cy="20" r="3" fill="#E56518" />
+                  <circle cx="80" cy="80" r="3" fill="#E56518" />
+                  <circle cx="20" cy="80" r="3" fill="#E56518" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#circuit-header)" />
+            </svg>
           </div>
 
+          {/* Floating AI Particles */}
+          <div className="absolute inset-0">
+            {[
+              { left: "15%", top: "20%", delay: "0s", duration: "4s" },
+              { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
+              { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
+              { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
+            ].map((particle, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-brand-orange rounded-full animate-pulse opacity-30"
+                style={{
+                  left: particle.left,
+                  top: particle.top,
+                  animationDelay: particle.delay,
+                  animationDuration: particle.duration,
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Gradient Orbs */}
+          <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
+          <div
+            className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="text-center">
             <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
               <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
@@ -740,11 +793,14 @@ export default function ProjectsPage() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Projects We've <span className="text-brand-orange">Built</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              Projects We've{" "}
+              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+                Built
+              </span>
             </h1>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Explore our complete portfolio of AI automation solutions that
               have transformed businesses across industries.
             </p>
@@ -752,40 +808,62 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="relative overflow-hidden">
-        {/* AI Background Effects */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
+      {/* Main Content - Pattern B: Glowing Orange Gradient Background */}
+      <div className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        {/* Glowing Orange Gradient Background Effects */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
+          <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/50 via-orange-400/25 to-brand-orange-light/40 rounded-full blur-3xl animate-pulse opacity-75" />
           <div
-            className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
+            className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/40 via-brand-orange/50 to-orange-500/35 rounded-full blur-3xl animate-pulse opacity-65"
             style={{ animationDelay: "2s" }}
           />
+
+          {/* Central Glowing Effect */}
+          <div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-brand-orange/10 via-orange-400/15 to-brand-orange/10 rounded-full blur-3xl animate-pulse opacity-40"
+            style={{ animationDelay: "4s" }}
+          />
+
+          {/* Additional Floating Orange Particles - Brighter */}
+          <div className="absolute inset-0 opacity-50">
+            {[
+              { left: "15%", top: "20%", delay: "0s", size: "w-4 h-4" },
+              { left: "85%", top: "30%", delay: "1s", size: "w-3 h-3" },
+              { left: "25%", top: "70%", delay: "2s", size: "w-5 h-5" },
+              { left: "75%", top: "60%", delay: "3s", size: "w-3 h-3" },
+              { left: "45%", top: "15%", delay: "4s", size: "w-4 h-4" },
+              { left: "65%", top: "80%", delay: "5s", size: "w-3 h-3" },
+            ].map((particle, i) => (
+              <div
+                key={i}
+                className={`absolute ${particle.size} bg-gradient-to-r from-brand-orange to-orange-400 rounded-full animate-pulse`}
+                style={{
+                  left: particle.left,
+                  top: particle.top,
+                  animationDelay: particle.delay,
+                  animationDuration: "3s",
+                  filter: "blur(1px)",
+                }}
+              />
+            ))}
+          </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
           {/* Search and Filter Section */}
-          <div className="mb-10">
-            <div className="flex items-center gap-4 justify-center">
-              {/* Filter Icon */}
-              <button
-                type="button"
-                aria-label="Filter"
-                className="hidden sm:flex items-center justify-center w-8 h-8 rounded-md border border-white/10 bg-white/5 text-gray-300 hover:text-white hover:border-brand-orange/40"
-              >
-                <Filter className="w-4 h-4" />
-              </button>
-
+          <div className="mb-16">
+            <div className="flex flex-col lg:flex-row items-center gap-6 justify-center">
               {/* Filter Pills */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap justify-center">
                 {filters.map((filter) => (
                   <button
                     key={filter.id}
                     onClick={() => setActiveFilter(filter.id)}
-                    className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm border ${
+                    className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm border ${
                       activeFilter === filter.id
                         ? "bg-brand-orange text-white border-brand-orange/60 shadow-brand-orange/20"
-                        : "bg-white/5 text-gray-300 border-white/10 hover:border-brand-orange/40 hover:text-white"
+                        : "bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-brand-orange/40 hover:text-brand-orange dark:hover:text-brand-orange"
                     }`}
                   >
                     {filter.label}
@@ -794,27 +872,27 @@ export default function ProjectsPage() {
               </div>
 
               {/* Search Input */}
-              <div className="relative w-72 sm:w-80">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <div className="relative w-full max-w-md">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search projects..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
                 />
               </div>
             </div>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {filteredProjects.map((project, index) => {
               const IconComponent = project.icon;
               return (
                 <div
                   key={project.id}
-                  className="group bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
+                  className="group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 dark:hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
                   style={{ animationDelay: `${index * 100}ms` }}
                   onClick={() => openModal(project)}
                 >
@@ -890,9 +968,9 @@ export default function ProjectsPage() {
             })}
           </div>
 
-          {/* CTA Section */}
-          <div className="text-center mt-16">
-            <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-white/20 shadow-lg">
+          {/* CTA Section - Clean and Simple */}
+          <div className="text-center">
+            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Ready to Build Something Amazing?
               </h3>
@@ -910,7 +988,7 @@ export default function ProjectsPage() {
             </div>
           </div>
 
-          {/* Disclaimer Button */}
+          {/* Disclaimer Section - Clean and Simple */}
           <div className="text-center mt-8">
             <button
               onClick={() => setIsDisclaimerOpen(true)}
@@ -937,6 +1015,8 @@ export default function ProjectsPage() {
           onClose={() => setIsDisclaimerOpen(false)}
         />
       )}
-    </div>
+
+      <Footer />
+    </main>
   );
 }

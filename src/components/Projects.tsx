@@ -375,7 +375,7 @@ const ProjectModal = ({
                 />
                 {/* Click to expand indicator */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                  <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-lg backdrop-blur-sm">
+                  <div className="bg-gray-300/30 dark:bg-gray-800/30 px-4 py-2 rounded-lg backdrop-blur-sm">
                     <span className="text-sm font-medium text-gray-900 dark:text-white">
                       Click to view full image
                     </span>
@@ -718,15 +718,46 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* AI Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-orange rounded-full blur-3xl animate-pulse" />
+      {/* Glowing Orange Gradient Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
+        <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/50 via-orange-400/25 to-brand-orange-light/40 rounded-full blur-3xl animate-pulse opacity-75" />
         <div
-          className="absolute bottom-20 right-20 w-40 h-40 bg-brand-orange/10 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/40 via-brand-orange/50 to-orange-500/35 rounded-full blur-3xl animate-pulse opacity-65"
           style={{ animationDelay: "2s" }}
         />
+
+        {/* Central Glowing Effect */}
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-brand-orange/10 via-orange-400/15 to-brand-orange/10 rounded-full blur-3xl animate-pulse opacity-40"
+          style={{ animationDelay: "4s" }}
+        />
+
+        {/* Additional Floating Orange Particles - Brighter */}
+        <div className="absolute inset-0 opacity-50">
+          {[
+            { left: "15%", top: "20%", delay: "0s", size: "w-4 h-4" },
+            { left: "85%", top: "30%", delay: "1s", size: "w-3 h-3" },
+            { left: "25%", top: "70%", delay: "2s", size: "w-5 h-5" },
+            { left: "75%", top: "60%", delay: "3s", size: "w-3 h-3" },
+            { left: "45%", top: "15%", delay: "4s", size: "w-4 h-4" },
+            { left: "65%", top: "80%", delay: "5s", size: "w-3 h-3" },
+          ].map((particle, i) => (
+            <div
+              key={i}
+              className={`absolute ${particle.size} bg-gradient-to-r from-brand-orange to-orange-400 rounded-full animate-pulse`}
+              style={{
+                left: particle.left,
+                top: particle.top,
+                animationDelay: particle.delay,
+                animationDuration: "3s",
+                filter: "blur(1px)",
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="container-width relative z-10">
@@ -754,7 +785,7 @@ const Projects = () => {
             <button
               type="button"
               aria-label="Filter"
-              className="hidden sm:flex items-center justify-center w-8 h-8 rounded-md border border-white/10 bg-white/5 text-gray-300 hover:text-white hover:border-brand-orange/40"
+              className="hidden sm:flex items-center justify-center w-8 h-8 rounded-md border border-white/10 bg-white/5 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-brand-orange/40"
             >
               <Filter className="w-4 h-4" />
             </button>
@@ -768,7 +799,7 @@ const Projects = () => {
                   className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm border ${
                     activeFilter === filter.id
                       ? "bg-brand-orange text-white border-brand-orange/60 shadow-brand-orange/20"
-                      : "bg-white/5 text-gray-300 border-white/10 hover:border-brand-orange/40 hover:text-white"
+                      : "bg-white/5 text-gray-600 dark:text-gray-300 border-white/10 hover:border-brand-orange/40 hover:text-gray-900 dark:hover:text-white"
                   }`}
                 >
                   {filter.label}
@@ -778,13 +809,13 @@ const Projects = () => {
 
             {/* Search Input */}
             <div className="relative w-72 sm:w-80">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 dark:text-gray-400" />
               <input
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
+                className="w-full pl-9 pr-3 py-2 rounded-lg bg-white/5 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
               />
             </div>
           </div>
@@ -797,7 +828,7 @@ const Projects = () => {
             return (
               <div
                 key={project.id}
-                className="group bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
+                className="group bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
                 onClick={() => openModal(project)}
               >
@@ -878,7 +909,7 @@ const Projects = () => {
           <div className="text-center mt-12">
             <a
               href="/projects"
-              className="inline-flex items-center bg-white/80 dark:bg-white/10 hover:bg-white/90 dark:hover:bg-white/20 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-gray-200/50 dark:border-white/20 backdrop-blur-sm"
+              className="inline-flex items-center bg-gray-300/30 dark:bg-gray-800/30 hover:bg-gray-300/40 dark:hover:bg-gray-800/40 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-gray-200/50 dark:border-white/20 backdrop-blur-sm"
             >
               <span>See All Projects</span>
               <ExternalLink className="w-5 h-5 ml-2" />
@@ -888,7 +919,7 @@ const Projects = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-white/20 shadow-lg">
+          <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-white/20 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to Build Something Amazing?
             </h3>

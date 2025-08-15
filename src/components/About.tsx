@@ -27,9 +27,9 @@ const About = () => {
       description: "Expert in machine learning and AI algorithms",
     },
     {
-      title: "Software Engineers",
+      title: "AI Engineers",
       icon: Cpu,
-      description: "Building robust Web and Software",
+      description: "Building robust AI-powered automation systems",
     },
     {
       title: "Automation Specialists",
@@ -119,9 +119,11 @@ const About = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We are a team of Filipino developers, AI specialists, and software
-            engineers working together to deliver intelligent automation
-            solutions that transform businesses.
+            We're an AI Automation Agency that transforms how businesses
+            operate. We help startups and growing companies eliminate manual
+            work by building intelligent automation systems that handle
+            repetitive tasks, streamline workflows, and free up your team to
+            focus on what truly matters—growing your business.
           </p>
         </div>
 
@@ -134,7 +136,7 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
+                  className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* AI Glow Effect */}
@@ -177,7 +179,7 @@ const About = () => {
               {team.map((member, index) => (
                 <div
                   key={member.title}
-                  className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
+                  className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="flex items-center space-x-4">

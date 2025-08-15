@@ -301,7 +301,7 @@ const Testimonials = () => {
             {/* Navigation */}
             <div className="flex justify-center gap-4 mt-8">
               <button
-                className="p-3 bg-white/80 dark:bg-gray-800/80 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
+                className="p-3 bg-gray-300/30 dark:bg-gray-800/30 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
                 onClick={() =>
                   goTo((active - 1 + testimonials.length) % testimonials.length)
                 }
@@ -310,7 +310,7 @@ const Testimonials = () => {
                 <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
               </button>
               <button
-                className="p-3 bg-white/80 dark:bg-gray-800/80 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
+                className="p-3 bg-gray-300/30 dark:bg-gray-800/30 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
                 onClick={() => goTo((active + 1) % testimonials.length)}
                 aria-label="Next"
               >
