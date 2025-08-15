@@ -314,13 +314,13 @@ const Services = () => {
               ))}
             </div>
 
-            {/* Learn More Button - Always at bottom */}
+            {/* Book a Call Button - Always at bottom */}
             <div className="mt-auto">
               <Link
                 href="#contact"
                 className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
               >
-                <span>Learn More</span>
+                <span>Book a Call</span>
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </div>
