@@ -257,9 +257,181 @@ const ProjectModal = ({
 
   if (!isOpen || !project) return null;
 
-  // Enhanced project details for Lead Flow Automation
+  // Enhanced project details for automation projects
   const getProjectDetails = (proj: any) => {
-    if (proj.id === 7) {
+    if (proj.id === 11) {
+      // Property Insights Automation
+      return {
+        fullDescription: `This comprehensive financial planning automation revolutionizes property investment analysis and retirement planning through intelligent data processing and visualization. Built with n8n, it captures client financial data via webhooks, generates sophisticated financial projections, creates dynamic charts, and delivers personalized PDF reports automatically. The system provides complete end-to-end automation from data collection to client communication.`,
+        detailedFeatures: [
+          "Webhook Integration: Secure form submission processing with authentication validation",
+          "Comprehensive Data Capture: Collects 15+ financial data points including assets, debts, and retirement goals",
+          "Dynamic Chart Generation: Creates 4 different chart types using QuickChart API for visual insights",
+          "Financial Projections: Calculates portfolio growth, retirement projections, and shortfall analysis",
+          "Automated PDF Generation: Creates personalized financial reports with embedded charts",
+          "Email Automation: Sends customized reports with professional messaging and attachments",
+          "Airtable Integration: Structured data storage with calculated fields and relationship mapping",
+          "Real-time Processing: Immediate chart generation and report delivery upon form submission",
+        ],
+        workflowSteps: [
+          "Client submits financial planning form through secure webhook endpoint",
+          "System validates request authenticity and stores comprehensive financial data in Airtable",
+          "Retrieves stored client data and calculates retirement projections with 6.5% growth rate",
+          "Generates Retirement Projections bar chart comparing current vs future portfolio value",
+          "Creates Portfolio Growth Over Time line chart showing year-by-year progression",
+          "Produces Shortfall Analysis chart comparing required vs projected retirement assets",
+          "Builds Comprehensive Financial Overview chart displaying all financial metrics",
+          "Updates Airtable record with all generated chart URLs for future reference",
+          "Retrieves PDF report from Airtable and sends personalized email with attachment",
+        ],
+        businessImpact: [
+          "Instant Financial Analysis: Eliminates hours of manual calculation and chart creation",
+          "Professional Client Experience: Automated delivery of polished financial reports",
+          "Data-Driven Insights: Visual representations help clients understand their financial position",
+          "Scalable Consultation Process: Handle unlimited client assessments without manual work",
+          "Consistent Reporting: Standardized analysis ensures quality across all client interactions",
+          "Time Efficiency: Complete financial analysis and report delivery in minutes, not hours",
+        ],
+        technicalSpecs: [
+          "Platform: n8n workflow automation with webhook triggers",
+          "Data Storage: Airtable with 15+ financial field mapping and calculated projections",
+          "Chart Generation: QuickChart API integration for dynamic financial visualizations",
+          "Email Delivery: Gmail API with attachment support and personalized messaging",
+          "Authentication: Webhook security validation with CloudFlare worker headers",
+          "PDF Processing: Automated report generation and attachment handling",
+          "Financial Calculations: JavaScript-based compound growth and projection algorithms",
+        ],
+      };
+    } else if (proj.id === 10) {
+      // Lead Flow Gmail Automation
+      return {
+        fullDescription: `This intelligent email automation revolutionizes property investment lead management through Gmail integration. Built with n8n, it automatically monitors incoming emails, extracts financial and personal data using AI, validates lead quality, and seamlessly integrates with CRM systems. The system provides instant, personalized responses while maintaining complete data synchronization across Airtable and HighLevel platforms.`,
+        detailedFeatures: [
+          "Gmail Integration: Real-time monitoring of unread emails with automatic polling",
+          "AI-Powered Data Extraction: OpenAI GPT-4 extracts structured financial data from email content",
+          "Lead Quality Validation: Intelligent filtering ensures only complete, high-quality leads are processed",
+          "Automated Response Generation: Context-aware email replies with personalized content and next steps",
+          "Multi-Platform CRM Sync: Seamless integration with both Airtable and HighLevel CRM systems",
+          "Memory-Enabled Conversations: Session-based memory for contextual email thread management",
+          "Dynamic Field Mapping: Extracts complex financial data including property values, loan amounts, and retirement planning",
+          "Email Workflow Management: Automated reply, mark as read, and follow-up sequence handling",
+        ],
+        workflowSteps: [
+          "Gmail trigger monitors incoming unread emails every minute",
+          "System retrieves and filters emails received within the current day",
+          "AI agent extracts structured financial data (property values, loan amounts, retirement targets)",
+          "Lead validation ensures all required fields are present and meet quality criteria",
+          "Validated data is stored in Airtable with calculated projections and equity information",
+          "Lead information syncs to HighLevel CRM with appropriate tags and contact details",
+          "AI generates personalized response based on completeness of provided information",
+          "Automated email reply is sent with next steps or missing information requests",
+          "Original email is marked as read to prevent duplicate processing",
+        ],
+        businessImpact: [
+          "24/7 Lead Processing: Never miss a potential client inquiry regardless of time",
+          "Instant Professional Responses: Immediate acknowledgment builds trust and engagement",
+          "Data Accuracy: AI extraction eliminates manual data entry errors",
+          "Lead Qualification: Automatic filtering ensures sales team focuses on quality prospects",
+          "CRM Synchronization: Unified lead data across all business systems",
+          "Scalable Operations: Handle unlimited email volume without additional staff",
+        ],
+        technicalSpecs: [
+          "Platform: n8n workflow automation with Gmail API integration",
+          "AI Processing: OpenAI GPT-4 for data extraction and response generation",
+          "Email Management: Gmail OAuth2 with automatic polling and status management",
+          "CRM Integration: Airtable API and HighLevel OAuth2 for dual-platform sync",
+          "Data Storage: Structured field mapping with calculated financial projections",
+          "Memory System: Session-based conversation context for email threads",
+          "Response Automation: Dynamic email generation with conditional logic",
+        ],
+      };
+    } else if (proj.id === 9) {
+      // CSV to HubSpot Uploader Automation
+      return {
+        fullDescription: `This sophisticated data migration automation streamlines the process of importing CSV data into HubSpot CRM. Built with n8n, it features intelligent field mapping, data validation, and seamless integration with HubSpot's API. The system automatically analyzes CSV structure, provides dynamic field correspondence forms, and ensures data integrity throughout the upload process, making bulk data imports effortless and error-free.`,
+        detailedFeatures: [
+          "Dynamic Field Mapping: Automatically detects CSV structure and creates correspondence forms for field matching",
+          "Multi-Object Support: Handles Companies, Contacts, Deals, Leads, and Tickets with dedicated workflows",
+          "HubSpot API Integration: Direct connection to HubSpot CRM with OAuth2 authentication",
+          "Data Validation: Filters out hidden fields and HubSpot system properties for clean imports",
+          "Google Sheets Cache: Maintains property definitions in Google Sheets for faster processing",
+          "Interactive Forms: User-friendly forms for file upload and field mapping configuration",
+          "Real-time Processing: Immediate data transformation and upload with progress feedback",
+          "Error Handling: Robust error management with detailed completion notifications",
+        ],
+        workflowSteps: [
+          "User uploads CSV file through interactive form and selects import type (Companies/Contacts/Deals/Leads/Tickets)",
+          "System extracts first line to analyze CSV structure and identify field names",
+          "HubSpot properties are fetched via API and cached in Google Sheets for the selected object type",
+          "Automatic field validation checks if CSV fields match existing HubSpot properties",
+          "If fields don't match, dynamic correspondence form is generated for manual mapping",
+          "User maps CSV fields to correct HubSpot properties through interactive interface",
+          "CSV data is parsed and transformed according to field mappings",
+          "Each record is processed and uploaded to HubSpot via API with proper property assignment",
+          "Completion notification confirms successful data import with summary details",
+        ],
+        businessImpact: [
+          "Streamlined Data Migration: Eliminates manual data entry for bulk imports",
+          "Reduced Import Errors: Intelligent field mapping prevents data corruption",
+          "Time Efficiency: Automates hours of manual CRM data entry work",
+          "Data Integrity: Validates and filters data before upload to maintain CRM quality",
+          "Multi-Platform Integration: Seamless connection between CSV sources and HubSpot",
+          "User-Friendly Process: Simple forms guide users through complex import procedures",
+        ],
+        technicalSpecs: [
+          "Platform: n8n workflow automation with advanced form handling",
+          "CRM Integration: HubSpot API v3 with OAuth2 authentication",
+          "Data Processing: CSV parsing with semicolon delimiter support",
+          "Storage: Google Sheets integration for property caching and management",
+          "Field Mapping: Dynamic form generation for field correspondence",
+          "Data Validation: Hidden field filtering and HubSpot system property exclusion",
+          "File Support: CSV format with configurable encoding and header row detection",
+        ],
+      };
+    } else if (proj.id === 8) {
+      // Contractor Automation
+      return {
+        fullDescription: `This intelligent contractor automation transforms how contractors receive and process leads through Telegram. Built with n8n, it features multi-modal input processing that handles voice messages, images, and text through a single unified workflow. The system uses advanced AI to extract location data, categorize contractor services, and automatically scrape business databases to populate CRM systems with qualified leads.`,
+        detailedFeatures: [
+          "Multi-Modal Input Processing: Handles voice messages, images, and text through unified Telegram interface",
+          "AI-Powered Data Extraction: OpenAI GPT-4 processes natural language to extract location and service data",
+          "Voice Transcription: Automatic speech-to-text conversion for hands-free lead input",
+          "Image Analysis: OCR and visual data extraction from photos and documents",
+          "Automated Web Scraping: Uses Apify actors to scrape contractor databases based on extracted criteria",
+          "Smart Categorization: AI identifies contractor services from extensive predefined category list",
+          "CRM Integration: Seamless data flow to Airtable and GoHighLevel for lead management",
+          "User Authentication: Telegram user validation with secure webhook integration",
+        ],
+        workflowSteps: [
+          "Contractor sends message via Telegram (voice, image, or text)",
+          "System validates user authentication and routes message by type",
+          "AI processes input to extract location, category, and maximum items needed",
+          "For voice: transcribes audio then extracts data using OpenAI",
+          "For images: converts to base64, analyzes visual content, extracts text data",
+          "For text: directly processes message content with AI location extractor",
+          "Structured data triggers Apify actor to scrape contractor databases",
+          "Scraped contractor data is stored in Airtable with full business details",
+          "Lead information automatically syncs to GoHighLevel CRM system",
+        ],
+        businessImpact: [
+          "Hands-Free Operation: Voice and image input allows contractors to work while generating leads",
+          "Multi-Channel Lead Generation: Automatically finds contractors across multiple databases",
+          "Real-Time Processing: Instant lead capture and database population",
+          "Scalable Automation: Handle unlimited lead generation requests simultaneously",
+          "Data Accuracy: AI-powered extraction ensures consistent, structured data",
+          "CRM Ready: Automated lead qualification and CRM integration",
+        ],
+        technicalSpecs: [
+          "Platform: n8n workflow automation with advanced node orchestration",
+          "AI Processing: OpenAI GPT-4 for text, voice, and image analysis",
+          "Integrations: Telegram Bot API, Apify Web Scraping, Airtable, GoHighLevel",
+          "Voice Processing: Automated transcription with OpenAI Whisper",
+          "Image Processing: Base64 conversion with visual content analysis",
+          "Data Storage: Structured contractor database with 16+ business fields",
+          "Authentication: Secure Telegram user validation and webhook verification",
+        ],
+      };
+    } else if (proj.id === 7) {
       // Lead Flow Messenger Automation
       return {
         fullDescription: `This sophisticated automation revolutionizes property investment lead generation through Facebook Messenger. Built with n8n, it creates an intelligent conversation flow that captures high-quality leads, extracts structured data using AI, and seamlessly integrates with your CRM ecosystem. The system handles everything from initial contact to lead qualification, making your sales process completely hands-free.`,
@@ -574,108 +746,6 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      id: 1,
-      title: "LeadGen AI Platform",
-      description:
-        "Automated lead generation system that captures and qualifies leads 24/7 using AI algorithms",
-      category: "zapier-automations",
-      image: "/assets/project-leadgen.jpg",
-      technologies: ["Python", "OpenAI API", "Zapier", "HubSpot"],
-      results: [
-        "300% increase in lead capture",
-        "95% qualification accuracy",
-        "24/7 automation",
-      ],
-      icon: Zap,
-      link: "#",
-      github: "#",
-    },
-    {
-      id: 2,
-      title: "CRM Integration Hub",
-      description:
-        "Seamless integration between multiple CRM systems with automated data synchronization",
-      category: "n8n-automations",
-      image: "/assets/project-crm.jpg",
-      technologies: ["Node.js", "Salesforce API", "Pipedrive", "Webhooks"],
-      results: [
-        "100% data accuracy",
-        "Real-time sync",
-        "Reduced manual work by 80%",
-      ],
-      icon: Users,
-      link: "#",
-      github: "#",
-    },
-    {
-      id: 3,
-      title: "Client Onboarding System",
-      description:
-        "Automated client onboarding workflow with document processing and progress tracking",
-      category: "make-automations",
-      image: "/assets/project-onboarding.jpg",
-      technologies: ["React", "AWS Lambda", "Document AI", "Stripe"],
-      results: [
-        "50% faster onboarding",
-        "Zero manual errors",
-        "100% compliance",
-      ],
-      icon: TrendingUp,
-      link: "#",
-      github: "#",
-    },
-    {
-      id: 4,
-      title: "AI Chatbot Platform",
-      description:
-        "Intelligent customer service chatbot with natural language processing capabilities",
-      category: "zapier-automations",
-      image: "/assets/project-chatbot.jpg",
-      technologies: ["Python", "NLP", "Dialogflow", "React"],
-      results: [
-        "90% customer satisfaction",
-        "24/7 support",
-        "60% cost reduction",
-      ],
-      icon: MessageCircle,
-      link: "#",
-      github: "#",
-    },
-    {
-      id: 5,
-      title: "Security Compliance Bot",
-      description:
-        "Automated compliance monitoring and security alert system for financial institutions",
-      category: "n8n-automations",
-      image: "/assets/project-security.jpg",
-      technologies: ["Python", "AWS", "SOC2", "Machine Learning"],
-      results: [
-        "100% compliance rate",
-        "Real-time alerts",
-        "Zero security breaches",
-      ],
-      icon: Shield,
-      link: "#",
-      github: "#",
-    },
-    {
-      id: 6,
-      title: "Process Optimization Suite",
-      description:
-        "Comprehensive business process automation with analytics and performance tracking",
-      category: "make-automations",
-      image: "/assets/project-process.jpg",
-      technologies: ["Node.js", "MongoDB", "Analytics", "Dashboard"],
-      results: [
-        "40% efficiency increase",
-        "Real-time insights",
-        "Scalable automation",
-      ],
-      icon: TrendingUp,
-      link: "#",
-      github: "#",
-    },
-    {
       id: 7,
       title: "Lead Flow Messenger Automation",
       description:
@@ -695,6 +765,106 @@ export default function ProjectsPage() {
         "AI data extraction",
       ],
       icon: MessageCircle,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 8,
+      title: "Contractor Automation",
+      description:
+        "Multi-modal AI automation for contractors that processes voice, image, and text inputs via Telegram to automatically scrape contractor databases and populate CRM systems",
+      category: "n8n-automations",
+      image: "/automations/contractor-project.png",
+      technologies: [
+        "n8n",
+        "OpenAI GPT-4",
+        "Telegram Bot API",
+        "Apify Web Scraping",
+        "Airtable",
+        "GoHighLevel CRM",
+        "OpenAI Whisper",
+      ],
+      results: [
+        "Multi-modal input processing",
+        "Automated contractor database scraping",
+        "Hands-free voice operation",
+      ],
+      icon: Users,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 9,
+      title: "CSV to HubSpot Uploader Automation",
+      description:
+        "Intelligent data migration automation that streamlines CSV imports into HubSpot CRM with dynamic field mapping, validation, and seamless API integration",
+      category: "n8n-automations",
+      image: "/automations/csv-to-hubspot-project.png",
+      technologies: [
+        "n8n",
+        "HubSpot API v3",
+        "Google Sheets",
+        "CSV Processing",
+        "OAuth2",
+        "Dynamic Forms",
+        "Data Validation",
+      ],
+      results: [
+        "Automated bulk data imports",
+        "Intelligent field mapping",
+        "Zero manual data entry",
+      ],
+      icon: TrendingUp,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 10,
+      title: "Lead Flow Gmail Automation",
+      description:
+        "AI-powered Gmail automation that monitors property investment inquiries, extracts financial data, validates leads, and provides instant personalized responses with CRM integration",
+      category: "n8n-automations",
+      image: "/automations/lead-flow-gmail-project.png",
+      technologies: [
+        "n8n",
+        "OpenAI GPT-4",
+        "Gmail API",
+        "Airtable",
+        "HighLevel CRM",
+        "OAuth2",
+        "AI Memory",
+      ],
+      results: [
+        "24/7 email lead processing",
+        "Instant AI-powered responses",
+        "Dual CRM synchronization",
+      ],
+      icon: MessageCircle,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 11,
+      title: "Property Insights Automation",
+      description:
+        "Comprehensive financial planning automation that captures client data, generates dynamic charts, calculates retirement projections, and delivers personalized PDF reports automatically",
+      category: "n8n-automations",
+      image: "/automations/property-insights-project.png",
+      technologies: [
+        "n8n",
+        "Airtable",
+        "QuickChart API",
+        "Gmail API",
+        "Webhook Integration",
+        "JavaScript",
+        "PDF Generation",
+      ],
+      results: [
+        "Automated financial analysis",
+        "Dynamic chart generation",
+        "Instant report delivery",
+      ],
+      icon: TrendingUp,
       link: "#",
       github: "#",
     },
