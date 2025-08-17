@@ -104,13 +104,11 @@ export default function BillingPaymentPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl font-semibold text-brand-orange mb-4">
-              Turn your billing process into a cash flow powerhouse
+              Streamline your billing with practical automation
             </p>
             <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              Most businesses lose thousands of dollars to late payments and
-              billing inefficiencies. We help you automate invoice generation,
-              payment processing, and follow-ups so you get paid faster and
-              never chase clients again.
+              We set up dependable invoicing, payment links, and reminder
+              workflows so you get paid faster without manual follow‑ups.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/#contact" className="btn-primary">
@@ -275,37 +273,36 @@ export default function BillingPaymentPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            We don't just set up payment processing and leave. We build complete
-            automated billing systems that handle everything from invoice
-            generation to payment collection, ensuring you get paid on time,
-            every time.
+            We configure reliable billing workflows and connect invoicing,
+            payments, reminders, and simple reporting so money moves on time and
+            your team spends less time chasing payments.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
                 title: "Automated invoice generation",
-                desc: "Smart templates that create professional invoices automatically based on completed work, time tracking, or project milestones.",
+                desc: "Create and send professional invoices from templates when work completes or time is logged.",
               },
               {
                 title: "Payment processing setup",
-                desc: "Seamless integration with multiple payment gateways, allowing clients to pay instantly via credit card, ACH, or digital wallets.",
+                desc: "Set up Stripe/PayPal payment links and checkout so clients can pay by card or bank transfer.",
               },
               {
                 title: "Smart payment reminders",
-                desc: "Automated follow-up sequences that send friendly reminders before and after due dates without being pushy.",
+                desc: "Automated, friendly reminders before and after due dates that keep cash flowing without pressure.",
               },
               {
                 title: "Expense tracking & reporting",
-                desc: "Automatic categorization of business expenses with real-time reporting for better financial visibility and tax preparation.",
+                desc: "Basic expense categorization and monthly summaries for better visibility and simple tax prep.",
               },
               {
-                title: "Cash flow forecasting",
-                desc: "AI-powered insights that predict incoming payments and identify potential cash flow issues before they happen.",
+                title: "Upcoming payments overview",
+                desc: "See what’s due and when with simple lists and filters based on invoice status and due dates.",
               },
               {
-                title: "Financial dashboard & analytics",
-                desc: "Real-time visibility into outstanding invoices, payment trends, and revenue metrics with actionable insights.",
+                title: "Billing snapshot dashboard",
+                desc: "At‑a‑glance view of outstanding invoices, recent payments, and trends in a simple dashboard.",
               },
             ].map((item) => (
               <div
@@ -329,24 +326,51 @@ export default function BillingPaymentPage() {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               We specialize in the leading billing and payment platforms:
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-blue-600 text-lg">Stripe</span>
+                <Image
+                  src="/servicesApps/stripe-logo.png"
+                  alt="Stripe"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-purple-600 text-lg">
-                  PayPal
-                </span>
+                <Image
+                  src="/servicesApps/paypal-logo.png"
+                  alt="PayPal"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-green-600 text-lg">
-                  QuickBooks
-                </span>
+                <Image
+                  src="/servicesApps/quickbooks-logo.png"
+                  alt="QuickBooks"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-orange-600 text-lg">
-                  FreshBooks
-                </span>
+                <Image
+                  src="/servicesApps/freshbooks-logo.png"
+                  alt="FreshBooks"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
+                <Image
+                  src="/servicesApps/xero-logo.svg"
+                  alt="Xero"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
             </div>
           </div>
@@ -404,8 +428,8 @@ export default function BillingPaymentPage() {
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
             Our billing & payment automation services work best for growing
-            businesses that want to improve cash flow and eliminate the
-            time-consuming manual work of invoicing and payment collection.
+            businesses that want to improve cash flow and remove manual steps
+            from invoicing and payment collection.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -419,26 +443,26 @@ export default function BillingPaymentPage() {
               {
                 label: "Professional Services Firms",
                 icon: Scale,
-                copy: "Streamline time-based billing, expense reimbursements, and multi-client payment processing with audit trails.",
-                size: "5-50 professionals",
+                copy: "Streamline time‑based billing, expense reimbursements, and multi‑client payments with audit trails.",
+                size: "3‑25 professionals",
               },
               {
                 label: "Creative Agencies",
                 icon: Briefcase,
-                copy: "Handle project-based billing, retainer management, and milestone payments with client-friendly processes.",
-                size: "Teams of 3-30 creatives",
+                copy: "Handle project‑based billing, retainers, and milestone payments with clear approval steps.",
+                size: "Teams of 3‑20",
               },
               {
-                label: "E-commerce & SaaS Businesses",
+                label: "E‑commerce & SaaS Businesses",
                 icon: DollarSign,
-                copy: "Automate subscription billing, failed payment recovery, and revenue recognition with seamless integrations.",
-                size: "$100K-$10M revenue",
+                copy: "Automate subscriptions, dunning (failed payment recovery), and basic revenue summaries.",
+                size: "Early‑stage to growing",
               },
               {
-                label: "Service-Based Businesses",
+                label: "Service‑Based Businesses",
                 icon: Settings,
-                copy: "Integrate billing with scheduling, CRM, and project management for end-to-end service delivery automation.",
-                size: "Small to mid-size teams",
+                copy: "Connect billing with scheduling, CRM, and projects so work and payments stay in sync.",
+                size: "Small to mid‑size teams",
               },
             ].map(({ label, icon: Icon, copy, size }) => (
               <div
@@ -532,47 +556,46 @@ export default function BillingPaymentPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            These are real examples from recent client projects. We customize
-            everything to match your specific billing processes and business
-            model.
+            These are practical automations we implement often. We tailor them
+            to match your billing process and tools.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {[
               {
-                title: "Smart invoice generation",
+                title: "Invoice send on completion",
                 description:
-                  "Automatically creates and sends professional invoices when projects complete, time thresholds are met, or milestones are reached",
+                  "Automatically send invoices when a job completes, time thresholds are met, or milestones close",
                 icon: Receipt,
               },
               {
                 title: "Payment reminder sequences",
                 description:
-                  "Sends polite, professional payment reminders at optimal intervals, escalating tone gradually without being aggressive",
+                  "Send polite reminders at sensible intervals and notify internally when payments are overdue",
                 icon: Bell,
               },
               {
-                title: "Failed payment recovery",
+                title: "Basic failed payment recovery",
                 description:
-                  "Automatically retries failed payments, updates expired cards, and notifies customers about payment issues with recovery workflows",
+                  "Use Stripe/PayPal retries and notifications to recover failed payments with minimal manual work",
                 icon: AlertCircle,
               },
               {
-                title: "Expense tracking automation",
+                title: "Expense capture to reports",
                 description:
-                  "Categorizes business expenses automatically from receipts, bank feeds, and credit card transactions for accurate reporting",
+                  "Pull expenses from receipts/bank and categorize to your accounting or a shared sheet for reviews",
                 icon: FileText,
               },
               {
-                title: "Cash flow forecasting",
+                title: "Upcoming payments calendar",
                 description:
-                  "Predicts incoming revenue based on outstanding invoices, payment history, and seasonal trends for better planning",
+                  "See expected payments and due dates in a simple calendar or list view for planning",
                 icon: TrendingUp,
               },
               {
-                title: "Financial reporting dashboard",
+                title: "Billing snapshot dashboard",
                 description:
-                  "Real-time visibility into revenue, outstanding payments, expense trends, and profitability metrics with automated insights",
+                  "Track outstanding invoices, recent payments, and basic trends in a clear, lightweight dashboard",
                 icon: LineChart,
               },
             ].map(({ title, description, icon: Icon }) => (
@@ -660,9 +683,6 @@ export default function BillingPaymentPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Billing Process Audit
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                $497 (2 hour session)
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 We'll analyze your current billing workflow, identify cash flow
                 bottlenecks, and give you a prioritized automation roadmap.
@@ -681,9 +701,6 @@ export default function BillingPaymentPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                 Complete Billing Automation
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Starting at $3,500
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 We build your entire automated billing system with invoice
                 generation, payment processing, and reminder workflows. Includes
@@ -702,9 +719,6 @@ export default function BillingPaymentPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Monthly Financial Optimization
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                $1,200/month
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 Monthly optimization of your billing workflows, cash flow
                 monitoring, and continuous improvements. Includes priority
@@ -982,9 +996,8 @@ export default function BillingPaymentPage() {
             </span>
           </h2>
           <p className="body-lg mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute call to discuss your current billing
-            challenges and see how we can help you get paid faster and more
-            consistently.
+            Book a free 30-minute call to review your current billing workflows
+            and explore practical automations to speed up payments.
           </p>
           <div className="flex items-center justify-center gap-3">
             <Link href="/#contact" className="btn-primary">

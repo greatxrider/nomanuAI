@@ -100,13 +100,12 @@ export default function ProjectManagementPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl font-semibold text-brand-orange mb-4">
-              Turn your project chaos into a streamlined delivery machine
+              Streamline your projects with practical automation
             </p>
             <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              Most teams spend more time managing projects than executing them.
-              We help you automate task tracking, team coordination, and
-              progress reporting so your team can focus on delivering
-              exceptional results.
+              We set up dependable automations for task tracking, team
+              coordination, and simple reporting so your team spends less time
+              managing and more time delivering.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/#contact" className="btn-primary">
@@ -272,37 +271,36 @@ export default function ProjectManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            We don't just set up project management tools and leave. We build
-            intelligent automation systems that keep your projects moving
-            forward, with real-time visibility and team coordination that
-            actually works.
+            We configure proven workflows in your project tools and connect them
+            with your communication and document systems, so projects move
+            forward with clear ownership and timely updates.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
                 title: "Automated task creation & assignment",
-                desc: "Smart workflows that create tasks, assign team members, and set deadlines based on project templates and dependencies.",
+                desc: "Create tasks from templates, assign owners, and set due dates automatically when new projects start.",
               },
               {
-                title: "Progress tracking & reporting",
-                desc: "Real-time dashboards showing project health, milestone progress, and team workload without manual updates.",
+                title: "Simple progress views & summaries",
+                desc: "Lightweight dashboards and weekly summaries that show status at a glance without manual updates.",
               },
               {
                 title: "Team communication automation",
-                desc: "Automated notifications, status updates, and escalations that keep everyone informed without overwhelming them.",
+                desc: "Automated notifications and status updates in Slack/Email to keep everyone aligned without noise.",
               },
               {
-                title: "Resource & capacity planning",
-                desc: "AI-powered insights into team availability, workload distribution, and optimal resource allocation.",
+                title: "Basic capacity views",
+                desc: "See workload across the team using task counts, due dates, and simple filters to prevent overload.",
               },
               {
                 title: "Client & stakeholder updates",
-                desc: "Automated progress reports, milestone notifications, and client-facing dashboards for complete transparency.",
+                desc: "Automated email summaries and milestone notifications for clear, consistent client communication.",
               },
               {
-                title: "Integration & data sync",
-                desc: "Connect your project tools with time tracking, billing, CRM, and communication platforms seamlessly.",
+                title: "Integrations & data sync",
+                desc: "Connect PM tools with time tracking, billing, CRM, and docs using Zapier/Make for seamless handoffs.",
               },
             ].map((item) => (
               <div
@@ -328,22 +326,40 @@ export default function ProjectManagementPage() {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-blue-600 text-lg">Asana</span>
+                <Image
+                  src="/servicesApps/asana-logo.png"
+                  alt="Asana"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-purple-600 text-lg">
-                  Monday
-                </span>
+                <Image
+                  src="/servicesApps/monday-logo.png"
+                  alt="Monday.com"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-orange-600 text-lg">
-                  ClickUp
-                </span>
+                <Image
+                  src="/servicesApps/clickup-logo.svg"
+                  alt="ClickUp"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-black dark:text-white text-lg">
-                  Notion
-                </span>
+                <Image
+                  src="/servicesApps/notion-logo.png"
+                  alt="Notion"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
             </div>
           </div>
@@ -401,8 +417,8 @@ export default function ProjectManagementPage() {
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
             Our project management automation services work best for growing
-            teams that have outgrown basic to-do lists but need more structure
-            than complex enterprise project management.
+            teams that need more structure than simple to‑do lists but aren't
+            ready for heavy enterprise systems.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -410,32 +426,32 @@ export default function ProjectManagementPage() {
               {
                 label: "Digital Marketing Agencies",
                 icon: Users,
-                copy: "Coordinate campaigns, deliverables, and client communications across multiple projects simultaneously.",
-                size: "Teams of 5-50 members",
+                copy: "Coordinate campaigns, tasks, and client updates across multiple projects with clear ownership.",
+                size: "Teams of 3-25",
               },
               {
                 label: "Software Development Teams",
                 icon: Settings,
-                copy: "Automate sprint planning, bug tracking, and deployment workflows with seamless developer tool integration.",
-                size: "Dev teams of 3-30",
+                copy: "Automate sprint routines, bug tracking, and release checklists with simple tool integrations.",
+                size: "Dev teams of 3-20",
               },
               {
                 label: "Creative Agencies & Design Studios",
                 icon: Briefcase,
-                copy: "Streamline creative briefs, revision tracking, and asset delivery with client approval workflows.",
-                size: "Studios of 3-25 creatives",
+                copy: "Streamline creative briefs, revision tracking, and asset delivery with approval steps.",
+                size: "Studios of 3-15",
               },
               {
                 label: "Construction & Engineering Firms",
                 icon: Landmark,
-                copy: "Track project phases, resource allocation, and compliance requirements with automated reporting.",
-                size: "Teams of 10-100",
+                copy: "Track phases and documentation with milestone reminders and simple reporting.",
+                size: "Teams of 10-50",
               },
               {
                 label: "Consulting Firms",
                 icon: Scale,
-                copy: "Manage client engagements, deliverable tracking, and team utilization across multiple projects.",
-                size: "Solo to 50+ consultants",
+                copy: "Manage engagements, deliverables, and utilization with light automation and shared views.",
+                size: "Solo to 25+ consultants",
               },
             ].map(({ label, icon: Icon, copy, size }) => (
               <div
@@ -529,47 +545,46 @@ export default function ProjectManagementPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            These are real examples from recent client projects. We customize
-            everything to match your specific project workflows and team
-            structure.
+            These are practical automations we implement often. We tailor them
+            to match your workflow and tools.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {[
               {
-                title: "Smart project kickoff workflows",
+                title: "Project kickoff templates",
                 description:
-                  "Automatically creates project templates, assigns team members, sets up communication channels, and schedules kickoff meetings",
+                  "Create project boards, assign core tasks, set deadlines, and schedule kickoff meetings in one flow",
                 icon: Target,
               },
               {
-                title: "Milestone & deadline tracking",
+                title: "Milestone & deadline reminders",
                 description:
-                  "Monitors project progress, sends automated reminders, escalates delayed tasks, and updates stakeholders on schedule changes",
+                  "Send timely reminders, flag overdue items, and notify stakeholders on schedule changes",
                 icon: Calendar,
               },
               {
-                title: "Resource allocation optimizer",
+                title: "Workload overview",
                 description:
-                  "Analyzes team capacity, suggests optimal task assignments, prevents overallocation, and balances workloads across projects",
+                  "Simple capacity views by assignee to prevent overload and balance tasks across the team",
                 icon: TrendingUp,
               },
               {
-                title: "Client progress reporting",
+                title: "Automated client updates",
                 description:
-                  "Generates automated status reports, client-facing dashboards, and milestone updates without manual data compilation",
+                  "Generate weekly status emails and share client-facing boards without manual compilation",
                 icon: FileText,
               },
               {
-                title: "Team performance analytics",
+                title: "Weekly status snapshots",
                 description:
-                  "Tracks productivity metrics, identifies bottlenecks, measures project success rates, and provides improvement insights",
+                  "Email or Slack summaries of completed tasks, upcoming deadlines, and potential blockers",
                 icon: LineChart,
               },
               {
-                title: "Cross-platform integrations",
+                title: "Cross-tool syncs",
                 description:
-                  "Syncs data between project tools, time tracking, communication apps, and billing systems for seamless workflows",
+                  "Keep PM, time tracking, comms, and billing in sync using Zapier/Make so data stays consistent",
                 icon: Workflow,
               },
             ].map(({ title, description, icon: Icon }) => (
@@ -657,9 +672,6 @@ export default function ProjectManagementPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Project Workflow Audit
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                $497 (2 hour session)
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 We'll analyze your current project workflows, identify
                 bottlenecks, and give you a prioritized automation roadmap.
@@ -679,9 +691,6 @@ export default function ProjectManagementPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                 Complete PM Automation Setup
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Starting at $3,500
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 We build your entire automated project management system with
                 task automation, progress tracking, and team coordination.
@@ -700,9 +709,6 @@ export default function ProjectManagementPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Monthly PM Optimization
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                $1,200/month
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 Monthly optimization of your project workflows, performance
                 monitoring, and continuous improvements. Includes priority
@@ -976,13 +982,12 @@ export default function ProjectManagementPage() {
         <div className="container-width text-center relative">
           <h2 className="heading-lg mb-4">
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Ready to transform your project delivery?
+              Ready to streamline your project delivery?
             </span>
           </h2>
           <p className="body-lg mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute call to discuss your current project
-            management challenges and see how we can streamline your team's
-            workflow.
+            Book a free 30-minute call to review your current workflows and
+            explore practical automations for your team.
           </p>
           <div className="flex items-center justify-center gap-3">
             <Link href="/#contact" className="btn-primary">

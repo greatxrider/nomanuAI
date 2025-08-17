@@ -107,13 +107,12 @@ export default function SocialMediaPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl font-semibold text-brand-orange mb-4">
-              Turn your social media into a consistent lead generation machine
+              Build a consistent social presence with practical automation
             </p>
             <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              Most businesses struggle to maintain consistent social media
-              presence. We help you automate content planning, creation, and
-              publishing so you stay visible online, engage your audience, and
-              generate leads without the daily posting grind.
+              We set up dependable content calendars, reusable templates, and
+              scheduling so you stay visible and engage your audience without
+              daily posting.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/#contact" className="btn-primary">
@@ -277,37 +276,36 @@ export default function SocialMediaPage() {
           </h2>
           <div className="accent-line mb-4" />
           <p className="body-lg mb-10 max-w-3xl">
-            We don't just schedule posts and disappear. We build complete
-            content automation systems that handle planning, creation,
-            publishing, and performance tracking so you maintain consistent
-            brand presence while focusing on your business.
+            We set up reliable content workflows—planning, templates,
+            scheduling, and simple reporting—so you publish consistently with
+            clear processes your team can follow.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
-                title: "Content planning & strategy",
-                desc: "AI-powered content calendars that align with your business goals, audience interests, and optimal posting times.",
+                title: "Content planning & calendar",
+                desc: "Plan themes and schedule posts around your goals and audience with a simple, reusable calendar.",
               },
               {
-                title: "Automated content creation",
-                desc: "Smart templates and workflows that generate engaging posts, captions, and hashtags from your business activities.",
+                title: "Reusable content templates",
+                desc: "Create post and caption templates and prompts your team can reuse for faster creation.",
               },
               {
                 title: "Multi-platform publishing",
-                desc: "Seamless posting across Facebook, Instagram, LinkedIn, Twitter, and other platforms with platform-specific optimization.",
+                desc: "Schedule and tailor posts for Facebook, Instagram, LinkedIn, and X using best-practice presets.",
               },
               {
-                title: "Engagement automation",
-                desc: "Automated responses, comment monitoring, and engagement strategies that build relationships with your audience.",
+                title: "Engagement alerts & helpers",
+                desc: "Monitor comments and mentions, and use saved replies to respond faster without the noise.",
               },
               {
-                title: "Performance tracking & insights",
-                desc: "Real-time analytics showing reach, engagement, and conversion metrics with actionable improvement recommendations.",
+                title: "Simple performance snapshots",
+                desc: "Track reach and engagement with lightweight dashboards and weekly summaries.",
               },
               {
-                title: "Content repurposing workflows",
-                desc: "Automatic conversion of blog posts, videos, and other content into multiple social media formats and sizes.",
+                title: "Content repurposing",
+                desc: "Turn blogs and videos into multiple post formats to save time and stay consistent.",
               },
             ].map((item) => (
               <div
@@ -331,24 +329,51 @@ export default function SocialMediaPage() {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               We specialize in the leading social media and content platforms:
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-blue-600 text-lg">
-                  Facebook
-                </span>
+                <Image
+                  src="/servicesApps/facebook-logo.svg"
+                  alt="Facebook"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-pink-600 text-lg">
-                  Instagram
-                </span>
+                <Image
+                  src="/servicesApps/instagram-logo.png"
+                  alt="Instagram"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-blue-700 text-lg">
-                  LinkedIn
-                </span>
+                <Image
+                  src="/servicesApps/linkedin-logo.png"
+                  alt="LinkedIn"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
-                <span className="font-bold text-blue-400 text-lg">Twitter</span>
+                <Image
+                  src="/servicesApps/x-logo.png"
+                  alt="X (Twitter)"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-xl p-4 w-full flex items-center justify-center">
+                <Image
+                  src="/servicesApps/youtube-logo.png"
+                  alt="YouTube"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
             </div>
           </div>
@@ -661,9 +686,6 @@ export default function SocialMediaPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Social Media Strategy Audit
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                $497 (2 hour session)
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 We'll analyze your current social media presence, identify
                 missed opportunities, and give you a prioritized automation
@@ -682,9 +704,6 @@ export default function SocialMediaPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                 Complete Social Media Automation
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Starting at $3,500
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 We build your entire automated social media system with content
                 planning, creation, publishing, and analytics. Includes training
@@ -703,9 +722,6 @@ export default function SocialMediaPage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Monthly Content Optimization
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                $1,200/month
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                 Monthly optimization of your content strategy, performance
                 monitoring, and continuous improvements. Includes priority
