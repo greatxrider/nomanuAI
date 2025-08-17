@@ -255,6 +255,43 @@ const ProjectModal = ({
 
   // Enhanced project details for Lead Flow Automation
   const getProjectDetails = (proj: any) => {
+    if (proj.id === 8) {
+      // Contractor Automation (Telegram multi-modal)
+      return {
+        fullDescription:
+          "Multi‑modal AI automation for contractors that processes voice, image, and text via Telegram to extract job requirements, scrape contractor databases, and populate your CRM automatically.",
+        detailedFeatures: [
+          "Multi‑Modal Inputs: Accepts voice notes (transcribed), images (OCR + vision), and text messages",
+          "Automated Web Scraping: Uses Apify actors to gather contractor data that matches extracted criteria",
+          "Smart Categorization: AI maps requests to a standardized category list for consistent records",
+          "CRM Sync: Pushes structured contractor data to Airtable and GoHighLevel with tags",
+          "Access Control: Validates Telegram users and applies usage rules per user",
+          "Status Updates: Sends progress and completion summaries back to the user in Telegram",
+        ],
+        workflowSteps: [
+          "User submits voice/image/text in Telegram",
+          "System authenticates user and routes by input type",
+          "AI extracts location, category, and item count requirements",
+          "Apify scrapes contractor sources using extracted parameters",
+          "Structured results are stored in Airtable with key business fields",
+          "Qualified entries sync to GoHighLevel for follow‑up",
+        ],
+        businessImpact: [
+          "Hands‑Free Intake: Capture jobs while on‑site via voice or images",
+          "Faster Sourcing: Automatically finds matching contractors across databases",
+          "Clean Data: AI standardizes categories and fields for reliable reporting",
+          "Seamless Handoffs: Leads appear in CRM ready for outreach",
+          "Scalable Volume: Process multiple requests in parallel",
+        ],
+        technicalSpecs: [
+          "Platform: n8n workflow orchestration",
+          "AI: OpenAI GPT‑4 for NLP/vision; Whisper for transcription",
+          "Integrations: Telegram Bot API, Apify, Airtable, GoHighLevel",
+          "Security: Webhook verification and user allow‑list",
+          "Data: JSON parsing, field mapping, and rate‑limited scraping",
+        ],
+      };
+    }
     if (proj.id === 7) {
       // Lead Flow Messenger Automation
       return {
@@ -291,6 +328,107 @@ const ProjectModal = ({
           "Memory: Context-aware conversations with session persistence",
           "Webhook Security: Token-based authentication and verification",
           "Data Processing: Real-time JSON parsing and field mapping",
+        ],
+      };
+    }
+
+    if (proj.id === 9) {
+      // CSV to HubSpot Uploader Automation
+      return {
+        fullDescription:
+          "Data migration automation that validates CSVs, maps fields dynamically, and imports records into HubSpot with safe retries and error reporting.",
+        detailedFeatures: [
+          "Dynamic Field Mapping: Map CSV headers to HubSpot object fields (Deals/Contacts/Companies)",
+          "Validation Layer: Required fields, email/phone formats, enum checks before import",
+          "Dry‑Run Mode: Preview mappings and errors without changing HubSpot",
+          "Batch Imports: Chunking with rate‑limit awareness and automatic retries",
+          "Deduplication: Match by email/domain or custom keys to prevent duplicates",
+          "Error Report: Exports failed rows with reasons to Google Sheets",
+        ],
+        workflowSteps: [
+          "Upload CSV or select Google Sheet",
+          "System inspects headers and proposes field mappings",
+          "Validation runs and produces a dry‑run summary",
+          "Approved runs import in batches with progress tracking",
+          "Failures are logged to a report and can be re‑queued",
+        ],
+        businessImpact: [
+          "Hours Saved: Avoid manual reformatting and one‑by‑one imports",
+          "Higher Data Quality: Validation prevents bad records from entering CRM",
+          "Lower Risk: Dry‑run and rollback‑safe batching",
+        ],
+        technicalSpecs: [
+          "Platform: n8n",
+          "APIs: HubSpot API v3, Google Sheets API",
+          "Auth: OAuth2 with token refresh",
+          "Data: CSV parsing, schema mapping, and rate‑limit handling",
+        ],
+      };
+    }
+
+    if (proj.id === 10) {
+      // Lead Flow Gmail Automation
+      return {
+        fullDescription:
+          "Email‑based lead capture that watches a mailbox, extracts structured data with AI, qualifies leads, and syncs them to Airtable and HighLevel with instant replies.",
+        detailedFeatures: [
+          "Gmail Watch: Filters for new inquiries and triggers workflows in real‑time",
+          "AI Parsing: Extracts names, budget, timelines, and key intent signals",
+          "Lead Qualification: Scores and tags based on custom rules",
+          "CRM Sync: Creates/updates records in Airtable and HighLevel",
+          "Smart Replies: Sends tailored responses and schedules follow‑ups",
+          "Memory: Maintains context across threads for accurate summaries",
+        ],
+        workflowSteps: [
+          "New inquiry hits Gmail label/watch",
+          "AI parser extracts structured fields and confidence",
+          "Lead scored and routed to the correct list/pipeline",
+          "Records created/updated in Airtable and HighLevel",
+          "Automated reply and follow‑up tasks scheduled",
+        ],
+        businessImpact: [
+          "Faster Response: Auto‑reply within seconds, 24/7",
+          "No Manual Entry: Details captured and synced automatically",
+          "Better Pipeline: Qualified, tagged leads ready for outreach",
+        ],
+        technicalSpecs: [
+          "Platform: n8n",
+          "APIs: Gmail API, Airtable API, HighLevel",
+          "AI: OpenAI GPT‑4 for extraction and summarization",
+          "Security: OAuth2 scopes and label‑scoped processing",
+        ],
+      };
+    }
+
+    if (proj.id === 11) {
+      // Property Insights Automation
+      return {
+        fullDescription:
+          "End‑to‑end insights generator that gathers client inputs, calculates projections, renders charts, and delivers branded PDF reports automatically.",
+        detailedFeatures: [
+          "Guided Intake: Collects financial inputs via form or email",
+          "Calculations: Generates projections and KPIs from inputs",
+          "Dynamic Charts: Uses QuickChart API for branded visuals",
+          "PDF Reports: Assembles results into a polished report",
+          "Delivery: Emails report to client and team automatically",
+          "Audit Trail: Stores data and artifacts in Airtable/Drive",
+        ],
+        workflowSteps: [
+          "Client submits inputs (form/email)",
+          "System validates and normalizes numeric fields",
+          "Calculations and chart rendering run",
+          "PDF is generated and stored with metadata",
+          "Report is emailed to client and internal recipients",
+        ],
+        businessImpact: [
+          "Time Savings: Minutes instead of hours per analysis",
+          "Consistency: Standardized outputs every time",
+          "Client Experience: Professional, branded deliverables",
+        ],
+        technicalSpecs: [
+          "Platform: n8n",
+          "APIs: QuickChart, Gmail/SMTP, Airtable",
+          "Docs: HTML‑to‑PDF generation pipeline",
         ],
       };
     }
