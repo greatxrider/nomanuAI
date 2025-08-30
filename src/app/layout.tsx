@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   creator: "NomanuAI",
   publisher: "NomanuAI",
   robots: "index, follow",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  other: {
+    "msapplication-TileColor": "#f97316",
+    "theme-color": "#f97316",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

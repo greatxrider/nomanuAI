@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ClientMarquee from "@/components/ClientMarquee";
 import Services from "@/components/Services";
+import WhyAutomate from "@/components/WhyAutomate";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
@@ -16,6 +17,7 @@ export default function Home() {
       <ClientMarquee />
       <Testimonials />
       <Services />
+      <WhyAutomate />
       <About />
       <Projects />
       <Contact />
