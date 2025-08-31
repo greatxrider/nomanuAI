@@ -83,33 +83,6 @@ const WhyAutomate = () => {
             })}
           </div>
         </div>
-
-        {/* Call to Action - More Conversational */}
-        <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Ready to Experience These Perks?
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Stop doing the same things manually and start enjoying the benefits
-            of automation. Let's identify the quick wins in your business and
-            get you started today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#services"
-              className="inline-flex items-center px-8 py-4 bg-brand-orange hover:bg-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50"
-            >
-              <Zap className="w-5 h-5 mr-2" />
-              See What We Can Automate
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-transparent hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-white font-semibold rounded-xl border border-gray-300 dark:border-white/20 hover:border-brand-orange/40 transition-all duration-300"
-            >
-              Let's Talk About Your Business
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

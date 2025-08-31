@@ -1,53 +1,15 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/lib/theme-context";
-import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
+import { ThemeProvider } from "@/lib/theme-context";
+import Chatbot from "@/components/Chatbot";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "NomanuAI - AI Automation Agency | Transform Your Business with AI",
+  title: "NomanuAI - AI Automation Solutions",
   description:
-    "Leading AI automation agency specializing in lead generation, CRM integration, and business process optimization. Transform your business with cutting-edge AI solutions.",
-  keywords:
-    "AI automation, lead generation, CRM integration, business automation, AI agency, process optimization",
-  authors: [{ name: "NomanuAI" }],
-  creator: "NomanuAI",
-  publisher: "NomanuAI",
-  robots: "index, follow",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  other: {
-    "msapplication-TileColor": "#f97316",
-    "theme-color": "#f97316",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://nomanuai.com",
-    title: "NomanuAI - AI Automation Agency",
-    description:
-      "Transform your business with cutting-edge AI automation solutions",
-    siteName: "NomanuAI",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "NomanuAI - AI Automation Agency",
-    description:
-      "Transform your business with cutting-edge AI automation solutions",
-  },
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#f97316",
+    "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, custom solutions, and integration services.",
 };
 
 export default function RootLayout({
@@ -59,10 +21,11 @@ export default function RootLayout({
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body
         className={`${inter.className} antialiased transition-colors duration-300`}
+        suppressHydrationWarning
       >
         <ThemeProvider>
           {children}
-          <CookieConsent />
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>

@@ -21,10 +21,9 @@ const Header = () => {
 
   const navigation = [
     { name: "Home", href: "/#home" },
-    { name: "About", href: "/aboutus" },
     { name: "Services", href: "/#services" },
     { name: "Projects", href: "/#projects" },
-    { name: "Contact", href: "/#contact" },
+    { name: "FAQs", href: "/faq" },
   ];
 
   // Theme Toggle Component

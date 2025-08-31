@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ClientMarquee from "@/components/ClientMarquee";
 import Services from "@/components/Services";
+import GetStarted from "@/components/GetStarted";
 import WhyAutomate from "@/components/WhyAutomate";
 import Projects from "@/components/Projects";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <MissionVision />
       <WhyChooseUs />
       <Services />
+      <GetStarted />
       <WhyAutomate />
       <Projects />
       <FAQ />

@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
       icon: Users,
       title: "Dedicated Support: Your DevMate & ClientMate",
       description:
-        "Every client gets a DevMate (your personal automation developer) and a ClientMate (your customer success manager), ensuring both technical execution and strategic alignment are always covered.",
+        "You get two dedicated experts: a DevMate who builds your automation and a ClientMate who ensures everything runs smoothly. No waiting, no confusion - just results.",
       image:
         "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=face",
       highlight: true,
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
       icon: Shield,
       title: "Customer Service is Our Strength",
       description:
-        "We pride ourselves on delivering responsive, proactive, personalized service at every step.",
+        "We answer your calls, respond to your emails, and solve your problems quickly. You're not just another client - you're our priority.",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
       highlight: true,
@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
       icon: Brain,
       title: "AI + Automation Expertise",
       description:
-        "We combine the power of artificial intelligence with automation to create smart systems that think and act on your behalf.",
+        "We know how to make AI work for your business. Our systems learn from your data and make smart decisions that save you time and money.",
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
       highlight: true,
@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
       icon: Zap,
       title: "Process-Driven, Tool-Agnostic",
       description:
-        "We focus on your business goals—not just tools—ensuring the best solution, regardless of platform.",
+        "We focus on what you want to achieve, not what tools we prefer. We'll use whatever works best to get you the results you need.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
       highlight: true,
@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
       icon: Rocket,
       title: "Scalable & Sustainable Architecture",
       description:
-        "Automations are designed to grow with your business—minimizing rework and maximizing ROI.",
+        "Your automation grows with your business. We build it right the first time so you don't have to rebuild it later. That means more money in your pocket.",
       image:
         "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop",
       highlight: true,
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
       icon: TrendingUp,
       title: "No-Code/Low-Code Implementation",
       description:
-        "We use modern automation platforms to move quickly without heavy development cycles.",
+        "We use the best automation tools available. This means faster results, lower costs, and solutions that work immediately without months of development.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
       highlight: true,
@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
       icon: Eye,
       title: "People-First Impact",
       description:
-        "Our automations don't replace people—they elevate them. We free teams to focus on strategy, creativity, and leadership.",
+        "We don't replace your team - we make them better. Your people focus on what they do best while our automation handles the boring stuff.",
       image:
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
       highlight: true,
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
       icon: Target,
       title: "Transparent Collaboration",
       description:
-        "We work closely with your team, providing clear communication, documented progress, and shared visibility across every phase.",
+        "You see everything we do. We keep you updated, share our progress, and work together to make sure you get exactly what you want.",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
       highlight: true,
@@ -164,8 +164,8 @@ const WhyChooseUs = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Transform Your{" "}
-            <span className="text-brand-orange">Business with AI</span>
+            Tailored Automation: Built Around{" "}
+            <span className="text-brand-orange">Your Business Goals</span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -180,7 +180,7 @@ const WhyChooseUs = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
+                className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 {/* AI Glow Effect */}
