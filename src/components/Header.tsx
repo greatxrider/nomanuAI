@@ -21,8 +21,8 @@ const Header = () => {
 
   const navigation = [
     { name: "Home", href: "/#home" },
+    { name: "About", href: "/aboutus" },
     { name: "Services", href: "/#services" },
-    { name: "About", href: "/#about" },
     { name: "Projects", href: "/#projects" },
     { name: "Contact", href: "/#contact" },
   ];
@@ -81,7 +81,7 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -124,14 +124,23 @@ const Header = () => {
             >
               <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             </a>
+          </nav>
 
+          {/* Right Side Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/#contact"
               className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
             >
+              Get Started
+            </Link>
+            <Link
+              href="/#contact"
+              className="border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-lg"
+            >
               Contact Us
             </Link>
-          </nav>
+          </div>
 
           {/* Mobile Controls */}
           <div className="md:hidden flex items-center space-x-2">
@@ -191,7 +200,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-4 space-y-3">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/nomanuai"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -204,6 +213,13 @@ const Header = () => {
                   href="/#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  href="/#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
                 >
                   Contact Us
                 </Link>

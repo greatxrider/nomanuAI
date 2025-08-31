@@ -4,8 +4,11 @@ import ClientMarquee from "@/components/ClientMarquee";
 import Services from "@/components/Services";
 import WhyAutomate from "@/components/WhyAutomate";
 import Projects from "@/components/Projects";
-import About from "@/components/About";
+
+import MissionVision from "@/components/MissionVision";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,10 +19,12 @@ export default function Home() {
       <Hero />
       <ClientMarquee />
       <Testimonials />
+      <MissionVision />
+      <WhyChooseUs />
       <Services />
       <WhyAutomate />
-      <About />
       <Projects />
+      <FAQ />
       <Contact />
       <Footer />
     </main>

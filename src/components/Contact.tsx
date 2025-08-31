@@ -17,27 +17,39 @@ import { supabase } from "@/lib/supabase";
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    serviceType: "",
-    budget: "",
-    timeline: "",
-    message: "",
+    fullname: "",
+    website: "",
+    workEmail: "",
+    usingAutomation: "",
+    automationGoal: "",
+    freeConsultation: "",
+    budgetRange: "",
   });
   const [submissionStatus, setSubmissionStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
 
-  const services = [
-    "AI Lead Generation",
-    "CRM Integration & Automation",
-    "Client Onboarding Automation",
-    "AI Communication Systems",
-    "Business Process Optimization",
-    "Compliance & Security Automation",
-    "Custom AI Solution",
+  const automationOptions = [
+    "Yes, extensively",
+    "Yes, some basic automation",
+    "No, not yet",
+    "Just exploring options",
+  ];
+
+  const automationGoals = [
+    "Streamline customer onboarding",
+    "Automate lead generation & qualification",
+    "Improve sales pipeline management",
+    "Optimize administrative tasks",
+    "Enhance customer communication",
+    "Integrate multiple systems",
+    "Other (please specify)",
+  ];
+
+  const consultationOptions = [
+    "Yes, I'd love a free consultation",
+    "Maybe, send me more information first",
+    "Not right now, just exploring",
   ];
 
   const budgetRanges = [
@@ -46,14 +58,7 @@ const Contact = () => {
     "$15,000 - $50,000",
     "$50,000 - $100,000",
     "Over $100,000",
-  ];
-
-  const timelines = [
-    "ASAP",
-    "1-3 months",
-    "3-6 months",
-    "6+ months",
-    "Just exploring",
+    "Not sure yet",
   ];
 
   const handleInputChange = (
@@ -73,14 +78,13 @@ const Contact = () => {
     try {
       const { error } = await supabase.from("service_inquiries").insert([
         {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone || null,
-          company: formData.company || null,
-          service_type: formData.serviceType,
-          budget_range: formData.budget || null,
-          timeline: formData.timeline || null,
-          message: formData.message,
+          name: formData.fullname,
+          email: formData.workEmail,
+          website: formData.website || null,
+          using_automation: formData.usingAutomation,
+          automation_goal: formData.automationGoal,
+          free_consultation: formData.freeConsultation,
+          budget_range: formData.budgetRange || null,
         },
       ]);
 
@@ -88,14 +92,13 @@ const Contact = () => {
 
       setSubmissionStatus("success");
       setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        serviceType: "",
-        budget: "",
-        timeline: "",
-        message: "",
+        fullname: "",
+        website: "",
+        workEmail: "",
+        usingAutomation: "",
+        automationGoal: "",
+        freeConsultation: "",
+        budgetRange: "",
       });
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -185,8 +188,8 @@ const Contact = () => {
             Business
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to automate your processes and accelerate growth? Get in touch
-            with our AI automation experts today.
+            We'd love to help! Share your details in the form and we'll respond
+            with the best solution for you.
           </p>
         </div>
 
@@ -300,173 +303,135 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
               {/* Form Fields Container */}
               <div className="flex-1 space-y-4">
-                {/* Name & Email Row */}
+                {/* Row 1: Fullname and Work Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                      Name *
+                  <div className="flex flex-col">
+                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                      Fullname *
                     </label>
                     <input
                       type="text"
-                      name="name"
-                      value={formData.name}
+                      name="fullname"
+                      value={formData.fullname}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                      placeholder="Your name"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                      placeholder="Fullname"
                     />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                      Email *
+                  <div className="flex flex-col">
+                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                      Work Email *
                     </label>
                     <input
                       type="email"
-                      name="email"
-                      value={formData.email}
+                      name="workEmail"
+                      value={formData.workEmail}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                      placeholder="Work Email"
                     />
                   </div>
                 </div>
 
-                {/* Phone & Company Row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                      placeholder="Your company"
-                    />
-                  </div>
-                </div>
-
-                {/* Service Type */}
+                {/* Row 2: Company Website */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Service Type *
+                  <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1">
+                    Company Website
                   </label>
-                  <select
-                    name="serviceType"
-                    value={formData.serviceType}
+                  <input
+                    type="url"
+                    name="website"
+                    value={formData.website}
                     onChange={handleInputChange}
-                    required
-                    aria-label="Select service type"
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white"
-                  >
-                    <option
-                      value=""
-                      className="text-gray-600 dark:text-gray-400"
-                    >
-                      Select a service
-                    </option>
-                    {services.map((service) => (
-                      <option
-                        key={service}
-                        value={service}
-                        className="text-gray-900 dark:text-white"
-                      >
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Budget & Timeline Row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                      Budget Range
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      aria-label="Select budget range"
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white"
-                    >
-                      <option
-                        value=""
-                        className="text-gray-600 dark:text-gray-400"
-                      >
-                        Select budget
-                      </option>
-                      {budgetRanges.map((budget) => (
-                        <option
-                          key={budget}
-                          value={budget}
-                          className="text-gray-900 dark:text-white"
-                        >
-                          {budget}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                      Timeline
-                    </label>
-                    <select
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleInputChange}
-                      aria-label="Select timeline"
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-sm text-gray-900 dark:text-white"
-                    >
-                      <option
-                        value=""
-                        className="text-gray-600 dark:text-gray-400"
-                      >
-                        Select timeline
-                      </option>
-                      {timelines.map((timeline) => (
-                        <option
-                          key={timeline}
-                          value={timeline}
-                          className="text-gray-900 dark:text-white"
-                        >
-                          {timeline}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-2">
-                    Project Details *
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/20 dark:bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 resize-none text-sm text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                    placeholder="Tell us about your automation needs..."
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    placeholder="Website URL"
                   />
+                </div>
+
+                {/* Row 3: Automation Usage and Goals */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex flex-col">
+                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                      Are you currently using automation? *
+                    </label>
+                    <select
+                      name="usingAutomation"
+                      value={formData.usingAutomation}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                    >
+                      <option value="">Select</option>
+                      {automationOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                      What do you want to achieve with automation? *
+                    </label>
+                    <select
+                      name="automationGoal"
+                      value={formData.automationGoal}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                    >
+                      <option value="">Select</option>
+                      {automationGoals.map((goal) => (
+                        <option key={goal} value={goal}>
+                          {goal}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Row 4: Consultation and Budget */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex flex-col">
+                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                      Would you like to book a free consultation? *
+                    </label>
+                    <select
+                      name="freeConsultation"
+                      value={formData.freeConsultation}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                    >
+                      <option value="">Select</option>
+                      {consultationOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                      What is your budget range? *
+                    </label>
+                    <select
+                      name="budgetRange"
+                      value={formData.budgetRange}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                    >
+                      <option value="">Select</option>
+                      {budgetRanges.map((range) => (
+                        <option key={range} value={range}>
+                          {range}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
               </div>
 
@@ -474,7 +439,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-sm"
+                className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-base"
               >
                 {isSubmitting ? (
                   <>
@@ -484,7 +449,7 @@ const Contact = () => {
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Send Message</span>
+                    <span>Get Started</span>
                   </>
                 )}
               </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import TeamCarousel from "./TeamCarousel";
+import TeamCards from "./TeamCards";
 import {
   Cpu,
   Users2,
@@ -40,7 +40,6 @@ const About = () => {
 
   return (
     <section
-      id="about"
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
       {/* Enhanced AI Background - Same as Home section */}
@@ -296,16 +295,18 @@ const About = () => {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Your{" "}
-              <span className="text-brand-orange">Automation Partners</span>
+              Meet the{" "}
+              <span className="text-brand-orange">Minds Behind NomanuAI</span>
             </h3>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Your partners in building efficient, scalable systems that support
-              growth today and adapt for tomorrow.
+              NomanuAI is built by a team of developers and innovators working
+              together to design smart automation and AI solutions. We
+              collaborate as equals, combining our skills to create practical
+              systems that help businesses scale with confidence.
             </p>
           </div>
 
-          <TeamCarousel />
+          <TeamCards />
         </div>
 
         {/* Bottom CTA */}
