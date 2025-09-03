@@ -318,11 +318,13 @@
 
 /* Ensure proper scrolling behavior */
 html {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Custom scrollbar for the smooth wrapper */

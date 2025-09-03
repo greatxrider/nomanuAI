@@ -70,11 +70,11 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${
         isScrolled
           ? theme === "dark"
             ? "bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800"
-            : "bg-gray-300/30 backdrop-blur-md shadow-lg border-b border-gray-200"
+            : "bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200"
           : "bg-transparent"
       }`}
     >
@@ -109,7 +109,7 @@ const Header = () => {
                     : "text-gray-800 hover:text-brand-orange"
                   : theme === "dark"
                   ? "text-white hover:text-brand-orange"
-                  : "text-gray-800 hover:text-brand-orange"
+                  : "text-gray-900 hover:text-brand-orange"
               }`;
 
               if (item.name === "Services") {
@@ -174,16 +174,26 @@ const Header = () => {
                 );
               }
 
-              return (
-                <button
-                  key={item.name}
-                  onClick={() => handleInternalLink(item.href)}
-                  className={baseClass}
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
-                </button>
-              );
+              // Check if it's an internal anchor link or external page link
+              if (item.href.startsWith("/#")) {
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => handleInternalLink(item.href)}
+                    className={baseClass}
+                  >
+                    {item.name}
+                    <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
+                  </button>
+                );
+              } else {
+                return (
+                  <Link key={item.name} href={item.href} className={baseClass}>
+                    {item.name}
+                    <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
+                  </Link>
+                );
+              }
             })}
 
             {/* Theme Toggle - Desktop */}
@@ -233,7 +243,15 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg transition-all duration-300 focus-ring"
+            className={`md:hidden p-2 rounded-lg transition-all duration-300 focus-ring ${
+              isScrolled
+                ? theme === "dark"
+                  ? "text-white hover:text-brand-orange"
+                  : "text-gray-800 hover:text-brand-orange"
+                : theme === "dark"
+                ? "text-white hover:text-brand-orange"
+                : "text-gray-900 hover:text-brand-orange"
+            }`}
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
@@ -248,18 +266,33 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    handleInternalLink(item.href);
-                  }}
-                  className="block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors"
-                >
-                  {item.name}
-                </button>
-              ))}
+              {navigation.map((item) => {
+                if (item.href.startsWith("/#")) {
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        handleInternalLink(item.href);
+                      }}
+                      className="block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors"
+                    >
+                      {item.name}
+                    </button>
+                  );
+                } else {
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                }
+              })}
               <div className="pt-4 pb-3 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between px-3">
                   <ThemeToggle />
