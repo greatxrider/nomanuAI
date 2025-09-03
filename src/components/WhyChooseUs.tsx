@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   Users,
   Shield,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 
 const WhyChooseUs = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   const features = [
     {
       icon: Users,
@@ -86,7 +88,10 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+    <section
+      ref={ref}
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+    >
       {/* Enhanced AI Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated Circuit Pattern */}
@@ -149,7 +154,13 @@ const WhyChooseUs = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
             <Brain className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
             <span className="text-brand-orange font-semibold">
@@ -175,8 +186,15 @@ const WhyChooseUs = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden ${
+                  isIntersecting
+                    ? "animate-fade-in-up opacity-100"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{
+                  animationDelay: `${index * 200}ms`,
+                  transitionDelay: `${index * 100}ms`,
+                }}
               >
                 {/* AI Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

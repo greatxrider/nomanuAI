@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Calendar, Check } from "lucide-react";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
 const Hero = () => {
   const [currentHeadline, setCurrentHeadline] = useState(0);
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   const headlines = [
     "Automate\nManual\nWork",
@@ -23,6 +25,7 @@ const Hero = () => {
 
   return (
     <section
+      ref={ref}
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
     >
@@ -89,7 +92,13 @@ const Hero = () => {
       <div className="container-width relative z-10">
         <div className="flex flex-col items-center justify-center min-h-screen py-20 text-center">
           {/* Innovation Badge */}
-          <div className="inline-flex items-center px-4 py-2 mb-8 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm">
+          <div
+            className={`inline-flex items-center px-4 py-2 mb-8 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm transition-all duration-1000 ${
+              isIntersecting
+                ? "animate-fade-in-down opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
             <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
             <span className="text-sm font-medium text-brand-orange">
               From manual to automated.
@@ -97,14 +106,26 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight mb-6">
+          <h1
+            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight mb-6 transition-all duration-1000 ${
+              isIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-12"
+            }`}
+          >
             <span className="block bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent min-h-[1.2em] whitespace-pre-line">
               {headlines[currentHeadline]}
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-lg lg:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto text-center">
+          <p
+            className={`text-base md:text-lg lg:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto text-center transition-all duration-1000 delay-300 ${
+              isIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
             At Nomanu AI, we take busywork off your plate. We design, build, and
             run automation workflows that replace manual work—while training
             your team to harness AI across every stage of your business, so you
@@ -112,7 +133,13 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center">
+          <div
+            className={`flex justify-center transition-all duration-1000 delay-500 ${
+              isIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
             <Link
               href="#contact"
               className="group relative bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange backdrop-blur-sm text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-700 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 text-base flex items-center justify-center overflow-hidden border-2 border-transparent hover:border-transparent"

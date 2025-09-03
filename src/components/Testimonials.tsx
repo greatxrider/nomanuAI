@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   Quote,
   Sparkles,
@@ -90,6 +91,7 @@ const AUTO_SCROLL_INTERVAL = 10000;
 const Testimonials = () => {
   const [active, setActive] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -116,6 +118,7 @@ const Testimonials = () => {
 
   return (
     <section
+      ref={ref}
       id="testimonials"
       className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
     >
@@ -187,7 +190,13 @@ const Testimonials = () => {
         {/* Two-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           {/* Left Column - Info & Stats */}
-          <div className="flex">
+          <div
+            className={`flex transition-all duration-1000 ${
+              isIntersecting
+                ? "animate-fade-in-left opacity-100"
+                : "opacity-0 translate-x-8"
+            }`}
+          >
             {/* Main Info */}
             <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 w-full flex flex-col justify-center">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -261,7 +270,13 @@ const Testimonials = () => {
           </div>
 
           {/* Right Column - Testimonial Carousel */}
-          <div className="flex flex-col">
+          <div
+            className={`flex flex-col transition-all duration-1000 delay-300 ${
+              isIntersecting
+                ? "animate-fade-in-right opacity-100"
+                : "opacity-0 translate-x-8"
+            }`}
+          >
             <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 hover:shadow-brand-orange/20 transition-all duration-500 group w-full flex flex-col justify-center relative flex-1">
               {/* AI Glow Effect */}
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-orange/10 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

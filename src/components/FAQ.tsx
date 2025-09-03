@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   ChevronDown,
   ChevronUp,
@@ -16,6 +17,7 @@ import {
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   const faqs = [
     {
@@ -97,7 +99,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+    <section
+      ref={ref}
+      className="relative py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+    >
       {/* Glowing Orange Gradient Background Effects - Services Style */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
@@ -140,7 +145,13 @@ const FAQ = () => {
 
       <div className="container-width relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
             <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
             <span className="text-sm font-medium text-brand-orange">
@@ -163,10 +174,18 @@ const FAQ = () => {
           <div className="flex-1 space-y-6">
             {faqs
               .filter((_, index) => index % 2 === 0)
-              .map((faq) => (
+              .map((faq, index) => (
                 <div
                   key={faq.id}
-                  className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300"
+                  className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 ${
+                    isIntersecting
+                      ? "animate-fade-in-left opacity-100"
+                      : "opacity-0 translate-x-8"
+                  }`}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    transitionDelay: `${index * 50}ms`,
+                  }}
                 >
                   <button
                     onClick={() => toggleItem(faq.id)}
@@ -212,10 +231,18 @@ const FAQ = () => {
           <div className="flex-1 space-y-6">
             {faqs
               .filter((_, index) => index % 2 === 1)
-              .map((faq) => (
+              .map((faq, index) => (
                 <div
                   key={faq.id}
-                  className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300"
+                  className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 ${
+                    isIntersecting
+                      ? "animate-fade-in-right opacity-100"
+                      : "opacity-0 translate-x-8"
+                  }`}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    transitionDelay: `${index * 50}ms`,
+                  }}
                 >
                   <button
                     onClick={() => toggleItem(faq.id)}

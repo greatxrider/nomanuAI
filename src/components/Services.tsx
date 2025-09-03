@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   Users,
   UserCheck,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 
 const Services = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   const services = [
     {
       id: 1,
@@ -135,6 +137,7 @@ const Services = () => {
 
   return (
     <section
+      ref={ref}
       id="services"
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
@@ -180,7 +183,13 @@ const Services = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
             <Cpu className="w-5 h-5 text-brand-orange mr-2 animate-pulse" />
             <span className="text-brand-orange font-semibold">
@@ -204,8 +213,15 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden flex flex-col"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden flex flex-col ${
+                  isIntersecting
+                    ? "animate-fade-in-up opacity-100"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{
+                  animationDelay: `${index * 200}ms`,
+                  transitionDelay: `${index * 100}ms`,
+                }}
               >
                 {/* AI Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
