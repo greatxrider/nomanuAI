@@ -173,8 +173,10 @@ const Contact = () => {
             <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Let's <span className="text-brand-orange">Transform</span> Your
-            Business
+            Ready to{" "}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              Get Started?
+            </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We'd love to help! Share your details in the form and we'll respond

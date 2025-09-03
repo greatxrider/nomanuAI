@@ -935,7 +935,10 @@ const Projects = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Projects We've <span className="text-brand-orange">Built</span>
+            Our{" "}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              Latest Projects
+            </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Explore our portfolio of AI automation solutions that have

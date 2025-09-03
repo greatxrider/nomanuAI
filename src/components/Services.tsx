@@ -198,8 +198,10 @@ const Services = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Automate Everything or{" "}
-            <span className="text-brand-orange">Don't Pay</span>
+            Complete{" "}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              Automation Solutions
+            </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
             We will automate your manual processes or you don't pay.

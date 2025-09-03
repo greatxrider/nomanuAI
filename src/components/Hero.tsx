@@ -74,7 +74,7 @@ const Hero = () => {
             <div
               key={i}
               className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
-              data-speed={0.5 + (i * 0.1)}
+              data-speed={0.5 + i * 0.1}
               style={{
                 left: particle.left,
                 top: particle.top,
@@ -86,12 +86,12 @@ const Hero = () => {
         </div>
 
         {/* Gradient Orbs */}
-        <div 
-          className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" 
+        <div
+          className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse"
           data-speed="0.2"
         />
-        <div 
-          className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" 
+        <div
+          className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300"
           data-speed="0.4"
         />
       </div>
@@ -122,12 +122,15 @@ const Hero = () => {
             }`}
             data-speed="0.6"
           >
-            <span className="text-brand-orange">
-              {headlines[currentHeadline].split("\n").map((line, index) => (
-                <span key={index} className="block">
-                  {line}
-                </span>
-              ))}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              {headlines[currentHeadline]
+                .split("\n")
+                .map((line, index, array) => (
+                  <span key={index} className="inline">
+                    {line}
+                    {index < array.length - 1 && " "}
+                  </span>
+                ))}
             </span>
           </h1>
 
@@ -162,10 +165,7 @@ const Hero = () => {
               <Calendar className="w-5 h-5 mr-2 inline" />
               Book Your Free Discovery Call
             </Link>
-            <Link
-              href="/services"
-              className="btn-secondary text-lg px-8 py-4"
-            >
+            <Link href="/services" className="btn-secondary text-lg px-8 py-4">
               Explore Our Services
             </Link>
           </div>

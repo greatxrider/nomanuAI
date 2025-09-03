@@ -307,7 +307,7 @@ export default function ProjectManagementPage() {
                 key={item.title}
                 className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-xl p-6"
               >
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
@@ -318,7 +318,7 @@ export default function ProjectManagementPage() {
           </div>
 
           <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:border-brand-orange/20 dark:hover:border-brand-orange/30 shadow-sm hover:shadow-lg hover:shadow-brand-orange/10 dark:hover:shadow-brand-orange/20 transition-all duration-300 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-4">
               Project management platforms we work with
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
@@ -595,7 +595,7 @@ export default function ProjectManagementPage() {
                 <div className="flex items-start space-x-3 mb-3">
                   <Icon className="w-6 h-6 text-brand-orange mt-1" />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">
                       {title}
                     </h3>
                   </div>
@@ -669,7 +669,7 @@ export default function ProjectManagementPage() {
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-orange mb-2">
                 START HERE
               </p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
                 Project Workflow Audit
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
@@ -688,7 +688,7 @@ export default function ProjectManagementPage() {
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-orange mb-2">
                 MOST POPULAR
               </p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-1">
                 Complete PM Automation Setup
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
@@ -706,7 +706,7 @@ export default function ProjectManagementPage() {
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-orange mb-2">
                 ONGOING
               </p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
                 Monthly PM Optimization
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
@@ -871,7 +871,7 @@ export default function ProjectManagementPage() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
                     {service.title}
                   </h3>
 

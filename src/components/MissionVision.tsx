@@ -82,8 +82,10 @@ const MissionVision = () => {
 
               {/* Main Title */}
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Your automation journey{" "}
-                <span className="text-brand-orange">starts here</span>
+                Our{" "}
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+                  Mission & Vision
+                </span>
               </h2>
 
               {/* Description */}

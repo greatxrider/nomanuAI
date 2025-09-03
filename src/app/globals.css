@@ -104,9 +104,22 @@
         @apply py-16 md:py-24 lg:py-32;
     }
 
+    /* Heading Classes */
+    .heading-lg {
+        font-size: 3.7rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: theme('colors.gray.900');
+    }
+
+    .dark .heading-lg {
+        color: theme('colors.gray.100');
+    }
+
     /* Container Width */
     .container-width {
-        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        @apply mx-auto px-4 sm:px-6 lg:px-8;
+        max-width: 1536px;
     }
 
     /* Brand Colors */
@@ -231,7 +244,7 @@
     @keyframes fadeInLeft {
         from {
             opacity: 0;
-            transform: translateX(-2rem);
+            transform: translateX(-8rem);
         }
 
         to {
@@ -243,7 +256,7 @@
     @keyframes fadeInRight {
         from {
             opacity: 0;
-            transform: translateX(2rem);
+            transform: translateX(8rem);
         }
 
         to {

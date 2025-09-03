@@ -704,7 +704,7 @@ export default function SalesCRMManagementPage() {
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-orange mb-2">
                 ONGOING
               </p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
                 Monthly Optimization
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">

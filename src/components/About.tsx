@@ -113,7 +113,10 @@ const About = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About <span className="text-brand-orange">NomanuAI</span>
+            About{" "}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              NomanuAI
+            </span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">

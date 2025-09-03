@@ -159,8 +159,10 @@ const FAQ = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Everything You Need to Know About{" "}
-            <span className="text-brand-orange">NomanuAI</span>
+            Frequently Asked{" "}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              Questions
+            </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Your complete guide to understanding how we can transform your

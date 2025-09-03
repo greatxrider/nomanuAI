@@ -170,8 +170,10 @@ const WhyChooseUs = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Tailored Automation: Built Around{" "}
-            <span className="text-brand-orange">Your Business Goals</span>
+            Why Businesses{" "}
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              Choose NomanuAI?
+            </span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -188,8 +190,12 @@ const WhyChooseUs = () => {
                 key={index}
                 className={`group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden ${
                   isIntersecting
-                    ? "animate-fade-in-up opacity-100"
-                    : "opacity-0 translate-y-8"
+                    ? index % 2 === 0
+                      ? "animate-fade-in-left opacity-100"
+                      : "animate-fade-in-right opacity-100"
+                    : index % 2 === 0
+                    ? "opacity-0 -translate-x-32"
+                    : "opacity-0 translate-x-32"
                 }`}
                 style={{
                   animationDelay: `${index * 200}ms`,

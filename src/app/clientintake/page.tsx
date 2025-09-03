@@ -692,7 +692,7 @@ const ClientIntakeOnboardingPage = () => {
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-orange mb-2">
                 START HERE
               </p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
                 Onboarding Audit
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
@@ -716,7 +716,7 @@ const ClientIntakeOnboardingPage = () => {
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-orange mb-2">
                 MOST POPULAR
               </p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-1">
                 Complete Onboarding Setup
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">
