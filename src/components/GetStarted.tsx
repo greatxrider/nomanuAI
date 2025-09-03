@@ -2,11 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import { Phone, ArrowRight } from "lucide-react";
 
 const GetStarted = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   return (
-    <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+    <section
+      ref={ref}
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+    >
       {/* Enhanced AI Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated Circuit Pattern */}
@@ -67,7 +72,13 @@ const GetStarted = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
             <ArrowRight className="w-5 h-5 text-brand-orange mr-3" />
             <span className="text-brand-orange font-semibold">
@@ -96,7 +107,14 @@ const GetStarted = () => {
         {/* Two Separate Containers - Each with Content and Image */}
         <div className="space-y-12">
           {/* Container 01 - Book Your Free Discovery Call */}
-          <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-500 max-w-[1300px] mx-auto">
+          <div
+            className={`bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-500 max-w-[1300px] mx-auto ${
+              isIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left Column - Content */}
               <div>

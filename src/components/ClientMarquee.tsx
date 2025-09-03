@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
 const ClientMarquee = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   // Company data with logos and placeholder info
   const companies = [
     {
@@ -33,7 +35,10 @@ const ClientMarquee = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 py-12 overflow-hidden border-y border-gray-200 dark:border-gray-700 transition-colors duration-300">
+    <section
+      ref={ref}
+      className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 py-12 overflow-hidden border-y border-gray-200 dark:border-gray-700 transition-colors duration-300"
+    >
       {/* Glowing Orange Gradient Background Effects - Same as Services section */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
@@ -76,14 +81,26 @@ const ClientMarquee = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div
+          className={`text-center mb-12 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="text-lg font-medium text-brand-orange">
             We've helped our clients reclaim 20+ hours weekly through automation
           </p>
         </div>
 
         {/* Static Logo Grid */}
-        <div className="flex items-center justify-center gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div
+          className={`flex items-center justify-center gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto transition-all duration-1000 delay-300 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           {companies.map((company, index) => (
             <div
               key={index}

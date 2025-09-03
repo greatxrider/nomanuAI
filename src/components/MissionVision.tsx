@@ -2,10 +2,15 @@
 
 import Image from "next/image";
 import { Target, Eye, Rocket } from "lucide-react";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
 const MissionVision = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   return (
-    <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+    <section
+      ref={ref}
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+    >
       {/* Glowing Orange Gradient Background Effects - Services Style */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
@@ -48,7 +53,13 @@ const MissionVision = () => {
 
       <div className="container-width relative z-10">
         {/* Main Container */}
-        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden">
+        <div
+          className={`bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-scale-in opacity-100"
+              : "opacity-0 scale-95"
+          }`}
+        >
           {/* Two-Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
             {/* Left Column - Image */}

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   ExternalLink,
   Github,
@@ -695,6 +696,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -853,6 +855,7 @@ const Projects = () => {
 
   return (
     <section
+      ref={ref}
       id="projects"
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
@@ -918,7 +921,13 @@ const Projects = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
             <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
             <span className="text-sm font-medium text-brand-orange">

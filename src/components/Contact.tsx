@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   Mail,
   Phone,
@@ -15,6 +16,7 @@ import {
 import { supabase } from "@/lib/supabase";
 
 const Contact = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
@@ -110,6 +112,7 @@ const Contact = () => {
 
   return (
     <section
+      ref={ref}
       id="contact"
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
@@ -155,7 +158,13 @@ const Contact = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
             <Brain className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
             <span className="text-brand-orange font-semibold">
@@ -174,7 +183,13 @@ const Contact = () => {
         </div>
 
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+        <div
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch transition-all duration-1000 delay-300 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           {/* Left Column - Contact Info & AI Features */}
           <div className="space-y-8">
             {/* AI-Powered Contact Card */}

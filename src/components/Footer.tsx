@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   Mail,
   Phone,
@@ -20,6 +21,7 @@ import { useTheme } from "@/lib/theme-context";
 
 const Footer = () => {
   const { theme, mounted } = useTheme();
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -49,7 +51,10 @@ const Footer = () => {
   } as const;
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <footer
+      ref={ref}
+      className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300"
+    >
       {/* AI Pattern Background */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-10 left-10 w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
@@ -58,7 +63,13 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="container-width py-16 relative">
+      <div
+        className={`container-width py-16 relative transition-all duration-1000 ${
+          isIntersecting
+            ? "animate-fade-in-up opacity-100"
+            : "opacity-0 translate-y-8"
+        }`}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info with AI Enhancement */}
           <div className="lg:col-span-1">

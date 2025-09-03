@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ClientMarquee from "@/components/ClientMarquee";
@@ -14,8 +16,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
 export default function Home() {
+  const { ref: blogRef, isIntersecting: blogIsIntersecting } =
+    useIntersectionObserver({ threshold: 0.1 });
+
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header />
@@ -31,7 +37,10 @@ export default function Home() {
       <FAQ />
 
       {/* Stay Updated Section */}
-      <section className="relative py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+      <section
+        ref={blogRef}
+        className="relative py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+      >
         {/* Enhanced AI Background - Home Style */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Animated Circuit Pattern */}
@@ -97,7 +106,13 @@ export default function Home() {
         </div>
 
         <div className="container-width relative z-10">
-          <div className="text-center mb-12">
+          <div
+            className={`text-center mb-12 transition-all duration-1000 ${
+              blogIsIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
             <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
               <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
               <span className="text-sm font-medium text-brand-orange">
@@ -117,7 +132,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-7xl mx-auto">
+          <div
+            className={`grid md:grid-cols-3 gap-8 mb-8 max-w-7xl mx-auto transition-all duration-1000 delay-300 ${
+              blogIsIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
             {/* Blog Post 1 */}
             <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
               <div className="relative aspect-video overflow-hidden">

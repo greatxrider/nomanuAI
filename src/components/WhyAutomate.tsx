@@ -1,8 +1,10 @@
 "use client";
 
 import { Zap, Clock, Users, DollarSign } from "lucide-react";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
 const WhyAutomate = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   const perks = [
     {
       icon: Clock,
@@ -35,6 +37,7 @@ const WhyAutomate = () => {
 
   return (
     <section
+      ref={ref}
       id="why-automate"
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
@@ -80,7 +83,13 @@ const WhyAutomate = () => {
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div
+          className={`text-center mb-20 transition-all duration-1000 ${
+            isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
             <Zap className="w-5 h-5 text-brand-orange mr-2 animate-pulse" />
             <span className="text-brand-orange font-semibold">
@@ -104,35 +113,43 @@ const WhyAutomate = () => {
         {/* Perks - Three Column Layout */}
         <div className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {perks.map((perk, index) => {
-              const IconComponent = perk.icon;
-              return (
-                <div key={index} className="group">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    {/* Image Container */}
-                    <div className="relative w-24 h-24 bg-white rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                      <iframe
-                        src={perk.image}
-                        className="w-full h-full rounded-xl"
-                        frameBorder="0"
-                        allowFullScreen
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
-                        {perk.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
-                        {perk.description}
-                      </p>
-                      <div className="text-brand-orange font-semibold text-sm bg-brand-orange/10 px-3 py-1 rounded-full inline-block">
-                        {perk.highlight}
-                      </div>
+            {perks.map((perk, index) => (
+              <div
+                key={index}
+                className={`group transition-all duration-1000 ${
+                  isIntersecting
+                    ? "animate-fade-in-up opacity-100"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{
+                  animationDelay: `${index * 200}ms`,
+                  transitionDelay: `${index * 100}ms`,
+                }}
+              >
+                <div className="flex flex-col items-center text-center space-y-4">
+                  {/* Image Container */}
+                  <div className="relative w-24 h-24 bg-white rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <iframe
+                      src={perk.image}
+                      className="w-full h-full rounded-xl"
+                      frameBorder="0"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
+                      {perk.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                      {perk.description}
+                    </p>
+                    <div className="text-brand-orange font-semibold text-sm bg-brand-orange/10 px-3 py-1 rounded-full inline-block">
+                      {perk.highlight}
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
