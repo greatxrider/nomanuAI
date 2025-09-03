@@ -5,12 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Sun, Moon, Github, ChevronDown } from "lucide-react";
 import { useTheme } from "@/lib/theme-context";
+import { useScrollSmoother } from "@/lib/useScrollSmoother";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const { theme, toggleTheme, mounted } = useTheme();
+  const { scrollToElement } = useScrollSmoother();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,14 @@ const Header = () => {
     { name: "Billing & Payment", href: "/billingpayment" },
     { name: "Social Media Content", href: "/socialmedia" },
   ];
+
+  // Handle smooth scrolling for internal links
+  const handleInternalLink = (href: string) => {
+    if (href.startsWith("/#")) {
+      const elementId = href.substring(2); // Remove "/#"
+      scrollToElement(`#${elementId}`);
+    }
+  };
 
   // Theme Toggle Component
   const ThemeToggle = () => (
@@ -147,13 +157,15 @@ const Header = () => {
                             </li>
                           ))}
                           <li className="mt-1 px-4">
-                            <Link
-                              href="/#services"
-                              onClick={() => setIsServicesOpen(false)}
+                            <button
+                              onClick={() => {
+                                setIsServicesOpen(false);
+                                handleInternalLink("/#services");
+                              }}
                               className="block w-full text-center text-sm bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2.5 px-3 rounded-lg transition-colors"
                             >
                               View all services
-                            </Link>
+                            </button>
                           </li>
                         </ul>
                       </div>
@@ -163,10 +175,14 @@ const Header = () => {
               }
 
               return (
-                <Link key={item.name} href={item.href} className={baseClass}>
+                <button
+                  key={item.name}
+                  onClick={() => handleInternalLink(item.href)}
+                  className={baseClass}
+                >
                   {item.name}
                   <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
-                </Link>
+                </button>
               );
             })}
 
@@ -200,7 +216,7 @@ const Header = () => {
               href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
+              className="btn-primary"
             >
               Get Started
             </Link>
@@ -208,97 +224,55 @@ const Header = () => {
               href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-lg"
+              className="btn-secondary"
             >
               Contact Us
             </Link>
           </div>
 
-          {/* Mobile Controls */}
-          <div className="md:hidden flex items-center space-x-2">
-            {/* Theme Toggle - Mobile */}
-            <ThemeToggle />
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-3 rounded-lg transition-colors focus-ring ${
-                isScrolled
-                  ? theme === "dark"
-                    ? "hover:bg-gray-700 text-white"
-                    : "hover:bg-gray-200 text-gray-800"
-                  : theme === "dark"
-                  ? "hover:bg-gray-800 text-white"
-                  : "hover:bg-gray-200 text-gray-800"
-              }`}
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-7 h-7" />
-              ) : (
-                <Menu className="w-7 h-7" />
-              )}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg transition-all duration-300 focus-ring"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div
-            className={`md:hidden border-t backdrop-blur-md ${
-              isScrolled
-                ? theme === "dark"
-                  ? "border-gray-800 bg-black/80"
-                  : "border-gray-200 bg-gray-300/30"
-                : theme === "dark"
-                ? "border-gray-700 bg-black/70"
-                : "border-gray-200 bg-white/70"
-            }`}
-          >
-            <div className="py-4 space-y-2">
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <Link
+                <button
                   key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-2 transition-colors duration-300 ${
-                    theme === "dark"
-                      ? "text-white hover:text-brand-orange"
-                      : "text-gray-800 hover:text-brand-orange"
-                  }`}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    handleInternalLink(item.href);
+                  }}
+                  className="block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors"
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
-              <div className="px-4 pt-4 space-y-3">
-                <a
-                  href="https://github.com/nomanuai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center w-full py-3 px-6 rounded-lg transition-all duration-300 text-center border border-gray-300 dark:border-gray-600 hover:border-brand-orange hover:text-brand-orange"
-                >
-                  <Github className="w-5 h-5 mr-2" />
-                  <span className="font-medium">View Projects</span>
-                </a>
-                <Link
-                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                >
-                  Contact Us
-                </Link>
+              <div className="pt-4 pb-3 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between px-3">
+                  <ThemeToggle />
+                  <Link
+                    href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -101,241 +101,126 @@ export default function Home() {
           </div>
 
           {/* Gradient Orbs */}
-          <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/20 rounded-full filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/15 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+          <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/30 via-orange-400/20 to-brand-orange-light/30 rounded-full blur-3xl animate-pulse opacity-40" />
+          <div
+            className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/30 via-brand-orange/30 to-orange-500/20 rounded-full blur-3xl animate-pulse opacity-30"
+            style={{ animationDelay: "2s" }}
+          />
         </div>
 
         <div className="container-width relative z-10">
+          {/* Section Header */}
           <div
-            className={`text-center mb-12 transition-all duration-1000 ${
+            className={`text-center mb-16 transition-all duration-1000 ${
               blogIsIntersecting
                 ? "animate-fade-in-up opacity-100"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-              <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
-              <span className="text-sm font-medium text-brand-orange">
-                Latest Insights
+            <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
+              <span className="text-brand-orange font-semibold">
+                AI Automation Insights
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Stay Updated with{" "}
-              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-                News and Automation Insights
-              </span>
+              <span className="text-brand-orange">Latest Insights</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Get practical guides, case studies, and expert tips on automation,
-              AI-driven workflows, and integration best practices to help you
-              scale operations.
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Discover the latest trends, tips, and strategies in business
+              automation. Stay ahead of the curve with our expert insights.
             </p>
           </div>
 
+          {/* Blog Posts Grid */}
           <div
-            className={`grid md:grid-cols-3 gap-8 mb-8 max-w-7xl mx-auto transition-all duration-1000 delay-300 ${
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 transition-all duration-1000 delay-200 ${
               blogIsIntersecting
                 ? "animate-fade-in-up opacity-100"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            {/* Blog Post 1 */}
-            <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src="/blogImages/future-of-business.jpg"
-                  alt="Why Automation is the Future of Business"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-medium text-brand-orange bg-brand-orange/10 px-2 py-1 rounded-full">
-                    Automation Benefits
-                  </span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    • 5 min read
-                  </span>
+            {[
+              {
+                title: "Why Automation is the Future of Business",
+                excerpt:
+                  "Discover how automation is transforming industries and why your business needs to adapt now.",
+                image: "/blogImages/future-of-business.jpg",
+                href: "/blog/why-automation-is-future-of-business",
+                readTime: "5 min read",
+              },
+              {
+                title: "How Automation Saves Money and Time",
+                excerpt:
+                  "Learn the real cost savings and time benefits that automation brings to your business.",
+                image: "/blogImages/social-payroll-automation.jpg",
+                href: "/blog/how-automation-saves-money-and-time",
+                readTime: "4 min read",
+              },
+              {
+                title: "Automation Best Practices for Success",
+                excerpt:
+                  "Follow these proven strategies to implement automation successfully in your organization.",
+                image: "/blogImages/automation-best-practices.jpeg",
+                href: "/blog/automation-best-practices-for-success",
+                readTime: "6 min read",
+              },
+            ].map((post, index) => (
+              <article
+                key={index}
+                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-brand-orange/30"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 leading-tight">
-                  Why Automation is the Future of Business
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
-                  Learn how automation can transform your business operations
-                  and give you a competitive edge in today's market.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
-                      Published by NomanuAI
-                    </span>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>{post.readTime}</span>
+                    <span>•</span>
+                    <span>September 1, 2025</span>
                   </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    Dec 19, 2024
-                  </span>
-                </div>
-                <Link
-                  href="/blog/why-automation-is-future-of-business"
-                  className="inline-flex items-center text-brand-orange hover:text-brand-orange-dark font-medium text-sm transition-colors duration-200"
-                >
-                  Read More
-                  <svg
-                    className="w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <Link
+                    href={post.href}
+                    className="inline-flex items-center text-brand-orange font-semibold hover:text-brand-orange-dark transition-colors duration-300"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </article>
-
-            {/* Blog Post 2 */}
-            <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src="/blogImages/social-payroll-automation.jpg"
-                  alt="How Automation Saves Money and Time"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-medium text-brand-orange bg-brand-orange/10 px-2 py-1 rounded-full">
-                    Cost Savings
-                  </span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    • 4 min read
-                  </span>
+                    Read More
+                    <svg
+                      className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 leading-tight">
-                  How Automation Saves Money and Time
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
-                  Discover the real cost savings and time benefits that
-                  automation brings to businesses of all sizes.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
-                      Published by NomanuAI
-                    </span>
-                  </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    Dec 19, 2024
-                  </span>
-                </div>
-                <Link
-                  href="/blog/how-automation-saves-money-and-time"
-                  className="inline-flex items-center text-brand-orange hover:text-brand-orange-dark font-medium text-sm transition-colors duration-200"
-                >
-                  Read More
-                  <svg
-                    className="w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </article>
-
-            {/* Blog Post 3 */}
-            <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src="/blogImages/automation-best-practices.jpeg"
-                  alt="Automation Best Practices for Success"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-medium text-brand-orange bg-brand-orange/10 px-2 py-1 rounded-full">
-                    Best Practices
-                  </span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    • 6 min read
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 leading-tight">
-                  Automation Best Practices for Success
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
-                  Learn the key strategies and best practices to ensure your
-                  automation projects succeed and deliver results.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
-                      Published by NomanuAI
-                    </span>
-                  </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    Dec 19, 2024
-                  </span>
-                </div>
-                <Link
-                  href="/blog/automation-best-practices-for-success"
-                  className="inline-flex items-center text-brand-orange hover:text-brand-orange-dark font-medium text-sm transition-colors duration-200"
-                >
-                  Read More
-                  <svg
-                    className="w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </article>
+              </article>
+            ))}
           </div>
 
+          {/* Call to Action */}
           <div className="text-center">
-            <Link
-              href="/blog"
-              className="inline-flex items-center px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-brand-orange/90 transition-colors duration-200"
-            >
-              View All Blog Posts
-              <svg
-                className="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+            <Link href="/blog" className="btn-primary text-lg">
+              View All Articles
             </Link>
           </div>
         </div>

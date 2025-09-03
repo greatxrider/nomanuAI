@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme-context";
 import Chatbot from "@/components/Chatbot";
+import ScrollSmootherComponent from "@/components/ScrollSmoother";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -24,8 +25,10 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-          {children}
-          <Chatbot />
+          <ScrollSmootherComponent>
+            {children}
+            <Chatbot />
+          </ScrollSmootherComponent>
         </ThemeProvider>
       </body>
     </html>

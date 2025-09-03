@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Enhanced AI Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated Circuit Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10" data-speed="0.3">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern
@@ -74,6 +74,7 @@ const Hero = () => {
             <div
               key={i}
               className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
+              data-speed={0.5 + (i * 0.1)}
               style={{
                 left: particle.left,
                 top: particle.top,
@@ -85,8 +86,14 @@ const Hero = () => {
         </div>
 
         {/* Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+        <div 
+          className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" 
+          data-speed="0.2"
+        />
+        <div 
+          className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" 
+          data-speed="0.4"
+        />
       </div>
 
       <div className="container-width relative z-10">
@@ -98,102 +105,94 @@ const Hero = () => {
                 ? "animate-fade-in-down opacity-100"
                 : "opacity-0 translate-y-8"
             }`}
+            data-speed="0.8"
           >
-            <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
+            <div className="w-2 h-2 bg-brand-orange rounded-full mr-2 animate-pulse" />
             <span className="text-sm font-medium text-brand-orange">
-              From manual to automated.
+              AI-Powered Automation
             </span>
           </div>
 
           {/* Main Headline */}
           <h1
-            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight mb-6 transition-all duration-1000 ${
+            className={`text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight transition-all duration-1000 ${
               isIntersecting
-                ? "animate-fade-in-up opacity-100"
+                ? "animate-fade-in-down opacity-100"
                 : "opacity-0 translate-y-12"
             }`}
+            data-speed="0.6"
           >
-            <span className="block bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent min-h-[1.2em] whitespace-pre-line">
-              {headlines[currentHeadline]}
+            <span className="text-brand-orange">
+              {headlines[currentHeadline].split("\n").map((line, index) => (
+                <span key={index} className="block">
+                  {line}
+                </span>
+              ))}
             </span>
           </h1>
 
           {/* Subheadline */}
           <p
-            className={`text-base md:text-lg lg:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto text-center transition-all duration-1000 delay-300 ${
+            className={`text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed transition-all duration-1000 delay-200 ${
               isIntersecting
                 ? "animate-fade-in-up opacity-100"
                 : "opacity-0 translate-y-8"
             }`}
+            data-speed="0.7"
           >
-            At Nomanu AI, we take busywork off your plate. We design, build, and
-            run automation workflows that replace manual work—while training
-            your team to harness AI across every stage of your business, so you
-            can focus on what matters most.
+            Transform your business with intelligent automation solutions that
+            streamline workflows, reduce costs, and boost productivity.
           </p>
 
           {/* CTA Buttons */}
           <div
-            className={`flex justify-center transition-all duration-1000 delay-500 ${
+            className={`flex flex-col sm:flex-row gap-4 mb-12 transition-all duration-1000 delay-300 ${
               isIntersecting
                 ? "animate-fade-in-up opacity-100"
                 : "opacity-0 translate-y-8"
             }`}
+            data-speed="0.9"
           >
             <Link
-              href="#contact"
-              className="group relative bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange backdrop-blur-sm text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-700 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 text-base flex items-center justify-center overflow-hidden border-2 border-transparent hover:border-transparent"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-lg px-8 py-4"
             >
-              <span className="relative z-10 flex items-center">
-                Book Free Consultation
-                <div className="ml-3 relative">
-                  <Calendar className="w-5 h-5" />
-                  <Check className="w-3 h-3 absolute -bottom-1 -right-1 text-green-400" />
-                </div>
-              </span>
-
-              {/* AI Colored Border Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm scale-105" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm scale-110" />
-
-              {/* Multi-colored Glowing Border Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-400/60 via-pink-500/70 to-blue-500/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-lg scale-110" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-400/40 via-purple-500/50 to-cyan-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-xl scale-125" />
-
-              {/* Inner Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-400/20 via-pink-500/30 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
-
-              {/* Subtle Background Glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-400/5 via-pink-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              {/* Glowing Shadow Effect */}
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-400/50 via-purple-500/50 to-pink-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl scale-110 -z-10" />
-              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-blue-400/30 via-green-400/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-2xl scale-125 -z-20" />
+              <Calendar className="w-5 h-5 mr-2 inline" />
+              Book Your Free Discovery Call
+            </Link>
+            <Link
+              href="/services"
+              className="btn-secondary text-lg px-8 py-4"
+            >
+              Explore Our Services
             </Link>
           </div>
-        </div>
-      </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
-        <button
-          onClick={() => {
-            const nextSection = document.getElementById("services");
-            if (nextSection) {
-              nextSection.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-          className="animate-bounce cursor-pointer hover:scale-110 transition-transform duration-300"
-        >
-          <div className="flex flex-col items-center space-y-2">
-            <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm hover:border-brand-orange transition-colors duration-300">
-              <div className="w-1 h-3 bg-brand-orange rounded-full mt-2 animate-pulse" />
+          {/* Trust Indicators */}
+          <div
+            className={`flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-500 dark:text-gray-400 transition-all duration-1000 delay-400 ${
+              isIntersecting
+                ? "animate-fade-in-up opacity-100"
+                : "opacity-0 translate-y-8"
+            }`}
+            data-speed="1.0"
+          >
+            <div className="flex items-center">
+              <Check className="w-4 h-4 mr-2 text-brand-orange" />
+              <span>No Setup Fees</span>
             </div>
-            <span className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-wide bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm px-2 py-1 rounded hover:text-brand-orange transition-colors duration-300">
-              Discover More
-            </span>
+            <div className="flex items-center">
+              <Check className="w-4 h-4 mr-2 text-brand-orange" />
+              <span>30-Day Money Back</span>
+            </div>
+            <div className="flex items-center">
+              <Check className="w-4 h-4 mr-2 text-brand-orange" />
+              <span>24/7 Support</span>
+            </div>
           </div>
-        </button>
+        </div>
       </div>
     </section>
   );
