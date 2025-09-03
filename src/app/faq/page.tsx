@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 import {
   ChevronDown,
@@ -106,7 +106,7 @@ const FAQPage = () => {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Header />
+
 
       {/* Hero Section - Home Background Style */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">

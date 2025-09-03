@@ -12,14 +12,12 @@ import {
   Mail,
   ArrowRight,
 } from "lucide-react";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 
 export default function CareersPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 overflow-hidden">
-      <Header />
-
       {/* Hero */}
       <section className="relative section-padding pt-32">
         {/* Decorative orbs */}

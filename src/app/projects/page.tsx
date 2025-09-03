@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 import {
   ExternalLink,
@@ -891,7 +891,7 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Header />
+
 
       {/* Page Header - Fixed navbar overlap issue */}
       <div className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">

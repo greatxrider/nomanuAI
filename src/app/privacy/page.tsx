@@ -1,11 +1,8 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Header />
-
       <div className="pt-36 pb-20">
         <div className="container-width">
           <div className="max-w-4xl mx-auto">

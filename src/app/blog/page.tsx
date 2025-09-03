@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 
 const BlogPage = () => {
@@ -44,8 +44,6 @@ const BlogPage = () => {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         {/* Enhanced AI Background - match Home */}

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 import {
   Users,
@@ -151,7 +151,7 @@ const ServicesPage = () => {
 
   return (
     <main className="min-h-screen">
-      <Header />
+
       {/* Main Header */}
       <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
         {/* Enhanced AI Background */}
