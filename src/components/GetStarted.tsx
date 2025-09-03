@@ -142,7 +142,9 @@ const GetStarted = () => {
 
                 {/* CTA Button */}
                 <Link
-                  href="/#contact"
+                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
                 >
                   <Phone className="w-5 h-5 mr-3" />
@@ -151,14 +153,13 @@ const GetStarted = () => {
                 </Link>
               </div>
 
-              {/* Right Column - Image */}
-              <div className="relative w-full max-w-full h-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=350&fit=crop"
-                  alt="Team Planning Discovery Call"
-                  width={500}
-                  height={350}
-                  className="w-full h-full object-cover rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg"
+              {/* Right Column - Animation */}
+              <div className="relative w-full max-w-full h-full bg-white rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg overflow-hidden">
+                <iframe
+                  src="https://lottie.host/embed/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie"
+                  title="Discovery call animation"
+                  className="w-full h-full"
+                  allowFullScreen
                 />
               </div>
             </div>
@@ -170,7 +171,7 @@ const GetStarted = () => {
               {/* Left Column - Image */}
               <div className="relative w-full max-w-full h-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=350&fit=crop"
+                  src="/whyChoose/automation-image-custom.png"
                   alt="Automation Workflow System"
                   width={500}
                   height={350}
@@ -270,14 +271,13 @@ const GetStarted = () => {
                 </div>
               </div>
 
-              {/* Right Column - Image */}
-              <div className="relative w-full max-w-full h-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=350&fit=crop"
-                  alt="Business Growth and Leadership"
-                  width={500}
-                  height={350}
-                  className="w-full h-full object-cover rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg"
+              {/* Right Column - Animation */}
+              <div className="relative w-full max-w-full h-full bg-white rounded-2xl border border-gray-200 dark:border-gray-600 shadow-lg overflow-hidden">
+                <iframe
+                  src="https://lottie.host/embed/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie"
+                  title="Growth and leadership animation"
+                  className="w-full h-full"
+                  allowFullScreen
                 />
               </div>
             </div>

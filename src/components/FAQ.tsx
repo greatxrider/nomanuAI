@@ -268,7 +268,9 @@ const FAQ = () => {
               Let's discuss how automation can transform your business processes
             </p>
             <a
-              href="#contact"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-brand-orange text-white font-medium rounded-lg hover:bg-brand-orange/90 transition-colors duration-200"
             >
               Schedule a Free Consultation

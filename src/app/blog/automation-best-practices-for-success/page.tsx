@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Clock, Calendar } from "lucide-react";
 
 const BlogPostPage = () => {
   return (
@@ -10,62 +12,97 @@ const BlogPostPage = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Enhanced AI Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Animated Circuit Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern
+                  id="circuit"
+                  x="0"
+                  y="0"
+                  width="100"
+                  height="100"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M20,20 L80,20 L80,80 L20,80 Z"
+                    fill="none"
+                    stroke="#E56518"
+                    strokeWidth="1"
+                  />
+                  <circle cx="20" cy="20" r="3" fill="#E56518" />
+                  <circle cx="80" cy="20" r="3" fill="#E56518" />
+                  <circle cx="80" cy="80" r="3" fill="#E56518" />
+                  <circle cx="20" cy="80" r="3" fill="#E56518" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#circuit)" />
+            </svg>
+          </div>
+
+          {/* Floating AI Particles */}
+          <div className="absolute inset-0">
+            {[
+              { left: "15%", top: "20%", delay: "0s", duration: "4s" },
+              { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
+              { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
+              { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
+              { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
+              { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
+              { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
+              { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
+            ].map((particle, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
+                style={{
+                  left: particle.left,
+                  top: particle.top,
+                  animationDelay: particle.delay,
+                  animationDuration: particle.duration,
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Gradient Orbs */}
           <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
           <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
         </div>
 
         <div className="container-width relative z-10">
           <div className="max-w-4xl mx-auto">
-            {/* Back to Blog */}
-            <div className="mb-8">
-              <Link
-                href="/blog"
-                className="inline-flex items-center text-brand-orange hover:text-brand-orange-dark font-medium transition-colors"
-              >
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-                Back to Blog
-              </Link>
+            {/* Innovation Badge */}
+            <div className="inline-flex items-center px-4 py-2 mb-8 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm">
+              <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
+              <span className="text-sm font-medium text-brand-orange">
+                Best Practices
+              </span>
             </div>
 
             {/* Post Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-sm font-medium text-brand-orange bg-brand-orange/10 px-3 py-1 rounded-full">
-                Best Practices
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                6 min read
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                Dec 19, 2024
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                Published by NomanuAI
-              </span>
+              <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <Clock className="w-4 h-4" />
+                <span>6 min read</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <Calendar className="w-4 h-4" />
+                <span>September 01, 2025</span>
+              </div>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Automation Best Practices for{" "}
+            {/* Main Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-                Success
+                Automation Best Practices for Success
               </span>
             </h1>
 
-            {/* Introduction */}
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+            {/* Subheadline */}
+            <p className="text-base md:text-lg lg:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
               Learn the key strategies and best practices to ensure your
               automation projects succeed and deliver measurable results.
               Discover proven approaches that leading companies use to maximize
@@ -79,20 +116,14 @@ const BlogPostPage = () => {
       <section className="py-8 bg-white dark:bg-gray-900">
         <div className="container-width">
           <div className="max-w-4xl mx-auto">
-            <div className="aspect-video bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-xl flex items-center justify-center mb-8">
-              <svg
-                className="w-32 h-32 text-green-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+            <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
+              <Image
+                src="/blogImages/automation-best-practices.jpeg"
+                alt="Automation Best Practices for Success"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
           </div>
         </div>
@@ -472,6 +503,72 @@ const BlogPostPage = () => {
         </div>
       </section>
 
+      {/* Related Articles */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container-width">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              Related Articles
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <article className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/blogImages/future-of-business.jpg"
+                    alt="Why Automation is the Future of Business"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                    Why Automation is the Future of Business
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    Learn how automation can transform your business operations
+                    and give you a competitive edge.
+                  </p>
+                  <Link
+                    href="/blog/why-automation-is-future-of-business"
+                    className="text-brand-orange hover:text-brand-orange-dark font-medium"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </article>
+
+              <article className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/blogImages/social-payroll-automation.jpg"
+                    alt="How Automation Saves Money and Time"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                    How Automation Saves Money and Time
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    Discover the real cost savings and time benefits that
+                    automation brings to businesses.
+                  </p>
+                  <Link
+                    href="/blog/how-automation-saves-money-and-time"
+                    className="text-brand-orange hover:text-brand-orange-dark font-medium"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-brand-orange">
         <div className="container-width">
@@ -484,7 +581,9 @@ const BlogPostPage = () => {
               practices
             </p>
             <Link
-              href="/contact"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               Schedule a Free Consultation
@@ -502,49 +601,6 @@ const BlogPostPage = () => {
                 />
               </svg>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Articles */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="container-width">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Related Articles
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  Why Automation is the Future of Business
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Learn how automation can transform your business operations
-                  and give you a competitive edge.
-                </p>
-                <Link
-                  href="/blog/why-automation-is-future-of-business"
-                  className="text-brand-orange hover:text-brand-orange-dark font-medium"
-                >
-                  Read More →
-                </Link>
-              </article>
-              <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  How Automation Saves Money and Time
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Discover the real cost savings and time benefits that
-                  automation brings to businesses.
-                </p>
-                <Link
-                  href="/blog/how-automation-saves-money-and-time"
-                  className="text-brand-orange hover:text-brand-orange-dark font-medium"
-                >
-                  Read More →
-                </Link>
-              </article>
-            </div>
           </div>
         </div>
       </section>

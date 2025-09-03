@@ -136,7 +136,12 @@ const ClientIntakeOnboardingPage = () => {
               Perfect for growing businesses ready to scale their processes.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/#contact" className="btn-primary">
+              <Link
+                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Book a Call
               </Link>
               <Link href="/#projects" className="btn-outline">
@@ -696,7 +701,12 @@ const ClientIntakeOnboardingPage = () => {
                 implementing automation. Perfect if you want to understand the
                 full scope before committing to changes.
               </p>
-              <Link href="/#contact" className="btn-primary">
+              <Link
+                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Book Session
               </Link>
             </div>
@@ -715,7 +725,12 @@ const ClientIntakeOnboardingPage = () => {
                 training, comprehensive documentation, and 60 days of support to
                 ensure everything works perfectly.
               </p>
-              <Link href="/#contact" className="btn-primary">
+              <Link
+                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Get Quote
               </Link>
             </div>
@@ -734,7 +749,12 @@ const ClientIntakeOnboardingPage = () => {
                 support, monthly strategy sessions, and quarterly system audits
                 to ensure peak performance.
               </p>
-              <Link href="/#contact" className="btn-primary">
+              <Link
+                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Learn More
               </Link>
             </div>
@@ -1017,7 +1037,12 @@ const ClientIntakeOnboardingPage = () => {
               great first impressions and scales with your business growth.
             </p>
             <div className="flex items-center justify-center gap-3">
-              <Link href="/#contact" className="btn-primary">
+              <Link
+                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Book Free Call
               </Link>
               <Link href="/#services" className="btn-secondary">

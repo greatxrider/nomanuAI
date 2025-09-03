@@ -10,6 +10,8 @@ const WhyAutomate = () => {
       description:
         "Stop spending hours on repetitive tasks. Automation handles the boring stuff while you focus on what you love about your business.",
       highlight: "Save 20-40 hours every month",
+      image:
+        "https://lottie.host/embed/e478e371-131d-40cb-8294-8ce5bb298e91/nQGZg9aKBO.lottie",
     },
     {
       icon: DollarSign,
@@ -17,6 +19,8 @@ const WhyAutomate = () => {
       description:
         "Reduce manual errors that cost money. Automated systems work 24/7 without overtime pay, sick days, or coffee breaks.",
       highlight: "Reduce operational costs by 30-50%",
+      image:
+        "https://lottie.host/embed/d5420ca1-a787-4c8d-b669-0d032fb6ba8d/6r8EP8ECsP.lottie",
     },
     {
       icon: Users,
@@ -24,6 +28,8 @@ const WhyAutomate = () => {
       description:
         "Handle 10x more customers without hiring 10x more staff. Your automation grows with your business, not against it.",
       highlight: "10x capacity without 10x complexity",
+      image:
+        "https://lottie.host/embed/28071aae-ce02-4bf2-bd38-f4d1ff4c0a08/Zw80FqSTKF.lottie",
     },
   ];
 
@@ -103,8 +109,14 @@ const WhyAutomate = () => {
               return (
                 <div key={index} className="group">
                   <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="w-16 h-16 bg-brand-orange/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-brand-orange/30 transition-all duration-300">
-                      <IconComponent className="w-8 h-8 text-brand-orange" />
+                    {/* Image Container */}
+                    <div className="relative w-24 h-24 bg-white rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      <iframe
+                        src={perk.image}
+                        className="w-full h-full rounded-xl"
+                        frameBorder="0"
+                        allowFullScreen
+                      />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">

@@ -30,8 +30,7 @@ const WhyChooseUs = () => {
       title: "Customer Service is Our Strength",
       description:
         "We answer your calls, respond to your emails, and solve your problems quickly. You're not just another client - you're our priority.",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "/whyChoose/customer-service.jpg",
       highlight: true,
     },
     {
@@ -48,8 +47,7 @@ const WhyChooseUs = () => {
       title: "Process-Driven, Tool-Agnostic",
       description:
         "We focus on what you want to achieve, not what tools we prefer. We'll use whatever works best to get you the results you need.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+      image: "/whyChoose/process-driven.png",
       highlight: true,
     },
     {
@@ -57,8 +55,7 @@ const WhyChooseUs = () => {
       title: "Scalable & Sustainable Architecture",
       description:
         "Your automation grows with your business. We build it right the first time so you don't have to rebuild it later. That means more money in your pocket.",
-      image:
-        "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop",
+      image: "/whyChoose/sustainable.png",
       highlight: true,
     },
     {
@@ -66,8 +63,7 @@ const WhyChooseUs = () => {
       title: "No-Code/Low-Code Implementation",
       description:
         "We use the best automation tools available. This means faster results, lower costs, and solutions that work immediately without months of development.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+      image: "/whyChoose/low-code.png",
       highlight: true,
     },
     {
@@ -84,8 +80,7 @@ const WhyChooseUs = () => {
       title: "Transparent Collaboration",
       description:
         "You see everything we do. We keep you updated, share our progress, and work together to make sure you get exactly what you want.",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "/whyChoose/people-meeting.jpg",
       highlight: true,
     },
   ];
@@ -206,13 +201,46 @@ const WhyChooseUs = () => {
                       </p>
                     </div>
 
-                    <div className="relative h-64 overflow-hidden rounded-2xl">
-                      <Image
-                        src={feature.image}
-                        alt={feature.title}
-                        fill
-                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                      />
+                    <div
+                      className={`relative h-64 overflow-hidden rounded-2xl ${
+                        feature.title.includes("Dedicated Support") ||
+                        feature.title.includes("AI + Automation Expertise") ||
+                        feature.title.includes("People-First Impact")
+                          ? "bg-white"
+                          : ""
+                      }`}
+                    >
+                      {feature.title.includes("Dedicated Support") ? (
+                        <iframe
+                          src="https://lottie.host/embed/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie"
+                          title={feature.title}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : feature.title.includes(
+                          "AI + Automation Expertise"
+                        ) ? (
+                        <iframe
+                          src="https://lottie.host/embed/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie"
+                          title={feature.title}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : feature.title.includes("People-First Impact") ? (
+                        <iframe
+                          src="https://lottie.host/embed/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie"
+                          title={feature.title}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <Image
+                          src={feature.image}
+                          alt={feature.title}
+                          fill
+                          className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                        />
+                      )}
                       {/* Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                     </div>
@@ -220,13 +248,46 @@ const WhyChooseUs = () => {
                 ) : (
                   // Right column: Image first, then icon, then title
                   <>
-                    <div className="relative h-64 overflow-hidden rounded-2xl mb-6">
-                      <Image
-                        src={feature.image}
-                        alt={feature.title}
-                        fill
-                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                      />
+                    <div
+                      className={`relative h-64 overflow-hidden rounded-2xl mb-6 ${
+                        feature.title.includes("Dedicated Support") ||
+                        feature.title.includes("AI + Automation Expertise") ||
+                        feature.title.includes("People-First Impact")
+                          ? "bg-white"
+                          : ""
+                      }`}
+                    >
+                      {feature.title.includes("Dedicated Support") ? (
+                        <iframe
+                          src="https://lottie.host/embed/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie"
+                          title={feature.title}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : feature.title.includes(
+                          "AI + Automation Expertise"
+                        ) ? (
+                        <iframe
+                          src="https://lottie.host/embed/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie"
+                          title={feature.title}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : feature.title.includes("People-First Impact") ? (
+                        <iframe
+                          src="https://lottie.host/embed/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie"
+                          title={feature.title}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <Image
+                          src={feature.image}
+                          alt={feature.title}
+                          fill
+                          className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                        />
+                      )}
                       {/* Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                     </div>

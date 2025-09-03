@@ -13,6 +13,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -119,20 +120,14 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8 max-w-7xl mx-auto">
             {/* Blog Post 1 */}
             <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-brand-orange"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src="/blogImages/future-of-business.jpg"
+                  alt="Why Automation is the Future of Business"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -184,20 +179,14 @@ export default function Home() {
 
             {/* Blog Post 2 */}
             <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-blue-600/10 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-                  />
-                </svg>
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src="/blogImages/social-payroll-automation.jpg"
+                  alt="How Automation Saves Money and Time"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -249,20 +238,14 @@ export default function Home() {
 
             {/* Blog Post 3 */}
             <article className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-green-500/20 to-green-600/10 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src="/blogImages/automation-best-practices.jpeg"
+                  alt="Automation Best Practices for Success"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">

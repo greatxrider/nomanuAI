@@ -217,6 +217,26 @@ const Services = () => {
                   <div className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse animation-delay-600" />
                 </div>
 
+                {/* Service Image */}
+                <div className="relative w-full h-48 mb-4 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300 bg-white">
+                  <iframe
+                    src={
+                      service.id === 2
+                        ? "https://lottie.host/embed/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie"
+                        : service.id === 3
+                        ? "https://lottie.host/embed/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie"
+                        : service.id === 4
+                        ? "https://lottie.host/embed/54f3962f-6105-4bd1-a7b2-e3669d81ce09/GWrW6epXID.lottie"
+                        : service.id === 5
+                        ? "https://lottie.host/embed/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie"
+                        : "https://lottie.host/embed/1908348d-e5e9-48d0-8c47-e3d0b9684236/6yg38oV1w0.lottie"
+                    }
+                    title={service.title}
+                    className="w-full h-full"
+                    allowFullScreen
+                  />
+                </div>
+
                 {/* Icon with Brand Orange Background */}
                 <div className="w-14 h-14 bg-brand-orange rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <IconComponent className="w-7 h-7 text-white" />
@@ -276,6 +296,12 @@ const Services = () => {
 
           {/* Special Discovery Card */}
           <div className="group relative bg-gradient-to-br from-brand-orange/5 via-brand-orange/10 to-brand-orange/5 dark:from-brand-orange/10 dark:via-brand-orange/20 dark:to-brand-orange/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-brand-orange/30 dark:border-brand-orange/40 hover:border-brand-orange/50 dark:hover:border-brand-orange/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/20 overflow-hidden flex flex-col">
+            {/* FREE Badge */}
+            <div className="absolute top-4 right-4 z-20">
+              <div className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                FREE
+              </div>
+            </div>
             {/* Enhanced AI Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-transparent to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import TeamCards from "./TeamCards";
 import {
   Cpu,
@@ -39,9 +40,7 @@ const About = () => {
   ];
 
   return (
-    <section
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
-    >
+    <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
       {/* Enhanced AI Background - Same as Home section */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated Circuit Pattern */}
@@ -311,9 +310,34 @@ const About = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center px-8 py-4 bg-brand-orange text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Sparkles className="w-5 h-5 mr-2" />
-            Ready to Transform Your Business?
+          <div className="bg-gradient-to-br from-brand-orange/5 via-brand-orange/10 to-brand-orange/5 dark:from-brand-orange/10 dark:via-brand-orange/20 dark:to-brand-orange/10 rounded-3xl p-12 border border-brand-orange/20">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how automation can transform your business processes
+            </p>
+            <Link
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Schedule a Free Consultation
+              <svg
+                className="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>

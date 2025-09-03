@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Sun, Moon, Github } from "lucide-react";
+import { Menu, X, Sun, Moon, Github, ChevronDown } from "lucide-react";
 import { useTheme } from "@/lib/theme-context";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const { theme, toggleTheme, mounted } = useTheme();
 
   useEffect(() => {
@@ -24,6 +25,14 @@ const Header = () => {
     { name: "Services", href: "/#services" },
     { name: "Projects", href: "/#projects" },
     { name: "FAQs", href: "/faq" },
+  ];
+
+  const servicesNav = [
+    { name: "Sales CRM Management", href: "/salescrmmanagement" },
+    { name: "Client Intake & Onboarding", href: "/clientintake" },
+    { name: "Project Management", href: "/projectmanagement" },
+    { name: "Billing & Payment", href: "/billingpayment" },
+    { name: "Social Media Content", href: "/socialmedia" },
   ];
 
   // Theme Toggle Component
@@ -82,24 +91,84 @@ const Header = () => {
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 text-lg ${
-                  isScrolled
-                    ? theme === "dark"
-                      ? "text-white hover:text-brand-orange"
-                      : "text-gray-800 hover:text-brand-orange"
-                    : theme === "dark"
+            {navigation.map((item) => {
+              const baseClass = `font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 text-lg ${
+                isScrolled
+                  ? theme === "dark"
                     ? "text-white hover:text-brand-orange"
                     : "text-gray-800 hover:text-brand-orange"
-                }`}
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
-              </Link>
-            ))}
+                  : theme === "dark"
+                  ? "text-white hover:text-brand-orange"
+                  : "text-gray-800 hover:text-brand-orange"
+              }`;
+
+              if (item.name === "Services") {
+                return (
+                  <div key={item.name} className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setIsServicesOpen((o) => !o)}
+                      className={`${baseClass} inline-flex items-center gap-1`}
+                      aria-haspopup="menu"
+                      aria-expanded={isServicesOpen}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isServicesOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
+                      <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
+                    </button>
+
+                    {isServicesOpen && (
+                      <div
+                        className={`absolute left-0 mt-2 w-72 rounded-xl border shadow-lg z-50 ${
+                          theme === "dark"
+                            ? "bg-gray-900 border-gray-700"
+                            : "bg-white border-gray-200"
+                        }`}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        <ul className="py-2">
+                          {servicesNav.map((svc) => (
+                            <li key={svc.name}>
+                              <Link
+                                href={svc.href}
+                                onClick={() => setIsServicesOpen(false)}
+                                className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${
+                                  theme === "dark"
+                                    ? "text-gray-200 hover:bg-gray-800 hover:text-brand-orange"
+                                    : "text-gray-800 hover:bg-gray-100 hover:text-brand-orange"
+                                }`}
+                              >
+                                {svc.name}
+                              </Link>
+                            </li>
+                          ))}
+                          <li className="mt-1 px-4">
+                            <Link
+                              href="/#services"
+                              onClick={() => setIsServicesOpen(false)}
+                              className="block w-full text-center text-sm bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2.5 px-3 rounded-lg transition-colors"
+                            >
+                              View all services
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link key={item.name} href={item.href} className={baseClass}>
+                  {item.name}
+                  <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
+                </Link>
+              );
+            })}
 
             {/* Theme Toggle - Desktop */}
             <ThemeToggle />
@@ -128,13 +197,17 @@ const Header = () => {
           {/* Right Side Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="/#contact"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
             >
               Get Started
             </Link>
             <Link
-              href="/#contact"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-lg"
             >
               Contact Us
@@ -209,14 +282,18 @@ const Header = () => {
                   <span className="font-medium">View Projects</span>
                 </a>
                 <Link
-                  href="/#contact"
+                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
                 >
                   Get Started
                 </Link>
                 <Link
-                  href="/#contact"
+                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
                 >

@@ -417,7 +417,9 @@ const FAQPage = () => {
               Let's discuss how automation can transform your business processes
             </p>
             <Link
-              href="/contact"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
             >
               Schedule a Free Consultation
