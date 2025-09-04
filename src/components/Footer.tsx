@@ -31,10 +31,11 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: "AI Lead Generation", href: "#services" },
-      { name: "CRM Integration", href: "#services" },
-      { name: "Process Automation", href: "#services" },
-      { name: "Business Optimization", href: "#services" },
+      { name: "Sales CRM Management", href: "/salescrmmanagement" },
+      { name: "Client Intake & Onboarding", href: "/clientintake" },
+      { name: "Project Management", href: "/projectmanagement" },
+      { name: "Billing & Payment", href: "/billingpayment" },
+      { name: "Social Media Content", href: "/socialmedia" },
     ],
     company: [
       { name: "About Us", href: "#about" },
