@@ -1,15 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
-import {
-  Quote,
-  Sparkles,
-  ChevronLeft,
-  ChevronRight,
-  Users,
-  Star,
-  Calendar,
-} from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight, Star, Calendar } from "lucide-react";
 
 const testimonials = [
   {
@@ -292,9 +285,11 @@ const Testimonials = () => {
 
               {/* Testimonial Content */}
               <div className="relative z-10 text-center">
-                <img
+                <Image
                   src={testimonials[active].avatar}
                   alt={testimonials[active].name}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-full object-cover border-4 border-brand-orange shadow-lg mx-auto mb-6"
                 />
 

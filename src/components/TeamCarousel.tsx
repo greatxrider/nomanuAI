@@ -28,7 +28,6 @@ interface TeamMember {
 
 const TeamCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const teamMembers: TeamMember[] = [
     {
@@ -157,6 +156,7 @@ const TeamCarousel = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
+            aria-label="Previous team member"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md rounded-full border border-white/40 dark:border-gray-700/40 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow-lg flex items-center justify-center group"
           >
             <ChevronLeft className="w-6 h-6 text-gray-700 dark:text-gray-200 group-hover:text-brand-orange transition-colors" />
@@ -164,6 +164,7 @@ const TeamCarousel = () => {
 
           <button
             onClick={nextSlide}
+            aria-label="Next team member"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md rounded-full border border-white/40 dark:border-gray-700/40 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow-lg flex items-center justify-center group"
           >
             <ChevronRight className="w-6 h-6 text-gray-700 dark:text-gray-200 group-hover:text-brand-orange transition-colors" />
@@ -302,6 +303,7 @@ const TeamCarousel = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
+            aria-label={`Go to team member ${index + 1}`}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentIndex
                 ? "bg-brand-orange scale-125"

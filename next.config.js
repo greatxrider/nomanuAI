@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    outputFileTracingRoot: __dirname,
     images: {
-        domains: ['localhost', 'images.unsplash.com', 'resize.latenode.com'],
+        domains: ['localhost', 'images.unsplash.com', 'resize.latenode.com', 'i.pravatar.cc'],
         formats: ['image/webp', 'image/avif'],
     },
     compress: true,

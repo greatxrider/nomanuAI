@@ -31,7 +31,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         "dark",
         initialTheme === "dark"
       );
-    } catch (error) {
+    } catch {
       // Fallback to dark theme if localStorage is not available
       console.warn("Theme initialization failed, using dark theme as default");
       setTheme("dark");
@@ -47,7 +47,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     try {
       localStorage.setItem("theme", newTheme);
-    } catch (error) {
+    } catch {
       console.warn("Failed to save theme to localStorage");
     }
 
@@ -73,4 +73,3 @@ export function useTheme() {
   }
   return context;
 }
- 

@@ -11,8 +11,6 @@ import {
   TrendingUp,
   Eye,
   Target,
-  ArrowRight,
-  CheckCircle,
 } from "lucide-react";
 
 const WhyChooseUs = () => {

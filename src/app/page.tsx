@@ -16,62 +16,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
-export const metadata: Metadata = {
-  title: "NomanuAI - AI Automation Solutions | Transform Your Business",
-  description:
-    "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions. Get started today!",
-  keywords: [
-    "AI automation",
-    "business automation",
-    "workflow automation",
-    "CRM integration",
-    "process automation",
-    "NomanuAI",
-    "automation services",
-    "AI solutions",
-    "business transformation",
-    "automation consulting",
-  ],
-  openGraph: {
-    title: "NomanuAI - AI Automation Solutions | Transform Your Business",
-    description:
-      "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions.",
-    url: "https://www.nomanuai.com",
-    siteName: "NomanuAI",
-    images: [
-      {
-        url: "https://www.nomanuai.com/assets/ai-automation.jpg",
-        width: 1200,
-        height: 630,
-        alt: "NomanuAI - AI Automation Solutions",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "NomanuAI - AI Automation Solutions | Transform Your Business",
-    description:
-      "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions.",
-    images: ["https://www.nomanuai.com/assets/ai-automation.jpg"],
-  },
-  alternates: {
-    canonical: "https://www.nomanuai.com",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
-
 export default function Home() {
   const { ref: blogRef, isIntersecting: blogIsIntersecting } =
     useIntersectionObserver({ threshold: 0.1 });
