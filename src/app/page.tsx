@@ -1,13 +1,11 @@
 "use client";
 
-
 import Hero from "@/components/Hero";
 import ClientMarquee from "@/components/ClientMarquee";
 import Services from "@/components/Services";
 import GetStarted from "@/components/GetStarted";
 import WhyAutomate from "@/components/WhyAutomate";
 import Projects from "@/components/Projects";
-
 import MissionVision from "@/components/MissionVision";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
@@ -18,12 +16,103 @@ import Link from "next/link";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
+export const metadata: Metadata = {
+  title: "NomanuAI - AI Automation Solutions | Transform Your Business",
+  description:
+    "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions. Get started today!",
+  keywords: [
+    "AI automation",
+    "business automation",
+    "workflow automation",
+    "CRM integration",
+    "process automation",
+    "NomanuAI",
+    "automation services",
+    "AI solutions",
+    "business transformation",
+    "automation consulting",
+  ],
+  openGraph: {
+    title: "NomanuAI - AI Automation Solutions | Transform Your Business",
+    description:
+      "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions.",
+    url: "https://www.nomanuai.com",
+    siteName: "NomanuAI",
+    images: [
+      {
+        url: "https://www.nomanuai.com/assets/ai-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NomanuAI - AI Automation Solutions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NomanuAI - AI Automation Solutions | Transform Your Business",
+    description:
+      "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions.",
+    images: ["https://www.nomanuai.com/assets/ai-automation.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.nomanuai.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
 export default function Home() {
   const { ref: blogRef, isIntersecting: blogIsIntersecting } =
     useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "NomanuAI",
+            url: "https://www.nomanuai.com",
+            logo: "https://www.nomanuai.com/assets/nomanuai-logo.png",
+            description: "AI-powered automation services for businesses",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "PH",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+63-975-948-3289",
+              contactType: "customer service",
+              email: "consulting@nomanuai.com",
+            },
+            sameAs: [
+              "https://x.com/nomanuai98",
+              "https://www.instagram.com/nomanuai/",
+              "https://www.facebook.com/people/NomanuAi/61578373473028/",
+              "https://www.linkedin.com/company/107854474/",
+            ],
+            serviceArea: {
+              "@type": "Place",
+              name: "Worldwide",
+            },
+          }),
+        }}
+      />
+
       <Hero />
       <ClientMarquee />
       <Testimonials />
