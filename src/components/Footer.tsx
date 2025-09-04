@@ -260,6 +260,27 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
+          {/* Careers */}
+          <div>
+            <div className="flex items-center space-x-2 mb-6">
+              <Sparkles className="w-5 h-5 text-brand-orange" />
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                Careers
+              </h3>
+            </div>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                >
+                  <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
+                  Open Roles
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
