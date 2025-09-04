@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
   ChevronDown,
@@ -106,7 +106,7 @@ const FAQPage = () => {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-
+      <Header />
 
       {/* Hero Section - Home Background Style */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
@@ -417,9 +417,7 @@ const FAQPage = () => {
               Let's discuss how automation can transform your business processes
             </p>
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
             >
               Schedule a Free Consultation

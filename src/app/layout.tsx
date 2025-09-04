@@ -65,6 +65,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
+        <meta
+          name="google-site-verification"
+          content="your-verification-code"
+        />
+        <meta name="security" content="trusted" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

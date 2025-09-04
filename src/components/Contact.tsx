@@ -72,23 +72,64 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateForm = () => {
+    if (!formData.fullname.trim()) {
+      alert("Please enter your full name");
+      return false;
+    }
+    if (!validateEmail(formData.workEmail)) {
+      alert("Please enter a valid email address");
+      return false;
+    }
+    if (!formData.usingAutomation) {
+      alert("Please select your automation usage");
+      return false;
+    }
+    if (!formData.automationGoal) {
+      alert("Please select your automation goal");
+      return false;
+    }
+    if (!formData.freeConsultation) {
+      alert("Please select consultation preference");
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Prevent double submission
+    if (isSubmitting) return;
+
+    // Validate form
+    if (!validateForm()) return;
+
     setIsSubmitting(true);
     setSubmissionStatus("idle");
 
     try {
-      const { error } = await supabase.from("service_inquiries").insert([
-        {
-          name: formData.fullname,
-          email: formData.workEmail,
-          website: formData.website || null,
-          using_automation: formData.usingAutomation,
-          automation_goal: formData.automationGoal,
-          free_consultation: formData.freeConsultation,
-          budget_range: formData.budgetRange || null,
-        },
-      ]);
+      // Sanitize inputs
+      const sanitizedData = {
+        name: formData.fullname.trim().replace(/[<>]/g, ""),
+        email: formData.workEmail.trim().toLowerCase(),
+        website: formData.website
+          ? formData.website.trim().replace(/[<>]/g, "")
+          : null,
+        using_automation: formData.usingAutomation,
+        automation_goal: formData.automationGoal,
+        free_consultation: formData.freeConsultation,
+        budget_range: formData.budgetRange || null,
+      };
+
+      const { error } = await supabase
+        .from("service_inquiries")
+        .insert([sanitizedData]);
 
       if (error) throw error;
 
@@ -358,6 +399,7 @@ const Contact = () => {
                       value={formData.usingAutomation}
                       onChange={handleInputChange}
                       required
+                      aria-label="Automation usage selection"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
                     >
                       <option value="">Select</option>
@@ -377,6 +419,7 @@ const Contact = () => {
                       value={formData.automationGoal}
                       onChange={handleInputChange}
                       required
+                      aria-label="Automation goal selection"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
                     >
                       <option value="">Select</option>
@@ -400,6 +443,7 @@ const Contact = () => {
                       value={formData.freeConsultation}
                       onChange={handleInputChange}
                       required
+                      aria-label="Free consultation preference"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
                     >
                       <option value="">Select</option>
@@ -419,6 +463,7 @@ const Contact = () => {
                       value={formData.budgetRange}
                       onChange={handleInputChange}
                       required
+                      aria-label="Budget range selection"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
                     >
                       <option value="">Select</option>
