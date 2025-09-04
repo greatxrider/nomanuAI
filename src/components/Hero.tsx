@@ -185,6 +185,10 @@ const Hero = () => {
             </div>
             <div className="flex items-center">
               <Check className="w-4 h-4 mr-2 text-brand-orange" />
+              <span>30-Day Money Back</span>
+            </div>
+            <div className="flex items-center">
+              <Check className="w-4 h-4 mr-2 text-brand-orange" />
               <span>24/7 Support</span>
             </div>
           </div>
