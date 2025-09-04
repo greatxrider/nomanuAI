@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
+type ScrollBlockPosition = "top" | "center" | "bottom";
+
 export const useScrollSmoother = () => {
   const smootherRef = useRef<ScrollSmoother | null>(null);
 
@@ -16,7 +18,7 @@ export const useScrollSmoother = () => {
     }
   }, []);
 
-  const scrollTo = (target: string | number, smooth: boolean = true, position: string = "top") => {
+  const scrollTo = (target: string | number, smooth: boolean = true, position: ScrollBlockPosition = "top") => {
     if (smootherRef.current) {
       smootherRef.current.scrollTo(target, smooth, position);
     } else {
@@ -24,7 +26,8 @@ export const useScrollSmoother = () => {
       if (typeof target === "string" && target.startsWith("#")) {
         const element = document.querySelector(target);
         if (element) {
-          element.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: position as any });
+          const block: ScrollLogicalPosition = position === "top" ? "start" : position === "center" ? "center" : "end";
+          element.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block });
         }
       } else if (typeof target === "number") {
         window.scrollTo({ top: target, behavior: smooth ? "smooth" : "auto" });

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import type { ComponentType } from "react";
 import { createPortal } from "react-dom";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
@@ -224,13 +225,26 @@ const DisclaimerModal = ({
     : null;
 };
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  technologies: string[];
+  results: string[];
+  icon: ComponentType<{ className?: string }>;
+  link: string;
+  github: string;
+};
+
 // Project Detail Modal Component
 const ProjectModal = ({
   project,
   isOpen,
   onClose,
 }: {
-  project: any;
+  project: Project | null;
   isOpen: boolean;
   onClose: () => void;
 }) => {
@@ -255,7 +269,7 @@ const ProjectModal = ({
   if (!isOpen || !project) return null;
 
   // Enhanced project details for Lead Flow Automation
-  const getProjectDetails = (proj: any) => {
+  const getProjectDetails = (proj: Project) => {
     if (proj.id === 8) {
       // Contractor Automation (Telegram multi-modal)
       return {
@@ -591,7 +605,7 @@ const ProjectModal = ({
                   Business Impact
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {details.businessImpact.map((impact, idx) => (
+                  {details.businessImpact.map((impact: string, idx: number) => (
                     <div
                       key={idx}
                       className="p-3 bg-brand-orange/5 border border-brand-orange/20 rounded-lg"
@@ -611,7 +625,7 @@ const ProjectModal = ({
                   Technical Specifications
                 </h3>
                 <div className="space-y-2">
-                  {details.technicalSpecs.map((spec, idx) => (
+                  {details.technicalSpecs.map((spec: string, idx: number) => (
                     <div
                       key={idx}
                       className="flex items-center text-gray-600 dark:text-gray-300 text-sm"
@@ -693,12 +707,12 @@ const ProjectModal = ({
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };

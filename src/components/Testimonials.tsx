@@ -93,11 +93,15 @@ const Testimonials = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     intervalRef.current = setInterval(() => {
       setActive((prev) => (prev + 1) % testimonials.length);
     }, AUTO_SCROLL_INTERVAL);
-    return () => intervalRef.current && clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, []);
 
   const goTo = (idx: number) => {

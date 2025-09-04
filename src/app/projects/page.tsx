@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import type { ComponentType } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 
@@ -227,13 +228,26 @@ const DisclaimerModal = ({
     : null;
 };
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  technologies: string[];
+  results: string[];
+  icon: ComponentType<{ className?: string }>;
+  link: string;
+  github: string;
+};
+
 // Project Detail Modal Component
 const ProjectModal = ({
   project,
   isOpen,
   onClose,
 }: {
-  project: any;
+  project: Project | null;
   isOpen: boolean;
   onClose: () => void;
 }) => {
@@ -258,7 +272,7 @@ const ProjectModal = ({
   if (!isOpen || !project) return null;
 
   // Enhanced project details for automation projects
-  const getProjectDetails = (proj: any) => {
+  const getProjectDetails = (proj: Project) => {
     if (proj.id === 11) {
       // Property Insights Automation
       return {
@@ -628,7 +642,7 @@ const ProjectModal = ({
                   Business Impact
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {details.businessImpact.map((impact, idx) => (
+                  {details.businessImpact.map((impact: string, idx: number) => (
                     <div
                       key={idx}
                       className="p-3 bg-brand-orange/5 border border-brand-orange/20 rounded-lg"
@@ -648,7 +662,7 @@ const ProjectModal = ({
                   Technical Specifications
                 </h3>
                 <div className="space-y-2">
-                  {details.technicalSpecs.map((spec, idx) => (
+                  {details.technicalSpecs.map((spec: string, idx: number) => (
                     <div
                       key={idx}
                       className="flex items-center text-gray-600 dark:text-gray-300 text-sm"
@@ -730,11 +744,11 @@ const ProjectModal = ({
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -891,8 +905,6 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-
-
       {/* Page Header - Fixed navbar overlap issue */}
       <div className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
         {/* Enhanced AI Background - Same as Home/About section */}

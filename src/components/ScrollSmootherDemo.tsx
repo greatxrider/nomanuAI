@@ -134,7 +134,9 @@ const ScrollSmootherDemo = () => {
           ].map((card, index) => (
             <div
               key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
+              ref={(el: HTMLDivElement | null) => {
+                cardRefs.current[index] = el;
+              }}
               className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-brand-orange/30"
               data-speed="0.3"
             >
