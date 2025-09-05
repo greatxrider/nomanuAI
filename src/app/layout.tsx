@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/lib/theme-context";
 import Chatbot from "@/components/Chatbot";
 import ScrollSmootherComponent from "@/components/ScrollSmoother";
 import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -112,6 +113,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
+          <ScrollToTop />
           <Header />
           <ScrollSmootherComponent>
             {children}
