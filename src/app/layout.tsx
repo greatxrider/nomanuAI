@@ -81,12 +81,27 @@ export default function RootLayout({
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/assets/nomanuai-logo.png"
+        />
+        <link rel="apple-touch-icon" href="/assets/nomanuai-logo.png" />
         <meta name="theme-color" content="#000000" />
         <meta
           name="google-site-verification"
           content="your-verification-code"
         />
         <meta name="security" content="trusted" />
+        <meta
+          property="og:logo"
+          content="https://www.nomanuai.com/assets/nomanuai-logo.png"
+        />
+        <meta
+          name="twitter:logo"
+          content="https://www.nomanuai.com/assets/nomanuai-logo.png"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -95,7 +110,13 @@ export default function RootLayout({
               "@type": "Organization",
               name: "NomanuAI",
               url: "https://www.nomanuai.com/",
-              logo: "https://www.nomanuai.com/assets/nomanuai-logo.png",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.nomanuai.com/assets/nomanuai-logo.png",
+                width: 300,
+                height: 100,
+              },
+              image: "https://www.nomanuai.com/assets/nomanuai-logo.png",
               sameAs: [
                 "https://x.com/nomanuai98",
                 "https://www.instagram.com/nomanuai/",
@@ -104,6 +125,15 @@ export default function RootLayout({
               ],
               description:
                 "AI-powered automation services for CRM, onboarding, billing, project management, and social media.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                url: "https://www.nomanuai.com/faq",
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "US",
+              },
             }),
           }}
         />

@@ -12,8 +12,48 @@ import {
   Mail,
   ArrowRight,
 } from "lucide-react";
-
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers | Join NomanuAI - AI Automation Jobs",
+  description:
+    "Join NomanuAI's innovative team and help shape the future of AI automation. Explore exciting career opportunities in AI development, automation engineering, and business transformation.",
+  keywords: [
+    "NomanuAI careers",
+    "AI automation jobs",
+    "automation engineer jobs",
+    "AI developer jobs",
+    "remote AI jobs",
+    "automation careers",
+    "tech careers",
+    "AI company jobs",
+  ],
+  openGraph: {
+    title: "Careers | Join NomanuAI - AI Automation Jobs",
+    description:
+      "Join NomanuAI's innovative team and help shape the future of AI automation. Explore exciting career opportunities in AI development and automation engineering.",
+    url: "https://www.nomanuai.com/careers",
+    images: [
+      {
+        url: "/assets/ai-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Careers at NomanuAI - AI Automation Jobs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers | Join NomanuAI - AI Automation Jobs",
+    description:
+      "Join NomanuAI's innovative team and help shape the future of AI automation. Explore exciting career opportunities.",
+    images: ["/assets/ai-automation.jpg"],
+  },
+  alternates: {
+    canonical: "/careers",
+  },
+};
 
 export default function CareersPage() {
   return (

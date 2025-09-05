@@ -2,6 +2,47 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Automation Services | NomanuAI",
+  description:
+    "Comprehensive AI automation services including CRM management, client intake, project management, billing, and social media automation. Transform your business with intelligent automation solutions.",
+  keywords: [
+    "AI automation services",
+    "CRM automation",
+    "client intake automation",
+    "project management automation",
+    "billing automation",
+    "social media automation",
+    "business process automation",
+    "workflow automation",
+  ],
+  openGraph: {
+    title: "AI Automation Services | NomanuAI",
+    description:
+      "Comprehensive AI automation services including CRM management, client intake, project management, billing, and social media automation.",
+    url: "https://www.nomanuai.com/services",
+    images: [
+      {
+        url: "/assets/ai-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Automation Services by NomanuAI",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation Services | NomanuAI",
+    description:
+      "Comprehensive AI automation services including CRM management, client intake, project management, billing, and social media automation.",
+    images: ["/assets/ai-automation.jpg"],
+  },
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 import Footer from "@/components/Footer";
 import {
@@ -151,7 +192,6 @@ const ServicesPage = () => {
 
   return (
     <main className="min-h-screen">
-
       {/* Main Header */}
       <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
         {/* Enhanced AI Background */}
