@@ -97,14 +97,13 @@ const Hero = () => {
       </div>
 
       <div className="container-width relative z-10">
-        <div className="flex flex-col items-center justify-center min-h-screen py-20 text-center">
+        <div className="flex flex-col items-center justify-center min-h-screen py-16 md:py-20 text-center px-4 sm:px-6">
           {/* Innovation Badge */}
           <div
-            className={`inline-flex items-center px-4 py-2 mb-8 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm transition-all duration-1000 ${
-              isIntersecting
-                ? "animate-fade-in-down opacity-100"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`inline-flex items-center px-4 py-2 mb-8 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm transition-all duration-1000 ${isIntersecting
+              ? "animate-fade-in-down opacity-100"
+              : "opacity-0 translate-y-8"
+              }`}
             data-speed="0.8"
           >
             <div className="w-2 h-2 bg-brand-orange rounded-full mr-2 animate-pulse" />
@@ -115,11 +114,10 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1
-            className={`text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight transition-all duration-1000 ${
-              isIntersecting
-                ? "animate-fade-in-down opacity-100"
-                : "opacity-0 translate-y-12"
-            }`}
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 leading-tight transition-all duration-1000 ${isIntersecting
+              ? "animate-fade-in-down opacity-100"
+              : "opacity-0 translate-y-12"
+              }`}
             data-speed="0.6"
           >
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
@@ -136,11 +134,10 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p
-            className={`text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed transition-all duration-1000 delay-200 ${
-              isIntersecting
-                ? "animate-fade-in-up opacity-100"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed transition-all duration-1000 delay-200 px-4 ${isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+              }`}
             data-speed="0.7"
           >
             Transform your business with intelligent automation solutions that
@@ -149,34 +146,34 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 mb-12 transition-all duration-1000 delay-300 ${
-              isIntersecting
-                ? "animate-fade-in-up opacity-100"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 md:mb-12 transition-all duration-1000 delay-300 items-center justify-center ${isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+              }`}
             data-speed="0.9"
           >
             <Link
               href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-lg px-8 py-4"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto max-w-sm sm:max-w-none"
             >
-              <Calendar className="w-5 h-5 mr-2 inline" />
-              Book Your Free Discovery Call
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 inline" />
+              <span className="hidden sm:inline">Book Your Free Discovery Call</span>
+              <span className="sm:hidden">Free Discovery Call</span>
             </Link>
-            <Link href="/services" className="btn-secondary text-lg px-8 py-4">
-              Explore Our Services
+            <Link href="/services" className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto max-w-sm sm:max-w-none">
+              <span className="hidden sm:inline">Explore Our Services</span>
+              <span className="sm:hidden">Our Services</span>
             </Link>
           </div>
 
           {/* Trust Indicators */}
           <div
-            className={`flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-500 dark:text-gray-400 transition-all duration-1000 delay-400 ${
-              isIntersecting
-                ? "animate-fade-in-up opacity-100"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-500 dark:text-gray-400 transition-all duration-1000 delay-400 ${isIntersecting
+              ? "animate-fade-in-up opacity-100"
+              : "opacity-0 translate-y-8"
+              }`}
             data-speed="1.0"
           >
             <div className="flex items-center">

@@ -49,15 +49,14 @@ const Header = () => {
   const ThemeToggle = () => (
     <button
       onClick={toggleTheme}
-      className={`p-2.5 rounded-lg transition-all duration-300 focus-ring group ${
-        isScrolled
+      className={`p-2.5 rounded-lg transition-all duration-300 focus-ring group ${isScrolled
           ? theme === "dark"
             ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
             : "hover:bg-gray-200 text-gray-700 hover:text-brand-orange"
           : theme === "dark"
-          ? "hover:bg-gray-800 text-white hover:text-brand-orange"
-          : "hover:bg-gray-200 text-gray-800 hover:text-brand-orange"
-      }`}
+            ? "hover:bg-gray-800 text-white hover:text-brand-orange"
+            : "hover:bg-gray-200 text-gray-800 hover:text-brand-orange"
+        }`}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       {theme === "dark" ? (
@@ -70,16 +69,15 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${isScrolled
           ? theme === "dark"
             ? "bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800"
             : "bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container-width">
-        <div className="flex items-center justify-between h-[100px] md:h-[100px]">
+        <div className="flex items-center justify-between h-16 md:h-20 lg:h-[100px]">
           {/* Logo */}
           <Link
             href="/"
@@ -94,7 +92,7 @@ const Header = () => {
               alt="NomanuAI"
               width={140}
               height={44}
-              className="h-12 md:h-14 w-auto"
+              className="h-8 md:h-10 lg:h-12 xl:h-14 w-auto"
               priority
             />
           </Link>
@@ -102,15 +100,14 @@ const Header = () => {
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => {
-              const baseClass = `font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 text-lg ${
-                isScrolled
+              const baseClass = `font-medium transition-colors duration-300 relative group focus-ring rounded-md px-2 py-1 text-lg ${isScrolled
                   ? theme === "dark"
                     ? "text-white hover:text-brand-orange"
                     : "text-gray-800 hover:text-brand-orange"
                   : theme === "dark"
-                  ? "text-white hover:text-brand-orange"
-                  : "text-gray-900 hover:text-brand-orange"
-              }`;
+                    ? "text-white hover:text-brand-orange"
+                    : "text-gray-900 hover:text-brand-orange"
+                }`;
 
               if (item.name === "Services") {
                 return (
@@ -124,20 +121,18 @@ const Header = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          isServicesOpen ? "rotate-180" : "rotate-0"
-                        }`}
+                        className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : "rotate-0"
+                          }`}
                       />
                       <span className="absolute bottom-0 left-2 w-0 h-0.5 bg-brand-orange group-hover:w-[calc(100%-16px)] transition-all duration-300"></span>
                     </button>
 
                     {isServicesOpen && (
                       <div
-                        className={`absolute left-0 mt-2 w-72 rounded-xl border shadow-lg z-50 ${
-                          theme === "dark"
+                        className={`absolute left-0 mt-2 w-72 rounded-xl border shadow-lg z-50 ${theme === "dark"
                             ? "bg-gray-900 border-gray-700"
                             : "bg-white border-gray-200"
-                        }`}
+                          }`}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >
                         <ul className="py-2">
@@ -146,11 +141,10 @@ const Header = () => {
                               <Link
                                 href={svc.href}
                                 onClick={() => setIsServicesOpen(false)}
-                                className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${
-                                  theme === "dark"
+                                className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${theme === "dark"
                                     ? "text-gray-200 hover:bg-gray-800 hover:text-brand-orange"
                                     : "text-gray-800 hover:bg-gray-100 hover:text-brand-orange"
-                                }`}
+                                  }`}
                               >
                                 {svc.name}
                               </Link>
@@ -204,15 +198,14 @@ const Header = () => {
               href="https://github.com/nomanuai"
               target="_blank"
               rel="noopener noreferrer"
-              className={`p-2.5 rounded-lg transition-all duration-300 focus-ring group ${
-                isScrolled
+              className={`p-2.5 rounded-lg transition-all duration-300 focus-ring group ${isScrolled
                   ? theme === "dark"
                     ? "hover:bg-gray-700 text-gray-300 hover:text-brand-orange"
                     : "hover:bg-gray-200 text-gray-700 hover:text-brand-orange"
                   : theme === "dark"
-                  ? "hover:bg-gray-800 text-white hover:text-brand-orange"
-                  : "hover:bg-gray-200 text-gray-800 hover:text-brand-orange"
-              }`}
+                    ? "hover:bg-gray-800 text-white hover:text-brand-orange"
+                    : "hover:bg-gray-200 text-gray-800 hover:text-brand-orange"
+                }`}
               aria-label="View our automation projects on GitHub"
               title="View our automation projects on GitHub"
             >
@@ -243,15 +236,14 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-all duration-300 focus-ring ${
-              isScrolled
+            className={`md:hidden p-2 rounded-lg transition-all duration-300 focus-ring ${isScrolled
                 ? theme === "dark"
                   ? "text-white hover:text-brand-orange"
                   : "text-gray-800 hover:text-brand-orange"
                 : theme === "dark"
-                ? "text-white hover:text-brand-orange"
-                : "text-gray-900 hover:text-brand-orange"
-            }`}
+                  ? "text-white hover:text-brand-orange"
+                  : "text-gray-900 hover:text-brand-orange"
+              }`}
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
@@ -265,8 +257,47 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className={`px-4 pt-4 pb-6 space-y-3 ${theme === "dark"
+                ? "bg-gray-900/95 border-gray-700"
+                : "bg-white/95 border-gray-200"
+              } backdrop-blur-md border-t`}>
               {navigation.map((item) => {
+                const mobileItemClass = `block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${theme === "dark"
+                    ? "text-gray-200 hover:bg-gray-800 hover:text-brand-orange"
+                    : "text-gray-800 hover:bg-gray-100 hover:text-brand-orange"
+                  }`;
+
+                if (item.name === "Services") {
+                  return (
+                    <div key={item.name} className="space-y-2">
+                      <button
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          handleInternalLink("/#services");
+                        }}
+                        className={mobileItemClass}
+                      >
+                        Services
+                      </button>
+                      <div className="pl-4 space-y-2">
+                        {servicesNav.map((svc) => (
+                          <Link
+                            key={svc.name}
+                            href={svc.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`block px-3 py-2 text-sm rounded-md transition-colors ${theme === "dark"
+                                ? "text-gray-300 hover:bg-gray-800 hover:text-brand-orange"
+                                : "text-gray-600 hover:bg-gray-50 hover:text-brand-orange"
+                              }`}
+                          >
+                            {svc.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
                 if (item.href.startsWith("/#")) {
                   return (
                     <button
@@ -275,7 +306,7 @@ const Header = () => {
                         setIsMobileMenuOpen(false);
                         handleInternalLink(item.href);
                       }}
-                      className="block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors"
+                      className={mobileItemClass}
                     >
                       {item.name}
                     </button>
@@ -286,24 +317,41 @@ const Header = () => {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors"
+                      className={mobileItemClass}
                     >
                       {item.name}
                     </Link>
                   );
                 }
               })}
-              <div className="pt-4 pb-3 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex items-center justify-between px-3">
+
+              {/* Mobile Action Buttons */}
+              <div className="pt-4 space-y-3 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between">
+                  <span className={`text-sm font-medium ${theme === "dark" ? "text-gray-300" : "text-gray-600"
+                    }`}>
+                    Theme
+                  </span>
                   <ThemeToggle />
+                </div>
+                <div className="space-y-2">
                   <Link
                     href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary"
+                    className="btn-primary w-full text-center text-base"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Get Started
+                  </Link>
+                  <Link
+                    href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary w-full text-center text-base"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact Us
                   </Link>
                 </div>
               </div>

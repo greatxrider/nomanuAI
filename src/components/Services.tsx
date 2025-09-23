@@ -184,42 +184,40 @@ const Services = () => {
       <div className="container-width relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isIntersecting
+          className={`text-center mb-12 md:mb-16 transition-all duration-1000 px-4 ${isIntersecting
               ? "animate-fade-in-up opacity-100"
               : "opacity-0 translate-y-8"
-          }`}
+            }`}
         >
-          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
-            <Cpu className="w-5 h-5 text-brand-orange mr-2 animate-pulse" />
-            <span className="text-brand-orange font-semibold">
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-4 sm:mb-6">
+            <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-brand-orange mr-2 animate-pulse" />
+            <span className="text-brand-orange font-semibold text-sm sm:text-base">
               Our AI Services
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="heading-responsive text-gray-900 dark:text-white mb-3 sm:mb-4">
             Complete{" "}
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
               Automation Solutions
             </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-mobile-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
             We will automate your manual processes or you don't pay.
           </p>
         </div>
 
         {/* AI-Inspired Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 md:mb-16 px-4 sm:px-0">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={service.id}
-                className={`group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden flex flex-col ${
-                  isIntersecting
+                className={`group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden flex flex-col touch-manipulation ${isIntersecting
                     ? "animate-fade-in-up opacity-100"
                     : "opacity-0 translate-y-8"
-                }`}
+                  }`}
                 style={{
                   animationDelay: `${index * 200}ms`,
                   transitionDelay: `${index * 100}ms`,
@@ -242,12 +240,12 @@ const Services = () => {
                       service.id === 2
                         ? "https://lottie.host/embed/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie"
                         : service.id === 3
-                        ? "https://lottie.host/embed/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie"
-                        : service.id === 4
-                        ? "https://lottie.host/embed/54f3962f-6105-4bd1-a7b2-e3669d81ce09/GWrW6epXID.lottie"
-                        : service.id === 5
-                        ? "https://lottie.host/embed/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie"
-                        : "https://lottie.host/embed/1908348d-e5e9-48d0-8c47-e3d0b9684236/6yg38oV1w0.lottie"
+                          ? "https://lottie.host/embed/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie"
+                          : service.id === 4
+                            ? "https://lottie.host/embed/54f3962f-6105-4bd1-a7b2-e3669d81ce09/GWrW6epXID.lottie"
+                            : service.id === 5
+                              ? "https://lottie.host/embed/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie"
+                              : "https://lottie.host/embed/1908348d-e5e9-48d0-8c47-e3d0b9684236/6yg38oV1w0.lottie"
                     }
                     title={service.title}
                     className="w-full h-full"
@@ -290,14 +288,14 @@ const Services = () => {
                       service.id === 1
                         ? "/salescrmmanagement"
                         : service.id === 2
-                        ? "/clientintake"
-                        : service.id === 3
-                        ? "/projectmanagement"
-                        : service.id === 4
-                        ? "/billingpayment"
-                        : service.id === 5
-                        ? "/socialmedia"
-                        : "#contact"
+                          ? "/clientintake"
+                          : service.id === 3
+                            ? "/projectmanagement"
+                            : service.id === 4
+                              ? "/billingpayment"
+                              : service.id === 5
+                                ? "/socialmedia"
+                                : "#contact"
                     }
                     className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
                   >

@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme-context";
 import Chatbot from "@/components/Chatbot";
-import ScrollSmootherComponent from "@/components/ScrollSmoother";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -80,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
@@ -88,7 +88,10 @@ export default function RootLayout({
           href="/assets/nomanuai-logo.png"
         />
         <link rel="apple-touch-icon" href="/assets/nomanuai-logo.png" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#E56518" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="format-detection" content="telephone=no" />
         <meta
           name="google-site-verification"
           content="your-verification-code"
@@ -145,10 +148,8 @@ export default function RootLayout({
         <ThemeProvider>
           <ScrollToTop />
           <Header />
-          <ScrollSmootherComponent>
-            {children}
-            <Chatbot />
-          </ScrollSmootherComponent>
+          {children}
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>
