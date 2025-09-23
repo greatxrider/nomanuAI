@@ -51,9 +51,9 @@ const TeamCarousel = () => {
     },
     {
       id: 2,
-      name: "Jed",
+      name: "Yvonne",
       title: "Jr. Automation Specialist & Web Developer",
-      image: "/devTeam/jed-picture.jpg",
+      image: "/devTeam/yvonne-picture.jpg",
       languages: ["JavaScript", "TypeScript", "Python"],
       degree: "Kodego Bootcamp Graduate",
       experience: "1 year of experience in Automation",
@@ -304,11 +304,10 @@ const TeamCarousel = () => {
             key={index}
             onClick={() => goToSlide(index)}
             aria-label={`Go to team member ${index + 1}`}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
                 ? "bg-brand-orange scale-125"
                 : "bg-gray-300 dark:bg-gray-600 hover:bg-brand-orange/50"
-            }`}
+              }`}
           />
         ))}
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Code, MapPin, Star } from "lucide-react";
+import { Code, MapPin, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 interface TeamMember {
   id: number;
@@ -40,6 +40,16 @@ const TeamCards = () => {
     },
     {
       id: 2,
+      name: "Yvonne",
+      title: "AI Automation Specialist",
+      image: "/devTeam/yvonne-picture.jpg",
+      languages: ["JavaScript", "TypeScript", "Python"],
+      degree: "Kodego Bootcamp Graduate",
+      experience: "1 year of experience in Automation",
+      location: "Philippines",
+    },
+    {
+      id: 3,
       name: "Clint",
       title: "AI Automation Specialist",
       image: "/devTeam/clint-picture.jpg",
@@ -47,16 +57,6 @@ const TeamCards = () => {
       degree: "BS Information Technology – Magna Cum Laude",
       school: "Mindanao State University - Iligan Institute of Technology",
       experience: "2 years of experience in Automation",
-      location: "Philippines",
-    },
-    {
-      id: 3,
-      name: "Jed",
-      title: "AI Automation Specialist",
-      image: "/devTeam/jed-picture.jpg",
-      languages: ["JavaScript", "TypeScript", "Python"],
-      degree: "Kodego Bootcamp Graduate",
-      experience: "1 year of experience in Automation",
       location: "Philippines",
     },
     {
@@ -186,21 +186,20 @@ const TeamCards = () => {
               </div>
             </div>
 
-            {/* Rating/Expertise Indicator */}
-            <div className="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-center">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span className="text-xs text-gray-600 dark:text-gray-400 ml-1">
-                  Expert Level
-                </span>
-              </div>
-              <div className="text-xs text-brand-orange font-semibold">
-                {member.experience.includes("4+")
-                  ? "Senior"
-                  : member.experience.includes("2")
-                  ? "Mid-Level"
-                  : "Junior"}
-              </div>
+            {/* Social Links */}
+            <div className="flex items-center justify-center gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 rounded-md hover:bg-brand-orange/10 transition-colors">
+                <Linkedin className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-1.5 rounded-md hover:bg-brand-orange/10 transition-colors">
+                <Github className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="p-1.5 rounded-md hover:bg-brand-orange/10 transition-colors">
+                <Twitter className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 rounded-md hover:bg-brand-orange/10 transition-colors">
+                <Instagram className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+              </a>
             </div>
           </div>
         </div>
