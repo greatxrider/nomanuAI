@@ -1,4 +1,4 @@
-"use client";
+// Converted to a Server Component to allow exporting metadata
 
 import Image from "next/image";
 import Link from "next/link";
@@ -491,12 +491,12 @@ const ServicesPage = () => {
                         service.id === 2
                           ? "https://lottie.host/embed/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie"
                           : service.id === 3
-                          ? "https://lottie.host/embed/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie"
-                          : service.id === 4
-                          ? "https://lottie.host/embed/54f3962f-6105-4bd1-a7b2-e3669d81ce09/GWrW6epXID.lottie"
-                          : service.id === 5
-                          ? "https://lottie.host/embed/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie"
-                          : "https://lottie.host/embed/1908348d-e5e9-48d0-8c47-e3d0b9684236/6yg38oV1w0.lottie"
+                            ? "https://lottie.host/embed/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie"
+                            : service.id === 4
+                              ? "https://lottie.host/embed/54f3962f-6105-4bd1-a7b2-e3669d81ce09/GWrW6epXID.lottie"
+                              : service.id === 5
+                                ? "https://lottie.host/embed/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie"
+                                : "https://lottie.host/embed/1908348d-e5e9-48d0-8c47-e3d0b9684236/6yg38oV1w0.lottie"
                       }
                       title={service.title}
                       className="w-full h-full"
@@ -539,14 +539,14 @@ const ServicesPage = () => {
                         service.id === 1
                           ? "/salescrmmanagement"
                           : service.id === 2
-                          ? "/clientintake"
-                          : service.id === 3
-                          ? "/projectmanagement"
-                          : service.id === 4
-                          ? "/billingpayment"
-                          : service.id === 5
-                          ? "/socialmedia"
-                          : "#contact"
+                            ? "/clientintake"
+                            : service.id === 3
+                              ? "/projectmanagement"
+                              : service.id === 4
+                                ? "/billingpayment"
+                                : service.id === 5
+                                  ? "/socialmedia"
+                                  : "#contact"
                       }
                       className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-orange via-orange-500 to-brand-orange hover:from-orange-500 hover:via-brand-orange hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 border border-orange-400/20 hover:border-orange-300/40 relative z-10 pointer-events-auto"
                     >
