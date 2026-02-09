@@ -1,0 +1,599 @@
+[    1941ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[    2496ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  568092ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  568357ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  569932ms] [WARNING] Image with src "/whyChoose/customer-service.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  570633ms] [WARNING] Image with src "/whyChoose/process-driven.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  570916ms] [WARNING] Image with src "/whyChoose/low-code.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  571026ms] [WARNING] Image with src "/whyChoose/sustainable.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  571215ms] [WARNING] Image with src "/whyChoose/people-meeting.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  568092ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  568357ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  568092ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  568357ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  568092ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  568357ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  568092ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  568357ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  574455ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  575615ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  575647ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1004281ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3001/_next/static/webpack/f6dd67a85a547c80.webpack.hot-update.json:0
+[ 1006978ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1007448ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1026218ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3001/_next/static/webpack/bd196852d588829b.webpack.hot-update.json:0
+[ 1027929ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1028408ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1215142ms] ReferenceError: CircuitPatternBackground is not defined
+    at Hero (webpack-internal:///(app-pages-browser)/./src/components/Hero.tsx:53:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770567912798:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770567912798:667:21
+[ 1215094ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1216145ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1217809ms] ReferenceError: CircuitPatternBackground is not defined
+    at Hero (webpack-internal:///(app-pages-browser)/./src/components/Hero.tsx:53:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1221085ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568101918 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1223829ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1224930ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1227928ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1229657ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1230339ms] SyntaxError: Unexpected non-whitespace character after JSON at position 388 (line 20 column 2)
+    at JSON.parse (<anonymous>)
+    at loadManifest (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\load-manifest.external.js:43:25)
+    at loadManifestWithRetries (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\load-components.js:46:59)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:575:9)
+    at process.processTimers (node:internal/timers:549:7)
+    at async loadComponentsImpl (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\load-components.js:110:150)
+    at async DevServer.findPageComponentsImpl (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\next-server.js:899:36)
+    at async DevServer.findPageComponents (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\dev\next-dev-server.js:705:16)
+    at async DevServer.renderPageComponent (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\base-server.js:1460:24)
+    at async DevServer.renderToResponseImpl (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\base-server.js:1514:32)
+    at async DevServer.pipeImpl (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\base-server.js:1025:25)
+    at async NextNodeServer.handleCatchallRenderRequest (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\next-server.js:393:17)
+    at async DevServer.handleRequestImpl (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\base-server.js:916:17)
+    at async (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\dev\next-dev-server.js:399:20)
+    at async Span.traceAsyncFn (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\trace\trace.js:157:20)
+    at async DevServer.handleRequest (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\dev\next-dev-server.js:395:24)
+    at async invokeRender (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\lib\router-server.js:240:21)
+    at async handleRequest (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\lib\router-server.js:437:24)
+    at async requestHandlerImpl (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\lib\router-server.js:485:13)
+    at async Server.requestListener (file://C:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\server\lib\start-server.js:226:13)
+[ 1232562ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/dev/hot-reloader/pages/hot-reloader-pages.js:347
+[ 1233330ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1233837ms] ReferenceError: CircuitPatternBackground is not defined
+    at Services (webpack-internal:///(app-pages-browser)/./src/components/Services.tsx:155:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1236899ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568119743 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1240830ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1241297ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1257591ms] ReferenceError: CircuitPatternBackground is not defined
+    at FAQ (webpack-internal:///(app-pages-browser)/./src/components/FAQ.tsx:96:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568125771:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568125771:667:21
+[ 1257593ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1258144ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1258886ms] ReferenceError: CircuitPatternBackground is not defined
+    at FAQ (webpack-internal:///(app-pages-browser)/./src/components/FAQ.tsx:96:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1261933ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568144165 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1271023ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1272573ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1273048ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1301471ms] ReferenceError: CircuitPatternBackground is not defined
+    at WhyAutomate (webpack-internal:///(app-pages-browser)/./src/components/WhyAutomate.tsx:45:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568157726:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568157726:667:21
+[ 1301473ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1302135ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1303012ms] ReferenceError: CircuitPatternBackground is not defined
+    at WhyAutomate (webpack-internal:///(app-pages-browser)/./src/components/WhyAutomate.tsx:45:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1306065ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568188047 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1308239ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1310006ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1310381ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1315508ms] ReferenceError: CircuitPatternBackground is not defined
+    at MissionVision (webpack-internal:///(app-pages-browser)/./src/components/MissionVision.tsx:26:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568194896:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568194896:667:21
+[ 1315510ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1316050ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1316501ms] ReferenceError: CircuitPatternBackground is not defined
+    at MissionVision (webpack-internal:///(app-pages-browser)/./src/components/MissionVision.tsx:26:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1319540ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568202106 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1324968ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1325386ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1331926ms] ReferenceError: CircuitPatternBackground is not defined
+    at Contact (webpack-internal:///(app-pages-browser)/./src/components/Contact.tsx:137:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568209610:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568209610:667:21
+[ 1331928ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1333085ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1333720ms] ReferenceError: CircuitPatternBackground is not defined
+    at Contact (webpack-internal:///(app-pages-browser)/./src/components/Contact.tsx:137:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1336775ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568218512 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1342535ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1343113ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1348877ms] ReferenceError: DottedGridBackground is not defined
+    at WhyChooseUs (webpack-internal:///(app-pages-browser)/./src/components/WhyChooseUs.tsx:84:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568227079:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568227079:667:21
+[ 1348880ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1349448ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1350275ms] ReferenceError: DottedGridBackground is not defined
+    at WhyChooseUs (webpack-internal:///(app-pages-browser)/./src/components/WhyChooseUs.tsx:84:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1353370ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568235457 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1356054ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1357096ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1358912ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1359555ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1363849ms] ReferenceError: DottedGridBackground is not defined
+    at GetStarted (webpack-internal:///(app-pages-browser)/./src/components/GetStarted.tsx:26:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568243929:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568243929:667:21
+[ 1363852ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1364455ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1365120ms] ReferenceError: DottedGridBackground is not defined
+    at GetStarted (webpack-internal:///(app-pages-browser)/./src/components/GetStarted.tsx:26:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1368171ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568250426 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1372841ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1373346ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1378084ms] ReferenceError: DottedGridBackground is not defined
+    at Projects (webpack-internal:///(app-pages-browser)/./src/components/Projects.tsx:1212:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568257589:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568257589:667:21
+[ 1378086ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1378814ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1379429ms] ReferenceError: DottedGridBackground is not defined
+    at Projects (webpack-internal:///(app-pages-browser)/./src/components/Projects.tsx:1212:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1382478ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568264660 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1384441ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1386767ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1387274ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1392199ms] ReferenceError: DottedGridBackground is not defined
+    at Testimonials (webpack-internal:///(app-pages-browser)/./src/components/Testimonials.tsx:138:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14991:13)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568271502:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568271502:667:21
+[ 1392201ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1392554ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1393181ms] ReferenceError: DottedGridBackground is not defined
+    at Testimonials (webpack-internal:///(app-pages-browser)/./src/components/Testimonials.tsx:138:89)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1396227ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568278782 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1403936ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1404492ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1417792ms] ReferenceError: DottedGridBackground is not defined
+    at Home (webpack-internal:///(app-pages-browser)/./src/app/page.tsx:138:97)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16831:7)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16677:21)
+    at flushSyncWork$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15297:12)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:114:9)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568288204:498:55)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568288204:667:21
+[ 1417781ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1419023ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[ 1419680ms] ReferenceError: DottedGridBackground is not defined
+    at Home (webpack-internal:///(app-pages-browser)/./src/app/page.tsx:138:97)
+    at Object.react_stack_bottom_frame (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23584:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:6793:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9247:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:10858:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15547:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15527:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15034:44)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[ 1422745ms] [WARNING] The resource http://localhost:3001/_next/static/css/app/layout.css?v=1770568305116 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3001/:0
+[ 1432860ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:113
+[ 1434346ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1434721ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1689108ms] [WARNING] Image with src "/whyChoose/customer-service.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1690091ms] [WARNING] Image with src "/whyChoose/process-driven.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1690376ms] [WARNING] Image with src "/whyChoose/low-code.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1690624ms] [WARNING] Image with src "/whyChoose/sustainable.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1692257ms] [WARNING] Image with src "/whyChoose/people-meeting.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1693795ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1693795ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[ 1695247ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1693795ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[ 1695247ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[ 1697726ms] [WARNING] Image with src "/whyChoose/automation-image-custom.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1698201ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1693795ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[ 1695247ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[ 1698201ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1693795ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[ 1695247ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[ 1698201ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[ 1689489ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1689609ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1691264ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 1691770ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[ 1691842ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[ 1693795ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[ 1695247ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[ 1698201ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[ 1726863ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/_next/image?url=%2FtestimonialsPicture%2Fraymond-photo.jpg&w=96&q=75:0
+[ 1730312ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/_next/image?url=%2FblogImages%2Ffuture-of-business.jpg&w=1920&q=75:0
+[ 1730312ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/_next/image?url=%2FblogImages%2Fsocial-payroll-automation.jpg&w=1920&q=75:0
+[ 1730312ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/_next/image?url=%2FblogImages%2Fautomation-best-practices.jpeg&w=1920&q=75:0
+[ 1736856ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/_next/image?url=%2FtestimonialsPicture%2Fyvonne-photo.jpg&w=96&q=75:0
+[ 1740135ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/?_rsc=vusbg:0
+[ 1740138ms] [ERROR] Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. TypeError: Failed to fetch
+    at createFetch (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js:163:33)
+    at fetchServerResponse (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js:88:27)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/prefetch-cache-utils.js:197:106)
+    at Object.task (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/promise-queue.js:30:38)
+    at PromiseQueue.processNext (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/promise-queue.js:81:186)
+    at PromiseQueue.enqueue (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/promise-queue.js:45:76)
+    at createLazyPrefetchEntry (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/prefetch-cache-utils.js:197:49)
+    at getOrCreatePrefetchCacheEntry (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/prefetch-cache-utils.js:144:12)
+    at navigateReducer (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/reducers/navigate-reducer.js:166:82)
+    at clientReducer (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/router-reducer/router-reducer.js:25:61)
+    at Object.action (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router-instance.js:156:55)
+    at runAction (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router-instance.js:66:38)
+    at dispatchAction (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router-instance.js:120:9)
+    at Object.dispatch (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router-instance.js:154:40)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/use-action-queue.js:55:29)
+    at startTransition (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:7968:27)
+    at dispatch (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/use-action-queue.js:54:13)
+    at dispatchAppRouterAction (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/use-action-queue.js:37:5)
+    at dispatchNavigateAction (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router-instance.js:207:49)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-dir/link.js:82:55)
+    at exports.startTransition (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react/cjs/react.development.js:1150:27)
+    at linkClicked (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-dir/link.js:81:20)
+    at onClick (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-dir/link.js:316:13)
+    at executeDispatch (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16971:9)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at processDispatchQueue (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:17021:19)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:17622:9)
+    at batchedUpdates$1 (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:3312:40)
+    at dispatchEventForPluginEventSystem (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:17175:7)
+    at dispatchEvent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:21358:11)
+    at dispatchDiscreteEvent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:21326:11) @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/userspace/app/errors/intercept-console-error.js:56
+[ 1787538ms] Invalid or unexpected token
+[ 1788795ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 1856166ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 1856360ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 1908417ms] ChunkLoadError: Loading chunk app/layout failed.
+(timeout: http://localhost:3001/_next/static/chunks/app/layout.js)
+    at __webpack_require__.f.j (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568672772:850:29)
+    at http://localhost:3001/_next/static/chunks/webpack.js?v=1770568672772:145:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568672772:144:67)
+    at fn.e (http://localhost:3001/_next/static/chunks/webpack.js?v=1770568672772:381:50)
+    at loadChunk (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:115:34)
+    at preloadModule (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:82:31)
+    at resolveModule (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2080:20)
+    at processFullStringRow (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2771:11)
+    at processFullBinaryRow (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2766:7)
+    at processBinaryChunk (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2969:15)
+    at progress (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:3233:13)

@@ -1,0 +1,95 @@
+[    2340ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    2613ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   18582ms] [WARNING] Image with src "/whyChoose/customer-service.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   18914ms] [WARNING] Image with src "/whyChoose/process-driven.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20380ms] [WARNING] Image with src "/whyChoose/low-code.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   20697ms] [WARNING] Image with src "/whyChoose/sustainable.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   21216ms] [WARNING] Image with src "/whyChoose/people-meeting.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   24900ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   26135ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. In a future version, Next.js will no longer automatically disable smooth scrolling during route transitions. To prepare for this change, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   50482ms] [WARNING] Image with src "/whyChoose/automation-image-custom.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   24900ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   24900ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   24900ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   24900ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[    2963ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   19503ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   20955ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   22952ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   24900ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   51549ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[   51598ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[   56933ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   56945ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   56983ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   57011ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   57081ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   57186ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   66311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   69301ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   69333ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[   69431ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[   69435ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   69448ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   69483ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[   69613ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0

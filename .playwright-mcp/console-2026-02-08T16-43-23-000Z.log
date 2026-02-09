@@ -1,0 +1,204 @@
+[    1434ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[    3388ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  122286ms] [WARNING] Image with src "/whyChoose/customer-service.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  123520ms] [WARNING] Image with src "/whyChoose/process-driven.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  123804ms] [WARNING] Image with src "/whyChoose/low-code.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  124437ms] [WARNING] Image with src "/whyChoose/sustainable.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  124521ms] [WARNING] Image with src "/whyChoose/people-meeting.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  125617ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  125617ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[  127619ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  125617ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[  127619ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[  128405ms] [WARNING] Image with src "/whyChoose/automation-image-custom.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  128520ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  125617ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[  127619ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[  128520ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  125617ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[  127619ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[  128520ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[  114569ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[  114754ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[  124221ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[  125167ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[  125174ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[  125617ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[  127619ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[  128520ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[  129501ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. In a future version, Next.js will no longer automatically disable smooth scrolling during route transitions. To prepare for this change, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 3771213ms] [WARNING] Image with src "/blogImages/social-payroll-automation.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 3771333ms] [WARNING] Image with src "/blogImages/future-of-business.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 3771337ms] [WARNING] Image with src "/blogImages/automation-best-practices.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 4047420ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 4047722ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 4051415ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 4051415ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 4106235ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 4239267ms] [WARNING] Image with src "/whyChoose/customer-service.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 4239369ms] [WARNING] Image with src "/whyChoose/process-driven.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 4051415ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 4106235ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[ 4241888ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[ 4259382ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[ 4259997ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>
+          <SegmentViewNode type="page" pagePath="page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} searchParams={{}} params={{}}>
+              <Home params={Promise} searchParams={Promise}>
+                <main className="min-h-scre...">
+                  <script>
+                  <Hero>
+                  <ClientMarquee>
+                  <Testimonials>
+                  <MissionVision>
+                  <WhyChooseUs>
+                  <Services>
+                  <GetStarted>
+                  <WhyAutomate>
+                  <Projects>
+                    <section ref={{current:null}} id="projects" className="relative s...">
+                      <HexDotBackground>
+                      <div className="container-...">
+                        <div>
+                        <div className="mb-10 tran...">
+                          <div className="flex flex-...">
+                            <button>
+                            <div>
+                            <div className="relative w...">
+                              <SearchIcon>
+                              <input
+                                type="text"
+                                placeholder="Search projects..."
+                                value=""
+                                onChange={function onChange}
+                                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-paper dark:bg-gray-800 text-ink dark..."
+-                               style={{caret-color:"transparent"}}
+                              >
+                        ...
+                  <FAQ>
+                  <section>
+                  <Contact>
+                    <section ref={{current:null}} id="contact" className="relative s...">
+                      <HoneycombBackground>
+                      <div className="container-...">
+                        <div>
+                        <div className="grid grid-...">
+                          <div>
+                          <div className="card-glass...">
+                            <div>
+                            <form onSubmit={function handleSubmit} className="flex-1 fle...">
+                              <div className="flex-1 spa...">
+                                <div className="grid grid-...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      type="text"
+                                      name="fullname"
+                                      value=""
+                                      onChange={function handleInputChange}
+                                      required={true}
+                                      className="w-full px-4 py-3 rounded-xl border border-ink/10 dark:border-white/10..."
+                                      placeholder="Your full name"
+-                                     style={{caret-color:"transparent"}}
+                                    >
+                                  <div>
+                                    <label>
+                                    <input
+                                      type="email"
+                                      name="workEmail"
+                                      value=""
+                                      onChange={function handleInputChange}
+                                      required={true}
+                                      className="w-full px-4 py-3 rounded-xl border border-ink/10 dark:border-white/10..."
+                                      placeholder="you@company.com"
+-                                     style={{caret-color:"transparent"}}
+                                    >
+                                <div>
+                                  <label>
+                                  <input
+                                    type="url"
+                                    name="website"
+                                    value=""
+                                    onChange={function handleInputChange}
+                                    className="w-full px-4 py-3 rounded-xl border border-ink/10 dark:border-white/10  ..."
+                                    placeholder="https://yourcompany.com"
+-                                   style={{caret-color:"transparent"}}
+                                  >
+                                ...
+                              ...
+                  ...
+          ...
+        ...
+ @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/userspace/app/errors/intercept-console-error.js:56
+[ 4260132ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 4262418ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[ 4269053ms] Error: Could not find the module "C:\Users\JephMari\Desktop\Portfolio\nomanuAI\src\lib\theme-context.tsx#ThemeProvider" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>:1:18)
+    at stringify (<anonymous>:1:18)
+    at resolveErrorDev (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2337:46)
+    at processFullStringRow (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2823:23)
+    at processFullBinaryRow (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2766:7)
+    at processBinaryChunk (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:2969:15)
+    at progress (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.browser.development.js:3233:13)

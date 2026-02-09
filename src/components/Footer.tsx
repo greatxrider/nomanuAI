@@ -3,21 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUp,
-  Brain,
-  Network,
-  Sparkles,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Facebook,
-} from "lucide-react";
 import { useTheme } from "@/lib/theme-context";
+import {
+  MailIcon,
+  PhoneIcon,
+  MapPinIcon,
+  ArrowUpIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  TwitterIcon,
+  InstagramIcon,
+  FacebookIcon,
+  NetworkIcon,
+  SparkleIcon,
+  BrainIcon,
+} from "@/components/icons/PremiumIcons";
 
 const Footer = () => {
   const { theme, mounted } = useTheme();
@@ -38,44 +38,48 @@ const Footer = () => {
       { name: "Social Media Content", href: "/socialmedia" },
     ],
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Our Team", href: "#about" },
+      { name: "About Us", href: "/aboutus" },
+      { name: "Our Team", href: "/aboutus" },
       { name: "Careers", href: "/careers" },
       { name: "Contact", href: "#contact" },
       { name: "Security Policy", href: "/security-policy" },
     ],
     resources: [
-      { name: "Case Studies", href: "#testimonials" },
-      { name: "AI Blog", href: "#" },
-      { name: "Documentation", href: "#" },
+      { name: "Case Studies", href: "/#projects" },
+      { name: "Blog", href: "/blog" },
+      { name: "FAQs", href: "/faq" },
       { name: "Support", href: "#contact" },
     ],
-  } as const;
+  };
+
+  const socialLinks = [
+    { name: "GitHub", href: "https://github.com/nomanuai", icon: GitHubIcon },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/107854474/", icon: LinkedInIcon },
+    { name: "Twitter", href: "https://x.com/nomanuai98", icon: TwitterIcon },
+    { name: "Instagram", href: "https://www.instagram.com/nomanuai/", icon: InstagramIcon },
+    { name: "Facebook", href: "https://www.facebook.com/people/NomanuAi/61578373473028/", icon: FacebookIcon },
+  ];
 
   return (
     <footer
       ref={ref}
-      className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300"
+      className="relative bg-paper dark:bg-gray-950"
     >
-      {/* AI Pattern Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-5">
-        <div className="absolute top-10 left-10 w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-1 h-1 bg-brand-orange rounded-full animate-pulse animation-delay-200"></div>
-        <div className="absolute bottom-10 left-20 w-2 h-2 bg-brand-orange rounded-full animate-pulse animation-delay-400"></div>
-      </div>
+      {/* Honeycomb Divider */}
+      <div className="divider-honeycomb" />
 
       {/* Main Footer Content */}
       <div
-        className={`container-width py-16 relative transition-all duration-1000 ${
+        className={`container-width py-16 md:py-20 transition-all duration-1000 ease-out-expo ${
           isIntersecting
-            ? "animate-fade-in-up opacity-100"
+            ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info with AI Enhancement */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center mb-6 group">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="inline-block mb-6 group">
               <Image
                 src={
                   !mounted || theme === "dark"
@@ -85,130 +89,87 @@ const Footer = () => {
                 alt="NomanuAI"
                 width={120}
                 height={38}
-                className="h-9 w-auto group-hover:scale-105 transition-transform duration-300"
-                unoptimized
+                className="h-8 w-auto transition-transform duration-300 ease-out-expo group-hover:scale-105"
               />
             </Link>
 
-            <div className="flex items-center space-x-2 mb-6">
-              <Brain className="w-5 h-5 text-brand-orange animate-pulse" />
-              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                AI-Powered Automation
-              </span>
-            </div>
-
-            <p className="text-gray-600 dark:text-gray-400 mb-6 text-base md:text-lg leading-relaxed">
+            <p className="text-body text-ink-secondary dark:text-gray-400 mb-6 max-w-sm">
               Empowering businesses with{" "}
-              <span className="text-brand-orange font-semibold">
-                intelligent automation
-              </span>
-              . Transform your operations and accelerate growth with our
-              cutting-edge AI technology.
+              <span className="text-brand font-medium">intelligent automation</span>.
+              Transform your operations and accelerate growth with our cutting-edge
+              AI technology.
             </p>
 
-            {/* Get Started Button */}
-            <Link
-              href="/#projects"
-              className="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8 group"
-            >
-              Get Started
-              <div className="ml-2 w-4 h-4 bg-white/20 rounded-full group-hover:bg-white/30 transition-colors duration-300"></div>
-            </Link>
+            {/* Contact Info */}
+            <div className="space-y-3 mb-8">
+              <a
+                href="mailto:consulting@nomanuai.com"
+                className="flex items-center gap-3 text-[14px] text-ink-secondary dark:text-gray-400
+                  hover:text-brand transition-colors duration-200 group"
+              >
+                <div className="w-8 h-8 clip-hex bg-ink/5 dark:bg-white/5 flex items-center justify-center
+                  group-hover:bg-brand/10 transition-colors duration-200">
+                  <MailIcon size={16} className="text-ink-tertiary dark:text-gray-500 group-hover:text-brand" />
+                </div>
+                <span>consulting@nomanuai.com</span>
+              </a>
+              <a
+                href="tel:+639759483289"
+                className="flex items-center gap-3 text-[14px] text-ink-secondary dark:text-gray-400
+                  hover:text-brand transition-colors duration-200 group"
+              >
+                <div className="w-8 h-8 clip-hex bg-ink/5 dark:bg-white/5 flex items-center justify-center
+                  group-hover:bg-brand/10 transition-colors duration-200">
+                  <PhoneIcon size={16} className="text-ink-tertiary dark:text-gray-500 group-hover:text-brand" />
+                </div>
+                <span>+63 975 948 3289</span>
+              </a>
+              <div className="flex items-center gap-3 text-[14px] text-ink-tertiary dark:text-gray-500">
+                <div className="w-8 h-8 clip-hex bg-ink/5 dark:bg-white/5 flex items-center justify-center">
+                  <MapPinIcon size={16} />
+                </div>
+                <span>Serving clients worldwide</span>
+              </div>
+            </div>
 
-            {/* Enhanced Contact Info */}
-            <div className="space-y-4">
-              <div className="flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors group">
-                <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <span className="text-sm">consulting@nomanuai.com</span>
-              </div>
-              <div className="flex items-center text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors group">
-                <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3 group-hover:bg-brand-orange/10 transition-colors">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <span className="text-sm">+63 975 948 3289</span>
-              </div>
-              <div className="flex items-center text-gray-600 dark:text-gray-400">
-                <div className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg mr-3">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <span className="text-sm">Serving clients worldwide</span>
-              </div>
-
-              {/* Social Media Links */}
-              <div className="pt-4">
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <Network className="w-4 h-4 text-brand-orange mr-2" />
-                  Follow Us
-                </h4>
-                <div className="flex space-x-3">
+            {/* Social Links */}
+            <div className="flex items-center gap-2">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
                   <a
-                    href="https://github.com/nomanuai"
+                    key={social.name}
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
-                    aria-label="GitHub"
+                    className="w-10 h-10 clip-hex bg-ink/5 dark:bg-white/5
+                      flex items-center justify-center
+                      hover:bg-brand hover:text-white
+                      text-ink-tertiary dark:text-gray-500
+                      transition-all duration-300 ease-out-expo"
+                    aria-label={social.name}
                   >
-                    <Github className="w-4 h-4" />
+                    <IconComponent size={18} />
                   </a>
-                  <a
-                    href="https://www.linkedin.com/company/107854474/admin/dashboard/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://x.com/nomanuai98"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
-                    aria-label="X"
-                  >
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/nomanuai/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/people/NomanuAi/61578373473028/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 group"
-                    aria-label="Facebook"
-                  >
-                    <Facebook className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* AI Services */}
+          {/* Services Links */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <Network className="w-5 h-5 text-brand-orange" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                AI Services
-              </h3>
-            </div>
+            <h3 className="flex items-center gap-2 text-[14px] font-semibold text-ink dark:text-white mb-5 uppercase tracking-wider">
+              <NetworkIcon size={16} className="text-brand" />
+              Services
+            </h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                    className="text-[14px] text-ink-secondary dark:text-gray-400
+                      hover:text-brand transition-colors duration-200"
                   >
-                    <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
                     {link.name}
                   </Link>
                 </li>
@@ -216,22 +177,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company Links */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <Sparkles className="w-5 h-5 text-brand-orange animate-pulse" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                Company
-              </h3>
-            </div>
+            <h3 className="flex items-center gap-2 text-[14px] font-semibold text-ink dark:text-white mb-5 uppercase tracking-wider">
+              <SparkleIcon size={16} className="text-brand" />
+              Company
+            </h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                    className="text-[14px] text-ink-secondary dark:text-gray-400
+                      hover:text-brand transition-colors duration-200"
                   >
-                    <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
                     {link.name}
                   </Link>
                 </li>
@@ -239,93 +198,84 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources Links */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <Brain className="w-5 h-5 text-brand-orange animate-pulse animation-delay-200" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                Resources
-              </h3>
-            </div>
+            <h3 className="flex items-center gap-2 text-[14px] font-semibold text-ink dark:text-white mb-5 uppercase tracking-wider">
+              <BrainIcon size={16} className="text-brand" />
+              Resources
+            </h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
+                    className="text-[14px] text-ink-secondary dark:text-gray-400
+                      hover:text-brand transition-colors duration-200"
                   >
-                    <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Careers */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <Sparkles className="w-5 h-5 text-brand-orange" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                Careers
-              </h3>
-            </div>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors duration-300 text-sm flex items-center group"
-                >
-                  <div className="w-1 h-1 bg-brand-orange/50 rounded-full mr-3 group-hover:bg-brand-orange transition-colors"></div>
-                  Open Roles
-                </Link>
-              </li>
-            </ul>
+            {/* CTA Button */}
+            <Link
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-6 text-[13px] py-2.5 px-5 inline-block"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Enhanced Bottom Bar */}
-      <div className="border-t border-gray-200 dark:border-gray-800 bg-gray-200/50 dark:bg-gray-900/50">
+      {/* Bottom Bar */}
+      <div className="divider-honeycomb" />
+      <div className="">
         <div className="container-width py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0 flex items-center">
-              <span>© {currentYear} NomanuAI. All rights reserved.</span>
-              <div className="ml-3 flex items-center space-x-1">
-                <span className="text-xs text-gray-500 dark:text-gray-500">
-                  Powered by
-                </span>
-                <Brain className="w-3 h-3 text-brand-orange animate-pulse" />
-                <span className="text-xs text-brand-orange font-medium">
-                  AI
-                </span>
-              </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <div className="flex items-center gap-2 text-[13px] text-ink-tertiary dark:text-gray-500">
+              <span>&copy; {currentYear} NomanuAI. All rights reserved.</span>
+              <span className="hidden md:inline">·</span>
+              <span className="hidden md:inline-flex items-center gap-1">
+                Powered by
+                <BrainIcon size={12} className="text-brand" />
+                <span className="text-brand font-medium">AI</span>
+              </span>
             </div>
 
             {/* Legal Links */}
-            <div className="flex space-x-6 text-sm">
+            <div className="flex items-center gap-6 text-[13px]">
               <Link
-                href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors"
+                href="/privacy"
+                className="text-ink-tertiary dark:text-gray-500 hover:text-brand transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-brand-orange transition-colors"
+                href="/security-policy"
+                className="text-ink-tertiary dark:text-gray-500 hover:text-brand transition-colors duration-200"
               >
                 Terms of Service
               </Link>
             </div>
 
-            {/* Enhanced Scroll to Top */}
+            {/* Scroll to Top - Hex shaped */}
             <button
+              type="button"
               onClick={scrollToTop}
-              className="group p-3 bg-brand-orange hover:bg-brand-orange-dark rounded-full transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-opacity-50 focus:ring-offset-2 dark:focus:ring-offset-gray-900 mt-4 md:mt-0 relative overflow-hidden"
+              className="w-10 h-10 clip-hex bg-brand text-white
+                flex items-center justify-center
+                hover:bg-brand-orange-dark
+                transition-all duration-300 ease-out-expo
+                hover:-translate-y-1 hover:shadow-brand
+                focus:outline-none"
               aria-label="Scroll to top"
             >
-              <ArrowUp className="w-4 h-4 text-white relative z-10" />
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-orange-light to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <ArrowUpIcon size={18} />
             </button>
           </div>
         </div>

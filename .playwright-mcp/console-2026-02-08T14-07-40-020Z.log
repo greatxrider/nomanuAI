@@ -1,0 +1,8 @@
+[    9590ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[   10430ms] Error: Could not find the module "c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\client\components\builtin\global-error.js#" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>:1:18)
+    at resolveErrorDev (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:370234)
+    at processFullStringRow (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:380081)
+    at <unknown> (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:385329)
+    at processBinaryChunk (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:385401)
+    at progress (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:386929)

@@ -1,125 +1,103 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import TeamCards from "./TeamCards";
 import {
-  Cpu,
-  Users2,
-  Lightbulb,
-  Zap,
-  Sparkles,
-  Brain,
-  CircuitBoard,
-  Network,
-} from "lucide-react";
+  ProcessorIcon,
+  UsersIcon,
+  LightbulbIcon,
+  ZapIcon,
+  SparkleIcon,
+  BrainIcon,
+  CircuitIcon,
+  NetworkIcon,
+  ArrowRightIcon,
+} from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 const About = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
+
   const stats = [
-    { label: "Automation Projects", value: "50+", icon: Zap },
-    { label: "Happy Clients", value: "5+", icon: Users2 },
-    { label: "AI Solutions Solved", value: "50+", icon: Lightbulb },
+    { label: "Automation Projects", value: "50+", icon: ZapIcon },
+    { label: "Happy Clients", value: "5+", icon: UsersIcon },
+    { label: "AI Solutions Solved", value: "50+", icon: LightbulbIcon },
   ];
 
   const team = [
     {
       title: "AI Specialists",
-      icon: Brain,
+      icon: BrainIcon,
       description: "Expert in machine learning and AI algorithms",
     },
     {
       title: "AI Engineers",
-      icon: Cpu,
+      icon: ProcessorIcon,
       description: "Building robust AI-powered automation systems",
     },
     {
       title: "Automation Specialists",
-      icon: CircuitBoard,
+      icon: CircuitIcon,
       description: "Creating intelligent business solutions",
     },
   ];
 
   return (
-    <section className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
-      {/* Enhanced AI Background - Same as Home section */}
+    <section
+      ref={ref}
+      className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
+    >
+      {/* Background Image */}
+      <img
+        src="/assets/beeInspiration/5303586.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20"
+      />
+      <div className="absolute inset-0 bg-paper/80 dark:bg-gray-950/75" />
+      <DarkHoneycombBackground patternId="about-honeycomb" />
+
+      {/* Premium Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Animated Circuit Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern
-                id="circuit-about"
-                x="0"
-                y="0"
-                width="100"
-                height="100"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M20,20 L80,20 L80,80 L20,80 Z"
-                  fill="none"
-                  stroke="#E56518"
-                  strokeWidth="1"
-                />
-                <circle cx="20" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="80" r="3" fill="#E56518" />
-                <circle cx="20" cy="80" r="3" fill="#E56518" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#circuit-about)" />
-          </svg>
-        </div>
+        {/* Subtle gradient mesh */}
+        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full opacity-[0.03]
+          bg-gradient-radial from-brand to-transparent blur-3xl" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full opacity-[0.02]
+          bg-gradient-radial from-accent to-transparent blur-3xl" />
 
-        {/* Floating AI Particles */}
-        <div className="absolute inset-0">
-          {[
-            { left: "15%", top: "20%", delay: "0s", duration: "4s" },
-            { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
-            { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
-            { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
-            { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
-            { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
-            { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
-            { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
-          ].map((particle, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
-              style={{
-                left: particle.left,
-                top: particle.top,
-                animationDelay: particle.delay,
-                animationDuration: particle.duration,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+        {/* Premium grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "64px 64px",
+          }}
+        />
       </div>
 
       <div className="container-width relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-            <Brain className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
-            <span className="text-brand-orange font-semibold">
-              Meet Our Team
-            </span>
-            <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
+        <div
+          className={`text-center mb-16 md:mb-20 transition-all duration-1000 ease-out-expo ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="badge mb-6 mx-auto">
+            <BrainIcon size={16} className="mr-2" />
+            <span>Meet Our Team</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About{" "}
-            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              NomanuAI
-            </span>
+          <h2 className="heading-lg text-ink dark:text-white mb-4 text-balance">
+            About <span className="text-gradient">NomanuAI</span>
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-body-lg max-w-3xl mx-auto">
             We're an AI Automation Agency that transforms how businesses
             operate. We help startups and growing companies eliminate manual
             work by building intelligent automation systems that handle
@@ -129,128 +107,84 @@ const About = () => {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div
+          className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ease-out-expo delay-200 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {/* AI Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  <div className="relative z-10 text-center">
-                    <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="w-6 h-6 text-white" />
+            <div className="grid grid-cols-3 gap-4">
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div
+                    key={stat.label}
+                    className="card-glass group p-5 text-center transition-all duration-500 ease-out-expo"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <div className="icon-container w-12 h-12 mx-auto mb-4">
+                      <IconComponent size={20} className="text-white" />
                     </div>
-
-                    <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    <div className="text-2xl font-bold text-ink dark:text-white mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
+                    <div className="text-[13px] text-ink-tertiary dark:text-gray-500">
                       {stat.label}
                     </div>
                   </div>
-
-                  {/* Floating AI Particles */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-                    <div
-                      className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse"
-                      style={{ animationDelay: "1s" }}
-                    />
-                    <div
-                      className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse"
-                      style={{ animationDelay: "2s" }}
-                    />
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Team Roles */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h3 className="text-xl font-semibold text-ink dark:text-white mb-5">
                 Our Expertise
               </h3>
-              {team.map((member, index) => (
-                <div
-                  key={member.title}
-                  className="group relative bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
-                      <member.icon className="w-5 h-5 text-white" />
+              {team.map((member, index) => {
+                const IconComponent = member.icon;
+                return (
+                  <div
+                    key={member.title}
+                    className="card group p-4 flex items-center gap-4 transition-all duration-500 ease-out-expo"
+                    style={{ transitionDelay: `${(index + 3) * 100}ms` }}
+                  >
+                    <div className="icon-container w-10 h-10 flex-shrink-0">
+                      <IconComponent size={18} className="text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">
+                      <h4 className="font-semibold text-ink dark:text-white text-[15px]
+                        group-hover:text-brand transition-colors duration-300">
                         {member.title}
                       </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                      <p className="text-[13px] text-ink-tertiary dark:text-gray-500">
                         {member.description}
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
           {/* Right Column - Visual Design */}
           <div className="relative">
-            {/* AI Processing Visualization */}
-            <div className="group relative bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-800/90 dark:to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 overflow-hidden">
-              {/* Neural Network Pattern */}
-              <div className="absolute inset-0 opacity-20">
-                <svg
-                  className="w-full h-full"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient
-                      id="neuralGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stopColor="#E56518" />
-                      <stop offset="100%" stopColor="#E56518" />
-                    </linearGradient>
-                  </defs>
-                  <circle cx="100" cy="100" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="200" cy="150" r="3" fill="url(#neuralGradient)" />
-                  <circle cx="300" cy="100" r="3" fill="url(#neuralGradient)" />
-                  <path
-                    d="M100,100 L200,150 L300,100"
-                    stroke="url(#neuralGradient)"
-                    strokeWidth="1"
-                    fill="none"
-                  />
-                  <path
-                    d="M250,50 L250,150 L250,250"
-                    stroke="url(#neuralGradient)"
-                    strokeWidth="1"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-
-              <div className="relative z-10 text-center">
-                <div className="w-24 h-24 bg-brand-orange rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/25 group-hover:scale-110 transition-transform duration-300">
-                  <Network className="w-12 h-12 text-white" />
+            <div className="card-glass group p-8 md:p-10">
+              <div className="text-center">
+                <div className="icon-container w-20 h-20 mx-auto mb-6">
+                  <NetworkIcon size={36} className="text-white" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-xl font-semibold text-ink dark:text-white mb-4
+                  group-hover:text-brand transition-colors duration-300">
                   AI-Powered Solutions
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                <p className="text-body text-ink-secondary dark:text-gray-400 mb-8">
                   We transform complex business processes into intelligent,
                   automated workflows. Our solutions adapt and learn, becoming
                   more efficient over time.
@@ -265,42 +199,35 @@ const About = () => {
                   ].map((solution, idx) => (
                     <div
                       key={solution}
-                      className="flex items-center space-x-3 p-3 bg-white/10 rounded-lg border border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105"
-                      style={{ animationDelay: `${idx * 100}ms` }}
+                      className="flex items-center gap-3 p-3 hex-cut-sm bg-ink/5 dark:bg-white/5
+                        border border-ink/5 dark:border-white/5
+                        hover:border-brand/30 transition-all duration-300 group/item"
                     >
-                      <Sparkles className="w-4 h-4 text-brand-orange flex-shrink-0" />
-                      <span className="text-sm text-gray-900 dark:text-white font-medium">
+                      <SparkleIcon size={16} className="text-brand flex-shrink-0" />
+                      <span className="text-[14px] text-ink dark:text-white font-medium">
                         {solution}
                       </span>
                     </div>
                   ))}
                 </div>
               </div>
-
-              {/* Floating AI Particles */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute top-4 right-4 w-2 h-2 bg-brand-orange/40 rounded-full animate-pulse" />
-                <div
-                  className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-brand-orange/40 rounded-full animate-pulse"
-                  style={{ animationDelay: "1s" }}
-                />
-                <div
-                  className="absolute top-1/2 right-2 w-1 h-1 bg-brand-orange/50 rounded-full animate-pulse"
-                  style={{ animationDelay: "2s" }}
-                />
-              </div>
             </div>
           </div>
         </div>
 
         {/* Team Members Section */}
-        <div className="mt-20">
+        <div
+          className={`mt-20 transition-all duration-1000 ease-out-expo delay-300 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="text-center mb-12">
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Meet the{" "}
-              <span className="text-brand-orange">Minds Behind NomanuAI</span>
+            <h3 className="heading-md text-ink dark:text-white mb-4">
+              Meet the <span className="text-gradient">Minds Behind NomanuAI</span>
             </h3>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-body-lg max-w-3xl mx-auto">
               NomanuAI is built by a team of developers and innovators working
               together to design smart automation and AI solutions. We
               collaborate as equals, combining our skills to create practical
@@ -312,34 +239,28 @@ const About = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-br from-brand-orange/5 via-brand-orange/10 to-brand-orange/5 dark:from-brand-orange/10 dark:via-brand-orange/20 dark:to-brand-orange/10 rounded-3xl p-12 border border-brand-orange/20">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div
+          className={`text-center mt-16 transition-all duration-1000 ease-out-expo delay-400 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="card-branded p-10 md:p-12 max-w-3xl mx-auto">
+            <h3 className="heading-sm text-ink dark:text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-body text-ink-secondary dark:text-gray-400 mb-8 max-w-xl mx-auto">
               Let's discuss how automation can transform your business processes
             </p>
             <Link
               href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              className="btn-secondary inline-flex items-center justify-center gap-2"
             >
-              Schedule a Free Consultation
-              <svg
-                className="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span>Schedule a Free Consultation</span>
+              <ArrowRightIcon size={18} />
             </Link>
           </div>
         </div>

@@ -1,8 +1,18 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
-import { Quote, ChevronLeft, ChevronRight, Star, Calendar } from "lucide-react";
+import {
+  QuoteIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  StarIcon,
+  CalendarIcon,
+  CheckIcon,
+} from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 const testimonials = [
   {
@@ -109,7 +119,7 @@ const Testimonials = () => {
 
   const renderStars = (rating: number) => {
     return Array.from({ length: rating }).map((_, i) => (
-      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+      <StarIcon key={i} size={16} className="text-amber-400 fill-current" />
     ));
   };
 
@@ -117,195 +127,124 @@ const Testimonials = () => {
     <section
       ref={ref}
       id="testimonials"
-      className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
+      className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
     >
-      {/* Enhanced AI Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Animated Circuit Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern
-                id="circuit-testimonials"
-                x="0"
-                y="0"
-                width="100"
-                height="100"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M20,20 L80,20 L80,80 L20,80 Z"
-                  fill="none"
-                  stroke="#E56518"
-                  strokeWidth="1"
-                />
-                <circle cx="20" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="80" r="3" fill="#E56518" />
-                <circle cx="20" cy="80" r="3" fill="#E56518" />
-              </pattern>
-            </defs>
-            <rect
-              width="100%"
-              height="100%"
-              fill="url(#circuit-testimonials)"
-            />
-          </svg>
-        </div>
-
-        {/* Floating AI Particles */}
-        <div className="absolute inset-0">
-          {[
-            { left: "15%", top: "20%", delay: "0s", duration: "4s" },
-            { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
-            { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
-            { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
-            { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
-            { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
-            { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
-            { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
-          ].map((particle, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-30"
-              style={{
-                left: particle.left,
-                top: particle.top,
-                animationDelay: particle.delay,
-                animationDuration: particle.duration,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/8 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
-      </div>
+      {/* Background Image */}
+      <img
+        src="/assets/beeInspiration/5303586.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.08] dark:opacity-15"
+      />
+      <div className="absolute inset-0 bg-paper/85 dark:bg-gray-950/80" />
+      <DarkHoneycombBackground patternId="testimonials-honeycomb" />
 
       <div className="container-width relative z-10">
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Column - Info & Stats */}
           <div
-            className={`flex transition-all duration-1000 ${
+            className={`flex transition-all duration-1000 ease-out-expo ${
               isIntersecting
-                ? "animate-fade-in-left opacity-100"
-                : "opacity-0 translate-x-8"
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
           >
-            {/* Main Info */}
-            <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 w-full flex flex-col justify-center">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                <span
-                  className="text-brand-orange"
-                  style={{
-                    textShadow:
-                      "0 0 8px rgba(229, 101, 24, 0.4), 0 0 15px rgba(229, 101, 24, 0.2)",
-                  }}
-                >
-                  Half the Workload, Full Speed Ahead
-                </span>
+            <div className="card-glass group p-8 md:p-10 w-full flex flex-col justify-center">
+              <h3 className="heading-md text-ink dark:text-white mb-6">
+                <span className="text-gradient">Half the Workload,</span>
+                <br />
+                Full Speed Ahead
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+
+              <p className="text-body text-ink-secondary dark:text-gray-400 mb-8">
                 Nomanu AI designs, builds, and runs automation workflows that
                 remove the repetitive clicks, manual updates, and constant
                 follow-ups slowing your team down.
               </p>
 
               {/* Key Benefits */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 clip-hex bg-success/10 flex items-center justify-center">
+                    <CheckIcon size={14} className="text-success" />
+                  </div>
+                  <span className="text-[15px] text-ink-secondary dark:text-gray-300">
                     20+ hours reclaimed every week
                   </span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 clip-hex bg-success/10 flex items-center justify-center">
+                    <CheckIcon size={14} className="text-success" />
+                  </div>
+                  <span className="text-[15px] text-ink-secondary dark:text-gray-300">
                     Instant process improvements from day one
                   </span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 clip-hex bg-success/10 flex items-center justify-center">
+                    <CheckIcon size={14} className="text-success" />
+                  </div>
+                  <span className="text-[15px] text-ink-secondary dark:text-gray-300">
                     No extra hires. No extra tools. Just results.
                   </span>
                 </div>
               </div>
 
-              {/* Book Free Consultation Button */}
-              <div className="mt-6">
-                <button className="group relative bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-base flex items-center justify-center overflow-hidden border-2 border-transparent hover:border-transparent">
-                  {/* AI Colored Border Effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm scale-105" />
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm scale-110" />
-
-                  {/* Multi-colored Glowing Border Effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400/60 via-pink-500/70 to-blue-500/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-lg scale-110" />
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/40 via-purple-500/50 to-cyan-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-xl scale-125" />
-
-                  {/* Inner Glow Effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400/20 via-pink-500/30 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
-
-                  {/* Subtle Background Glow */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400/5 via-pink-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Glowing Shadow Effect */}
-                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-400/50 via-purple-500/50 to-pink-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl scale-110 -z-10" />
-                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-blue-400/30 via-green-400/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-2xl scale-125 -z-20" />
-
-                  {/* Button Content */}
-                  <span className="relative z-10 flex items-center">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Book Free Consultation
-                  </span>
-                </button>
-              </div>
+              {/* CTA Button */}
+              <Link
+                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+              >
+                <CalendarIcon size={18} />
+                <span>Book Free Consultation</span>
+              </Link>
             </div>
           </div>
 
           {/* Right Column - Testimonial Carousel */}
           <div
-            className={`flex flex-col transition-all duration-1000 delay-300 ${
+            className={`flex flex-col transition-all duration-1000 ease-out-expo delay-200 ${
               isIntersecting
-                ? "animate-fade-in-right opacity-100"
-                : "opacity-0 translate-x-8"
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl shadow-brand-orange/10 hover:shadow-brand-orange/20 transition-all duration-500 group w-full flex flex-col justify-center relative flex-1">
-              {/* AI Glow Effect */}
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-orange/10 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
+            <div className="card-glass group p-8 md:p-10 w-full flex flex-col justify-center relative flex-1">
               {/* Floating Quote Icon */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center shadow-lg shadow-brand-orange/20">
-                <Quote className="w-6 h-6 text-white" />
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 icon-hex w-10 h-10">
+                <QuoteIcon size={18} className="text-white" />
               </div>
 
               {/* Testimonial Content */}
-              <div className="relative z-10 text-center">
-                <Image
-                  src={testimonials[active].avatar}
-                  alt={testimonials[active].name}
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-full object-cover border-4 border-brand-orange shadow-lg mx-auto mb-6"
-                />
+              <div className="relative z-10 text-center pt-4">
+                <div className="w-20 h-20 clip-hex bg-gradient-to-br from-brand/30 to-brand-light/20 p-[3px] mx-auto mb-6">
+                  <div className="w-full h-full clip-hex overflow-hidden">
+                    <Image
+                      src={testimonials[active].avatar}
+                      alt={testimonials[active].name}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
 
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center gap-1 mb-4">
                   {renderStars(testimonials[active].rating)}
                 </div>
 
-                <p className="text-lg text-gray-800 dark:text-gray-100 mb-6 leading-relaxed">
+                <p className="text-lg text-ink dark:text-gray-100 mb-6 leading-relaxed italic">
                   "{testimonials[active].content}"
                 </p>
 
                 <div className="text-center">
-                  <div className="font-bold text-brand-orange text-lg">
+                  <div className="font-semibold text-brand text-lg">
                     {testimonials[active].name}
                   </div>
-                  <div className="text-brand-orange/80 text-sm italic">
+                  <div className="text-[14px] text-ink-tertiary dark:text-gray-500">
                     {testimonials[active].company}
                   </div>
                 </div>
@@ -313,22 +252,32 @@ const Testimonials = () => {
             </div>
 
             {/* Navigation */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex justify-center gap-4 mt-6">
               <button
-                className="p-3 bg-gray-300/30 dark:bg-gray-800/30 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
+                type="button"
+                className="w-10 h-10 clip-hex bg-ink/5 dark:bg-white/5
+                  flex items-center justify-center
+                  hover:bg-brand hover:text-white
+                  text-ink-secondary dark:text-gray-400
+                  transition-all duration-300 ease-out-expo"
                 onClick={() =>
                   goTo((active - 1 + testimonials.length) % testimonials.length)
                 }
-                aria-label="Previous"
+                aria-label="Previous testimonial"
               >
-                <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <ChevronLeftIcon size={18} />
               </button>
               <button
-                className="p-3 bg-gray-300/30 dark:bg-gray-800/30 rounded-full border border-gray-200/50 dark:border-gray-700/50 hover:border-brand-orange/50 transition-all duration-300 hover:scale-110 shadow"
+                type="button"
+                className="w-10 h-10 clip-hex bg-ink/5 dark:bg-white/5
+                  flex items-center justify-center
+                  hover:bg-brand hover:text-white
+                  text-ink-secondary dark:text-gray-400
+                  transition-all duration-300 ease-out-expo"
                 onClick={() => goTo((active + 1) % testimonials.length)}
-                aria-label="Next"
+                aria-label="Next testimonial"
               >
-                <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <ChevronRightIcon size={18} />
               </button>
             </div>
 
@@ -337,13 +286,14 @@ const Testimonials = () => {
               {testimonials.map((_, i) => (
                 <button
                   key={i}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  type="button"
+                  className={`w-2.5 h-2.5 clip-hex transition-all duration-300 ease-out-expo ${
                     i === active
-                      ? "bg-brand-orange"
-                      : "bg-gray-300 dark:bg-gray-700"
+                      ? "bg-brand scale-150"
+                      : "bg-ink/20 dark:bg-white/20 hover:bg-ink/40 dark:hover:bg-white/40"
                   }`}
                   onClick={() => goTo(i)}
-                  aria-label={`Go to slide ${i + 1}`}
+                  aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}
             </div>

@@ -1,0 +1,13 @@
+[   23976ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[   23978ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[   29448ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[   32372ms] [WARNING] Image with src "/assets/mission-vision.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  173589ms] [WARNING] Image with src "/whyChoose/customer-service.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  187534ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/:0
+[  188381ms] Error: Could not find the module "c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\client\components\builtin\global-error.js#" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>:1:18)
+    at resolveErrorDev (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:370234)
+    at processFullStringRow (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:380081)
+    at <unknown> (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:385329)
+    at processBinaryChunk (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:385401)
+    at progress (file://c:\Users\JephMari\Desktop\Portfolio\nomanuAI\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:2:386929)

@@ -1,95 +1,72 @@
 "use client";
 
 import Image from "next/image";
-import { Target, Eye, Rocket } from "lucide-react";
+import Link from "next/link";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
+import {
+  TargetIcon,
+  EyeIcon,
+  BrainIcon,
+  ArrowRightIcon,
+} from "@/components/icons/PremiumIcons";
 
 const MissionVision = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
+
   return (
     <section
       ref={ref}
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* Glowing Orange Gradient Background Effects - Services Style */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
-        <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/70 via-orange-400/40 to-brand-orange-light/60 rounded-full blur-3xl animate-pulse opacity-90" />
-        <div
-          className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/60 via-brand-orange/70 to-orange-500/50 rounded-full blur-3xl animate-pulse opacity-80"
-          style={{ animationDelay: "2s" }}
-        />
-
-        {/* Central Glowing Effect */}
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-brand-orange/10 via-orange-400/15 to-brand-orange/10 rounded-full blur-3xl animate-pulse opacity-40"
-          style={{ animationDelay: "4s" }}
-        />
-
-        {/* Additional Floating Orange Particles - Brighter */}
-        <div className="absolute inset-0 opacity-80">
-          {[
-            { left: "15%", top: "20%", delay: "0s", size: "w-4 h-4" },
-            { left: "85%", top: "30%", delay: "1s", size: "w-3 h-3" },
-            { left: "25%", top: "70%", delay: "2s", size: "w-5 h-5" },
-            { left: "75%", top: "60%", delay: "3s", size: "w-3 h-3" },
-            { left: "45%", top: "15%", delay: "4s", size: "w-4 h-4" },
-            { left: "65%", top: "80%", delay: "5s", size: "w-3 h-3" },
-          ].map((particle, i) => (
-            <div
-              key={i}
-              className={`absolute ${particle.size} bg-gradient-to-r from-brand-orange to-orange-400 rounded-full animate-pulse`}
-              style={{
-                left: particle.left,
-                top: particle.top,
-                animationDelay: particle.delay,
-                animationDuration: "3s",
-                filter: "blur(1px)",
-              }}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Background Image */}
+      <img
+        src="/assets/beeInspiration/5303586.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
 
       <div className="container-width relative z-10">
         {/* Main Container */}
         <div
-          className={`bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden transition-all duration-1000 ${
+          className={`card-glass overflow-hidden transition-all duration-1000 ease-out-expo ${
             isIntersecting
-              ? "animate-scale-in opacity-100"
-              : "opacity-0 scale-95"
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
           }`}
         >
           {/* Two-Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-            {/* Left Column - Image */}
-            <div className="relative">
+            {/* Left Column - Image with hex overlay accents */}
+            <div className="relative min-h-[300px] lg:min-h-full overflow-hidden">
               <Image
                 src="/assets/mission-vision.jpg"
                 alt="Mission and Vision"
                 fill
                 className="object-cover"
               />
+              {/* Honey-tinted overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand/5 to-paper/20 dark:to-gray-900/20" />
+              {/* Floating hex accents */}
+              <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div className="hex-particle w-12 h-12 bottom-[10%] right-[10%]" style={{ animationDelay: '0s' }} />
+                <div className="hex-particle w-8 h-8 top-[15%] left-[15%]" style={{ animationDelay: '3s' }} />
+              </div>
             </div>
 
             {/* Right Column - Content */}
             <div className="p-8 lg:p-12 flex flex-col justify-center">
-              {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange rounded-full text-sm font-medium mb-6 w-fit">
-                <span className="text-brand-orange mr-2">*</span>
-                ABOUT NOMANUAI
-              </div>
-
               {/* Main Title */}
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="heading-lg text-ink dark:text-white mb-6">
                 Our{" "}
-                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+                <span className="text-gradient">
                   Mission & Vision
                 </span>
               </h2>
 
               {/* Description */}
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+              <p className="text-body-lg text-ink-secondary dark:text-gray-300 mb-8">
                 NomanuAI is a digital automation company that helps
                 forward-thinking businesses eliminate operational inefficiencies
                 by automating and integrating their web-based tools. We
@@ -100,18 +77,18 @@ const MissionVision = () => {
               </p>
 
               {/* Vision & Mission Single Container */}
-              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200 dark:border-gray-700 mb-8">
+              <div className="card p-6 mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Vision */}
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center flex-shrink-0">
-                      <Eye className="w-5 h-5 text-white" />
+                  <div className="flex items-start gap-4">
+                    <div className="icon-hex w-12 h-12 flex-shrink-0">
+                      <EyeIcon size={20} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                      <h3 className="text-lg font-semibold text-ink dark:text-white mb-2">
                         Vision
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                      <p className="text-sm text-ink-secondary dark:text-gray-400 leading-relaxed">
                         To lead the future of intelligent business systems—where
                         automation and AI drive operational excellence, and
                         individuals are free to contribute their most valuable
@@ -121,15 +98,15 @@ const MissionVision = () => {
                   </div>
 
                   {/* Mission */}
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center flex-shrink-0">
-                      <Target className="w-5 h-5 text-white" />
+                  <div className="flex items-start gap-4">
+                    <div className="icon-hex w-12 h-12 flex-shrink-0">
+                      <TargetIcon size={20} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                      <h3 className="text-lg font-semibold text-ink dark:text-white mb-2">
                         Mission
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                      <p className="text-sm text-ink-secondary dark:text-gray-400 leading-relaxed">
                         To empower organizations to automate and integrate their
                         business processes—so their people can spend less time
                         on manual tasks and more time on strategic, creative,
@@ -141,12 +118,13 @@ const MissionVision = () => {
               </div>
 
               {/* CTA Button */}
-              <a
+              <Link
                 href="/aboutus"
-                className="inline-flex items-center bg-brand-orange hover:bg-orange-500 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-fit"
+                className="btn-primary inline-flex items-center gap-2 w-fit"
               >
-                Know More About Us!
-              </a>
+                <span>Know More About Us</span>
+                <ArrowRightIcon size={18} />
+              </Link>
             </div>
           </div>
         </div>

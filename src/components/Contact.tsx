@@ -3,16 +3,15 @@
 import { useState } from "react";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  MessageCircle,
-  Sparkles,
-  Brain,
-  Zap,
-  Users,
-} from "lucide-react";
+  MailIcon,
+  PhoneIcon,
+  MapPinIcon,
+  SendIcon,
+  BrainIcon,
+  ZapIcon,
+  UsersIcon,
+  MessageIcon,
+} from "@/components/icons/PremiumIcons";
 import { supabase } from "@/lib/supabase";
 
 const Contact = () => {
@@ -104,17 +103,13 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Prevent double submission
     if (isSubmitting) return;
-
-    // Validate form
     if (!validateForm()) return;
 
     setIsSubmitting(true);
     setSubmissionStatus("idle");
 
     try {
-      // Sanitize inputs
       const sanitizedData = {
         name: formData.fullname.trim().replace(/[<>]/g, ""),
         email: formData.workEmail.trim().toLowerCase(),
@@ -157,136 +152,106 @@ const Contact = () => {
       id="contact"
       className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* Glowing Orange Gradient Background Effects - Services Style */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
-        <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/70 via-orange-400/40 to-brand-orange-light/60 rounded-full blur-3xl animate-pulse opacity-90" />
-        <div
-          className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/60 via-brand-orange/70 to-orange-500/50 rounded-full blur-3xl animate-pulse opacity-80"
-          style={{ animationDelay: "2s" }}
-        />
-
-        {/* Central Glowing Effect */}
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-brand-orange/10 via-orange-400/15 to-brand-orange/10 rounded-full blur-3xl animate-pulse opacity-40"
-          style={{ animationDelay: "4s" }}
-        />
-
-        {/* Additional Floating Orange Particles - Brighter */}
-        <div className="absolute inset-0 opacity-80">
-          {[
-            { left: "15%", top: "20%", delay: "0s", size: "w-4 h-4" },
-            { left: "85%", top: "30%", delay: "1s", size: "w-3 h-3" },
-            { left: "25%", top: "70%", delay: "2s", size: "w-5 h-5" },
-            { left: "75%", top: "60%", delay: "3s", size: "w-3 h-3" },
-            { left: "45%", top: "15%", delay: "4s", size: "w-4 h-4" },
-            { left: "65%", top: "80%", delay: "5s", size: "w-3 h-3" },
-          ].map((particle, i) => (
-            <div
-              key={i}
-              className={`absolute ${particle.size} bg-gradient-to-r from-brand-orange to-orange-400 rounded-full animate-pulse`}
-              style={{
-                left: particle.left,
-                top: particle.top,
-                animationDelay: particle.delay,
-                animationDuration: "3s",
-                filter: "blur(1px)",
-              }}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Background Image */}
+      <img
+        src="/assets/beeInspiration/5303586.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
 
       <div className="container-width relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-16 md:mb-20 transition-all duration-1000 ease-out-expo ${
             isIntersecting
-              ? "animate-fade-in-up opacity-100"
+              ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-            <Brain className="w-5 h-5 text-brand-orange mr-3 animate-pulse" />
-            <span className="text-brand-orange font-semibold">
-              Get Started Today
-            </span>
-            <div className="w-2 h-2 bg-brand-orange rounded-full ml-3 animate-pulse" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Ready to{" "}
-            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Get Started?
-            </span>
+          <h2 className="heading-lg text-ink dark:text-white mb-4 text-balance">
+            Ready to <span className="text-gradient">Get Started?</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We'd love to help! Share your details in the form and we'll respond
-            with the best solution for you.
+          <p className="text-body-lg max-w-2xl mx-auto">
+            We'd love to help! Share your details and we'll respond with the
+            best solution for you.
           </p>
         </div>
 
         {/* Two-Column Layout */}
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch transition-all duration-1000 delay-300 ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch transition-all duration-1000 ease-out-expo delay-200 ${
             isIntersecting
-              ? "animate-fade-in-up opacity-100"
+              ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Left Column - Contact Info & AI Features */}
-          <div className="space-y-8">
+          {/* Left Column - Contact Info & Features */}
+          <div className="space-y-6">
             {/* AI-Powered Contact Card */}
-            <div className="group bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10">
-              <div className="w-12 h-12 bg-brand-orange rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-4">
-                <Brain className="w-6 h-6 text-white" />
+            <div className="card-glass group p-6 md:p-8">
+              <div className="icon-hex w-12 h-12 mb-5">
+                <BrainIcon size={24} className="text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-brand-orange transition-colors duration-300 mb-4">
+
+              <h3 className="text-xl font-semibold text-ink dark:text-white mb-3 group-hover:text-brand transition-colors duration-300">
                 AI-Powered Consultation
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+              <p className="text-body text-ink-secondary dark:text-gray-400 mb-6">
                 Our AI specialists analyze your business needs and design custom
                 automation solutions that deliver measurable results.
               </p>
 
               {/* Contact Methods */}
               <div className="space-y-4">
-                <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl">
-                  <div className="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-brand-orange" />
+                <a
+                  href="mailto:consulting@nomanuai.com"
+                  className="flex items-center gap-4 p-4 hex-cut-sm bg-ink/5 dark:bg-white/5
+                    hover:bg-brand/10 transition-all duration-300 group/item"
+                >
+                  <div className="w-12 h-12 clip-hex bg-brand/10 flex items-center justify-center
+                    group-hover/item:bg-brand group-hover/item:text-white transition-all duration-300">
+                    <MailIcon size={20} className="text-brand group-hover/item:text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">
+                    <div className="font-semibold text-ink dark:text-white text-[15px]">
                       Email
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">
+                    <div className="text-[14px] text-ink-secondary dark:text-gray-400">
                       consulting@nomanuai.com
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl">
-                  <div className="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-brand-orange" />
+                <a
+                  href="tel:+639759483289"
+                  className="flex items-center gap-4 p-4 hex-cut-sm bg-ink/5 dark:bg-white/5
+                    hover:bg-brand/10 transition-all duration-300 group/item"
+                >
+                  <div className="w-12 h-12 clip-hex bg-brand/10 flex items-center justify-center
+                    group-hover/item:bg-brand group-hover/item:text-white transition-all duration-300">
+                    <PhoneIcon size={20} className="text-brand group-hover/item:text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">
+                    <div className="font-semibold text-ink dark:text-white text-[15px]">
                       Phone
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">
+                    <div className="text-[14px] text-ink-secondary dark:text-gray-400">
                       +63 975 948 3289
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl">
-                  <div className="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-brand-orange" />
+                <div className="flex items-center gap-4 p-4 hex-cut-sm bg-ink/5 dark:bg-white/5">
+                  <div className="w-12 h-12 clip-hex bg-brand/10 flex items-center justify-center">
+                    <MapPinIcon size={20} className="text-brand" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">
+                    <div className="font-semibold text-ink dark:text-white text-[15px]">
                       Location
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">
+                    <div className="text-[14px] text-ink-secondary dark:text-gray-400">
                       Serving clients worldwide
                     </div>
                   </div>
@@ -294,28 +259,28 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* AI Features */}
+            {/* Quick Features */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="group text-center bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
+              <div className="card-glass group p-5 text-center">
+                <div className="icon-hex w-12 h-12 mx-auto mb-3">
+                  <ZapIcon size={20} className="text-white" />
                 </div>
-                <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                <div className="text-[14px] font-semibold text-ink dark:text-white mb-1">
                   Fast Response
                 </div>
-                <div className="text-xs text-gray-600 dark:text-gray-300">
+                <div className="text-[13px] text-ink-tertiary dark:text-gray-500">
                   2-4 hours during business days
                 </div>
               </div>
 
-              <div className="group text-center bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-6 h-6 text-white" />
+              <div className="card-glass group p-5 text-center">
+                <div className="icon-hex w-12 h-12 mx-auto mb-3">
+                  <UsersIcon size={20} className="text-white" />
                 </div>
-                <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                <div className="text-[14px] font-semibold text-ink dark:text-white mb-1">
                   Expert Team
                 </div>
-                <div className="text-xs text-gray-600 dark:text-gray-300">
+                <div className="text-[13px] text-ink-tertiary dark:text-gray-500">
                   AI specialists & engineers
                 </div>
               </div>
@@ -323,29 +288,28 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="group bg-gray-100/80 dark:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-300/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/10 h-full flex flex-col">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-brand-orange rounded-lg flex items-center justify-center mr-4">
-                <MessageCircle className="w-6 h-6 text-white" />
+          <div className="card-glass group p-6 md:p-8 flex flex-col">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="icon-hex w-12 h-12">
+                <MessageIcon size={24} className="text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-brand-orange transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-ink dark:text-white group-hover:text-brand transition-colors duration-300">
                   Start Your Project
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-[14px] text-ink-secondary dark:text-gray-400">
                   Tell us about your automation needs
                 </p>
               </div>
             </div>
 
             <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
-              {/* Form Fields Container */}
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-5">
                 {/* Row 1: Fullname and Work Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex flex-col">
-                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
-                      Fullname *
+                  <div>
+                    <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
+                      Full Name *
                     </label>
                     <input
                       type="text"
@@ -353,12 +317,16 @@ const Contact = () => {
                       value={formData.fullname}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                      placeholder="Fullname"
+                      className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                        bg-paper dark:bg-gray-800 text-ink dark:text-white
+                        placeholder-ink-tertiary dark:placeholder-gray-500
+                        focus:ring-2 focus:ring-brand/30 focus:border-brand
+                        transition-all duration-300 text-[15px]"
+                      placeholder="Your full name"
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
+                  <div>
+                    <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
                       Work Email *
                     </label>
                     <input
@@ -367,15 +335,19 @@ const Contact = () => {
                       value={formData.workEmail}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                      placeholder="Work Email"
+                      className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                        bg-paper dark:bg-gray-800 text-ink dark:text-white
+                        placeholder-ink-tertiary dark:placeholder-gray-500
+                        focus:ring-2 focus:ring-brand/30 focus:border-brand
+                        transition-all duration-300 text-[15px]"
+                      placeholder="you@company.com"
                     />
                   </div>
                 </div>
 
                 {/* Row 2: Company Website */}
                 <div>
-                  <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1">
+                  <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
                     Company Website
                   </label>
                   <input
@@ -383,16 +355,20 @@ const Contact = () => {
                     name="website"
                     value={formData.website}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
-                    placeholder="Website URL"
+                    className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                      bg-paper dark:bg-gray-800 text-ink dark:text-white
+                      placeholder-ink-tertiary dark:placeholder-gray-500
+                      focus:ring-2 focus:ring-brand/30 focus:border-brand
+                      transition-all duration-300 text-[15px]"
+                    placeholder="https://yourcompany.com"
                   />
                 </div>
 
                 {/* Row 3: Automation Usage and Goals */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex flex-col">
-                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
-                      Are you currently using automation? *
+                  <div>
+                    <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
+                      Currently using automation? *
                     </label>
                     <select
                       name="usingAutomation"
@@ -400,9 +376,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       aria-label="Automation usage selection"
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                        bg-paper dark:bg-gray-800 text-ink dark:text-white
+                        focus:ring-2 focus:ring-brand/30 focus:border-brand
+                        transition-all duration-300 text-[15px]"
                     >
-                      <option value="">Select</option>
+                      <option value="">Select option</option>
                       {automationOptions.map((option) => (
                         <option key={option} value={option}>
                           {option}
@@ -410,9 +389,9 @@ const Contact = () => {
                       ))}
                     </select>
                   </div>
-                  <div className="flex flex-col">
-                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
-                      What do you want to achieve with automation? *
+                  <div>
+                    <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
+                      Automation goal? *
                     </label>
                     <select
                       name="automationGoal"
@@ -420,9 +399,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       aria-label="Automation goal selection"
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                        bg-paper dark:bg-gray-800 text-ink dark:text-white
+                        focus:ring-2 focus:ring-brand/30 focus:border-brand
+                        transition-all duration-300 text-[15px]"
                     >
-                      <option value="">Select</option>
+                      <option value="">Select goal</option>
                       {automationGoals.map((goal) => (
                         <option key={goal} value={goal}>
                           {goal}
@@ -434,9 +416,9 @@ const Contact = () => {
 
                 {/* Row 4: Consultation and Budget */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex flex-col">
-                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
-                      Would you like to book a free consultation? *
+                  <div>
+                    <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
+                      Free consultation? *
                     </label>
                     <select
                       name="freeConsultation"
@@ -444,9 +426,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       aria-label="Free consultation preference"
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                        bg-paper dark:bg-gray-800 text-ink dark:text-white
+                        focus:ring-2 focus:ring-brand/30 focus:border-brand
+                        transition-all duration-300 text-[15px]"
                     >
-                      <option value="">Select</option>
+                      <option value="">Select preference</option>
                       {consultationOptions.map((option) => (
                         <option key={option} value={option}>
                           {option}
@@ -454,19 +439,21 @@ const Contact = () => {
                       ))}
                     </select>
                   </div>
-                  <div className="flex flex-col">
-                    <label className="block text-base font-medium text-gray-900 dark:text-gray-300 mb-1 min-h-[1.5rem] flex items-center">
-                      What is your budget range? *
+                  <div>
+                    <label className="block text-[14px] font-medium text-ink dark:text-gray-300 mb-2">
+                      Budget range
                     </label>
                     <select
                       name="budgetRange"
                       value={formData.budgetRange}
                       onChange={handleInputChange}
-                      required
                       aria-label="Budget range selection"
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 backdrop-blur-sm focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all duration-300 text-base text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 hex-cut-sm border border-ink/10 dark:border-white/10
+                        bg-paper dark:bg-gray-800 text-ink dark:text-white
+                        focus:ring-2 focus:ring-brand/30 focus:border-brand
+                        transition-all duration-300 text-[15px]"
                     >
-                      <option value="">Select</option>
+                      <option value="">Select range</option>
                       {budgetRanges.map((range) => (
                         <option key={range} value={range}>
                           {range}
@@ -481,16 +468,17 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-base"
+                className="btn-primary w-full mt-6 py-4 text-[15px] flex items-center justify-center gap-2
+                  disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     <span>Submitting...</span>
                   </>
                 ) : (
                   <>
-                    <Send className="w-4 h-4" />
+                    <SendIcon size={18} />
                     <span>Get Started</span>
                   </>
                 )}
@@ -498,16 +486,16 @@ const Contact = () => {
 
               {/* Status Messages */}
               {submissionStatus === "success" && (
-                <div className="p-3 bg-green-900/20 border border-green-700 rounded-lg">
-                  <p className="text-green-300 text-xs">
+                <div className="mt-4 p-4 hex-cut-sm bg-success/10 border border-success/20">
+                  <p className="text-success text-[14px]">
                     Thank you! Your message has been sent successfully. We'll
                     get back to you within 2-4 hours.
                   </p>
                 </div>
               )}
               {submissionStatus === "error" && (
-                <div className="p-3 bg-red-900/20 border border-red-700 rounded-lg">
-                  <p className="text-red-300 text-xs">
+                <div className="mt-4 p-4 hex-cut-sm bg-error/10 border border-error/20">
+                  <p className="text-error text-[14px]">
                     Sorry, there was an error sending your message. Please try
                     again or contact us directly.
                   </p>

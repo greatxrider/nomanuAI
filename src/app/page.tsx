@@ -15,13 +15,14 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 export default function Home() {
   const { ref: blogRef, isIntersecting: blogIsIntersecting } =
     useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <main className="min-h-screen bg-paper dark:bg-gray-950 transition-colors duration-300">
       {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
@@ -71,74 +72,17 @@ export default function Home() {
       {/* Stay Updated Section */}
       <section
         ref={blogRef}
-        className="relative py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+        className="relative py-16 bg-gradient-to-b from-paper via-paper to-paper-secondary dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 overflow-hidden"
       >
-        {/* Enhanced AI Background - Home Style */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Animated Circuit Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="circuit-stay-updated"
-                  x="0"
-                  y="0"
-                  width="100"
-                  height="100"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M20,20 L80,20 L80,80 L20,80 Z"
-                    fill="none"
-                    stroke="#E56518"
-                    strokeWidth="1"
-                  />
-                  <circle cx="20" cy="20" r="3" fill="#E56518" />
-                  <circle cx="80" cy="20" r="3" fill="#E56518" />
-                  <circle cx="80" cy="80" r="3" fill="#E56518" />
-                  <circle cx="20" cy="80" r="3" fill="#E56518" />
-                </pattern>
-              </defs>
-              <rect
-                width="100%"
-                height="100%"
-                fill="url(#circuit-stay-updated)"
-              />
-            </svg>
-          </div>
-
-          {/* Floating AI Particles */}
-          <div className="absolute inset-0">
-            {[
-              { left: "15%", top: "20%", delay: "0s", duration: "4s" },
-              { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
-              { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
-              { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
-              { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
-              { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
-              { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
-              { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
-            ].map((particle, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-60"
-                style={{
-                  left: particle.left,
-                  top: particle.top,
-                  animationDelay: particle.delay,
-                  animationDuration: particle.duration,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Gradient Orbs */}
-          <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/30 via-orange-400/20 to-brand-orange-light/30 rounded-full blur-3xl animate-pulse opacity-40" />
-          <div
-            className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/30 via-brand-orange/30 to-orange-500/20 rounded-full blur-3xl animate-pulse opacity-30"
-            style={{ animationDelay: "2s" }}
-          />
-        </div>
+        {/* Background Image */}
+        <img
+          src="/assets/beeInspiration/5303586.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.08] dark:opacity-15"
+        />
+        <div className="absolute inset-0 bg-paper/85 dark:bg-gray-950/80" />
+        <DarkHoneycombBackground patternId="blog-honeycomb" />
 
         <div className="container-width relative z-10">
           {/* Section Header */}
@@ -149,12 +93,6 @@ export default function Home() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-6">
-              <span className="text-brand-orange font-semibold">
-                AI Automation Insights
-              </span>
-            </div>
-
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Stay Updated with{" "}
               <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">

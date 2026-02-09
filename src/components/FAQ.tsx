@@ -1,19 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
-  ChevronDown,
-  ChevronUp,
-  HelpCircle,
-  Zap,
-  Brain,
-  Users,
-  Shield,
-  Clock,
-  DollarSign,
-  Target,
-} from "lucide-react";
+  ChevronDownIcon,
+  ChevronUpIcon,
+  HelpIcon,
+  ZapIcon,
+  BrainIcon,
+  UsersIcon,
+  ShieldIcon,
+  ClockIcon,
+  DollarIcon,
+  TargetIcon,
+  CalendarIcon,
+} from "@/components/icons/PremiumIcons";
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -25,70 +27,70 @@ const FAQ = () => {
       question: "Do you build software or just give advice?",
       answer:
         "We do both! We build the actual automation tools that work for your business, and we also give you advice on how to use them best. We create the software, connect your existing tools, and help you keep improving as your business grows.",
-      icon: Zap,
+      icon: ZapIcon,
     },
     {
       id: 2,
       question: "Will this work for my type of business?",
       answer:
         "Yes! We've helped all kinds of businesses - real estate, healthcare, law firms, factories, and service companies. The key is finding the boring, repetitive tasks that take up 20+ hours each week. We'll look at your specific work and show you exactly where automation will help the most.",
-      icon: Target,
+      icon: TargetIcon,
     },
     {
       id: 3,
       question: "What can automation actually fix for my business?",
       answer:
         "Automation can fix the boring stuff that wastes your time: typing the same information over and over, sending follow-up emails, checking leads, and keeping track of customers. We focus on the biggest time-wasters like managing sales, bringing in new clients, and doing the same admin tasks day after day.",
-      icon: Brain,
+      icon: BrainIcon,
     },
     {
       id: 4,
       question: "How much time and money will this save me?",
       answer:
         "Most of our clients save 40-70% of their time on the tasks we automate, and they get their money back within 3-6 months. For example, automated lead checking saves 15-20 hours per week, and automated client setup goes from taking days to just hours. We'll show you exactly how much you'll save before we start.",
-      icon: DollarSign,
+      icon: DollarIcon,
     },
     {
       id: 5,
       question: "Can you handle complicated work processes?",
       answer:
         "Yes! We're experts at building complex workflows that connect multiple systems and make smart decisions. Whether it's scoring leads across different criteria, sending messages through multiple channels, or following strict rules, we build strong solutions that handle all the details and grow with your business.",
-      icon: Users,
+      icon: UsersIcon,
     },
     {
       id: 6,
       question: "Are you trained and certified in the tools you use?",
       answer:
         "Yes, our team has official training and certifications in all the major platforms we use like Zapier, Make, Microsoft Power Automate, and AI tools. We're also official partners with big CRM platforms like HubSpot, Salesforce, and HighLevel. This means we know the best ways to use these tools.",
-      icon: Shield,
+      icon: ShieldIcon,
     },
     {
       id: 7,
       question: "Do you have examples of work you've done?",
       answer:
         "Yes! We have lots of real examples from different industries. We helped a real estate team automate their lead checking (saving 25 hours per week), a healthcare office streamline patient intake (making it 80% faster), and a consulting firm automate their proposal creation (increasing their success rate by 35%). We'll show you relevant examples when we talk.",
-      icon: HelpCircle,
+      icon: HelpIcon,
     },
     {
       id: 8,
       question: "What makes you different from other automation companies?",
       answer:
         "We understand your business goals first, then build automation that helps you reach them. Unlike pure tech companies, we focus on making sure your team actually uses and benefits from the automation we build. We don't just create technical solutions - we make sure they work for your business.",
-      icon: Brain,
+      icon: BrainIcon,
     },
     {
       id: 9,
       question: "Is this a one-time job or ongoing work?",
       answer:
         "We offer both options. Many clients start with one specific automation project, then expand to ongoing improvements as they see results. We provide maintenance, updates, and continuous improvements. Some clients prefer our ongoing partnership where we keep finding new ways to automate as their business changes.",
-      icon: Clock,
+      icon: ClockIcon,
     },
     {
       id: 10,
       question: "Do I need tech experts on my team?",
       answer:
         "No! We build easy-to-use interfaces and provide full training. Our automations are designed for regular business people to monitor and adjust. We also provide ongoing support and maintenance, so you can focus on running your business while we make sure your automation keeps working smoothly.",
-      icon: Users,
+      icon: UsersIcon,
     },
   ];
 
@@ -101,209 +103,182 @@ const FAQ = () => {
   return (
     <section
       ref={ref}
-      className="relative py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* Glowing Orange Gradient Background Effects - Services Style */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
-        <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/70 via-orange-400/40 to-brand-orange-light/60 rounded-full blur-3xl animate-pulse opacity-90" />
-        <div
-          className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/60 via-brand-orange/70 to-orange-500/50 rounded-full blur-3xl animate-pulse opacity-80"
-          style={{ animationDelay: "2s" }}
-        />
-
-        {/* Central Glowing Effect */}
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-brand-orange/10 via-orange-400/15 to-brand-orange/10 rounded-full blur-3xl animate-pulse opacity-40"
-          style={{ animationDelay: "4s" }}
-        />
-
-        {/* Additional Floating Orange Particles - Brighter */}
-        <div className="absolute inset-0 opacity-80">
-          {[
-            { left: "15%", top: "20%", delay: "0s", size: "w-4 h-4" },
-            { left: "85%", top: "30%", delay: "1s", size: "w-3 h-3" },
-            { left: "25%", top: "70%", delay: "2s", size: "w-5 h-5" },
-            { left: "75%", top: "60%", delay: "3s", size: "w-3 h-3" },
-            { left: "45%", top: "15%", delay: "4s", size: "w-4 h-4" },
-            { left: "65%", top: "80%", delay: "5s", size: "w-3 h-3" },
-          ].map((particle, i) => (
-            <div
-              key={i}
-              className={`absolute ${particle.size} bg-gradient-to-r from-brand-orange to-orange-400 rounded-full animate-pulse`}
-              style={{
-                left: particle.left,
-                top: particle.top,
-                animationDelay: particle.delay,
-                animationDuration: "3s",
-                filter: "blur(1px)",
-              }}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Background Image */}
+      <img
+        src="/assets/beeInspiration/5303586.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
 
       <div className="container-width relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-16 md:mb-20 transition-all duration-1000 ease-out-expo ${
             isIntersecting
-              ? "animate-fade-in-up opacity-100"
+              ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-            <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
-            <span className="text-sm font-medium text-brand-orange">
-              Common Questions
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Questions
-            </span>
+          <h2 className="heading-lg text-ink dark:text-white mb-4 text-balance">
+            Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-body-lg max-w-2xl mx-auto">
             Your complete guide to understanding how we can transform your
             business with smart automation
           </p>
         </div>
 
         {/* FAQ Grid */}
-        <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-6 max-w-5xl mx-auto">
           {/* Left Column */}
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-4">
             {faqs
               .filter((_, index) => index % 2 === 0)
-              .map((faq, index) => (
-                <div
-                  key={faq.id}
-                  className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 ${
-                    isIntersecting
-                      ? "animate-fade-in-left opacity-100"
-                      : "opacity-0 translate-x-8"
-                  }`}
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                    transitionDelay: `${index * 50}ms`,
-                  }}
-                >
-                  <button
-                    onClick={() => toggleItem(faq.id)}
-                    className="w-full px-6 py-4 text-left flex items-start justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200 rounded-xl"
-                  >
-                    <div className="flex items-start gap-3 flex-1">
-                      <div className="flex-shrink-0 mt-1">
-                        <faq.icon className="w-5 h-5 text-brand-orange" />
-                      </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-relaxed">
-                        {faq.question}
-                      </h3>
-                    </div>
-                    <div className="flex-shrink-0">
-                      {openItems.includes(faq.id) ? (
-                        <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                      )}
-                    </div>
-                  </button>
-
+              .map((faq, index) => {
+                const IconComponent = faq.icon;
+                return (
                   <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      openItems.includes(faq.id)
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
+                    key={faq.id}
+                    className={`card group transition-all duration-700 ease-out-expo ${
+                      isIntersecting
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
                     }`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <div className="px-6 pb-4">
-                      <div className="pl-8 border-l-2 border-brand-orange/30">
-                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                          {faq.answer}
-                        </p>
+                    <button
+                      type="button"
+                      onClick={() => toggleItem(faq.id)}
+                      className="w-full px-5 py-4 text-left flex items-start justify-between gap-4
+                        hover:bg-ink/5 dark:hover:bg-white/5 transition-colors duration-200 hex-cut-sm"
+                    >
+                      <div className="flex items-start gap-3 flex-1">
+                        <div className="flex-shrink-0 mt-0.5 w-8 h-8 clip-hex bg-brand/10
+                          flex items-center justify-center">
+                          <IconComponent size={16} className="text-brand" />
+                        </div>
+                        <h3 className="font-semibold text-ink dark:text-white text-[15px] leading-relaxed">
+                          {faq.question}
+                        </h3>
+                      </div>
+                      <div className="flex-shrink-0 mt-0.5">
+                        {openItems.includes(faq.id) ? (
+                          <ChevronUpIcon size={18} className="text-ink-tertiary dark:text-gray-400" />
+                        ) : (
+                          <ChevronDownIcon size={18} className="text-ink-tertiary dark:text-gray-400" />
+                        )}
+                      </div>
+                    </button>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ease-out-expo ${
+                        openItems.includes(faq.id)
+                          ? "max-h-96 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="px-5 pb-5">
+                        <div className="pl-11 border-l-2 border-brand/20">
+                          <p className="text-ink-secondary dark:text-gray-400 text-[14px] leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-4">
             {faqs
               .filter((_, index) => index % 2 === 1)
-              .map((faq, index) => (
-                <div
-                  key={faq.id}
-                  className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 ${
-                    isIntersecting
-                      ? "animate-fade-in-right opacity-100"
-                      : "opacity-0 translate-x-8"
-                  }`}
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                    transitionDelay: `${index * 50}ms`,
-                  }}
-                >
-                  <button
-                    onClick={() => toggleItem(faq.id)}
-                    className="w-full px-6 py-4 text-left flex items-start justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200 rounded-xl"
-                  >
-                    <div className="flex items-start gap-3 flex-1">
-                      <div className="flex-shrink-0 mt-1">
-                        <faq.icon className="w-5 h-5 text-brand-orange" />
-                      </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-relaxed">
-                        {faq.question}
-                      </h3>
-                    </div>
-                    <div className="flex-shrink-0">
-                      {openItems.includes(faq.id) ? (
-                        <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                      )}
-                    </div>
-                  </button>
-
+              .map((faq, index) => {
+                const IconComponent = faq.icon;
+                return (
                   <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      openItems.includes(faq.id)
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
+                    key={faq.id}
+                    className={`card group transition-all duration-700 ease-out-expo ${
+                      isIntersecting
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
                     }`}
+                    style={{ transitionDelay: `${(index + 1) * 100}ms` }}
                   >
-                    <div className="px-6 pb-4">
-                      <div className="pl-8 border-l-2 border-brand-orange/30">
-                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                          {faq.answer}
-                        </p>
+                    <button
+                      type="button"
+                      onClick={() => toggleItem(faq.id)}
+                      className="w-full px-5 py-4 text-left flex items-start justify-between gap-4
+                        hover:bg-ink/5 dark:hover:bg-white/5 transition-colors duration-200 hex-cut-sm"
+                    >
+                      <div className="flex items-start gap-3 flex-1">
+                        <div className="flex-shrink-0 mt-0.5 w-8 h-8 clip-hex bg-brand/10
+                          flex items-center justify-center">
+                          <IconComponent size={16} className="text-brand" />
+                        </div>
+                        <h3 className="font-semibold text-ink dark:text-white text-[15px] leading-relaxed">
+                          {faq.question}
+                        </h3>
+                      </div>
+                      <div className="flex-shrink-0 mt-0.5">
+                        {openItems.includes(faq.id) ? (
+                          <ChevronUpIcon size={18} className="text-ink-tertiary dark:text-gray-400" />
+                        ) : (
+                          <ChevronDownIcon size={18} className="text-ink-tertiary dark:text-gray-400" />
+                        )}
+                      </div>
+                    </button>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ease-out-expo ${
+                        openItems.includes(faq.id)
+                          ? "max-h-96 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="px-5 pb-5">
+                        <div className="pl-11 border-l-2 border-brand/20">
+                          <p className="text-ink-secondary dark:text-gray-400 text-[14px] leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-12">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+        <div
+          className={`text-center mt-16 transition-all duration-1000 ease-out-expo delay-500 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="card-honeycomb hex-border-pulse p-8 md:p-10 max-w-2xl mx-auto text-center">
+            <h3 className="text-xl font-semibold text-ink dark:text-white mb-3">
               Still have questions?
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-body text-ink-secondary dark:text-gray-400 mb-6">
               Let's discuss how automation can transform your business processes
             </p>
-            <a
+            <Link
               href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-brand-orange text-white font-medium rounded-lg hover:bg-brand-orange/90 transition-colors duration-200"
+              className="btn-primary inline-flex items-center justify-center gap-2"
             >
-              Schedule a Free Consultation
-            </a>
+              <CalendarIcon size={18} />
+              <span>Schedule a Free Consultation</span>
+            </Link>
           </div>
         </div>
       </div>

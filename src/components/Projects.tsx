@@ -5,20 +5,29 @@ import type { ComponentType } from "react";
 import { createPortal } from "react-dom";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
-  ExternalLink,
-  Github,
-  Zap,
-  Users,
-  TrendingUp,
-  Shield,
-  MessageCircle,
-  Search,
-  Filter,
-  X,
-  Clock,
-  Target,
-  CheckCircle,
-} from "lucide-react";
+  ExternalLinkIcon,
+  GitHubIcon,
+  ZapIcon,
+  UsersIcon,
+  TrendingUpIcon,
+  ShieldIcon,
+  MessageIcon,
+  SearchIcon,
+  FilterIcon,
+  CloseIcon,
+  ClockIcon,
+  TargetIcon,
+  CheckCircleIcon,
+  BrainIcon,
+  ArrowRightIcon,
+} from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
+
+// Icon props type for the project icons
+interface IconProps {
+  size?: number;
+  className?: string;
+}
 
 // Renders technology chips in a single line; if they overflow, show "+N" with a modal on hover
 const TechList = ({ technologies }: { technologies: string[] }) => {
@@ -58,7 +67,7 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
 
     const measureEl = document.createElement("span");
     measureEl.className =
-      "px-2 py-1 bg-brand-orange/10 text-brand-orange text-xs rounded-full font-medium";
+      "px-2 py-1 bg-brand/10 text-brand text-xs hex-cut-sm font-medium";
     measureEl.style.visibility = "hidden";
     measureEl.style.position = "absolute";
     measureEl.textContent = `+${remaining}`;
@@ -105,7 +114,8 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
       {technologies.slice(0, visibleCount).map((tech) => (
         <span
           key={tech}
-          className="px-2 py-1 bg-brand-orange/10 text-brand-orange text-xs rounded-full font-medium"
+          className="px-2 py-1 bg-brand/10 text-brand text-xs hex-cut-sm font-medium
+            border border-brand/20"
         >
           {tech}
         </span>
@@ -116,16 +126,18 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
           onMouseEnter={() => setIsHoveringTrigger(true)}
           onMouseLeave={() => setIsHoveringTrigger(false)}
         >
-          <span className="px-2 py-1 bg-brand-orange/10 text-brand-orange text-xs rounded-full font-medium cursor-default">
+          <span className="px-2 py-1 bg-brand/10 text-brand text-xs hex-cut-sm font-medium cursor-default
+            border border-brand/20">
             +{overflowCount}
           </span>
 
           {isHoveringTrigger && (
             <div className="fixed inset-0 z-50 pointer-events-none">
               {/* Non-interactive backdrop so hover is not trapped */}
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-ink/40 dark:bg-black/60 backdrop-blur-sm" />
               <div className="relative z-10 flex items-center justify-center w-full h-full p-4">
-                <div className="max-w-md w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-xl shadow-2xl p-4">
+                <div className="max-w-md w-full bg-paper dark:bg-gray-900 text-ink dark:text-white
+                  border border-brand/10 dark:border-brand/15 hex-cut shadow-2xl p-5">
                   <div className="text-sm font-semibold mb-3">
                     Technologies / Apps
                   </div>
@@ -133,7 +145,8 @@ const TechList = ({ technologies }: { technologies: string[] }) => {
                     {hiddenTechs.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-brand-orange/10 text-brand-orange text-xs rounded-full font-medium"
+                        className="px-2 py-1 bg-brand/10 text-brand text-xs hex-cut-sm font-medium
+                          border border-brand/20"
                       >
                         {tech}
                       </span>
@@ -161,7 +174,7 @@ const DisclaimerModal = ({
 
   const modalContent = (
     <div
-      className="fixed inset-0 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+      className="fixed inset-0 flex items-center justify-center p-4 bg-ink/80 dark:bg-black/80 backdrop-blur-md"
       style={{
         zIndex: 999999999,
         position: "fixed",
@@ -174,25 +187,26 @@ const DisclaimerModal = ({
       }}
     >
       <div
-        className="relative bg-white dark:bg-gray-900 rounded-2xl max-w-2xl w-full p-6 shadow-2xl"
+        className="relative bg-paper dark:bg-gray-900 modal-hex max-w-2xl w-full p-6 shadow-2xl
+          border border-brand/10 dark:border-brand/15"
         style={{
           zIndex: 999999999,
           position: "relative",
         }}
       >
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white flex items-center">
-            <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
+          <h3 className="text-xl font-bold text-ink dark:text-white flex items-center">
+            <ShieldIcon size={20} className="text-brand mr-2" />
             Project Portfolio Information
           </h3>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+            className="text-ink-tertiary hover:text-ink dark:hover:text-white transition-colors duration-300"
           >
-            <X className="w-5 h-5" />
+            <CloseIcon size={20} />
           </button>
         </div>
-        <div className="text-gray-600 dark:text-gray-300 space-y-3">
+        <div className="text-ink-secondary dark:text-gray-300 space-y-3">
           <p>
             Some of our client automation projects are protected by
             non-disclosure agreements (NDAs) and cannot be publicly displayed.
@@ -210,7 +224,7 @@ const DisclaimerModal = ({
         <div className="mt-6 text-center">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-medium rounded-lg transition-colors duration-300"
+            className="btn-secondary"
           >
             Got it
           </button>
@@ -233,7 +247,7 @@ type Project = {
   image?: string;
   technologies: string[];
   results: string[];
-  icon: ComponentType<{ className?: string }>;
+  icon: ComponentType<IconProps>;
   link: string;
   github: string;
 };
@@ -467,7 +481,7 @@ const ProjectModal = ({
 
   const modalContent = (
     <div
-      className="fixed inset-0 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+      className="fixed inset-0 flex items-center justify-center p-4 bg-ink/80 dark:bg-black/80 backdrop-blur-md"
       style={{
         zIndex: 999999999,
         position: "fixed",
@@ -480,7 +494,8 @@ const ProjectModal = ({
       }}
     >
       <div
-        className="relative bg-white dark:bg-gray-900 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
+        className="relative bg-paper dark:bg-gray-900 modal-hex max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl
+          border border-brand/10 dark:border-brand/15"
         style={{
           zIndex: 999999999,
           position: "relative",
@@ -490,15 +505,16 @@ const ProjectModal = ({
         <button
           onClick={onClose}
           aria-label="Close modal"
-          className="absolute top-4 right-4 p-3 bg-red-500 hover:bg-red-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+          className="absolute top-4 right-4 p-3 bg-error hover:bg-error/90 clip-hex shadow-lg hover:shadow-xl
+            transition-all duration-300 group z-10"
           style={{ zIndex: 999999999 }}
         >
-          <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+          <CloseIcon size={20} className="text-white group-hover:rotate-90 transition-transform duration-300" />
         </button>
 
         <div className="flex flex-col h-full max-h-[90vh]">
           {/* Project Title Section */}
-          <div className="px-6 py-4 bg-gradient-to-r from-brand-orange to-brand-orange-dark flex-shrink-0">
+          <div className="px-6 py-4 bg-gradient-to-r from-brand to-accent flex-shrink-0">
             <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
               {project.title}
             </h2>
@@ -506,7 +522,7 @@ const ProjectModal = ({
               {project.technologies.slice(0, 4).map((tech: string) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm rounded-full"
+                  className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm hex-cut-sm"
                 >
                   {tech}
                 </span>
@@ -515,7 +531,7 @@ const ProjectModal = ({
           </div>
 
           {/* Image Section */}
-          <div className="w-full h-80 relative flex-shrink-0 bg-gray-50 dark:bg-gray-800">
+          <div className="w-full h-80 relative flex-shrink-0 bg-paper-secondary dark:bg-gray-800">
             {project.image && project.image.startsWith("/automations/") ? (
               <div
                 className="relative h-full group cursor-pointer"
@@ -527,18 +543,18 @@ const ProjectModal = ({
                   className="w-full h-full object-contain hover:opacity-90 transition-opacity duration-300"
                 />
                 {/* Click to expand indicator */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                  <div className="bg-gray-300/30 dark:bg-gray-800/30 px-4 py-2 rounded-lg backdrop-blur-sm">
-                    <span className="text-sm font-medium text-gray-900 dark:text-white">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-ink/20">
+                  <div className="bg-paper/80 dark:bg-gray-800/80 px-4 py-2 hex-cut-sm backdrop-blur-sm">
+                    <span className="text-sm font-medium text-ink dark:text-white">
                       Click to view full image
                     </span>
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="h-full bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center">
-                <div className="w-24 h-24 bg-brand-orange rounded-xl flex items-center justify-center">
-                  <project.icon className="w-12 h-12 text-white" />
+              <div className="h-full bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center">
+                <div className="icon-container w-24 h-24">
+                  <project.icon size={48} className="text-white" />
                 </div>
               </div>
             )}
@@ -549,28 +565,28 @@ const ProjectModal = ({
             <div className="space-y-6">
               {/* Description */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <Target className="w-5 h-5 mr-2 text-brand-orange" />
+                <h3 className="text-xl font-bold text-ink dark:text-white mb-3 flex items-center">
+                  <TargetIcon size={20} className="mr-2 text-brand" />
                   Overview
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-ink-secondary dark:text-gray-300 leading-relaxed">
                   {details.fullDescription}
                 </p>
               </div>
 
               {/* Key Features */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2 text-brand-orange" />
+                <h3 className="text-xl font-bold text-ink dark:text-white mb-3 flex items-center">
+                  <CheckCircleIcon size={20} className="mr-2 text-brand" />
                   Key Features
                 </h3>
                 <ul className="space-y-2">
                   {details.detailedFeatures.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start text-gray-600 dark:text-gray-300 text-sm"
+                      className="flex items-start text-ink-secondary dark:text-gray-300 text-sm"
                     >
-                      <div className="w-2 h-2 bg-brand-orange rounded-full mr-3 mt-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-brand clip-hex mr-3 mt-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -579,17 +595,17 @@ const ProjectModal = ({
 
               {/* Workflow Steps */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <Clock className="w-5 h-5 mr-2 text-brand-orange" />
+                <h3 className="text-xl font-bold text-ink dark:text-white mb-3 flex items-center">
+                  <ClockIcon size={20} className="mr-2 text-brand" />
                   How It Works
                 </h3>
                 <ol className="space-y-3">
                   {details.workflowSteps.map((step, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start text-gray-600 dark:text-gray-300 text-sm"
+                      className="flex items-start text-ink-secondary dark:text-gray-300 text-sm"
                     >
-                      <span className="flex-shrink-0 w-6 h-6 bg-brand-orange text-white rounded-full text-xs flex items-center justify-center mr-3 mt-0.5">
+                      <span className="flex-shrink-0 w-6 h-6 bg-brand text-white clip-hex text-xs flex items-center justify-center mr-3 mt-0.5">
                         {idx + 1}
                       </span>
                       {step}
@@ -600,17 +616,17 @@ const ProjectModal = ({
 
               {/* Business Impact */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2 text-brand-orange" />
+                <h3 className="text-xl font-bold text-ink dark:text-white mb-3 flex items-center">
+                  <TrendingUpIcon size={20} className="mr-2 text-brand" />
                   Business Impact
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {details.businessImpact.map((impact: string, idx: number) => (
                     <div
                       key={idx}
-                      className="p-3 bg-brand-orange/5 border border-brand-orange/20 rounded-lg"
+                      className="p-3 bg-brand/5 border border-brand/20 hex-cut-sm"
                     >
-                      <p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
+                      <p className="text-ink dark:text-gray-300 text-sm font-medium">
                         {impact}
                       </p>
                     </div>
@@ -620,17 +636,17 @@ const ProjectModal = ({
 
               {/* Technical Specifications */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <Zap className="w-5 h-5 mr-2 text-brand-orange" />
+                <h3 className="text-xl font-bold text-ink dark:text-white mb-3 flex items-center">
+                  <ZapIcon size={20} className="mr-2 text-brand" />
                   Technical Specifications
                 </h3>
                 <div className="space-y-2">
                   {details.technicalSpecs.map((spec: string, idx: number) => (
                     <div
                       key={idx}
-                      className="flex items-center text-gray-600 dark:text-gray-300 text-sm"
+                      className="flex items-center text-ink-secondary dark:text-gray-300 text-sm"
                     >
-                      <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3" />
+                      <div className="w-1.5 h-1.5 bg-brand clip-hex mr-3" />
                       {spec}
                     </div>
                   ))}
@@ -638,24 +654,26 @@ const ProjectModal = ({
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-4">
                 <a
                   href={project.link}
-                  className="flex-1 bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                  className="btn-primary flex-1 text-center"
                 >
                   View Live Demo
                 </a>
                 <a
                   href={project.github}
-                  className="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
+                  className="btn-secondary flex-1 text-center"
                 >
                   View Code
                 </a>
                 <button
                   onClick={onClose}
-                  className="px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+                  className="px-6 py-3 bg-ink/10 dark:bg-white/10 hover:bg-ink/20 dark:hover:bg-white/20
+                    text-ink dark:text-white font-semibold hex-cut-sm transition-all duration-300
+                    flex items-center justify-center gap-2"
                 >
-                  <X className="w-4 h-4" />
+                  <CloseIcon size={16} />
                   Close
                 </button>
               </div>
@@ -681,10 +699,11 @@ const ProjectModal = ({
               <button
                 onClick={() => setIsImageModalOpen(false)}
                 aria-label="Close full image"
-                className="absolute top-6 right-6 p-3 bg-red-500 hover:bg-red-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="absolute top-6 right-6 p-3 bg-error hover:bg-error/90 clip-hex shadow-lg hover:shadow-xl
+                  transition-all duration-300 group"
                 style={{ zIndex: 999999999 }}
               >
-                <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+                <CloseIcon size={24} className="text-white group-hover:rotate-90 transition-transform duration-300" />
               </button>
               <img
                 src={project.image}
@@ -722,7 +741,7 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 7,
       title: "Lead Flow Messenger Automation",
@@ -742,7 +761,7 @@ const Projects = () => {
         "Real-time CRM integration",
         "AI data extraction",
       ],
-      icon: MessageCircle,
+      icon: MessageIcon,
       link: "#",
       github: "#",
     },
@@ -767,7 +786,7 @@ const Projects = () => {
         "Automated contractor database scraping",
         "Hands-free voice operation",
       ],
-      icon: Users,
+      icon: UsersIcon,
       link: "#",
       github: "#",
     },
@@ -792,7 +811,7 @@ const Projects = () => {
         "Intelligent field mapping",
         "Zero manual data entry",
       ],
-      icon: TrendingUp,
+      icon: TrendingUpIcon,
       link: "#",
       github: "#",
     },
@@ -817,7 +836,7 @@ const Projects = () => {
         "Instant AI-powered responses",
         "Dual CRM synchronization",
       ],
-      icon: MessageCircle,
+      icon: MessageIcon,
       link: "#",
       github: "#",
     },
@@ -842,7 +861,7 @@ const Projects = () => {
         "Dynamic chart generation",
         "Instant report delivery",
       ],
-      icon: TrendingUp,
+      icon: TrendingUpIcon,
       link: "#",
       github: "#",
     },
@@ -871,117 +890,69 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+      className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
     >
-      {/* Enhanced AI Background - Home Style */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Animated Circuit Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern
-                id="circuit-projects"
-                x="0"
-                y="0"
-                width="100"
-                height="100"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M20,20 L80,20 L80,80 L20,80 Z"
-                  fill="none"
-                  stroke="#E56518"
-                  strokeWidth="1"
-                />
-                <circle cx="20" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="20" r="3" fill="#E56518" />
-                <circle cx="80" cy="80" r="3" fill="#E56518" />
-                <circle cx="20" cy="80" r="3" fill="#E56518" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#circuit-projects)" />
-          </svg>
-        </div>
-
-        {/* Floating AI Particles */}
-        <div className="absolute inset-0">
-          {[
-            { left: "15%", top: "20%", delay: "0s", duration: "4s" },
-            { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
-            { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
-            { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
-            { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
-            { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
-            { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
-            { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
-          ].map((particle, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-60"
-              style={{
-                left: particle.left,
-                top: particle.top,
-                animationDelay: particle.delay,
-                animationDuration: particle.duration,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/20 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/15 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
-      </div>
+      {/* Background Image */}
+      <img
+        src="/assets/beeInspiration/5303586.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20"
+      />
+      <div className="absolute inset-0 bg-paper/80 dark:bg-gray-950/75" />
+      <DarkHoneycombBackground patternId="projects-honeycomb" />
 
       <div className="container-width relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-16 md:mb-20 transition-all duration-1000 ease-out-expo ${
             isIntersecting
-              ? "animate-fade-in-up opacity-100"
+              ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-            <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
-            <span className="text-sm font-medium text-brand-orange">
-              Our Portfolio
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Our{" "}
-            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
-              Latest Projects
-            </span>
+          <h2 className="heading-lg text-ink dark:text-white mb-4 text-balance">
+            Our <span className="text-gradient">Latest Projects</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+
+          <p className="text-body-lg max-w-3xl mx-auto">
             Explore our portfolio of AI automation solutions that have
             transformed businesses across industries.
           </p>
         </div>
 
         {/* Search and Filter Section */}
-        <div className="mb-10">
-          <div className="flex items-center gap-4 justify-center">
+        <div
+          className={`mb-10 transition-all duration-1000 ease-out-expo delay-100 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="flex flex-wrap items-center gap-4 justify-center">
             {/* Filter Icon */}
             <button
               type="button"
               aria-label="Filter"
-              className="hidden sm:flex items-center justify-center w-8 h-8 rounded-md border border-white/10 bg-white/5 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-brand-orange/40"
+              className="hidden sm:flex items-center justify-center w-10 h-10 clip-hex
+                border border-ink/10 dark:border-white/10 bg-paper dark:bg-gray-800
+                text-ink-tertiary dark:text-gray-400 hover:text-brand hover:border-brand/40
+                transition-all duration-300"
             >
-              <Filter className="w-4 h-4" />
+              <FilterIcon size={18} />
             </button>
 
             {/* Filter Pills */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               {filters.map((filter) => (
                 <button
                   key={filter.id}
                   onClick={() => setActiveFilter(filter.id)}
-                  className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm border ${
+                  className={`px-5 py-2 hex-cut-sm text-sm font-medium transition-all duration-300
+                    border ${
                     activeFilter === filter.id
-                      ? "bg-brand-orange text-white border-brand-orange/60 shadow-brand-orange/20"
-                      : "bg-white/5 text-gray-600 dark:text-gray-300 border-white/10 hover:border-brand-orange/40 hover:text-gray-900 dark:hover:text-white"
+                      ? "bg-brand text-white border-brand shadow-brand"
+                      : "bg-paper dark:bg-gray-800 text-ink-secondary dark:text-gray-300 border-ink/10 dark:border-white/10 hover:border-brand/40 hover:text-brand"
                   }`}
                 >
                   {filter.label}
@@ -991,31 +962,39 @@ const Projects = () => {
 
             {/* Search Input */}
             <div className="relative w-72 sm:w-80">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 dark:text-gray-400" />
+              <SearchIcon size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-ink-tertiary dark:text-gray-400" />
               <input
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 rounded-lg bg-white/5 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange/40"
+                className="w-full pl-10 pr-4 py-2.5 hex-cut-sm bg-paper dark:bg-gray-800 text-ink dark:text-white
+                  placeholder-ink-tertiary dark:placeholder-gray-500 border border-ink/10 dark:border-white/10
+                  focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand/40
+                  transition-all duration-300"
               />
             </div>
           </div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filteredProjects.slice(0, 6).map((project, index) => {
             const IconComponent = project.icon;
             return (
               <div
                 key={project.id}
-                className="group bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-white/20 hover:border-brand-orange/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-brand-orange/10 overflow-hidden cursor-pointer"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`card-glass group p-0 overflow-hidden cursor-pointer transition-all duration-700 ease-out-expo
+                  hover:shadow-brand hover:-translate-y-1 ${
+                  isIntersecting
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-12"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => openModal(project)}
               >
                 {/* Project Image */}
-                <div className="h-48 bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 flex items-center justify-center relative overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center relative overflow-hidden">
                   {project.image &&
                   project.image.startsWith("/automations/") ? (
                     <img
@@ -1024,40 +1003,43 @@ const Projects = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-16 h-16 bg-brand-orange rounded-xl flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="icon-container w-16 h-16">
+                      <IconComponent size={32} className="text-white" />
                     </div>
                   )}
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-brand-orange/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                  <div className="absolute inset-0 bg-brand/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <a
                       href={project.link}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                      className="p-3 bg-white/20 backdrop-blur-sm clip-hex hover:bg-white/30 transition-all duration-300"
                     >
-                      <ExternalLink className="w-5 h-5 text-white" />
+                      <ExternalLinkIcon size={20} className="text-white" />
                     </a>
                     <a
                       href={project.github}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                      className="p-3 bg-white/20 backdrop-blur-sm clip-hex hover:bg-white/30 transition-all duration-300"
                     >
-                      <Github className="w-5 h-5 text-white" />
+                      <GitHubIcon size={20} className="text-white" />
                     </a>
                   </div>
                 </div>
 
                 {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-orange transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-ink dark:text-white mb-3
+                    group-hover:text-brand transition-colors duration-300">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+                  <p className="text-ink-secondary dark:text-gray-400 text-sm mb-4 leading-relaxed line-clamp-2">
                     {project.description}
                   </p>
 
                   {/* Technologies with responsive +N overflow */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="text-sm font-medium text-ink dark:text-white mb-2">
                       Technologies / Apps
                     </h4>
                     <TechList technologies={project.technologies} />
@@ -1065,16 +1047,16 @@ const Projects = () => {
 
                   {/* Results */}
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="text-sm font-medium text-ink dark:text-white mb-2">
                       Key Results
                     </h4>
                     <ul className="space-y-1">
                       {project.results.map((result, idx) => (
                         <li
                           key={idx}
-                          className="flex items-center text-xs text-gray-600 dark:text-gray-300"
+                          className="flex items-center text-xs text-ink-secondary dark:text-gray-400"
                         >
-                          <div className="w-2 h-2 bg-brand-orange rounded-full mr-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-brand clip-hex mr-2 flex-shrink-0" />
                           {result}
                         </li>
                       ))}
@@ -1091,30 +1073,36 @@ const Projects = () => {
           <div className="text-center mt-12">
             <a
               href="/projects"
-              className="inline-flex items-center bg-gray-300/30 dark:bg-gray-800/30 hover:bg-gray-300/40 dark:hover:bg-gray-800/40 text-gray-900 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-gray-200/50 dark:border-white/20 backdrop-blur-sm"
+              className="btn-secondary inline-flex items-center gap-2"
             >
               <span>See All Projects</span>
-              <ExternalLink className="w-5 h-5 ml-2" />
+              <ArrowRightIcon size={18} />
             </a>
           </div>
         )}
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gray-300/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-white/20 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        <div
+          className={`text-center mt-16 transition-all duration-1000 ease-out-expo delay-500 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="card-honeycomb hex-border-pulse p-10 md:p-12 max-w-3xl mx-auto text-center">
+            <h3 className="heading-md text-ink dark:text-white mb-4">
               Ready to Build Something Amazing?
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-body text-ink-secondary dark:text-gray-400 mb-8 max-w-xl mx-auto">
               Let's discuss your project requirements and create a custom AI
               automation solution for your business.
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="btn-primary inline-flex items-center gap-2"
             >
-              Start Your Project
-              <ExternalLink className="w-4 h-4 ml-2" />
+              <span>Start Your Project</span>
+              <ArrowRightIcon size={18} />
             </a>
           </div>
         </div>
@@ -1123,9 +1111,10 @@ const Projects = () => {
         <div className="text-center mt-8">
           <button
             onClick={() => setIsDisclaimerOpen(true)}
-            className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
+            className="inline-flex items-center text-sm text-ink-tertiary dark:text-gray-500
+              hover:text-ink dark:hover:text-gray-300 transition-colors duration-300"
           >
-            <Shield className="w-4 h-4 mr-2" />
+            <ShieldIcon size={16} className="mr-2" />
             Project Portfolio Information
           </button>
         </div>

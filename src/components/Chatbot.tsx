@@ -1,8 +1,13 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Bot, User } from "lucide-react";
-import { useTheme } from "@/lib/theme-context";
+import {
+  MessageIcon,
+  CloseIcon,
+  SendIcon,
+  BotIcon,
+  UserIcon,
+} from "@/components/icons/PremiumIcons";
 
 interface Message {
   id: string;
@@ -24,7 +29,6 @@ const Chatbot = () => {
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const { theme } = useTheme();
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -69,7 +73,6 @@ const Chatbot = () => {
   // Enhanced AI response generation with context awareness
   const generateBotResponse = (userMessage: string): string => {
     const message = userMessage.toLowerCase();
-    const words = message.split(" ");
 
     // Enhanced greeting responses with personality
     if (
@@ -193,27 +196,6 @@ const Chatbot = () => {
       message.includes("sector") ||
       message.includes("business type")
     ) {
-      const industry = words.find((word) =>
-        [
-          "ecommerce",
-          "healthcare",
-          "finance",
-          "real estate",
-          "marketing",
-          "manufacturing",
-        ].includes(word)
-      );
-      if (industry) {
-        const industryExamples: Record<string, string> = {
-          ecommerce:
-            "For e-commerce, we automate inventory management, order processing, customer support, and marketing campaigns. Our clients see 40% faster order fulfillment and 25% increase in customer satisfaction.",
-          healthcare:
-            "In healthcare, we automate patient scheduling, billing, insurance verification, and compliance reporting. This reduces administrative burden and improves patient care quality.",
-          finance:
-            "For finance, we automate loan processing, compliance reporting, risk assessment, and customer onboarding. This improves accuracy and reduces processing time by 60%.",
-        };
-        return industryExamples[industry] || nomanuaiKnowledge.industries;
-      }
       return nomanuaiKnowledge.industries;
     }
 
@@ -224,15 +206,6 @@ const Chatbot = () => {
       message.includes("help")
     ) {
       return "I can help answer specific questions about our services, pricing, process, or technologies. For detailed FAQs, visit our FAQ page. What specific question do you have about automation or our services?";
-    }
-
-    // Blog with topic suggestions
-    if (
-      message.includes("blog") ||
-      message.includes("article") ||
-      message.includes("insight")
-    ) {
-      return "We publish weekly insights on automation trends, implementation guides, and industry-specific solutions. Recent topics include: 'Automation ROI Calculation', 'AI in Customer Service', 'Workflow Optimization Strategies'. Is there a particular topic you'd like to explore?";
     }
 
     // Automation-specific questions
@@ -347,62 +320,50 @@ const Chatbot = () => {
     <>
       {/* Chat Button */}
       <button
+        type="button"
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus-ring ${
-          theme === "dark"
-            ? "bg-brand-orange text-white hover:bg-brand-orange-dark"
-            : "bg-brand-orange text-white hover:bg-brand-orange-dark"
-        }`}
+        className="fixed bottom-6 right-6 z-50 p-4 clip-hex shadow-elevation-high
+          bg-brand text-white hover:bg-brand-dark
+          transition-all duration-300 hover:scale-110 focus-ring"
         aria-label="Open AI Assistant"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageIcon size={24} />
       </button>
 
       {/* Chat Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-end justify-end p-4">
           <div
-            className="absolute inset-0 bg-black/50"
+            className="absolute inset-0 bg-ink/50 dark:bg-black/60 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
-          <div
-            className={`relative w-full max-w-md h-[600px] rounded-t-xl shadow-2xl flex flex-col ${
-              theme === "dark"
-                ? "bg-gray-900 border border-gray-700"
-                : "bg-white border border-gray-200"
-            }`}
-          >
+          <div className="relative w-full max-w-md h-[600px] modal-hex shadow-elevation-high
+            flex flex-col bg-paper dark:bg-gray-900 border border-brand/10 dark:border-brand/15">
             {/* Header */}
-            <div
-              className={`flex items-center justify-between p-4 rounded-t-xl ${
-                theme === "dark"
-                  ? "bg-gray-800 border-b border-gray-700"
-                  : "bg-gray-50 border-b border-gray-200"
-              }`}
-            >
+            <div className="flex items-center justify-between p-4
+              bg-paper-secondary dark:bg-gray-800 border-b border-brand/10 dark:border-brand/15">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-full bg-brand-orange">
-                  <Bot className="w-5 h-5 text-white" />
+                <div className="icon-hex w-10 h-10">
+                  <BotIcon size={20} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                  <h3 className="font-semibold text-ink dark:text-white">
                     NomanuAI Assistant
                   </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                  <p className="text-xs text-ink-tertiary dark:text-gray-400">
                     AI-powered help
                   </p>
                 </div>
               </div>
               <button
+                type="button"
                 onClick={() => setIsOpen(false)}
-                className={`p-2 rounded-lg transition-colors ${
-                  theme === "dark"
-                    ? "hover:bg-gray-700 text-gray-300"
-                    : "hover:bg-gray-200 text-gray-600"
-                }`}
+                className="p-2 hex-cut-sm hover:bg-ink/5 dark:hover:bg-white/5
+                  text-ink-tertiary dark:text-gray-400 hover:text-ink dark:hover:text-white
+                  transition-all duration-300"
                 aria-label="Close chat"
               >
-                <X className="w-5 h-5" />
+                <CloseIcon size={20} />
               </button>
             </div>
 
@@ -423,25 +384,23 @@ const Chatbot = () => {
                     }`}
                   >
                     <div
-                      className={`p-2 rounded-full ${
+                      className={`p-2 clip-hex flex-shrink-0 ${
                         message.sender === "user"
-                          ? "bg-brand-orange"
-                          : "bg-gray-200 dark:bg-gray-700"
+                          ? "bg-brand"
+                          : "bg-ink/10 dark:bg-white/10"
                       }`}
                     >
                       {message.sender === "user" ? (
-                        <User className="w-4 h-4 text-white" />
+                        <UserIcon size={16} className="text-white" />
                       ) : (
-                        <Bot className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+                        <BotIcon size={16} className="text-ink-secondary dark:text-gray-300" />
                       )}
                     </div>
                     <div
-                      className={`p-3 rounded-lg ${
+                      className={`p-3 hex-cut-sm ${
                         message.sender === "user"
-                          ? "bg-brand-orange text-white"
-                          : theme === "dark"
-                          ? "bg-gray-800 text-gray-100"
-                          : "bg-gray-100 text-gray-800"
+                          ? "bg-brand text-white"
+                          : "bg-paper-secondary dark:bg-gray-800 text-ink dark:text-gray-100"
                       }`}
                     >
                       <p className="text-sm leading-relaxed">{message.text}</p>
@@ -460,24 +419,18 @@ const Chatbot = () => {
               {isTyping && (
                 <div className="flex justify-start">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
-                      <Bot className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+                    <div className="p-2 clip-hex bg-ink/10 dark:bg-white/10">
+                      <BotIcon size={16} className="text-ink-secondary dark:text-gray-300" />
                     </div>
-                    <div
-                      className={`p-3 rounded-lg ${
-                        theme === "dark"
-                          ? "bg-gray-800 text-gray-100"
-                          : "bg-gray-100 text-gray-800"
-                      }`}
-                    >
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                    <div className="p-3 hex-cut-sm bg-paper-secondary dark:bg-gray-800">
+                      <div className="flex space-x-1.5">
+                        <div className="w-2 h-2 bg-brand/50 dark:bg-brand/40 clip-hex animate-bounce"></div>
                         <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          className="w-2 h-2 bg-brand/50 dark:bg-brand/40 clip-hex animate-bounce"
                           style={{ animationDelay: "0.1s" }}
                         ></div>
                         <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          className="w-2 h-2 bg-brand/50 dark:bg-brand/40 clip-hex animate-bounce"
                           style={{ animationDelay: "0.2s" }}
                         ></div>
                       </div>
@@ -489,7 +442,7 @@ const Chatbot = () => {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="p-4 border-t border-ink/10 dark:border-white/10">
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -497,23 +450,23 @@ const Chatbot = () => {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask me about NomanuAI..."
-                  className={`flex-1 px-3 py-2 rounded-lg border transition-colors focus-ring ${
-                    theme === "dark"
-                      ? "bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-brand-orange"
-                      : "bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brand-orange"
-                  }`}
+                  className="flex-1 px-4 py-2 rounded-xl border transition-all duration-300 focus-ring
+                    bg-paper dark:bg-gray-800 border-ink/10 dark:border-white/10
+                    text-ink dark:text-white placeholder-ink-tertiary dark:placeholder-gray-500
+                    focus:border-brand"
                 />
                 <button
+                  type="button"
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim() || isTyping}
-                  className={`p-2 rounded-lg transition-colors ${
+                  className={`p-3 rounded-xl transition-all duration-300 ${
                     inputValue.trim() && !isTyping
-                      ? "bg-brand-orange text-white hover:bg-brand-orange-dark"
-                      : "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed"
+                      ? "bg-brand text-white hover:bg-brand-dark"
+                      : "bg-ink/10 dark:bg-white/10 text-ink-tertiary dark:text-gray-500 cursor-not-allowed"
                   }`}
                   aria-label="Send message"
                 >
-                  <Send className="w-5 h-5" />
+                  <SendIcon size={20} />
                 </button>
               </div>
             </div>
