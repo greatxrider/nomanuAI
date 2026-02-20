@@ -1,0 +1,78 @@
+[     521ms] [WARNING] Missing Supabase environment variables - using placeholder values @ http://localhost:3001/_next/static/chunks/app/page-6ed5246b91cf0e9e.js:0
+[     721ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    7751ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3001/_next/static/chunks/app/aboutus/page-146ade133828e287.js:0
+[    7751ms] [ERROR] Refused to execute script from 'http://localhost:3001/_next/static/chunks/app/aboutus/page-146ade133828e287.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3001/:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   10918ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   10918ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   12332ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   10918ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   12332ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[   19475ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   10918ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   12332ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[   19475ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   10918ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   12332ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[   19475ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[    7402ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie:0
+[    7408ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie:0
+[    8596ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie:0
+[    9724ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie:0
+[    9732ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie:0
+[   10918ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie:0
+[   12332ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie:0
+[   19475ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://lottie.host/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie:0
+[   25582ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3001/_next/static/chunks/app/blog/why-automation-is-future-of-business/page-9ba33be9c87feb54.js:0
+[   25582ms] [ERROR] Refused to execute script from 'http://localhost:3001/_next/static/chunks/app/blog/why-automation-is-future-of-business/page-9ba33be9c87feb54.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3001/:0
+[   25597ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3001/_next/static/chunks/app/blog/how-automation-saves-money-and-time/page-a4da129b65a6c514.js:0
+[   25597ms] [ERROR] Refused to execute script from 'http://localhost:3001/_next/static/chunks/app/blog/how-automation-saves-money-and-time/page-a4da129b65a6c514.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3001/:0
+[   25597ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3001/_next/static/chunks/app/blog/automation-best-practices-for-success/page-a4da129b65a6c514.js:0
+[   25597ms] [ERROR] Refused to execute script from 'http://localhost:3001/_next/static/chunks/app/blog/automation-best-practices-for-success/page-a4da129b65a6c514.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3001/:0
+[   25601ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3001/_next/static/chunks/app/blog/page-98de2e59b6e462df.js:0
+[   25601ms] [ERROR] Refused to execute script from 'http://localhost:3001/_next/static/chunks/app/blog/page-98de2e59b6e462df.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3001/:0

@@ -95,15 +95,12 @@ const WhyChooseUs = () => {
       ref={ref}
       className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
     >
-      {/* Background Image */}
-      <img
-        src="/assets/beeInspiration/5303586.jpg"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-20"
-      />
-      <div className="absolute inset-0 bg-paper/80 dark:bg-gray-950/75" />
-      <DarkHoneycombBackground patternId="whychoose-honeycomb" />
+      {/* Background Pattern */}
+      <DarkHoneycombBackground patternId="why-choose-us-honeycomb" />
+      
+      {/* Top/Bottom Dividers */}
+      <div className="absolute top-0 left-0 right-0 divider-honeycomb" />
+      <div className="absolute bottom-0 left-0 right-0 divider-honeycomb" />
 
       <div className="container-width relative z-10">
         {/* Section Header */}
@@ -167,12 +164,15 @@ const WhyChooseUs = () => {
                           loading="lazy"
                         />
                       ) : (
-                        <Image
-                          src={feature.image}
-                          alt={feature.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={feature.image}
+                            alt={feature.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                        </div>
                       )}
                     </div>
                   </>
@@ -189,12 +189,15 @@ const WhyChooseUs = () => {
                           loading="lazy"
                         />
                       ) : (
-                        <Image
-                          src={feature.image}
-                          alt={feature.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={feature.image}
+                            alt={feature.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                        </div>
                       )}
                     </div>
 

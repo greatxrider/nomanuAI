@@ -44,16 +44,11 @@ const WhyAutomate = () => {
     <section
       ref={ref}
       id="why-automate"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+      className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
     >
-      {/* Background Image */}
-      <img
-        src="/assets/beeInspiration/5303586.jpg"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
+      {/* Pattern B - Clean with honeycomb dividers */}
+      <div className="absolute top-0 left-0 right-0 divider-honeycomb" />
+      <div className="absolute bottom-0 left-0 right-0 divider-honeycomb" />
 
       <div className="container-width relative z-10">
         {/* Section Header */}

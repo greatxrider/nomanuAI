@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
-import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
+
 
 export default function Home() {
   const { ref: blogRef, isIntersecting: blogIsIntersecting } =
@@ -72,17 +72,11 @@ export default function Home() {
       {/* Stay Updated Section */}
       <section
         ref={blogRef}
-        className="relative py-16 bg-gradient-to-b from-paper via-paper to-paper-secondary dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 overflow-hidden"
+        className="relative py-16 bg-paper dark:bg-gray-950 overflow-hidden"
       >
-        {/* Background Image */}
-        <img
-          src="/assets/beeInspiration/5303586.jpg"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.08] dark:opacity-15"
-        />
-        <div className="absolute inset-0 bg-paper/85 dark:bg-gray-950/80" />
-        <DarkHoneycombBackground patternId="blog-honeycomb" />
+        {/* Pattern B - Clean with honeycomb dividers */}
+        <div className="absolute top-0 left-0 right-0 divider-honeycomb" />
+        <div className="absolute bottom-0 left-0 right-0 divider-honeycomb" />
 
         <div className="container-width relative z-10">
           {/* Section Header */}

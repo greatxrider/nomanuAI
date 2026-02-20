@@ -10,10 +10,11 @@ import {
   BillingIcon,
   SocialIcon,
   DiscoveryIcon,
-  ProcessorIcon,
   NetworkIcon,
   ArrowRightIcon,
+  HexagonIcon,
 } from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 const Services = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
@@ -128,16 +129,17 @@ const Services = () => {
     <section
       ref={ref}
       id="services"
-      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
+      className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Pattern C - Paper with honeycomb background */}
       <img
         src="/assets/beeInspiration/5303586.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.25] dark:opacity-15"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
+      <div className="absolute inset-0 bg-paper/60 dark:bg-gray-950/80" />
+      <DarkHoneycombBackground patternId="services-honeycomb" />
 
       <div className="container-width relative z-10">
         {/* Section Header - Apple-style */}

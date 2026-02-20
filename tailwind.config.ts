@@ -103,21 +103,23 @@ const config: Config = {
     			}
     		},
     		fontFamily: {
-    			sans: [
-    				'Plus Jakarta Sans',
-    				'-apple-system',
-    				'BlinkMacSystemFont',
-    				'Segoe UI',
-    				'Roboto',
-    				'sans-serif'
-    			],
-    			display: [
-    				'Exo 2',
-    				'-apple-system',
-    				'BlinkMacSystemFont',
-    				'Segoe UI',
-    				'sans-serif'
-    			]
+			sans: [
+				'var(--font-plus-jakarta)',
+				'Plus Jakarta Sans',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'Segoe UI',
+				'Roboto',
+				'sans-serif'
+			],
+			display: [
+				'var(--font-exo2)',
+				'Exo 2',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'Segoe UI',
+				'sans-serif'
+			]
     		},
     		fontSize: {
     			'display-2xl': [

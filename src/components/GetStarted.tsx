@@ -9,25 +9,22 @@ import {
   BrainIcon,
   CheckIcon,
 } from "@/components/icons/PremiumIcons";
-import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
-
 const GetStarted = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <section
       ref={ref}
-      className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
+      className="relative section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Pattern A - Gradient with texture */}
       <img
         src="/assets/beeInspiration/5303586.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.08] dark:opacity-15"
+        className="absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-30"
       />
-      <div className="absolute inset-0 bg-paper/85 dark:bg-gray-950/80" />
-      <DarkHoneycombBackground patternId="getstarted-honeycomb" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/80 via-white/70 to-gray-100/80 dark:from-gray-950/70 dark:via-gray-900/60 dark:to-gray-950/70" />
 
       <div className="container-width relative z-10">
         {/* Section Header */}

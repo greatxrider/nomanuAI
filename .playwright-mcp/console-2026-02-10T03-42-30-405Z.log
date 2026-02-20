@@ -1,0 +1,2 @@
+[     110ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3001/clientintake:0
+[     368ms] [WARNING] Missing Supabase environment variables - using placeholder values @ http://localhost:3001/_next/static/chunks/app/page-31bdd893cb38c438.js:0

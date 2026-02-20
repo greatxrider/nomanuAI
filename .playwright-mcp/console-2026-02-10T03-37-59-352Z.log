@@ -1,0 +1,17 @@
+[     498ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3000/salescrmmanagement:0
+[    2673ms] [ERROR] Failed to fetch RSC payload for http://localhost:3000/clientintake. Falling back to browser navigation. Error: Failed to read a RSC payload created by a development version of React on the server while using a production version on the client. Always use matching versions on the server and the client.
+    at http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:150920
+    at t (http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:151413) @ http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:0
+[    2674ms] [ERROR] Failed to fetch RSC payload for http://localhost:3000/projectmanagement. Falling back to browser navigation. Error: Failed to read a RSC payload created by a development version of React on the server while using a production version on the client. Always use matching versions on the server and the client.
+    at http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:150920
+    at t (http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:151413) @ http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:0
+[    2674ms] [ERROR] Failed to fetch RSC payload for http://localhost:3000/billingpayment. Falling back to browser navigation. Error: Failed to read a RSC payload created by a development version of React on the server while using a production version on the client. Always use matching versions on the server and the client.
+    at http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:150920
+    at t (http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:151413) @ http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:0
+[    2675ms] [ERROR] Failed to fetch RSC payload for http://localhost:3000/socialmedia. Falling back to browser navigation. Error: Failed to read a RSC payload created by a development version of React on the server while using a production version on the client. Always use matching versions on the server and the client.
+    at http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:150920
+    at t (http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:151413) @ http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:0
+[    5206ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=ls5y0:0
+[    5208ms] [ERROR] Failed to fetch RSC payload for http://localhost:3000/faq. Falling back to browser navigation. Error: Failed to read a RSC payload created by a development version of React on the server while using a production version on the client. Always use matching versions on the server and the client.
+    at http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:150920
+    at t (http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:1:151413) @ http://localhost:3000/_next/static/chunks/255-e3bf15caf1f1e0f9.js:0

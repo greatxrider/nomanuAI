@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Exo_2, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme-context";
 import Chatbot from "@/components/Chatbot";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const exo2 = Exo_2({ 
+  subsets: ["latin"], 
+  variable: "--font-exo2",
+  display: 'swap',
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({ 
+  subsets: ["latin"], 
+  variable: "--font-plus-jakarta",
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nomanuai.com"),
@@ -77,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={`${exo2.variable} ${plusJakartaSans.variable}`} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
         <link rel="icon" href="/favicon.ico" />
@@ -142,7 +152,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} antialiased transition-colors duration-300`}
+        className={`font-sans antialiased transition-colors duration-300`}
         suppressHydrationWarning
       >
         <ThemeProvider>

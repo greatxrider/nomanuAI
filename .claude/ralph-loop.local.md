@@ -2,8 +2,8 @@
 active: true
 iteration: 1
 max_iterations: 0
-completion_promise: "The UI is fully consistent with no visual bugs, dark/light modes work correctly, backgrounds are harmonious, colors are in sync, and the design looks professional"
-started_at: "2026-01-30T00:58:18Z"
+completion_promise: "All tests pass"
+started_at: "2026-02-10T03:27:57Z"
 ---
 
---prompt Review and fix all UI inconsistencies - ensure dark/light modes work correctly, backgrounds are harmonious across all sections, colors are in sync, and the design looks professional with no visual bugs
+Update all service sub-pages to match the homepage hex beehive design system

@@ -11,6 +11,7 @@ import {
   StarIcon,
   CalendarIcon,
   CheckIcon,
+  HexagonIcon,
 } from "@/components/icons/PremiumIcons";
 import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
@@ -134,71 +135,77 @@ const Testimonials = () => {
         src="/assets/beeInspiration/5303586.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.08] dark:opacity-15"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.25] dark:opacity-15"
       />
-      <div className="absolute inset-0 bg-paper/85 dark:bg-gray-950/80" />
+      <div className="absolute inset-0 bg-paper/60 dark:bg-gray-950/80" />
       <DarkHoneycombBackground patternId="testimonials-honeycomb" />
 
       <div className="container-width relative z-10">
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Info & Stats */}
           <div
-            className={`flex transition-all duration-1000 ease-out-expo ${
+            className={`flex flex-col transition-all duration-1000 ease-out-expo ${
               isIntersecting
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="card-glass group p-8 md:p-10 w-full flex flex-col justify-center">
-              <h3 className="heading-md text-ink dark:text-white mb-6">
+            <div className="mb-8">
+              <div className="badge mb-4">
+                <HexagonIcon size={14} className="mr-2 text-brand" />
+                <span>Client Success Stories</span>
+              </div>
+              <h2 className="heading-lg text-ink dark:text-white mb-6 text-balance">
                 <span className="text-gradient">Half the Workload,</span>
                 <br />
                 Full Speed Ahead
-              </h3>
+              </h2>
 
-              <p className="text-body text-ink-secondary dark:text-gray-400 mb-8">
+              <p className="text-body-lg text-ink-secondary dark:text-gray-400 mb-8 max-w-lg">
                 Nomanu AI designs, builds, and runs automation workflows that
                 remove the repetitive clicks, manual updates, and constant
                 follow-ups slowing your team down.
               </p>
+            </div>
 
-              {/* Key Benefits */}
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 clip-hex bg-success/10 flex items-center justify-center">
-                    <CheckIcon size={14} className="text-success" />
-                  </div>
-                  <span className="text-[15px] text-ink-secondary dark:text-gray-300">
-                    20+ hours reclaimed every week
-                  </span>
+            {/* Key Benefits */}
+            <div className="space-y-5 mb-10">
+              <div className="flex items-center gap-4 group">
+                <div className="w-10 h-10 clip-hex bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors duration-300">
+                  <CheckIcon size={18} className="text-success" />
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 clip-hex bg-success/10 flex items-center justify-center">
-                    <CheckIcon size={14} className="text-success" />
-                  </div>
-                  <span className="text-[15px] text-ink-secondary dark:text-gray-300">
-                    Instant process improvements from day one
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 clip-hex bg-success/10 flex items-center justify-center">
-                    <CheckIcon size={14} className="text-success" />
-                  </div>
-                  <span className="text-[15px] text-ink-secondary dark:text-gray-300">
-                    No extra hires. No extra tools. Just results.
-                  </span>
-                </div>
+                <span className="text-lg text-ink dark:text-gray-200 font-medium">
+                  20+ hours reclaimed every week
+                </span>
               </div>
+              <div className="flex items-center gap-4 group">
+                <div className="w-10 h-10 clip-hex bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors duration-300">
+                  <CheckIcon size={18} className="text-success" />
+                </div>
+                <span className="text-lg text-ink dark:text-gray-200 font-medium">
+                  Instant process improvements from day one
+                </span>
+              </div>
+              <div className="flex items-center gap-4 group">
+                <div className="w-10 h-10 clip-hex bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors duration-300">
+                  <CheckIcon size={18} className="text-success" />
+                </div>
+                <span className="text-lg text-ink dark:text-gray-200 font-medium">
+                  No extra hires. No extra tools. Just results.
+                </span>
+              </div>
+            </div>
 
-              {/* CTA Button */}
+            {/* CTA Button */}
+            <div>
               <Link
                 href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="btn-primary inline-flex items-center justify-center gap-2 w-full sm:w-auto shadow-brand hover:shadow-brand-lg"
               >
-                <CalendarIcon size={18} />
+                <CalendarIcon size={20} />
                 <span>Book Free Consultation</span>
               </Link>
             </div>
@@ -212,90 +219,102 @@ const Testimonials = () => {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="card-glass group p-8 md:p-10 w-full flex flex-col justify-center relative flex-1">
-              {/* Floating Quote Icon */}
-              <div className="absolute -top-5 left-1/2 -translate-x-1/2 icon-hex w-10 h-10">
-                <QuoteIcon size={18} className="text-white" />
-              </div>
-
-              {/* Testimonial Content */}
-              <div className="relative z-10 text-center pt-4">
-                <div className="w-20 h-20 clip-hex bg-gradient-to-br from-brand/30 to-brand-light/20 p-[3px] mx-auto mb-6">
-                  <div className="w-full h-full clip-hex overflow-hidden">
-                    <Image
-                      src={testimonials[active].avatar}
-                      alt={testimonials[active].name}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            <div className="relative mt-8">
+              {/* Decorative Elements */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand/10 clip-hex animate-float pointer-events-none" />
+              <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-honey/10 clip-hex animate-float animation-delay-500 pointer-events-none" />
+              
+              <div className="card-honeycomb group p-8 md:p-12 w-full flex flex-col justify-center relative z-10 bg-white dark:bg-gray-800 border border-ink/5 dark:border-white/5 shadow-xl">
+                {/* Floating Quote Icon */}
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 icon-hex w-12 h-12 shadow-lg">
+                  <QuoteIcon size={20} className="text-white" />
                 </div>
 
-                <div className="flex justify-center gap-1 mb-4">
-                  {renderStars(testimonials[active].rating)}
-                </div>
-
-                <p className="text-lg text-ink dark:text-gray-100 mb-6 leading-relaxed italic">
-                  "{testimonials[active].content}"
-                </p>
-
-                <div className="text-center">
-                  <div className="font-semibold text-brand text-lg">
-                    {testimonials[active].name}
+                {/* Testimonial Content */}
+                <div className="relative z-10 text-center pt-6">
+                  {/* Avatar */}
+                  <div className="w-24 h-24 clip-hex bg-gradient-to-br from-brand to-honey p-[3px] mx-auto mb-6 shadow-md">
+                    <div className="w-full h-full clip-hex overflow-hidden bg-white">
+                      <Image
+                        src={testimonials[active].avatar}
+                        alt={testimonials[active].name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <div className="text-[14px] text-ink-tertiary dark:text-gray-500">
-                    {testimonials[active].company}
+
+                  {/* Stars */}
+                  <div className="flex justify-center gap-1.5 mb-6">
+                    {renderStars(testimonials[active].rating)}
+                  </div>
+
+                  {/* Quote */}
+                  <blockquote className="text-xl md:text-2xl text-ink dark:text-white mb-8 leading-relaxed font-medium">
+                    "{testimonials[active].content}"
+                  </blockquote>
+
+                  {/* Author Info */}
+                  <div className="text-center border-t border-ink/5 dark:border-white/10 pt-6">
+                    <div className="font-bold text-brand text-lg mb-1">
+                      {testimonials[active].name}
+                    </div>
+                    <div className="text-sm font-medium text-ink-tertiary dark:text-gray-400 uppercase tracking-wide">
+                      {testimonials[active].company}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Navigation */}
-            <div className="flex justify-center gap-4 mt-6">
-              <button
-                type="button"
-                className="w-10 h-10 clip-hex bg-ink/5 dark:bg-white/5
-                  flex items-center justify-center
-                  hover:bg-brand hover:text-white
-                  text-ink-secondary dark:text-gray-400
-                  transition-all duration-300 ease-out-expo"
-                onClick={() =>
-                  goTo((active - 1 + testimonials.length) % testimonials.length)
-                }
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeftIcon size={18} />
-              </button>
-              <button
-                type="button"
-                className="w-10 h-10 clip-hex bg-ink/5 dark:bg-white/5
-                  flex items-center justify-center
-                  hover:bg-brand hover:text-white
-                  text-ink-secondary dark:text-gray-400
-                  transition-all duration-300 ease-out-expo"
-                onClick={() => goTo((active + 1) % testimonials.length)}
-                aria-label="Next testimonial"
-              >
-                <ChevronRightIcon size={18} />
-              </button>
-            </div>
-
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-4">
-              {testimonials.map((_, i) => (
+            <div className="flex flex-col items-center mt-8 gap-6">
+              <div className="flex justify-center gap-4">
                 <button
-                  key={i}
                   type="button"
-                  className={`w-2.5 h-2.5 clip-hex transition-all duration-300 ease-out-expo ${
-                    i === active
-                      ? "bg-brand scale-150"
-                      : "bg-ink/20 dark:bg-white/20 hover:bg-ink/40 dark:hover:bg-white/40"
-                  }`}
-                  onClick={() => goTo(i)}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
+                  className="w-12 h-12 clip-hex bg-white dark:bg-gray-800 border border-ink/10 dark:border-white/10
+                    flex items-center justify-center
+                    hover:bg-brand hover:text-white hover:border-brand
+                    text-ink-secondary dark:text-gray-400
+                    transition-all duration-300 ease-out-expo shadow-sm hover:shadow-md"
+                  onClick={() =>
+                    goTo((active - 1 + testimonials.length) % testimonials.length)
+                  }
+                  aria-label="Previous testimonial"
+                >
+                  <ChevronLeftIcon size={20} />
+                </button>
+                <button
+                  type="button"
+                  className="w-12 h-12 clip-hex bg-white dark:bg-gray-800 border border-ink/10 dark:border-white/10
+                    flex items-center justify-center
+                    hover:bg-brand hover:text-white hover:border-brand
+                    text-ink-secondary dark:text-gray-400
+                    transition-all duration-300 ease-out-expo shadow-sm hover:shadow-md"
+                  onClick={() => goTo((active + 1) % testimonials.length)}
+                  aria-label="Next testimonial"
+                >
+                  <ChevronRightIcon size={20} />
+                </button>
+              </div>
+
+              {/* Dots */}
+              <div className="flex justify-center gap-3">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className={`w-3 h-3 clip-hex transition-all duration-300 ease-out-expo ${
+                      i === active
+                        ? "bg-brand scale-125"
+                        : "bg-ink/20 dark:bg-white/20 hover:bg-ink/40 dark:hover:bg-white/40"
+                    }`}
+                    onClick={() => goTo(i)}
+                    aria-label={`Go to testimonial ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

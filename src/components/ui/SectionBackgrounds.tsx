@@ -11,7 +11,7 @@ export const DarkHoneycombBackground: React.FC<BackgroundProps> = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <div
-        className="absolute inset-0 opacity-[0.08] dark:opacity-[0.20]"
+        className="absolute inset-0 opacity-[0.15] dark:opacity-[0.20]"
         style={{
           backgroundImage: "url('/assets/beeInspiration/2754781-2.jpg')",
           backgroundSize: "cover",

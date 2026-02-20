@@ -4,19 +4,36 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 import {
-  ChevronDown,
-  ChevronUp,
-  Zap,
-  Users,
-  Settings,
-  Shield,
-  Brain,
-  Building,
-  Globe,
-  Clock,
-  DollarSign,
-} from "lucide-react";
+  ChevronDownIcon,
+  ChevronUpIcon,
+  ZapIcon,
+  UsersIcon,
+  SettingsIcon,
+  ShieldIcon,
+  BrainIcon,
+  NetworkIcon, // Replaced Globe with NetworkIcon or similar
+  ClockIcon,
+  DollarIcon,
+  ArrowRightIcon,
+  HexagonIcon,
+  HelpIcon,
+  BriefcaseIcon, // Replaced Building with BriefcaseIcon
+} from "@/components/icons/PremiumIcons";
+
+// Aliases
+const ChevronDown = ChevronDownIcon;
+const ChevronUp = ChevronUpIcon;
+const Zap = ZapIcon;
+const Users = UsersIcon;
+const Settings = SettingsIcon;
+const Shield = ShieldIcon;
+const Brain = BrainIcon;
+const Building = BriefcaseIcon; // Fallback
+const Globe = NetworkIcon; // Fallback
+const Clock = ClockIcon;
+const DollarSign = DollarIcon;
 
 const FAQPage = () => {
   const [openItems, setOpenItems] = useState<string[]>([]);
@@ -105,88 +122,34 @@ const FAQPage = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <main className="min-h-screen bg-paper dark:bg-gray-950 transition-colors duration-300">
       <Header />
 
-      {/* Hero Section - Home Background Style */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
-        {/* Enhanced AI Background - Home Style */}
+      {/* Hero Section - AI Inspired */}
+      {/* Pattern A */}
+      <section className="relative pt-36 pb-20 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         <div className="absolute inset-0 overflow-hidden">
-          {/* Animated Circuit Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="circuit-faq-hero"
-                  x="0"
-                  y="0"
-                  width="100"
-                  height="100"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M20,20 L80,20 L80,80 L20,80 Z"
-                    fill="none"
-                    stroke="#E56518"
-                    strokeWidth="1"
-                  />
-                  <circle cx="20" cy="20" r="3" fill="#E56518" />
-                  <circle cx="80" cy="20" r="3" fill="#E56518" />
-                  <circle cx="80" cy="80" r="3" fill="#E56518" />
-                  <circle cx="20" cy="80" r="3" fill="#E56518" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#circuit-faq-hero)" />
-            </svg>
-          </div>
-
-          {/* Floating AI Particles */}
-          <div className="absolute inset-0">
-            {[
-              { left: "15%", top: "20%", delay: "0s", duration: "4s" },
-              { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
-              { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
-              { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
-              { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
-              { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
-              { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
-              { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
-            ].map((particle, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-60"
-                style={{
-                  left: particle.left,
-                  top: particle.top,
-                  animationDelay: particle.delay,
-                  animationDuration: particle.duration,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Gradient Orbs */}
-          <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/20 rounded-full filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/15 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
+          <div className="absolute inset-0 opacity-50 dark:opacity-30" style={{ backgroundImage: "url('/assets/beeInspiration/5303586.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-white/40 to-gray-100/50 dark:from-gray-950/70 dark:via-gray-900/60 dark:to-gray-950/70" />
         </div>
 
         <div className="container-width relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-6 py-3 bg-brand-orange/10 border border-brand-orange/30 rounded-full backdrop-blur-sm mb-8">
-              <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse mr-3" />
-              <span className="text-sm font-medium text-brand-orange">
+            <div className="badge-glass mb-8">
+              <HelpIcon size={16} className="mr-2 text-brand" />
+              <span className="font-display tracking-wide text-xs uppercase font-bold">
                 Frequently Asked Questions
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="heading-display mb-6">
               Everything You Need to Know About{" "}
-              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              <span className="honey-shimmer">
                 AI Automation
               </span>
             </h1>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-body-lg max-w-3xl mx-auto">
               Your complete guide to understanding how we can transform your
               business with smart automation
             </p>
@@ -195,45 +158,11 @@ const FAQPage = () => {
       </section>
 
       {/* FAQ Content - Services Background Style */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 relative z-20 overflow-hidden">
-        {/* Glowing Orange Gradient Background Effects - Services Style */}
+      <section className="py-16 bg-paper dark:bg-gray-950 relative z-20 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          {/* Large Glowing Orange Gradient Orbs - Brighter Edges */}
-          <div className="absolute top-10 -left-20 w-96 h-96 bg-gradient-to-r from-brand-orange/70 via-orange-400/40 to-brand-orange-light/60 rounded-full blur-3xl animate-pulse opacity-90" />
-          <div
-            className="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-gradient-to-r from-brand-orange-light/60 via-brand-orange/70 to-orange-500/50 rounded-full blur-3xl animate-pulse opacity-80"
-            style={{ animationDelay: "2s" }}
-          />
-
-          {/* Central Glowing Effect */}
-          <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-brand-orange/10 via-orange-400/15 to-brand-orange/10 rounded-full blur-3xl animate-pulse opacity-40"
-            style={{ animationDelay: "4s" }}
-          />
-
-          {/* Additional Floating Orange Particles - Brighter */}
-          <div className="absolute inset-0 opacity-80">
-            {[
-              { left: "15%", top: "20%", delay: "0s", size: "w-4 h-4" },
-              { left: "85%", top: "30%", delay: "1s", size: "w-3 h-3" },
-              { left: "25%", top: "70%", delay: "2s", size: "w-5 h-5" },
-              { left: "75%", top: "60%", delay: "3s", size: "w-3 h-3" },
-              { left: "45%", top: "15%", delay: "4s", size: "w-4 h-4" },
-              { left: "65%", top: "80%", delay: "5s", size: "w-3 h-3" },
-            ].map((particle, i) => (
-              <div
-                key={i}
-                className={`absolute ${particle.size} bg-gradient-to-r from-brand-orange to-orange-400 rounded-full animate-pulse`}
-                style={{
-                  left: particle.left,
-                  top: particle.top,
-                  animationDelay: particle.delay,
-                  animationDuration: "3s",
-                  filter: "blur(1px)",
-                }}
-              />
-            ))}
-          </div>
+          <div className="absolute inset-0 opacity-[0.25] dark:opacity-15" style={{ backgroundImage: "url('/assets/beeInspiration/5303586.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div className="absolute inset-0 bg-paper/60 dark:bg-gray-950/80" />
+          <DarkHoneycombBackground patternId="faq-content-honeycomb" />
         </div>
 
         <div className="container-width relative z-10">
@@ -246,11 +175,11 @@ const FAQPage = () => {
                 .map((faq) => (
                   <div
                     key={faq.id}
-                    className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 relative z-50"
+                    className="card-honeycomb group"
                   >
                     <div
                       onClick={() => handleClick(faq.id)}
-                      className="w-full px-6 py-4 text-left flex items-start justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200 rounded-xl cursor-pointer relative z-60"
+                      className="w-full px-6 py-5 text-left flex items-start justify-between gap-4 cursor-pointer relative z-10"
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
@@ -259,31 +188,28 @@ const FAQPage = () => {
                           handleClick(faq.id);
                         }
                       }}
-                      style={{ position: "relative", zIndex: 100 }}
                     >
-                      <div className="flex items-start gap-3 flex-1">
-                        <div className="flex-shrink-0 mt-1">
-                          <faq.icon className="w-5 h-5 text-brand-orange" />
+                      <div className="flex items-start gap-4 flex-1">
+                        <div className="icon-hex w-10 h-10 flex-shrink-0 mt-0.5">
+                          <faq.icon className="w-5 h-5 text-white" />
                         </div>
-                        <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-relaxed">
+                        <h3 className="text-lg font-semibold text-ink dark:text-white leading-relaxed pt-1.5 group-hover:text-brand transition-colors duration-300">
                           {faq.question}
                         </h3>
                       </div>
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 pt-2">
                         {openItems.includes(faq.id) ? (
-                          <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                          <ChevronUp className="w-5 h-5 text-ink-tertiary dark:text-gray-400" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                          <ChevronDown className="w-5 h-5 text-ink-tertiary dark:text-gray-400" />
                         )}
                       </div>
                     </div>
 
                     {openItems.includes(faq.id) && (
-                      <div className="px-6 pb-4">
-                        <div className="pl-8 border-l-2 border-brand-orange/30">
-                          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                            {faq.answer}
-                          </p>
+                      <div className="px-6 pb-6 pl-[4.5rem]">
+                        <div className="text-body text-ink-secondary dark:text-gray-300 text-sm leading-relaxed border-l-2 border-brand/20 pl-4">
+                          {faq.answer}
                         </div>
                       </div>
                     )}
@@ -298,11 +224,11 @@ const FAQPage = () => {
                 .map((faq) => (
                   <div
                     key={faq.id}
-                    className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 relative z-50"
+                    className="card-honeycomb group"
                   >
                     <div
                       onClick={() => handleClick(faq.id)}
-                      className="w-full px-6 py-4 text-left flex items-start justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200 rounded-xl cursor-pointer relative z-60"
+                      className="w-full px-6 py-5 text-left flex items-start justify-between gap-4 cursor-pointer relative z-10"
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
@@ -311,31 +237,28 @@ const FAQPage = () => {
                           handleClick(faq.id);
                         }
                       }}
-                      style={{ position: "relative", zIndex: 100 }}
                     >
-                      <div className="flex items-start gap-3 flex-1">
-                        <div className="flex-shrink-0 mt-1">
-                          <faq.icon className="w-5 h-5 text-brand-orange" />
+                      <div className="flex items-start gap-4 flex-1">
+                        <div className="icon-hex w-10 h-10 flex-shrink-0 mt-0.5">
+                          <faq.icon className="w-5 h-5 text-white" />
                         </div>
-                        <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-relaxed">
+                        <h3 className="text-lg font-semibold text-ink dark:text-white leading-relaxed pt-1.5 group-hover:text-brand transition-colors duration-300">
                           {faq.question}
                         </h3>
                       </div>
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 pt-2">
                         {openItems.includes(faq.id) ? (
-                          <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                          <ChevronUp className="w-5 h-5 text-ink-tertiary dark:text-gray-400" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                          <ChevronDown className="w-5 h-5 text-ink-tertiary dark:text-gray-400" />
                         )}
                       </div>
                     </div>
 
                     {openItems.includes(faq.id) && (
-                      <div className="px-6 pb-4">
-                        <div className="pl-8 border-l-2 border-brand-orange/30">
-                          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                            {faq.answer}
-                          </p>
+                      <div className="px-6 pb-6 pl-[4.5rem]">
+                        <div className="text-body text-ink-secondary dark:text-gray-300 text-sm leading-relaxed border-l-2 border-brand/20 pl-4">
+                          {faq.answer}
                         </div>
                       </div>
                     )}
@@ -347,93 +270,27 @@ const FAQPage = () => {
       </section>
 
       {/* CTA Section - Home Background Style */}
-      <section className="relative py-16 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
-        {/* Enhanced AI Background - Home Style */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Animated Circuit Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="circuit-faq-cta"
-                  x="0"
-                  y="0"
-                  width="100"
-                  height="100"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M20,20 L80,20 L80,80 L20,80 Z"
-                    fill="none"
-                    stroke="#E56518"
-                    strokeWidth="1"
-                  />
-                  <circle cx="20" cy="20" r="3" fill="#E56518" />
-                  <circle cx="80" cy="20" r="3" fill="#E56518" />
-                  <circle cx="80" cy="80" r="3" fill="#E56518" />
-                  <circle cx="20" cy="80" r="3" fill="#E56518" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#circuit-faq-cta)" />
-            </svg>
-          </div>
-
-          {/* Floating AI Particles */}
-          <div className="absolute inset-0">
-            {[
-              { left: "15%", top: "20%", delay: "0s", duration: "4s" },
-              { left: "85%", top: "30%", delay: "0.5s", duration: "3.5s" },
-              { left: "25%", top: "70%", delay: "1s", duration: "4.5s" },
-              { left: "75%", top: "60%", delay: "1.5s", duration: "3s" },
-              { left: "45%", top: "15%", delay: "2s", duration: "4.2s" },
-              { left: "65%", top: "80%", delay: "2.5s", duration: "3.8s" },
-              { left: "10%", top: "50%", delay: "3s", duration: "4.1s" },
-              { left: "90%", top: "45%", delay: "3.5s", duration: "3.7s" },
-            ].map((particle, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-brand-orange rounded-full animate-float opacity-60"
-                style={{
-                  left: particle.left,
-                  top: particle.top,
-                  animationDelay: particle.delay,
-                  animationDuration: particle.duration,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Gradient Orbs */}
-          <div className="absolute top-1/4 -left-32 w-64 h-64 bg-brand-orange/20 rounded-full filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-brand-orange/15 rounded-full filter blur-3xl animate-pulse animation-delay-300" />
-        </div>
+      {/* Pattern B */}
+      <section className="relative py-20 overflow-hidden bg-paper dark:bg-gray-950">
+        <div className="absolute top-0 left-0 right-0 divider-honeycomb" />
+        <div className="absolute bottom-0 left-0 right-0 divider-honeycomb" />
 
         <div className="container-width relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="heading-lg mb-6">
               Still have questions?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-body-lg mb-8">
               Let's discuss how automation can transform your business processes
             </p>
             <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2"
             >
-              Schedule a Free Consultation
-              <svg
-                className="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span>Schedule a Free Consultation</span>
+              <ArrowRightIcon size={18} />
             </Link>
           </div>
         </div>
