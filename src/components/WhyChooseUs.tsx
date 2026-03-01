@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
       title: "Customer Service is Our Strength",
       description:
         "We answer your calls, respond to your emails, and solve your problems quickly. You're not just another client - you're our priority.",
-      image: "/whyChoose/customer-service.jpg",
+      image: "https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=400&fit=crop",
       useLottie: false,
     },
     {
@@ -51,7 +51,7 @@ const WhyChooseUs = () => {
       title: "Process-Driven, Tool-Agnostic",
       description:
         "We focus on what you want to achieve, not what tools we prefer. We'll use whatever works best to get you the results you need.",
-      image: "/whyChoose/process-driven.png",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       useLottie: false,
     },
     {
@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
       title: "Scalable & Sustainable Architecture",
       description:
         "Your automation grows with your business. We build it right the first time so you don't have to rebuild it later. That means more money in your pocket.",
-      image: "/whyChoose/sustainable.png",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
       useLottie: false,
     },
     {
@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
       title: "No-Code/Low-Code Implementation",
       description:
         "We use the best automation tools available. This means faster results, lower costs, and solutions that work immediately without months of development.",
-      image: "/whyChoose/low-code.png",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       useLottie: false,
     },
     {
@@ -85,7 +85,7 @@ const WhyChooseUs = () => {
       title: "Transparent Collaboration",
       description:
         "You see everything we do. We keep you updated, share our progress, and work together to make sure you get exactly what you want.",
-      image: "/whyChoose/people-meeting.jpg",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
       useLottie: false,
     },
   ];

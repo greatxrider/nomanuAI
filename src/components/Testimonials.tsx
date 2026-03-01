@@ -172,24 +172,24 @@ const Testimonials = () => {
             {/* Key Benefits */}
             <div className="space-y-5 mb-10">
               <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 clip-hex bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors duration-300">
-                  <CheckIcon size={18} className="text-success" />
+                <div className="w-10 h-10 clip-hex bg-brand/10 flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-300">
+                  <CheckIcon size={18} className="text-brand" />
                 </div>
                 <span className="text-lg text-ink dark:text-gray-200 font-medium">
                   20+ hours reclaimed every week
                 </span>
               </div>
               <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 clip-hex bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors duration-300">
-                  <CheckIcon size={18} className="text-success" />
+                <div className="w-10 h-10 clip-hex bg-brand/10 flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-300">
+                  <CheckIcon size={18} className="text-brand" />
                 </div>
                 <span className="text-lg text-ink dark:text-gray-200 font-medium">
                   Instant process improvements from day one
                 </span>
               </div>
               <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 clip-hex bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors duration-300">
-                  <CheckIcon size={18} className="text-success" />
+                <div className="w-10 h-10 clip-hex bg-brand/10 flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-300">
+                  <CheckIcon size={18} className="text-brand" />
                 </div>
                 <span className="text-lg text-ink dark:text-gray-200 font-medium">
                   No extra hires. No extra tools. Just results.
@@ -219,14 +219,14 @@ const Testimonials = () => {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative mt-8">
+            <div className="relative mt-8 lg:mt-0">
               {/* Decorative Elements */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand/10 clip-hex animate-float pointer-events-none" />
               <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-honey/10 clip-hex animate-float animation-delay-500 pointer-events-none" />
               
-              <div className="card-honeycomb group p-8 md:p-12 w-full flex flex-col justify-center relative z-10 bg-white dark:bg-gray-800 border border-ink/5 dark:border-white/5 shadow-xl">
+              <div className="card-honeycomb group p-8 md:p-12 w-full flex flex-col justify-center relative z-10 bg-white dark:bg-gray-800 border border-ink/5 dark:border-white/5 shadow-xl mt-6 lg:mt-0">
                 {/* Floating Quote Icon */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 icon-hex w-12 h-12 shadow-lg">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 icon-hex w-12 h-12 shadow-lg z-20">
                   <QuoteIcon size={20} className="text-white" />
                 </div>
 
