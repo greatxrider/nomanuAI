@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[PAGE_TITLE] | Next Generation Medicine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FFFFFF;
+      --paper-alt: #FAFAF8;
+      --ink-900: #0A0B0C;
+      --ink-700: #1F2124;
+      --ink-500: #5C626B;
+      --ink-400: #8B909A;
+      --line: #E5E3DE;
+      --gold: #C5A572;
+      --vermillion: #E03E2F;
+
+      --space-1: 8px;
+      --space-2: 12px;
+      --space-3: 20px;
+      --space-4: 32px;
+      --space-5: 48px;
+      --space-6: 72px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-700);
+      background-color: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Newsreader', 'Noto Serif JP', serif;
+      color: var(--ink-900);
+      font-weight: 500;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--paper-alt);
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 48px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wordmark {
+      font-family: 'Newsreader', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--ink-900);
+      letter-spacing: -0.01em;
+    }
+
+    .header-context {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── Hero Section ── */
+    .hero {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: var(--space-6) clamp(20px, 5vw, 48px) var(--space-4);
+      text-align: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-2);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.15;
+      margin-bottom: var(--space-3);
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--ink-500);
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Value Props (optional) ── */
+    .value-props {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto var(--space-4);
+      padding: 0 clamp(20px, 5vw, 48px);
+    }
+
+    .value-prop {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .value-prop-icon {
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .value-prop-text h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-900);
+      margin-bottom: 2px;
+    }
+
+    .value-prop-text p {
+      font-size: 13px;
+      color: var(--ink-500);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ── Form Card ── */
+    .form-card {
+      background: var(--paper-alt);
+      border: 1px solid var(--line);
+      padding: 40px;
+      max-width: 520px;
+      margin: 0 auto var(--space-5);
+    }
+
+    @media (max-width: 600px) {
+      .form-card {
+        padding: 28px 20px;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+    }
+
+    /* ── Form Fields ── */
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 500px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-label {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+      margin-bottom: 8px;
+    }
+
+    .required {
+      color: var(--vermillion);
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      display: block;
+      width: 100%;
+      padding: 14px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.4;
+      color: var(--ink-900);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 0;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--ink-400);
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.15);
+    }
+
+    .form-input:disabled,
+    .form-textarea:disabled,
+    .form-select:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C626B' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .form-input.error {
+      border-color: var(--vermillion);
+    }
+
+    .field-error {
+      font-size: 12px;
+      color: var(--vermillion);
+      margin-top: 6px;
+    }
+
+    /* ── Honeypot ── */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+    }
+
+    /* ── Submit Button ── */
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 16px 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: white;
+      background: var(--ink-900);
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .form-submit:hover {
+      background: var(--vermillion);
+      transform: translateY(-1px);
+    }
+
+    .form-submit:active {
+      transform: translateY(0);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-submit:disabled:hover {
+      background: var(--ink-900);
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ── Error Message ── */
+    .form-error {
+      padding: 12px 16px;
+      background: rgba(224, 62, 47, 0.08);
+      border-left: 3px solid var(--vermillion);
+      color: var(--vermillion);
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .form-error.visible {
+      display: block;
+    }
+
+    /* ── Success State ── */
+    .success-state {
+      text-align: center;
+      padding: 48px 32px;
+      display: none;
+    }
+
+    .success-state.visible {
+      display: block;
+    }
+
+    .success-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .success-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: white;
+      fill: none;
+    }
+
+    .success-state h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .success-state p {
+      color: var(--ink-500);
+      line-height: 1.6;
+    }
+
+    /* ── Privacy Notice ── */
+    .privacy-notice {
+      font-size: 12px;
+      color: var(--ink-400);
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: var(--space-5) 0;
+      color: var(--ink-400);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="wordmark">Next Generation Medicine</div>
+      <span class="header-context">[HEADER_CONTEXT]</span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-label">[HERO_LABEL]</span>
+    <h1>[HEADLINE]</h1>
+    <p class="hero-subtitle">[SUBHEADLINE]</p>
+  </section>
+
+  <!-- Value Props (optional — remove this block if not needed) -->
+  <section class="value-props">
+    <div class="value-prop">
+      <span class="value-prop-icon">&rarr;</span>
+      <div class="value-prop-text">
+        <h4>[VALUE_1_TITLE]</h4>
+        <p>[VALUE_1_DESC]</p>
+      </div>
+    </div>
+    <div class="value-prop">
+      <span class="value-prop-icon">&rarr;</span>
+      <div class="value-prop-text">
+        <h4>[VALUE_2_TITLE]</h4>
+        <p>[VALUE_2_DESC]</p>
+      </div>
+    </div>
+    <div class="value-prop">
+      <span class="value-prop-icon">&rarr;</span>
+      <div class="value-prop-text">
+        <h4>[VALUE_3_TITLE]</h4>
+        <p>[VALUE_3_DESC]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Card -->
+  <div class="form-card" id="form-card">
+
+    <!-- Success State (hidden until submission) -->
+    <div class="success-state" id="success-state">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h3>[SUCCESS_HEADING]</h3>
+      <p>[SUCCESS_MESSAGE]</p>
+    </div>
+
+    <!-- Form (hidden after submission) -->
+    <form id="lead-form" novalidate>
+
+      <!-- Error Banner -->
+      <div class="form-error" id="form-error" role="alert"></div>
+
+      <!-- Row: First Name + Email (always present) -->
+      <div class="form-group">
+        <div class="form-row">
+          <div>
+            <label for="firstName" class="form-label">First Name <span class="required">*</span></label>
+            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Jane" required autocomplete="given-name">
+          </div>
+          <div>
+            <label for="email" class="form-label">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="jane@clinic.com" required autocomplete="email" inputmode="email">
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: Last Name + Company (optional — remove if not needed) -->
+      <div class="form-group">
+        <div class="form-row">
+          <div>
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" autocomplete="family-name">
+          </div>
+          <div>
+            <label for="company" class="form-label">Company / Practice</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Longevity Clinic" autocomplete="organization">
+          </div>
+        </div>
+      </div>
+
+      <!-- Interest Dropdown (optional — remove if not needed) -->
+      <div class="form-group">
+        <label for="interest" class="form-label">Primary Interest</label>
+        <select id="interest" name="interest" class="form-select">
+          <option value="">Select one (optional)</option>
+          <option value="Clinical education">Clinical education</option>
+          <option value="AI clinical tools">AI clinical tools</option>
+          <option value="Business consulting">Business consulting</option>
+          <option value="Enterprise deployment">Enterprise deployment</option>
+        </select>
+      </div>
+
+      <!-- Message (optional — remove if not needed) -->
+      <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you're looking to solve." rows="4"></textarea>
+      </div>
+
+      <!-- Honeypot (always include — bot protection) -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="website_url">Website</label>
+        <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="form-submit" id="submit-btn">
+        <span id="submit-text">[CTA_BUTTON_TEXT]</span>
+        <svg id="submit-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        <span id="submit-spinner" class="spinner" style="display:none;"></span>
+      </button>
+
+      <p class="privacy-notice">We respect your privacy. No spam. Unsubscribe anytime.</p>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Next Generation Medicine</p>
+    <p style="margin-top: 4px;">Turning science into strategy&mdash;and strategy into systems that deliver results.</p>
+  </div>
+
+  <script>
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // CONFIGURATION — Update these for each form
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    const LEAD_SOURCE = '[LEAD_SOURCE]';
+    const API_ENDPOINT = '/api/leads';
+
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // Tracking metadata capture
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    function getTrackingMetadata() {
+      const params = new URLSearchParams(window.location.search);
+      function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[2]) : '';
+      }
+      return {
+        pageUri: window.location.href,
+        pageName: document.title,
+        referrer: document.referrer || '',
+        hutk: getCookie('hubspotutk'),
+        utmSource: params.get('utm_source') || '',
+        utmMedium: params.get('utm_medium') || '',
+        utmCampaign: params.get('utm_campaign') || '',
+        utmTerm: params.get('utm_term') || '',
+        utmContent: params.get('utm_content') || '',
+        gclid: params.get('gclid') || '',
+        fbclid: params.get('fbclid') || '',
+        capturedAt: new Date().toISOString()
+      };
+    }
+
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // Form submission handler
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    const form = document.getElementById('lead-form');
+    const errorBanner = document.getElementById('form-error');
+    const submitBtn = document.getElementById('submit-btn');
+    const submitText = document.getElementById('submit-text');
+    const submitArrow = document.getElementById('submit-arrow');
+    const submitSpinner = document.getElementById('submit-spinner');
+    const successState = document.getElementById('success-state');
+
+    function showError(msg) {
+      errorBanner.textContent = msg;
+      errorBanner.classList.add('visible');
+    }
+
+    function hideError() {
+      errorBanner.classList.remove('visible');
+    }
+
+    function setLoading(loading) {
+      submitBtn.disabled = loading;
+      submitText.textContent = loading ? 'Sending...' : '[CTA_BUTTON_TEXT]';
+      submitArrow.style.display = loading ? 'none' : 'inline';
+      submitSpinner.style.display = loading ? 'inline-block' : 'none';
+      // Disable all inputs during submission
+      form.querySelectorAll('input, select, textarea').forEach(function(el) {
+        el.disabled = loading;
+      });
+    }
+
+    function showSuccess() {
+      form.style.display = 'none';
+      successState.classList.add('visible');
+    }
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      hideError();
+
+      const firstName = form.firstName.value.trim();
+      const email = form.email.value.trim();
+      const lastName = form.lastName ? form.lastName.value.trim() : '';
+      const company = form.company ? form.company.value.trim() : '';
+      const interest = form.interest ? form.interest.value.trim() : '';
+      const message = form.message ? form.message.value.trim() : '';
+      const honeypot = form.website_url ? form.website_url.value.trim() : '';
+
+      // Validation
+      if (!firstName) {
+        showError('Please enter your first name.');
+        return;
+      }
+      if (!email || !email.includes('@') || !email.includes('.')) {
+        showError('Please enter a valid email address.');
+        return;
+      }
+
+      // Honeypot check — bots fill this in, humans don't see it
+      if (honeypot) {
+        showSuccess();
+        return;
+      }
+
+      setLoading(true);
+
+      const payload = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email.toLowerCase(),
+        company: company,
+        source: LEAD_SOURCE,
+        interest: interest,
+        message: message,
+        tracking: getTrackingMetadata()
+      };
+
+      try {
+        const response = await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          const data = await response.json().catch(function() { return null; });
+          const fieldError = data && Array.isArray(data.errors) && data.errors.length > 0
+            ? data.errors[0].message
+            : null;
+          throw new Error(fieldError || (data && data.message) || 'Unable to submit form');
+        }
+
+        showSuccess();
+      } catch (err) {
+        showError(err.message || 'Something went wrong. Please try again.');
+      } finally {
+        setLoading(false);
+      }
+    });
+  </script>
+</body>
+</html>
