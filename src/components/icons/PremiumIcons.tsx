@@ -745,6 +745,58 @@ export const VideoIcon = ({ size = 24, className = "", ...props }: IconProps) =>
   </IconWrapper>
 );
 
+// Smartphone Icon
+export const SmartphoneIcon = ({ size = 24, className = "", ...props }: IconProps) => (
+  <IconWrapper size={size} className={className} {...props}>
+    <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+    <line x1="12" x2="12.01" y1="18" y2="18" />
+  </IconWrapper>
+);
+
+// Shopping Cart Icon
+export const ShoppingCartIcon = ({ size = 24, className = "", ...props }: IconProps) => (
+  <IconWrapper size={size} className={className} {...props}>
+    <circle cx="8" cy="21" r="1" />
+    <circle cx="19" cy="21" r="1" />
+    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+  </IconWrapper>
+);
+
+// Headphones Icon
+export const HeadphonesIcon = ({ size = 24, className = "", ...props }: IconProps) => (
+  <IconWrapper size={size} className={className} {...props}>
+    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+  </IconWrapper>
+);
+
+// Layers Icon
+export const LayersIcon = ({ size = 24, className = "", ...props }: IconProps) => (
+  <IconWrapper size={size} className={className} {...props}>
+    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+    <polyline points="2 17 12 22 22 17" />
+    <polyline points="2 12 12 17 22 12" />
+  </IconWrapper>
+);
+
+// Wrench Icon
+export const WrenchIcon = ({ size = 24, className = "", ...props }: IconProps) => (
+  <IconWrapper size={size} className={className} {...props}>
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+  </IconWrapper>
+);
+
+// Palette Icon
+export const PaletteIcon = ({ size = 24, className = "", ...props }: IconProps) => (
+  <IconWrapper size={size} className={className} {...props}>
+    <circle cx="13.5" cy="6.5" r="0.5" fill="currentColor" />
+    <circle cx="17.5" cy="10.5" r="0.5" fill="currentColor" />
+    <circle cx="8.5" cy="7.5" r="0.5" fill="currentColor" />
+    <circle cx="6.5" cy="12.5" r="0.5" fill="currentColor" />
+    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+  </IconWrapper>
+);
+
 // Export all icons
 export {
   IconWrapper,
@@ -832,4 +884,10 @@ export default {
   GlobeIcon,
   UserPlusIcon,
   VideoIcon,
+  SmartphoneIcon,
+  ShoppingCartIcon,
+  HeadphonesIcon,
+  LayersIcon,
+  WrenchIcon,
+  PaletteIcon,
 };

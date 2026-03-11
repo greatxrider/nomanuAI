@@ -20,6 +20,10 @@ import {
   CheckCircleIcon,
   BrainIcon,
   ArrowRightIcon,
+  CodeIcon,
+  PhoneIcon,
+  BotIcon,
+  GlobeIcon,
 } from "@/components/icons/PremiumIcons";
 import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
@@ -208,8 +212,8 @@ const DisclaimerModal = ({
         </div>
         <div className="text-ink-secondary dark:text-gray-300 space-y-3">
           <p>
-            Some of our client automation projects are protected by
-            non-disclosure agreements (NDAs) and cannot be publicly displayed.
+            Some of our client projects are protected by non-disclosure
+            agreements (NDAs) and cannot be publicly displayed.
           </p>
           <p>
             The projects shown here are either showcase examples built by our
@@ -217,8 +221,9 @@ const DisclaimerModal = ({
             that have been approved for public sharing.
           </p>
           <p>
-            This portfolio represents our capabilities while respecting client
-            confidentiality.
+            This portfolio represents our capabilities across automations,
+            web &amp; software development, mobile apps, and AI receptionists
+            while respecting client confidentiality.
           </p>
         </div>
         <div className="mt-6 text-center">
@@ -458,6 +463,216 @@ const ProjectModal = ({
           "Platform: n8n",
           "APIs: QuickChart, Gmail/SMTP, Airtable",
           "Docs: HTML‑to‑PDF generation pipeline",
+        ],
+      };
+    }
+
+    if (proj.id === 12) {
+      // E-Commerce Platform
+      return {
+        fullDescription:
+          "Full‑stack e‑commerce platform with AI‑powered product recommendations, real‑time inventory management, Stripe checkout, and an admin dashboard for order and catalog management.",
+        detailedFeatures: [
+          "AI Recommendations: Personalized product suggestions powered by OpenAI embeddings",
+          "Real‑Time Inventory: Stock levels update instantly across storefront and admin",
+          "Stripe Checkout: PCI‑compliant payments with subscriptions and one‑time purchases",
+          "Admin Dashboard: Manage products, orders, customers, and analytics in one place",
+          "Responsive Design: Optimized for desktop, tablet, and mobile shopping",
+          "SEO Optimized: Server‑side rendering and structured data for search visibility",
+        ],
+        workflowSteps: [
+          "Customer browses products with AI‑recommended suggestions",
+          "Items added to cart with real‑time stock validation",
+          "Secure Stripe checkout with multiple payment methods",
+          "Order confirmation and inventory auto‑adjustment",
+          "Admin notified and fulfillment workflow triggered",
+        ],
+        businessImpact: [
+          "40% Conversion Lift: AI recommendations drive higher cart values",
+          "Zero Overselling: Real‑time inventory prevents stock conflicts",
+          "Faster Launch: Fully custom yet deployed in weeks, not months",
+        ],
+        technicalSpecs: [
+          "Framework: Next.js with TypeScript",
+          "Database: PostgreSQL with Prisma ORM",
+          "Payments: Stripe API with webhook verification",
+          "AI: OpenAI for product recommendations",
+          "Styling: Tailwind CSS with responsive design system",
+        ],
+      };
+    }
+
+    if (proj.id === 13) {
+      // Business Dashboard SaaS
+      return {
+        fullDescription:
+          "Custom analytics SaaS dashboard that aggregates business data from multiple sources, visualizes KPIs in real time, and delivers automated performance reports to stakeholders.",
+        detailedFeatures: [
+          "Multi‑Source Ingestion: Pull data from APIs, databases, and spreadsheets",
+          "Interactive Charts: D3.js visualizations with drill‑down and filtering",
+          "Automated Reports: Weekly/monthly PDF reports emailed to stakeholders",
+          "Role‑Based Access: Admin, manager, and viewer permission tiers",
+          "Custom Widgets: Drag‑and‑drop dashboard builder for each team",
+          "Real‑Time Updates: WebSocket‑powered live data feeds",
+        ],
+        workflowSteps: [
+          "Connect data sources via API keys or OAuth",
+          "Configure KPI widgets and visualization preferences",
+          "Dashboard renders real‑time metrics with auto‑refresh",
+          "Scheduled reports generated and distributed via email",
+          "Alerts trigger when metrics exceed thresholds",
+        ],
+        businessImpact: [
+          "Single Source of Truth: All business metrics in one place",
+          "Faster Decisions: Real‑time data instead of weekly spreadsheets",
+          "Team Alignment: Shared dashboards keep everyone informed",
+        ],
+        technicalSpecs: [
+          "Frontend: React with D3.js charts",
+          "Backend: Node.js REST API",
+          "Database: PostgreSQL with caching layer",
+          "Infrastructure: AWS with Docker containers",
+          "Auth: JWT with role‑based access control",
+        ],
+      };
+    }
+
+    if (proj.id === 14) {
+      // Fitness Tracking App
+      return {
+        fullDescription:
+          "Cross‑platform mobile app that delivers AI‑generated workout plans, nutrition logging with barcode scanning, and detailed progress analytics synced with Apple Health and Google Fit.",
+        detailedFeatures: [
+          "AI Workout Plans: Personalized routines generated by OpenAI based on goals and history",
+          "Nutrition Tracking: Log meals with barcode scanning and AI food recognition",
+          "Progress Analytics: Charts for weight, strength, and body composition trends",
+          "Health Sync: Integrates with Apple HealthKit and Google Fit",
+          "Social Features: Share achievements and challenge friends",
+          "Offline Mode: Full functionality without internet connection",
+        ],
+        workflowSteps: [
+          "User sets fitness goals and completes onboarding assessment",
+          "AI generates personalized workout and nutrition plan",
+          "Daily workouts tracked with exercise logging and timers",
+          "Nutrition logged via search, barcode scan, or photo",
+          "Weekly progress reports with AI‑adjusted recommendations",
+        ],
+        businessImpact: [
+          "10K+ Active Users: Rapid adoption through personalized experience",
+          "Higher Retention: AI adaptation keeps users engaged long‑term",
+          "Cross‑Platform: Single codebase for iOS and Android",
+        ],
+        technicalSpecs: [
+          "Framework: React Native with TypeScript",
+          "Backend: Firebase (Auth, Firestore, Cloud Functions)",
+          "AI: OpenAI GPT‑4 for plan generation",
+          "Health APIs: Apple HealthKit, Google Fit",
+          "Storage: Offline‑first with local SQLite sync",
+        ],
+      };
+    }
+
+    if (proj.id === 15) {
+      // Field Service Mobile App
+      return {
+        fullDescription:
+          "Enterprise mobile app for field service teams featuring real‑time job scheduling, GPS tracking, digital inspection forms, photo capture, and offline‑capable data sync.",
+        detailedFeatures: [
+          "Job Scheduling: Dispatch and reassign jobs in real time from the office",
+          "GPS Tracking: Live technician locations on a map for route optimization",
+          "Digital Forms: Custom inspection checklists with photo and signature capture",
+          "Offline Mode: Complete jobs without connectivity and sync when back online",
+          "Push Notifications: Instant alerts for new assignments and schedule changes",
+          "Reporting: Automated job completion reports sent to clients and managers",
+        ],
+        workflowSteps: [
+          "Dispatcher assigns job via admin dashboard",
+          "Technician receives push notification with job details",
+          "GPS navigation to job site with optimal routing",
+          "Digital form completed with photos and signatures",
+          "Job marked complete and report auto‑generated",
+        ],
+        businessImpact: [
+          "60% Faster Completion: Streamlined workflows eliminate paperwork",
+          "Never Offline: Offline‑first architecture ensures reliability",
+          "Real‑Time Visibility: Managers see team status instantly",
+        ],
+        technicalSpecs: [
+          "Framework: Flutter with Dart",
+          "Backend: Firebase (Auth, Firestore, Cloud Messaging)",
+          "Maps: Google Maps API with geofencing",
+          "Offline: SQLite local database with background sync",
+          "Notifications: Firebase Cloud Messaging (FCM)",
+        ],
+      };
+    }
+
+    if (proj.id === 16) {
+      // AI Receptionist for Dental Clinic
+      return {
+        fullDescription:
+          "AI voice receptionist purpose‑built for dental practices that answers calls 24/7, books and reschedules appointments, verifies insurance eligibility, and sends automated reminders — all without human intervention.",
+        detailedFeatures: [
+          "Natural Voice AI: Human‑like conversations powered by Vapi AI and ElevenLabs",
+          "Appointment Management: Books, reschedules, and cancels appointments in real time",
+          "Insurance Verification: Confirms patient coverage during the call",
+          "Patient Intake: Collects new patient information and medical history",
+          "Smart Routing: Escalates urgent calls to on‑call staff automatically",
+          "Follow‑Up Calls: Automated appointment reminders and post‑visit check‑ins",
+        ],
+        workflowSteps: [
+          "Incoming call answered by AI receptionist within 2 rings",
+          "AI identifies caller intent (booking, inquiry, emergency)",
+          "Appointment availability checked against Google Calendar",
+          "Booking confirmed with SMS/email confirmation sent",
+          "Call summary and recording synced to HighLevel CRM",
+        ],
+        businessImpact: [
+          "24/7 Availability: Never miss a call, even after hours",
+          "85% Resolution Rate: Most calls handled without human staff",
+          "Reduced No‑Shows: Automated reminders cut missed appointments",
+        ],
+        technicalSpecs: [
+          "Voice AI: Vapi AI with custom prompts",
+          "Voice Synthesis: ElevenLabs for natural speech",
+          "Telephony: Twilio for call routing and recording",
+          "Calendar: Google Calendar API for availability",
+          "CRM: HighLevel for patient records and follow‑ups",
+        ],
+      };
+    }
+
+    if (proj.id === 17) {
+      // AI Receptionist for Real Estate
+      return {
+        fullDescription:
+          "AI‑powered phone receptionist for real estate agencies that qualifies buyer and seller leads on inbound calls, schedules property viewings, and syncs all data to CRM — operating around the clock.",
+        detailedFeatures: [
+          "Lead Qualification: AI asks targeted questions to score buyer/seller intent",
+          "Property Matching: Suggests relevant listings based on caller criteria",
+          "Viewing Scheduling: Books property tours directly into agent calendars",
+          "CRM Integration: All call data, transcripts, and lead scores sync to HighLevel and Airtable",
+          "Multi‑Language: Supports English and Spanish conversations",
+          "Call Transfer: Seamlessly connects high‑priority leads to available agents",
+        ],
+        workflowSteps: [
+          "Caller reaches AI receptionist via office phone line",
+          "AI greets caller and identifies intent (buy, sell, rent, inquiry)",
+          "Qualification questions gather budget, timeline, and preferences",
+          "Matching properties suggested or viewing scheduled",
+          "Lead record created in CRM with full call transcript and score",
+        ],
+        businessImpact: [
+          "3x More Leads: Capture every call, including after‑hours inquiries",
+          "Instant Qualification: Leads arrive in CRM pre‑scored and tagged",
+          "Zero Missed Calls: AI handles overflow during peak hours",
+        ],
+        technicalSpecs: [
+          "Voice AI: Vapi AI with real estate prompts",
+          "Voice Synthesis: ElevenLabs for professional tone",
+          "Telephony: Twilio for inbound/outbound calls",
+          "CRM: HighLevel and Airtable dual sync",
+          "Calendar: Google Calendar for viewing appointments",
         ],
       };
     }
@@ -747,7 +962,7 @@ const Projects = () => {
       title: "Lead Flow Messenger Automation",
       description:
         "AI-powered Facebook Messenger bot that captures property investment leads, extracts data, and integrates with CRM systems",
-      category: "n8n-automations",
+      category: "automations",
       image: "/automations/lead-flow-messenger-project.png",
       technologies: [
         "n8n",
@@ -770,7 +985,7 @@ const Projects = () => {
       title: "Contractor Automation",
       description:
         "Multi-modal AI automation for contractors that processes voice, image, and text inputs via Telegram to automatically scrape contractor databases and populate CRM systems",
-      category: "n8n-automations",
+      category: "automations",
       image: "/automations/contractor-project.png",
       technologies: [
         "n8n",
@@ -795,7 +1010,7 @@ const Projects = () => {
       title: "CSV to HubSpot Uploader Automation",
       description:
         "Intelligent data migration automation that streamlines CSV imports into HubSpot CRM with dynamic field mapping, validation, and seamless API integration",
-      category: "n8n-automations",
+      category: "automations",
       image: "/automations/csv-to-hubspot-project.png",
       technologies: [
         "n8n",
@@ -820,7 +1035,7 @@ const Projects = () => {
       title: "Lead Flow Gmail Automation",
       description:
         "AI-powered Gmail automation that monitors property investment inquiries, extracts financial data, validates leads, and provides instant personalized responses with CRM integration",
-      category: "n8n-automations",
+      category: "automations",
       image: "/automations/lead-flow-gmail-project.png",
       technologies: [
         "n8n",
@@ -845,7 +1060,7 @@ const Projects = () => {
       title: "Property Insights Automation",
       description:
         "Comprehensive financial planning automation that captures client data, generates dynamic charts, calculates retirement projections, and delivers personalized PDF reports automatically",
-      category: "n8n-automations",
+      category: "automations",
       image: "/automations/property-insights-project.png",
       technologies: [
         "n8n",
@@ -865,13 +1080,161 @@ const Projects = () => {
       link: "#",
       github: "#",
     },
+    {
+      id: 12,
+      title: "E-Commerce Platform",
+      description:
+        "Full-stack e-commerce web application with AI-powered product recommendations, real-time inventory management, and seamless payment processing",
+      category: "web-software",
+      image: "/automations/ecommerce-project.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Stripe API",
+        "PostgreSQL",
+        "Prisma",
+        "OpenAI",
+      ],
+      results: [
+        "40% increase in conversions",
+        "AI-driven product suggestions",
+        "Real-time inventory sync",
+      ],
+      icon: GlobeIcon,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 13,
+      title: "Business Dashboard SaaS",
+      description:
+        "Custom analytics dashboard for tracking KPIs, revenue metrics, and team performance with automated reporting and data visualization",
+      category: "web-software",
+      image: "/automations/dashboard-project.png",
+      technologies: [
+        "React",
+        "Node.js",
+        "D3.js",
+        "PostgreSQL",
+        "REST API",
+        "AWS",
+        "Docker",
+      ],
+      results: [
+        "Real-time data visualization",
+        "Automated weekly reports",
+        "Multi-tenant architecture",
+      ],
+      icon: CodeIcon,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 14,
+      title: "Fitness Tracking App",
+      description:
+        "Cross-platform mobile application for fitness tracking with AI-powered workout plans, nutrition logging, and progress analytics",
+      category: "mobile-apps",
+      image: "/automations/fitness-app-project.png",
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Firebase",
+        "OpenAI",
+        "HealthKit",
+        "Google Fit API",
+      ],
+      results: [
+        "10K+ active users",
+        "AI personalized workouts",
+        "Cross-platform iOS & Android",
+      ],
+      icon: PhoneIcon,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 15,
+      title: "Field Service Mobile App",
+      description:
+        "Mobile application for field service teams with real-time job scheduling, GPS tracking, digital forms, and offline-capable functionality",
+      category: "mobile-apps",
+      image: "/automations/field-service-project.png",
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Google Maps API",
+        "SQLite",
+        "Push Notifications",
+      ],
+      results: [
+        "60% faster job completion",
+        "Offline-first architecture",
+        "Real-time team tracking",
+      ],
+      icon: PhoneIcon,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 16,
+      title: "AI Receptionist for Dental Clinic",
+      description:
+        "Intelligent AI voice receptionist that handles appointment scheduling, patient inquiries, insurance verification, and follow-up calls 24/7",
+      category: "ai-receptionists",
+      image: "/automations/ai-receptionist-dental-project.png",
+      technologies: [
+        "Vapi AI",
+        "OpenAI GPT-4",
+        "Twilio",
+        "Google Calendar API",
+        "HighLevel CRM",
+        "ElevenLabs",
+      ],
+      results: [
+        "24/7 call handling",
+        "85% call resolution rate",
+        "Automated appointment booking",
+      ],
+      icon: BotIcon,
+      link: "#",
+      github: "#",
+    },
+    {
+      id: 17,
+      title: "AI Receptionist for Real Estate",
+      description:
+        "AI-powered phone receptionist for real estate agencies that qualifies leads, schedules property viewings, and syncs with CRM systems automatically",
+      category: "ai-receptionists",
+      image: "/automations/ai-receptionist-realestate-project.png",
+      technologies: [
+        "Vapi AI",
+        "OpenAI GPT-4",
+        "Twilio",
+        "HighLevel CRM",
+        "Airtable",
+        "Google Calendar",
+        "ElevenLabs",
+      ],
+      results: [
+        "3x more leads captured",
+        "Instant lead qualification",
+        "Zero missed calls",
+      ],
+      icon: BotIcon,
+      link: "#",
+      github: "#",
+    },
   ];
 
   const filters = [
     { id: "all", label: "All" },
-    { id: "n8n-automations", label: "n8n Automations" },
-    { id: "zapier-automations", label: "Zapier Automations" },
-    { id: "make-automations", label: "Make Automations" },
+    { id: "automations", label: "Automations" },
+    { id: "web-software", label: "Web/Software" },
+    { id: "mobile-apps", label: "Mobile Apps" },
+    { id: "ai-receptionists", label: "AI Receptionists" },
   ];
 
   const filteredProjects = projects.filter((project) => {
@@ -916,8 +1279,9 @@ const Projects = () => {
           </h2>
 
           <p className="text-body-lg max-w-3xl mx-auto">
-            Explore our portfolio of AI automation solutions that have
-            transformed businesses across industries.
+            Explore our portfolio of automations, web &amp; software apps,
+            mobile apps, and AI receptionists that have transformed businesses
+            across industries.
           </p>
         </div>
 
