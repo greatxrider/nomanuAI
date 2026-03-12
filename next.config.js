@@ -2,7 +2,12 @@
 const nextConfig = {
     outputFileTracingRoot: __dirname,
     images: {
-        domains: ['localhost', 'images.unsplash.com', 'resize.latenode.com', 'i.pravatar.cc'],
+        remotePatterns: [
+            { protocol: 'http', hostname: 'localhost' },
+            { protocol: 'https', hostname: 'images.unsplash.com' },
+            { protocol: 'https', hostname: 'resize.latenode.com' },
+            { protocol: 'https', hostname: 'i.pravatar.cc' },
+        ],
         formats: ['image/webp', 'image/avif'],
     },
     compress: true,
