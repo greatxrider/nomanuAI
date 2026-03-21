@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
         "You get two dedicated experts: a DevMate who builds your automation and a ClientMate who ensures everything runs smoothly. No waiting, no confusion - just results.",
       image:
         "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=face",
-      lottie: "https://lottie.host/embed/2d72dc12-f9c3-4246-9ca4-761c6b68b7e8/otmznHELV9.lottie",
+      lottie: "https://lottie.host/a759ce86-f329-4b6d-b1c0-862b85f9ea83/o10oovBv2W.lottie",
       useLottie: true,
     },
     {
@@ -41,10 +41,8 @@ const WhyChooseUs = () => {
       title: "AI + Automation Expertise",
       description:
         "We know how to make AI work for your business. Our systems learn from your data and make smart decisions that save you time and money.",
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
-      lottie: "https://lottie.host/embed/087108cc-2e05-43ae-ab7b-a6097b603f0c/d2NDpHCZcX.lottie",
-      useLottie: true,
+      image: "/automations/automation-image.png",
+      useLottie: false,
     },
     {
       icon: ZapIcon,
@@ -77,8 +75,7 @@ const WhyChooseUs = () => {
         "We don't replace your team - we make them better. Your people focus on what they do best while our automation handles the boring stuff.",
       image:
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
-      lottie: "https://lottie.host/embed/15c9e726-c4e6-4c91-b85e-8689fe0cb5f9/KSIIvmyugy.lottie",
-      useLottie: true,
+      useLottie: false,
     },
     {
       icon: TargetIcon,
@@ -157,11 +154,11 @@ const WhyChooseUs = () => {
                     {/* Image/Lottie */}
                     <div className="relative h-48 md:h-56 overflow-hidden hex-cut-sm bg-paper dark:bg-gray-800">
                       {feature.useLottie && feature.lottie ? (
-                        <iframe
-                          src={feature.lottie}
-                          title={feature.title}
-                          className="w-full h-full border-0"
-                          loading="lazy"
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `<dotlottie-wc src="${feature.lottie}" autoplay loop style="width:100%;height:100%;display:block;" renderer="svg"></dotlottie-wc>`,
+                          }}
+                          className="w-full h-full [&_dotlottie-wc]:block [&_dotlottie-wc]:w-full [&_dotlottie-wc]:h-full [&_canvas]:!w-full [&_canvas]:!h-full [&_canvas]:!rounded-none [&_svg]:!w-full [&_svg]:!h-full"
                         />
                       ) : (
                         <div className="relative w-full h-full">
@@ -182,11 +179,11 @@ const WhyChooseUs = () => {
                     {/* Image/Lottie */}
                     <div className="relative h-48 md:h-56 overflow-hidden hex-cut-sm bg-paper dark:bg-gray-800 mb-6">
                       {feature.useLottie && feature.lottie ? (
-                        <iframe
-                          src={feature.lottie}
-                          title={feature.title}
-                          className="w-full h-full border-0"
-                          loading="lazy"
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `<dotlottie-wc src="${feature.lottie}" autoplay loop style="width:100%;height:100%;display:block;" renderer="svg"></dotlottie-wc>`,
+                          }}
+                          className="w-full h-full [&_dotlottie-wc]:block [&_dotlottie-wc]:w-full [&_dotlottie-wc]:h-full [&_canvas]:!w-full [&_canvas]:!h-full [&_canvas]:!rounded-none [&_svg]:!w-full [&_svg]:!h-full"
                         />
                       ) : (
                         <div className="relative w-full h-full">

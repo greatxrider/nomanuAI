@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Override dotlottie-wc circular canvas — fill container as rectangle */
+dotlottie-wc {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+dotlottie-wc canvas,
+dotlottie-wc svg {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
+}
+
 @layer base {
     :root {
         /* Premium Color System - Refined Enterprise Palette */

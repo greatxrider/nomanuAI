@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/lib/theme-context";
 import Chatbot from "@/components/Chatbot";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import Script from "next/script";
 
 const exo2 = Exo_2({ 
   subsets: ["latin"], 
@@ -155,6 +156,11 @@ export default function RootLayout({
         className={`font-sans antialiased transition-colors duration-300`}
         suppressHydrationWarning
       >
+        <Script
+          src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js"
+          strategy="beforeInteractive"
+          type="module"
+        />
         <ThemeProvider>
           <ScrollToTop />
           <Header />

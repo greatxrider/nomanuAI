@@ -67,8 +67,6 @@ const automationServices = [
       "Document collection and e-signatures",
     ],
     href: "/clientintake",
-    lottieUrl:
-      "https://lottie.host/embed/0a219d7c-539c-4100-9066-5124cc46c7ac/Dmrwc1Et7J.lottie",
   },
   {
     id: 3,
@@ -82,8 +80,6 @@ const automationServices = [
       "Team communication and updates",
     ],
     href: "/projectmanagement",
-    lottieUrl:
-      "https://lottie.host/embed/676ba249-78b3-4d76-956d-adf89efb2a76/ygRWOuRKbJ.lottie",
   },
   {
     id: 4,
