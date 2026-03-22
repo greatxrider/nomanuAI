@@ -7,6 +7,7 @@ import {
   UsersIcon,
   DollarIcon,
 } from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 const WhyAutomate = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
@@ -47,6 +48,7 @@ const WhyAutomate = () => {
       className="relative section-padding bg-paper dark:bg-gray-950 overflow-hidden"
     >
       {/* Pattern B - Clean with honeycomb dividers */}
+      <DarkHoneycombBackground patternId="why-automate-honeycomb" effect="current" />
       <div className="absolute top-0 left-0 right-0 divider-honeycomb" />
       <div className="absolute bottom-0 left-0 right-0 divider-honeycomb" />
 
@@ -62,15 +64,14 @@ const WhyAutomate = () => {
           <h2 className="heading-lg text-ink dark:text-white mb-4 text-balance">
             Here's What Happens When You{" "}
             <span className="text-gradient">
-              Automate Your Workflow
+              Partner With Us
             </span>
           </h2>
 
           <p className="text-body-lg max-w-3xl mx-auto">
-            Think of automation as your business's personal assistant that never
-            sleeps, never complains, and never asks for a raise. Here are the
-            real perks you'll experience when you let technology handle the
-            heavy lifting.
+            Whether it's custom software, mobile apps, AI automation, or healthcare
+            systems — here are the real perks you'll experience when you let the
+            right technology handle the heavy lifting.
           </p>
         </div>
 

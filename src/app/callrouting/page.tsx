@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: "Intelligent Call Routing | NomanuAI",
   description:
-    "AI-powered call routing that detects caller intent in real time and connects every call to the right person, department, or workflow — eliminating transfers, hold times, and lost leads.",
+    "AI-powered call routing that detects caller intent in real time and connects every call to the right person, department, or workflow, eliminating transfers, hold times, and lost leads.",
   keywords: [
     "intelligent call routing",
     "AI call distribution",

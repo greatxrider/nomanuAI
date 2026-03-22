@@ -114,7 +114,7 @@ const ClientIntakeOnboardingPage = () => {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -469,7 +469,7 @@ const ClientIntakeOnboardingPage = () => {
                 full scope before committing to changes.
               </p>
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full text-center"
@@ -493,7 +493,7 @@ const ClientIntakeOnboardingPage = () => {
                 ensure everything works perfectly.
               </p>
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full text-center"
@@ -517,7 +517,7 @@ const ClientIntakeOnboardingPage = () => {
                 to ensure peak performance.
               </p>
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full text-center"
@@ -713,7 +713,7 @@ const ClientIntakeOnboardingPage = () => {
             </p>
             <div className="flex items-center justify-center gap-3">
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"

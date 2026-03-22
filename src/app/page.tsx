@@ -33,7 +33,7 @@ export default function Home() {
             name: "NomanuAI",
             url: "https://www.nomanuai.com",
             logo: "https://www.nomanuai.com/assets/nomanuai-logo.png",
-            description: "AI-powered automation services for businesses",
+            description: "Full-service technology company offering software development, AI automation, mobile apps, SaaS, and healthcare solutions",
             address: {
               "@type": "PostalAddress",
               addressCountry: "PH",
@@ -42,7 +42,7 @@ export default function Home() {
               "@type": "ContactPoint",
               telephone: "+63-975-948-3289",
               contactType: "customer service",
-              email: "consulting@nomanuai.com",
+              email: "jephmari@nomanuai.com",
             },
             sameAs: [
               "https://x.com/nomanuai98",
@@ -95,8 +95,8 @@ export default function Home() {
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Discover the latest trends, tips, and strategies in business
-              automation. Stay ahead of the curve with our expert insights.
+              Discover the latest trends, tips, and strategies in software
+              development, AI, and business technology. Stay ahead with our expert insights.
             </p>
           </div>
 

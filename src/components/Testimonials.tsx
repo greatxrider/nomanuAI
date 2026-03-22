@@ -200,7 +200,7 @@ const Testimonials = () => {
             {/* CTA Button */}
             <div>
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center gap-2 w-full sm:w-auto shadow-brand hover:shadow-brand-lg"
@@ -224,12 +224,12 @@ const Testimonials = () => {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand/10 clip-hex animate-float pointer-events-none" />
               <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-honey/10 clip-hex animate-float animation-delay-500 pointer-events-none" />
               
-              <div className="card-honeycomb group p-8 md:p-12 w-full flex flex-col justify-center relative z-10 bg-white dark:bg-gray-800 border border-ink/5 dark:border-white/5 shadow-xl mt-6 lg:mt-0">
-                {/* Floating Quote Icon */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 icon-hex w-12 h-12 shadow-lg z-20">
-                  <QuoteIcon size={20} className="text-white" />
-                </div>
+              {/* Floating Quote Icon - outside card-honeycomb to avoid clip-path */}
+              <div className="absolute -top-0 left-1/2 -translate-x-1/2 icon-hex w-12 h-12 shadow-lg z-30">
+                <QuoteIcon size={20} className="text-white" />
+              </div>
 
+              <div className="card-honeycomb group p-8 md:p-12 w-full flex flex-col justify-center relative z-10 bg-white dark:bg-gray-800 border border-ink/5 dark:border-white/5 shadow-xl mt-6 lg:mt-0">
                 {/* Testimonial Content */}
                 <div className="relative z-10 text-center pt-6">
                   {/* Avatar */}

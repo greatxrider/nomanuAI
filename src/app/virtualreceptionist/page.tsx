@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Virtual Receptionist | NomanuAI",
   description:
-    "Never miss a call again. NomanuAI's AI Virtual Receptionist answers every call 24/7 with natural language understanding, custom voice personas, and multi-language support — so your business always sounds professional.",
+    "Never miss a call again. NomanuAI's AI Virtual Receptionist answers every call 24/7 with natural language understanding, custom voice personas, and multi-language support, so your business always sounds professional.",
   keywords: [
     "AI virtual receptionist",
     "AI phone answering",

@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Lead Qualification | NomanuAI",
   description:
-    "Automated AI lead qualification that scores, engages, and routes high-value prospects in real time — so your sales team closes more deals and wastes zero time on unqualified leads.",
+    "Automated AI lead qualification that scores, engages, and routes high-value prospects in real time, so your sales team closes more deals and wastes zero time on unqualified leads.",
   keywords: [
     "AI lead qualification",
     "automated lead scoring",

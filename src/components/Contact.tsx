@@ -208,7 +208,7 @@ const Contact = () => {
               {/* Contact Methods */}
               <div className="space-y-4">
                 <a
-                  href="mailto:consulting@nomanuai.com"
+                  href="mailto:jephmari@nomanuai.com"
                   className="flex items-center gap-4 p-4 hex-cut-sm bg-ink/5 dark:bg-white/5
                     hover:bg-brand/10 transition-all duration-300 group/item"
                 >
@@ -221,7 +221,7 @@ const Contact = () => {
                       Email
                     </div>
                     <div className="text-[14px] text-ink-secondary dark:text-gray-400">
-                      consulting@nomanuai.com
+                      jephmari@nomanuai.com
                     </div>
                   </div>
                 </a>

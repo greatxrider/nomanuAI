@@ -9,6 +9,7 @@ import {
   BrainIcon,
   ArrowRightIcon,
 } from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 const MissionVision = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
@@ -26,6 +27,7 @@ const MissionVision = () => {
         className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
+      <DarkHoneycombBackground patternId="mission-honeycomb" effect="current" />
 
       <div className="container-width relative z-10">
         {/* Main Container */}
@@ -67,11 +69,11 @@ const MissionVision = () => {
 
               {/* Description */}
               <p className="text-body-lg text-ink-secondary dark:text-gray-300 mb-8">
-                NomanuAI is a digital automation company that helps
-                forward-thinking businesses eliminate operational inefficiencies
-                by automating and integrating their web-based tools. We
-                specialize in building intelligent, scalable workflows that
-                connect your apps, streamline processes, and enable your teams
+                NomanuAI is a full-service technology company that helps
+                forward-thinking businesses thrive through custom software
+                development, mobile apps, AI automation, SaaS products, and
+                healthcare EMR/EHR solutions. We build intelligent, scalable
+                systems that streamline processes and enable your teams
                 to focus on what truly matters—creativity, innovation, and
                 growth.
               </p>
@@ -90,9 +92,9 @@ const MissionVision = () => {
                       </h3>
                       <p className="text-sm text-ink-secondary dark:text-gray-400 leading-relaxed">
                         To lead the future of intelligent business systems—where
-                        automation and AI drive operational excellence, and
-                        individuals are free to contribute their most valuable
-                        and meaningful work.
+                        custom software, AI, and automation drive operational
+                        excellence, and individuals are free to contribute
+                        their most valuable and meaningful work.
                       </p>
                     </div>
                   </div>
@@ -107,10 +109,10 @@ const MissionVision = () => {
                         Mission
                       </h3>
                       <p className="text-sm text-ink-secondary dark:text-gray-400 leading-relaxed">
-                        To empower organizations to automate and integrate their
-                        business processes—so their people can spend less time
-                        on manual tasks and more time on strategic, creative,
-                        and high-impact work.
+                        To empower organizations with the right technology—from
+                        software development to AI automation—so their people
+                        can spend less time on manual tasks and more time on
+                        strategic, creative, and high-impact work.
                       </p>
                     </div>
                   </div>

@@ -52,8 +52,7 @@ const automationServices = [
       "Pipeline management and deal progression",
     ],
     href: "/salescrmmanagement",
-    lottieUrl:
-      "https://lottie.host/embed/1908348d-e5e9-48d0-8c47-e3d0b9684236/6yg38oV1w0.lottie",
+    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 2,
@@ -67,6 +66,7 @@ const automationServices = [
       "Document collection and e-signatures",
     ],
     href: "/clientintake",
+    imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 3,
@@ -80,6 +80,7 @@ const automationServices = [
       "Team communication and updates",
     ],
     href: "/projectmanagement",
+    imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 4,
@@ -93,8 +94,7 @@ const automationServices = [
       "Expense tracking and reporting",
     ],
     href: "/billingpayment",
-    lottieUrl:
-      "https://lottie.host/embed/54f3962f-6105-4bd1-a7b2-e3669d81ce09/GWrW6epXID.lottie",
+    imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 5,
@@ -108,8 +108,7 @@ const automationServices = [
       "Performance tracking and analytics",
     ],
     href: "/socialmedia",
-    lottieUrl:
-      "https://lottie.host/embed/86945951-c9a6-4c44-ab90-4a8cafd1adf7/3qazEaYoVx.lottie",
+    imageUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600",
   },
 ];
 
@@ -126,6 +125,7 @@ const webSoftwareServices = [
       "Cloud-hosted & scalable architecture",
     ],
     href: "/webapplications",
+    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 7,
@@ -139,6 +139,7 @@ const webSoftwareServices = [
       "Analytics & user management",
     ],
     href: "/saasdevelopment",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 8,
@@ -152,6 +153,7 @@ const webSoftwareServices = [
       "Integration with existing systems",
     ],
     href: "/customsoftware",
+    imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 9,
@@ -165,6 +167,7 @@ const webSoftwareServices = [
       "Order fulfillment & shipping automation",
     ],
     href: "/ecommercesolutions",
+    imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 10,
@@ -178,6 +181,7 @@ const webSoftwareServices = [
       "Authentication & rate limiting",
     ],
     href: "/apidevelopment",
+    imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
   },
 ];
 
@@ -194,6 +198,7 @@ const mobileAppServices = [
       "Push notifications & in-app purchases",
     ],
     href: "/iosdevelopment",
+    imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 12,
@@ -207,6 +212,7 @@ const mobileAppServices = [
       "Google Play Store deployment",
     ],
     href: "/androiddevelopment",
+    imageUrl: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 13,
@@ -220,6 +226,7 @@ const mobileAppServices = [
       "Native-level performance",
     ],
     href: "/crossplatformapps",
+    imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 14,
@@ -233,6 +240,7 @@ const mobileAppServices = [
       "Feature enhancements & scaling",
     ],
     href: "/appmaintenance",
+    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 15,
@@ -246,6 +254,7 @@ const mobileAppServices = [
       "Design systems & component libraries",
     ],
     href: "/uiuxdesign",
+    imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=600",
   },
 ];
 
@@ -262,6 +271,7 @@ const aiReceptionistServices = [
       "Multi-language support",
     ],
     href: "/virtualreceptionist",
+    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 17,
@@ -275,6 +285,7 @@ const aiReceptionistServices = [
       "Overflow & after-hours handling",
     ],
     href: "/callrouting",
+    imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 18,
@@ -288,6 +299,7 @@ const aiReceptionistServices = [
       "No-show follow-up sequences",
     ],
     href: "/appointmentscheduling",
+    imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 19,
@@ -301,6 +313,7 @@ const aiReceptionistServices = [
       "CRM integration & auto-logging",
     ],
     href: "/leadqualification",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: 20,
@@ -314,6 +327,7 @@ const aiReceptionistServices = [
       "Sentiment analysis & priority routing",
     ],
     href: "/customersupport247",
+    imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600",
   },
 ];
 
@@ -325,6 +339,7 @@ type ServiceItem = {
   features: string[];
   href: string;
   lottieUrl?: string;
+  imageUrl?: string;
 };
 
 const servicesByCategory: Record<ServiceCategory, ServiceItem[]> = {
@@ -335,14 +350,14 @@ const servicesByCategory: Record<ServiceCategory, ServiceItem[]> = {
 };
 
 const discoveryCard = {
-  title: "Not Sure What to Automate?",
-  subtitle: "Let Us Discover Your Automation Opportunities",
+  title: "Not Sure Where to Start?",
+  subtitle: "Let Us Discover Your Growth Opportunities",
   description:
-    "We'll analyze your current systems, software, and workflows to identify hidden automation opportunities you might have missed.",
+    "We'll analyze your current systems, software, and workflows to identify the right technology solutions — from automation to custom software to AI integration.",
   icon: DiscoveryIcon,
   benefits: [
-    "AI-powered workflow analysis",
-    "Custom automation roadmap",
+    "AI-powered workflow & systems analysis",
+    "Custom technology roadmap",
     "ROI projections for each opportunity",
   ],
 };
@@ -396,10 +411,10 @@ const Services = () => {
         >
           <h2 className="heading-lg text-ink dark:text-white mb-4 text-balance">
             Complete{" "}
-            <span className="text-gradient">Automation Solutions</span>
+            <span className="text-gradient">Technology Solutions</span>
           </h2>
           <p className="text-body-lg max-w-2xl mx-auto">
-            We will automate your manual processes or you don&apos;t pay.
+            Software development, AI automation, mobile apps, and more — tailored to your business.
           </p>
         </div>
 
@@ -452,6 +467,13 @@ const Services = () => {
                       title={service.title}
                       className="w-full h-full border-0"
                       loading="lazy"
+                    />
+                  ) : service.imageUrl ? (
+                    <Image
+                      src={service.imageUrl}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 mix-blend-luminosity hover:mix-blend-normal"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-brand/5 via-brand/10 to-brand/5 dark:from-brand/10 dark:via-brand/20 dark:to-brand/10">
@@ -547,7 +569,7 @@ const Services = () => {
               </ul>
 
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full text-center text-[14px]"
@@ -575,8 +597,8 @@ const Services = () => {
               Plug AI into your <span className="text-brand">existing data</span>
             </h3>
             <p className="text-body max-w-2xl mx-auto">
-              We connect AI to your existing systems — from CRMs to project
-              management tools — to automate repetitive work and turn your data
+              We connect your existing systems — from CRMs to healthcare EMR/EHR platforms
+              — to automate workflows, power custom software, and turn your data
               into actionable insights.
             </p>
           </div>

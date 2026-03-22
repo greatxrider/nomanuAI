@@ -103,7 +103,7 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
               <a
-                href="mailto:consulting@nomanuai.com"
+                href="mailto:jephmari@nomanuai.com"
                 className="flex items-center gap-3 text-[14px] text-ink-secondary dark:text-gray-400
                   hover:text-brand transition-colors duration-200 group"
               >
@@ -111,7 +111,7 @@ const Footer = () => {
                   group-hover:bg-brand/10 transition-colors duration-200">
                   <MailIcon size={16} className="text-ink-tertiary dark:text-gray-500 group-hover:text-brand" />
                 </div>
-                <span>consulting@nomanuai.com</span>
+                <span>jephmari@nomanuai.com</span>
               </a>
               <a
                 href="tel:+639759483289"
@@ -220,7 +220,7 @@ const Footer = () => {
 
             {/* CTA Button */}
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary mt-6 text-[13px] py-2.5 px-5 inline-block"

@@ -747,7 +747,7 @@ const ProjectModal = ({
 
           {/* Image Section */}
           <div className="w-full h-80 relative flex-shrink-0 bg-paper-secondary dark:bg-gray-800">
-            {project.image && project.image.startsWith("/automations/") ? (
+            {project.image ? (
               <div
                 className="relative h-full group cursor-pointer"
                 onClick={() => setIsImageModalOpen(true)}
@@ -1011,7 +1011,7 @@ const Projects = () => {
       description:
         "Intelligent data migration automation that streamlines CSV imports into HubSpot CRM with dynamic field mapping, validation, and seamless API integration",
       category: "automations",
-      image: "/automations/csv-to-hubspot-project.png",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "n8n",
         "HubSpot API v3",
@@ -1036,7 +1036,7 @@ const Projects = () => {
       description:
         "AI-powered Gmail automation that monitors property investment inquiries, extracts financial data, validates leads, and provides instant personalized responses with CRM integration",
       category: "automations",
-      image: "/automations/lead-flow-gmail-project.png",
+      image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "n8n",
         "OpenAI GPT-4",
@@ -1061,7 +1061,7 @@ const Projects = () => {
       description:
         "Comprehensive financial planning automation that captures client data, generates dynamic charts, calculates retirement projections, and delivers personalized PDF reports automatically",
       category: "automations",
-      image: "/automations/property-insights-project.png",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "n8n",
         "Airtable",
@@ -1086,7 +1086,7 @@ const Projects = () => {
       description:
         "Full-stack e-commerce web application with AI-powered product recommendations, real-time inventory management, and seamless payment processing",
       category: "web-software",
-      image: "/automations/ecommerce-project.png",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -1111,7 +1111,7 @@ const Projects = () => {
       description:
         "Custom analytics dashboard for tracking KPIs, revenue metrics, and team performance with automated reporting and data visualization",
       category: "web-software",
-      image: "/automations/dashboard-project.png",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "React",
         "Node.js",
@@ -1136,7 +1136,7 @@ const Projects = () => {
       description:
         "Cross-platform mobile application for fitness tracking with AI-powered workout plans, nutrition logging, and progress analytics",
       category: "mobile-apps",
-      image: "/automations/fitness-app-project.png",
+      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "React Native",
         "TypeScript",
@@ -1160,7 +1160,7 @@ const Projects = () => {
       description:
         "Mobile application for field service teams with real-time job scheduling, GPS tracking, digital forms, and offline-capable functionality",
       category: "mobile-apps",
-      image: "/automations/field-service-project.png",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "Flutter",
         "Dart",
@@ -1184,7 +1184,7 @@ const Projects = () => {
       description:
         "Intelligent AI voice receptionist that handles appointment scheduling, patient inquiries, insurance verification, and follow-up calls 24/7",
       category: "ai-receptionists",
-      image: "/automations/ai-receptionist-dental-project.png",
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "Vapi AI",
         "OpenAI GPT-4",
@@ -1208,7 +1208,7 @@ const Projects = () => {
       description:
         "AI-powered phone receptionist for real estate agencies that qualifies leads, schedules property viewings, and syncs with CRM systems automatically",
       category: "ai-receptionists",
-      image: "/automations/ai-receptionist-realestate-project.png",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
       technologies: [
         "Vapi AI",
         "OpenAI GPT-4",
@@ -1359,8 +1359,7 @@ const Projects = () => {
               >
                 {/* Project Image */}
                 <div className="h-48 bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center relative overflow-hidden">
-                  {project.image &&
-                  project.image.startsWith("/automations/") ? (
+                  {project.image ? (
                     <img
                       src={project.image}
                       alt={project.title}

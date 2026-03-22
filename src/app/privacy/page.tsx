@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
                     NomanuAI
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Email: consulting@nomanuai.com
+                    Email: jephmari@nomanuai.com
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
                     Phone: +63 975 948 3289

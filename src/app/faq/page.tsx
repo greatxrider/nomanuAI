@@ -284,7 +284,7 @@ const FAQPage = () => {
               Let's discuss how automation can transform your business processes
             </p>
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-2"

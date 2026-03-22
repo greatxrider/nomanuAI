@@ -69,47 +69,110 @@ const ClientMarquee = () => {
           </p>
         </div>
 
-        {/* Static Logo Grid */}
+        {/* Animated Logo Marquee */}
         <div
-          className={`flex items-center justify-center gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto
-            transition-all duration-1000 ease-out-expo delay-200 ${
+          className={`relative overflow-hidden w-full max-w-6xl mx-auto py-8 transition-all duration-1000 ease-out-expo delay-200 ${
             isIntersecting
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          {companies.map((company, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center group cursor-pointer flex-1"
-            >
-              {company.hasLogo ? (
-                <div className="relative w-full h-12 md:h-14 lg:h-16 flex items-center justify-center">
-                  <Image
-                    src={company.logo!}
-                    alt={company.name}
-                    width={120}
-                    height={60}
-                    className={`h-12 md:h-14 lg:h-16 w-auto object-contain
-                      grayscale hover:grayscale-0 brightness-75 hover:brightness-100
-                      transition-all duration-500 hover:scale-110
-                      group-hover:drop-shadow-[0_4px_12px_rgba(229,101,24,0.15)]
-                      ${company.invertInDarkMode ? 'dark:invert dark:opacity-80 dark:hover:opacity-100' : ''}`}
-                  />
+          {/* Gradient Edges to blur the ends of the marquee */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-paper dark:from-gray-950 to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-paper dark:from-gray-950 to-transparent z-20 pointer-events-none" />
+
+          {/* Marquee Track */}
+          <div className="flex overflow-hidden group space-x-12 md:space-x-20">
+            {/* First Track */}
+            <div className="flex animate-marquee group-hover:[animation-play-state:paused] shrink-0 items-center space-x-12 md:space-x-20 w-max">
+              {[...companies, ...companies].map((company, index) => (
+                <div
+                  key={`track1-${index}`}
+                  className="flex items-center justify-center cursor-pointer flex-shrink-0"
+                >
+                  {company.hasLogo ? (
+                    <div className="relative w-40 h-16 md:h-20 flex items-center justify-center px-4">
+                      <Image
+                        src={company.logo!}
+                        alt={company.name}
+                        width={160}
+                        height={80}
+                        className={`max-h-[3rem] md:max-h-[4rem] w-auto object-contain
+                          opacity-50 grayscale hover:grayscale-0 hover:opacity-100
+                          transition-all duration-500 hover:scale-110
+                          hover:drop-shadow-[0_0_15px_rgba(229,101,24,0.4)]
+                          ${
+                            company.logo.endsWith(".jpg") || company.logo.endsWith(".jpeg")
+                              ? "mix-blend-darken dark:mix-blend-screen"
+                              : ""
+                          }
+                          ${company.invertInDarkMode ? "dark:invert" : ""}`}
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="flex items-center justify-center w-36 h-14 md:h-16
+                      bg-paper-secondary/50 dark:bg-gray-800/50 backdrop-blur-sm hex-cut-sm
+                      border border-ink/10 dark:border-white/10 hover:border-brand/40
+                      transition-all duration-300 shadow-sm group-hover:border-brand/40"
+                    >
+                      <span
+                        className="text-lg font-bold text-ink-secondary dark:text-gray-300
+                        hover:text-brand transition-colors duration-300 tracking-wide"
+                      >
+                        {company.name}
+                      </span>
+                    </div>
+                  )}
                 </div>
-              ) : (
-                <div className="flex items-center justify-center w-32 h-12 md:h-14 lg:h-16
-                  bg-paper-secondary dark:bg-gray-800 backdrop-blur-sm hex-cut-sm
-                  border border-ink/10 dark:border-white/10 hover:border-brand/30
-                  transition-all duration-300">
-                  <span className="text-lg font-semibold text-ink dark:text-white
-                    group-hover:text-brand transition-colors duration-300">
-                    {company.name}
-                  </span>
-                </div>
-              )}
+              ))}
             </div>
-          ))}
+            
+            {/* Second Track (Duplicate for seamless loop) */}
+            <div aria-hidden="true" className="flex animate-marquee group-hover:[animation-play-state:paused] shrink-0 items-center space-x-12 md:space-x-20 w-max">
+              {[...companies, ...companies].map((company, index) => (
+                <div
+                  key={`track2-${index}`}
+                  className="flex items-center justify-center cursor-pointer flex-shrink-0"
+                >
+                  {company.hasLogo ? (
+                    <div className="relative w-40 h-16 md:h-20 flex items-center justify-center px-4">
+                      <Image
+                        src={company.logo!}
+                        alt={company.name}
+                        width={160}
+                        height={80}
+                        className={`max-h-[3rem] md:max-h-[4rem] w-auto object-contain
+                          opacity-50 grayscale hover:grayscale-0 hover:opacity-100
+                          transition-all duration-500 hover:scale-110
+                          hover:drop-shadow-[0_0_15px_rgba(229,101,24,0.4)]
+                          ${
+                            company.logo.endsWith(".jpg") || company.logo.endsWith(".jpeg")
+                              ? "mix-blend-darken dark:mix-blend-screen"
+                              : ""
+                          }
+                          ${company.invertInDarkMode ? "dark:invert" : ""}`}
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="flex items-center justify-center w-36 h-14 md:h-16
+                      bg-paper-secondary/50 dark:bg-gray-800/50 backdrop-blur-sm hex-cut-sm
+                      border border-ink/10 dark:border-white/10 hover:border-brand/40
+                      transition-all duration-300 shadow-sm"
+                    >
+                      <span
+                        className="text-lg font-bold text-ink-secondary dark:text-gray-300
+                        hover:text-brand transition-colors duration-300 tracking-wide"
+                      >
+                        {company.name}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Trust indicator */}

@@ -27,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: "24/7 AI Customer Support | NomanuAI",
   description:
-    "Always-on AI customer support that resolves tickets, answers complex queries, and escalates with full context — delivering instant help across phone, chat, email, and SMS around the clock.",
+    "Always-on AI customer support that resolves tickets, answers complex queries, and escalates with full context, delivering instant help across phone, chat, email, and SMS around the clock.",
   keywords: [
     "24/7 AI customer support",
     "AI help desk",

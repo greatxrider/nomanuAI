@@ -27,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Appointment Scheduling | NomanuAI",
   description:
-    "AI-powered appointment scheduling that books, reschedules, and confirms appointments through natural conversation — syncing with your calendar, reducing no-shows, and filling your schedule around the clock.",
+    "AI-powered appointment scheduling that books, reschedules, and confirms appointments through natural conversation, syncing with your calendar, reducing no-shows, and filling your schedule around the clock.",
   keywords: [
     "AI appointment scheduling",
     "automated booking",

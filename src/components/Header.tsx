@@ -56,11 +56,30 @@ const Header = () => {
   ];
 
   const servicesNav = [
-    { name: "Sales CRM Management", href: "/salescrmmanagement", description: "Automate your sales pipeline" },
-    { name: "Client Intake & Onboarding", href: "/clientintake", description: "Streamline client onboarding" },
-    { name: "Project Management", href: "/projectmanagement", description: "Automate project workflows" },
-    { name: "Billing & Payment", href: "/billingpayment", description: "Simplify invoicing & payments" },
-    { name: "Social Media Content", href: "/socialmedia", description: "Schedule and automate content" },
+    // Automation
+    { name: "Sales CRM Management", href: "/salescrmmanagement", description: "Automate your sales pipeline", category: "Automation" },
+    { name: "Client Intake & Onboarding", href: "/clientintake", description: "Streamline client onboarding", category: "Automation" },
+    { name: "Project Management", href: "/projectmanagement", description: "Automate project workflows", category: "Automation" },
+    { name: "Billing & Payment", href: "/billingpayment", description: "Simplify invoicing & payments", category: "Automation" },
+    { name: "Social Media Content", href: "/socialmedia", description: "Schedule and automate content", category: "Automation" },
+    // Web / Software
+    { name: "Web Applications", href: "/webapplications", description: "Custom web app development", category: "Web / Software" },
+    { name: "SaaS Development", href: "/saasdevelopment", description: "End-to-end SaaS products", category: "Web / Software" },
+    { name: "Custom Software", href: "/customsoftware", description: "Tailor-made business software", category: "Web / Software" },
+    { name: "E-Commerce Solutions", href: "/ecommercesolutions", description: "Online stores & marketplaces", category: "Web / Software" },
+    { name: "API Development", href: "/apidevelopment", description: "Robust APIs & integrations", category: "Web / Software" },
+    // Mobile Apps
+    { name: "iOS Development", href: "/iosdevelopment", description: "Native iPhone & iPad apps", category: "Mobile Apps" },
+    { name: "Android Development", href: "/androiddevelopment", description: "Native Android apps", category: "Mobile Apps" },
+    { name: "Cross-Platform Apps", href: "/crossplatformapps", description: "React Native & Flutter", category: "Mobile Apps" },
+    { name: "App Maintenance", href: "/appmaintenance", description: "Ongoing updates & support", category: "Mobile Apps" },
+    { name: "UI/UX Design", href: "/uiuxdesign", description: "Research-backed interfaces", category: "Mobile Apps" },
+    // AI Receptionists
+    { name: "AI Virtual Receptionist", href: "/virtualreceptionist", description: "24/7 AI-powered reception", category: "AI Receptionists" },
+    { name: "Intelligent Call Routing", href: "/callrouting", description: "Smart call distribution", category: "AI Receptionists" },
+    { name: "AI Appointment Scheduling", href: "/appointmentscheduling", description: "AI-powered booking", category: "AI Receptionists" },
+    { name: "AI Lead Qualification", href: "/leadqualification", description: "Automated lead scoring", category: "AI Receptionists" },
+    { name: "24/7 Customer Support", href: "/customersupport247", description: "AI support across channels", category: "AI Receptionists" },
   ];
 
   const handleInternalLink = useCallback((href: string) => {
@@ -162,36 +181,45 @@ const Header = () => {
 
                     {/* Hex Dropdown Menu */}
                     <div
-                      className={`absolute left-0 mt-2 w-80 dropdown-hex overflow-hidden
+                      className={`fixed left-1/2 -translate-x-1/2 top-16 mt-2 dropdown-hex overflow-hidden
                         bg-paper-elevated dark:bg-gray-900
                         border border-brand/10 dark:border-brand/15
                         shadow-xl dark:shadow-2xl
-                        transition-all duration-300 ease-out-expo origin-top
+                        transition-all duration-300 ease-out-expo origin-top z-50
                         ${isServicesOpen
                           ? "opacity-100 scale-100 translate-y-0"
                           : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                         }`}
+                      style={{ width: 'min(720px, 95vw)' }}
                     >
-                      <div className="p-2">
-                        {servicesNav.map((svc, index) => (
-                          <Link
-                            key={svc.name}
-                            href={svc.href}
-                            onClick={() => setIsServicesOpen(false)}
-                            className="flex flex-col gap-0.5 px-4 py-3 hex-cut-sm
-                              transition-all duration-200 ease-out-expo
-                              hover:bg-brand/5 dark:hover:bg-brand/10
-                              group"
-                            style={{ animationDelay: `${index * 50}ms` }}
-                          >
-                            <span className="text-[15px] font-medium text-ink dark:text-white
-                              group-hover:text-brand transition-colors duration-200">
-                              {svc.name}
-                            </span>
-                            <span className="text-[13px] text-ink-tertiary dark:text-gray-500">
-                              {svc.description}
-                            </span>
-                          </Link>
+                      <div className="p-4 grid grid-cols-4 gap-4">
+                        {(["Automation", "Web / Software", "Mobile Apps", "AI Receptionists"] as const).map((category) => (
+                          <div key={category}>
+                            <h4 className="text-[11px] font-bold uppercase tracking-wider text-brand mb-2 px-2">
+                              {category}
+                            </h4>
+                            {servicesNav
+                              .filter((svc) => svc.category === category)
+                              .map((svc) => (
+                              <Link
+                                key={svc.name}
+                                href={svc.href}
+                                onClick={() => setIsServicesOpen(false)}
+                                className="flex flex-col gap-0.5 px-2 py-2 hex-cut-sm
+                                  transition-all duration-200 ease-out-expo
+                                  hover:bg-brand/5 dark:hover:bg-brand/10
+                                  group"
+                              >
+                                <span className="text-[13px] font-medium text-ink dark:text-white
+                                  group-hover:text-brand transition-colors duration-200 leading-tight">
+                                  {svc.name}
+                                </span>
+                                <span className="text-[11px] text-ink-tertiary dark:text-gray-500 leading-tight">
+                                  {svc.description}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
                         ))}
                       </div>
                       <div className="divider-honeycomb" />
@@ -280,7 +308,7 @@ const Header = () => {
               <div className="w-1.5 h-6 clip-hex bg-brand/20 mx-2" />
 
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-[14px] py-2.5 px-5"
@@ -310,7 +338,7 @@ const Header = () => {
         {/* Mobile Menu - Premium slide-down animation */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-500 ease-out-expo ${
-            isMobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+            isMobileMenuOpen ? "max-h-[80vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0"
           }`}
         >
           <div className="py-4 space-y-1 border-t border-ink/5 dark:border-white/5">
@@ -331,19 +359,28 @@ const Header = () => {
                     >
                       Services
                     </button>
-                    <div className="pl-4 space-y-0.5">
-                      {servicesNav.map((svc) => (
-                        <Link
-                          key={svc.name}
-                          href={svc.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block px-4 py-2.5 hex-cut-sm text-[14px]
-                            text-ink-secondary dark:text-gray-400
-                            hover:text-brand hover:bg-ink/5 dark:hover:bg-white/5
-                            transition-all duration-200"
-                        >
-                          {svc.name}
-                        </Link>
+                    <div className="pl-4 space-y-2">
+                      {(["Automation", "Web / Software", "Mobile Apps", "AI Receptionists"] as const).map((category) => (
+                        <div key={category}>
+                          <p className="px-4 pt-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-brand">
+                            {category}
+                          </p>
+                          {servicesNav
+                            .filter((svc) => svc.category === category)
+                            .map((svc) => (
+                            <Link
+                              key={svc.name}
+                              href={svc.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="block px-4 py-2 hex-cut-sm text-[14px]
+                                text-ink-secondary dark:text-gray-400
+                                hover:text-brand hover:bg-ink/5 dark:hover:bg-white/5
+                                transition-all duration-200"
+                            >
+                              {svc.name}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -395,7 +432,7 @@ const Header = () => {
               </div>
               <div className="px-4 space-y-2">
                 <Link
-                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                  href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full text-center text-[15px]"
@@ -404,7 +441,7 @@ const Header = () => {
                   Get Started
                 </Link>
                 <Link
-                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                  href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center text-[15px]"

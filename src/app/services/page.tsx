@@ -260,12 +260,12 @@ const ServicesPage = () => {
             </div>
 
             <h1 className="heading-display mb-6">
-              Automate Everything or{" "}
-              <span className="text-gradient">Don&apos;t Pay</span>
+              Build, Automate &{" "}
+              <span className="text-gradient">Scale Your Business</span>
             </h1>
             <p className="text-body-lg mb-8 max-w-3xl mx-auto">
-              We will automate your manual processes or you don&apos;t pay. Transform
-              your business with AI-powered automation solutions.
+              From custom software and mobile apps to AI automation and healthcare
+              EMR/EHR — we deliver end-to-end technology solutions.
             </p>
           </div>
         </div>
@@ -285,7 +285,7 @@ const ServicesPage = () => {
                 </div>
                 <h2 className="heading-lg mb-4">
                   <span className="text-gradient">
-                    Automation & Integration
+                    Technology & Development
                   </span>
                   <br />
                   <span className="text-ink dark:text-white">Services</span>
@@ -347,11 +347,11 @@ const ServicesPage = () => {
 
             <h2 className="heading-lg mb-4">
               Complete{" "}
-              <span className="text-gradient">Automation Solutions</span>
+              <span className="text-gradient">Technology Solutions</span>
             </h2>
             <p className="text-body-lg max-w-3xl mx-auto mb-8">
-              From sales to social media, we automate every aspect of your
-              business operations.
+              Software development, mobile apps, AI automation, SaaS, and
+              healthcare solutions — all under one roof.
             </p>
           </div>
 
@@ -483,7 +483,7 @@ const ServicesPage = () => {
 
                 <div className="mt-auto">
                   <Link
-                    href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                    href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary w-full text-center text-[14px]"
@@ -509,7 +509,7 @@ const ServicesPage = () => {
               consultation to explore automation opportunities.
             </p>
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center gap-2"

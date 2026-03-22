@@ -392,7 +392,7 @@ const BlogPostPage = () => {
               automation strategy
             </p>
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-colors"

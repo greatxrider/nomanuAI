@@ -22,22 +22,24 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nomanuai.com"),
   title: {
-    default: "NomanuAI - AI Automation Solutions | Transform Your Business",
+    default: "NomanuAI - Software Development, AI & Automation Solutions",
     template: "%s | NomanuAI",
   },
   description:
-    "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions. Get started today!",
+    "NomanuAI builds custom software, web & mobile apps, AI automation, SaaS products, and healthcare EMR/EHR solutions. Transform your business with end-to-end technology services.",
   keywords: [
+    "custom software development",
+    "web application development",
+    "mobile app development",
     "AI automation",
-    "business automation",
+    "SaaS development",
+    "healthcare EMR",
+    "healthcare EHR",
+    "AI receptionists",
     "workflow automation",
     "CRM integration",
-    "process automation",
     "NomanuAI",
-    "automation services",
-    "AI solutions",
-    "business transformation",
-    "automation consulting",
+    "business technology solutions",
   ],
   authors: [{ name: "NomanuAI" }],
   alternates: {
@@ -57,16 +59,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.nomanuai.com/",
-    title: "NomanuAI - AI Automation Solutions | Transform Your Business",
+    title: "NomanuAI - Software Development, AI & Automation Solutions",
     description:
-      "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions.",
+      "NomanuAI builds custom software, web & mobile apps, AI automation, SaaS products, and healthcare EMR/EHR solutions for businesses worldwide.",
     siteName: "NomanuAI",
     images: [
       {
         url: "/assets/ai-automation.jpg",
         width: 1200,
         height: 630,
-        alt: "NomanuAI - AI Automation Solutions",
+        alt: "NomanuAI - Software Development, AI & Automation Solutions",
       },
     ],
     locale: "en_US",
@@ -75,9 +77,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nomanuai98",
     creator: "@nomanuai98",
-    title: "NomanuAI - AI Automation Solutions | Transform Your Business",
+    title: "NomanuAI - Software Development, AI & Automation Solutions",
     description:
-      "Transform your business with intelligent automation solutions. NomanuAI specializes in AI-powered process automation, CRM integration, and custom solutions.",
+      "NomanuAI builds custom software, web & mobile apps, AI automation, SaaS products, and healthcare EMR/EHR solutions for businesses worldwide.",
     images: ["/assets/ai-automation.jpg"],
   },
 };
@@ -138,7 +140,7 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/107854474/",
               ],
               description:
-                "AI-powered automation services for CRM, onboarding, billing, project management, and social media.",
+                "Full-service technology company offering custom software development, web & mobile apps, AI automation, SaaS, and healthcare EMR/EHR solutions.",
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer service",

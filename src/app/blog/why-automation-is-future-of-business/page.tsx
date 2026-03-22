@@ -315,7 +315,7 @@ const BlogPostPage = () => {
                 solutions that drive real results for your business.
               </p>
               <Link
-                href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-brand-orange text-white font-medium rounded-lg hover:bg-brand-orange/90 transition-colors duration-200"
@@ -404,7 +404,7 @@ const BlogPostPage = () => {
               Let's discuss how automation can transform your business processes
             </p>
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-100 transition-colors"

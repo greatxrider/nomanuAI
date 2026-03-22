@@ -12,12 +12,14 @@ const Hero = () => {
 
   const headlines = useMemo(
     () => [
-      "Build Custom AI Agents",
-      "Develop AI-Powered Products",
-      "Create MCP Servers",
-      "Deploy AI Voice Agents",
-      "Engineer Custom Software",
+      "Build Custom Software",
+      "Develop Web Applications",
+      "Create Mobile Apps",
+      "Deploy AI Receptionists",
+      "Build SaaS Products",
       "Automate Complex Workflows",
+      "Integrate Healthcare EMR/EHR",
+      "Engineer AI Solutions",
     ],
     []
   );
@@ -46,7 +48,7 @@ const Hero = () => {
               isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
             <HexagonIcon size={14} className="mr-2 text-brand" />
-            <span className="font-display tracking-wide text-xs uppercase font-bold">AI-Powered Automation</span>
+            <span className="font-display tracking-wide text-xs uppercase font-bold">AI-Powered Technology Solutions</span>
           </div>
 
           {/* Main Headline - Geometric Exo 2 typeface */}
@@ -76,8 +78,7 @@ const Hero = () => {
                 : "opacity-0 translate-y-6"
             }`}
           >
-            Transform your business with intelligent automation solutions that
-            streamline workflows, reduce costs, and boost productivity.
+            From custom software and mobile apps to AI automation and healthcare EMR systems, we build the technology that powers your business growth.
           </p>
 
           {/* CTA Buttons */}
@@ -89,7 +90,7 @@ const Hero = () => {
             }`}
           >
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary group inline-flex items-center justify-center gap-3 text-[16px] px-8 py-4 shadow-brand hover:shadow-brand-lg"

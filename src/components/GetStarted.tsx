@@ -6,9 +6,9 @@ import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 import {
   PhoneIcon,
   ArrowRightIcon,
-  BrainIcon,
   CheckIcon,
 } from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 const GetStarted = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
@@ -25,6 +25,7 @@ const GetStarted = () => {
         className="absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-30"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/80 via-white/70 to-gray-100/80 dark:from-gray-950/70 dark:via-gray-900/60 dark:to-gray-950/70" />
+      <DarkHoneycombBackground patternId="get-started-honeycomb" effect="current" />
 
       <div className="container-width relative z-10">
         {/* Section Header */}
@@ -89,7 +90,7 @@ const GetStarted = () => {
 
                 {/* CTA Button */}
                 <Link
-                  href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+                  href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary inline-flex items-center gap-2"
@@ -100,13 +101,13 @@ const GetStarted = () => {
                 </Link>
               </div>
 
-              {/* Right Column - Animation */}
+              {/* Right Column - Image */}
               <div className="relative w-full h-72 bg-paper-secondary dark:bg-gray-800 hex-cut border border-ink/10 dark:border-white/10 overflow-hidden">
-                <iframe
-                  src="https://lottie.host/embed/a503333d-300b-499d-bea4-16ed5735ed88/riwclcALDL.lottie"
-                  title="Discovery call animation"
-                  className="w-full h-full"
-                  loading="lazy"
+                <Image
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
+                  alt="Discovery call"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
             </div>
@@ -207,13 +208,13 @@ const GetStarted = () => {
                 </div>
               </div>
 
-              {/* Right Column - Animation */}
+              {/* Right Column - Image */}
               <div className="relative w-full h-72 bg-paper-secondary dark:bg-gray-800 hex-cut border border-ink/10 dark:border-white/10 overflow-hidden">
-                <iframe
-                  src="https://lottie.host/embed/cf5a013f-0590-4462-b7ac-a86002ac9f76/OjiADZe4jM.lottie"
-                  title="Growth and leadership animation"
-                  className="w-full h-full"
-                  loading="lazy"
+                <Image
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                  alt="Growth and leadership"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
             </div>

@@ -16,6 +16,7 @@ import {
   TargetIcon,
   CalendarIcon,
 } from "@/components/icons/PremiumIcons";
+import { DarkHoneycombBackground } from "@/components/ui/SectionBackgrounds";
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -113,6 +114,7 @@ const FAQ = () => {
         className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-25"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/85 via-white/75 to-gray-100/85 dark:from-gray-950/75 dark:via-gray-900/65 dark:to-gray-950/75" />
+      <DarkHoneycombBackground patternId="faq-honeycomb" effect="current" />
 
       <div className="container-width relative z-10">
         {/* Header */}
@@ -271,7 +273,7 @@ const FAQ = () => {
               Let's discuss how automation can transform your business processes
             </p>
             <Link
-              href="https://calendar.app.google/hTHhAJ1rCRTQMgheA"
+              href="https://calendar.app.google/ydhNfzf6HS7uVcUp7"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center justify-center gap-2"
