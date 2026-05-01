@@ -29,7 +29,7 @@ const TeamCards = () => {
     {
       id: 1,
       name: "Jeph",
-      title: "AI Automation Specialist",
+      title: "Sr. Software Engineer",
       image: "/devTeam/jeph-logo.jpg",
       languages: ["JavaScript", "TypeScript", "Python", "C++", "C#"],
       degree:
@@ -48,7 +48,7 @@ const TeamCards = () => {
     {
       id: 2,
       name: "Yvonne",
-      title: "AI Automation Specialist",
+      title: "Jr. Software Engineer",
       image: "/devTeam/yvonne-picture.jpg",
       languages: ["JavaScript", "TypeScript", "Python"],
       degree: "Kodego Bootcamp Graduate",
@@ -58,7 +58,7 @@ const TeamCards = () => {
     {
       id: 3,
       name: "Clint",
-      title: "AI Automation Specialist",
+      title: "Sr. Software Engineer",
       image: "/devTeam/clint-picture.jpg",
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
@@ -69,7 +69,7 @@ const TeamCards = () => {
     {
       id: 4,
       name: "Jeah",
-      title: "AI Automation Specialist",
+      title: "Jr. Software Engineer",
       image: "/devTeam/jeah-picture.jpg",
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
@@ -80,7 +80,7 @@ const TeamCards = () => {
     {
       id: 5,
       name: "Gabrielle",
-      title: "AI Automation Specialist",
+      title: "Jr. Software Engineer",
       image: "/devTeam/gabrielle-picture.jpg",
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
@@ -91,7 +91,7 @@ const TeamCards = () => {
     {
       id: 6,
       name: "Christine",
-      title: "AI Automation Specialist",
+      title: "Jr. Software Engineer",
       image: "/devTeam/christine-picture.jpg",
       languages: ["Python", "JavaScript", "TypeScript", "C++"],
       degree: "BS Information Technology – Magna Cum Laude",
@@ -102,12 +102,32 @@ const TeamCards = () => {
     {
       id: 7,
       name: "Mohammed",
-      title: "AI Automation Specialist",
+      title: "Jr. Software Engineer",
       image: "/devTeam/mohammed.jpg",
       languages: ["JavaScript", "Python", "TypeScript"],
       degree: "Electronics and Communications Engineering",
       location: "Kilakarai",
       experience: "1 year of experience in Automation",
+    },
+    {
+      id: 8,
+      name: "Armor",
+      title: "Jr. Software Engineer",
+      image: "/devTeam/armor-picture.jpg",
+      languages: ["JavaScript", "TypeScript", "Python"],
+      degree: "BS Information Technology",
+      experience: "Software engineering and AI automation",
+      location: "Philippines",
+    },
+    {
+      id: 9,
+      name: "Ayen",
+      title: "Jr. Software Engineer",
+      image: "/devTeam/ayen-picture.jpg",
+      languages: ["JavaScript", "TypeScript", "Python"],
+      degree: "BS Information Technology",
+      experience: "Software engineering and AI automation",
+      location: "Philippines",
     },
   ];
 
